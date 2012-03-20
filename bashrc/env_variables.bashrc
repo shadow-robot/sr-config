@@ -1,3 +1,7 @@
+#this is a boolean to specify that the config has been installed locally
+# it is use in the launch files
+export SHADOW_ROS_CONFIG_INSTALLED=0
+
 #this is the path to the default installed config files
 export SHADOW_ROS_CONFIG_PATH=/etc/robot
 
