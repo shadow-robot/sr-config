@@ -2,6 +2,10 @@
 # it is use in the launch files
 export SHADOW_ROS_CONFIG_INSTALLED=0
 
+#the SR_CONFIG_BZR_BRANCH variable is set if a branch has
+# already been created for this user.
+export SR_CONFIG_BZR_BRANCH=''
+
 #this is the path to the default installed config files
 export SHADOW_ROS_CONFIG_PATH=/etc/robot
 
