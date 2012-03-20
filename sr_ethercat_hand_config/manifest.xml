@@ -1,0 +1,14 @@
+<package>
+  <description brief="sr_ethercat_hand_config">
+
+     sr_ethercat_hand_config
+
+  </description>
+  <author>Ugo Cupcic</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/sr_ethercat_hand_config</url>
+
+</package>
+
+
