@@ -1,7 +1,7 @@
 <package>
   <description brief="sr_ethercat_hand_config">
 
-     sr_ethercat_hand_config
+    sr_ethercat_hand_config contains the different yaml files storing the parameters used on the etherCAT hand.
 
   </description>
   <author>Ugo Cupcic</author>
