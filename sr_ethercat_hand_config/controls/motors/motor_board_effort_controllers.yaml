@@ -9,8 +9,8 @@ ffj0:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 ffj3:
   pid:
@@ -23,8 +23,8 @@ ffj3:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 ffj4:
   pid:
@@ -37,8 +37,8 @@ ffj4:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 lfj0:
   pid:
@@ -51,8 +51,8 @@ lfj0:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 lfj3:
   pid:
@@ -65,8 +65,8 @@ lfj3:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 lfj4:
   pid:
@@ -79,8 +79,8 @@ lfj4:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 lfj5:
   pid:
@@ -93,8 +93,8 @@ lfj5:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 mfj0:
   pid:
@@ -107,8 +107,8 @@ mfj0:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 mfj3:
   pid:
@@ -121,8 +121,8 @@ mfj3:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 mfj4:
   pid:
@@ -135,8 +135,8 @@ mfj4:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 rfj0:
   pid:
@@ -149,8 +149,8 @@ rfj0:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 rfj3:
   pid:
@@ -163,8 +163,8 @@ rfj3:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 rfj4:
   pid:
@@ -177,8 +177,8 @@ rfj4:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 thj1:
   pid:
@@ -191,8 +191,8 @@ thj1:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 thj2:
   pid:
@@ -205,8 +205,8 @@ thj2:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 thj3:
   pid:
@@ -219,8 +219,8 @@ thj3:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 thj4:
   pid:
@@ -233,8 +233,8 @@ thj4:
     p: 4800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 thj5:
   pid:
@@ -247,8 +247,8 @@ thj5:
     p: 6800
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 wrj1:
   pid:
@@ -261,8 +261,8 @@ wrj1:
     p: 3200
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
 wrj2:
   pid:
@@ -275,6 +275,6 @@ wrj2:
     p: 6100
     sg_left: 0
     sg_right: 0
-    sgleftref: 0.0
-    sgrightref: 0.0
+    sgleftref: 0
+    sgrightref: 0
     sign: 0
