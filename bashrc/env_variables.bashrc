@@ -14,7 +14,7 @@ export REAL_HAND=0
 export REAL_ARM=0
 
 #set to 1 if you have a muscle arm or hand
-export VALVES=0
+export MUSCLE=1
 
 #set to 1 if you want to build the compatibility interface for the etherCAT hand
 export ETHERCAT=0
@@ -28,3 +28,6 @@ export PWM_CONTROL=0
 #set to 1 if you want to have access to the internal firmware repository
 #NOTE: for Shadow employees only for the time being
 export INTERNAL_FIRMWARE=0
+
+#set to 1 if you have ellipsoid fingertips (ATI nano sensors)
+ELLIPSOID=0
