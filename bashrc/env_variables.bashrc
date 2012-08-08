@@ -14,10 +14,10 @@ export REAL_HAND=0
 export REAL_ARM=0
 
 #set to 1 if you have a muscle arm or hand
-export MUSCLE=1
+export MUSCLE=0
 
 #set to 1 if you want to build the compatibility interface for the etherCAT hand
-export ETHERCAT=0
+export ETHERCAT=1
 
 #set to 1 if you want to build the compatibility interface for the etherCAT hand
 export ETHERCAT_PORT=eth1
