@@ -17,7 +17,7 @@ export REAL_ARM=0
 export MUSCLE=0
 
 #set to 1 if you want to build the compatibility interface for the etherCAT hand
-export ETHERCAT=1
+export ETHERCAT=0
 
 #set to 1 if you want to build the compatibility interface for the etherCAT hand
 export ETHERCAT_PORT=eth1
