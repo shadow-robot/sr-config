@@ -17,7 +17,7 @@ export REAL_ARM=0
 export MUSCLE=0
 
 #set to 1 if you want to build the compatibility interface for the etherCAT hand
-export ETHERCAT=0
+export ETHERCAT=1
 
 #set to 1 if you want to build the compatibility interface for the etherCAT hand
 export ETHERCAT_PORT=eth1
@@ -30,4 +30,7 @@ export PWM_CONTROL=0
 export INTERNAL_FIRMWARE=0
 
 #set to 1 if you have ellipsoid fingertips (ATI nano sensors)
-ELLIPSOID=0
+export ELLIPSOID=0
+
+#set to 1 if you want to publish more debug information
+export DEBUG=0
