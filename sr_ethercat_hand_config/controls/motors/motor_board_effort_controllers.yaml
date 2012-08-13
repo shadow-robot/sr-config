@@ -1,4 +1,5 @@
 ffj0:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -13,6 +14,7 @@ ffj0:
     sgrightref: 0.0
     sign: 0.0
 ffj3:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -27,6 +29,7 @@ ffj3:
     sgrightref: 0.0
     sign: 0.0
 ffj4:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -41,6 +44,7 @@ ffj4:
     sgrightref: 0.0
     sign: 0.0
 lfj0:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -55,6 +59,7 @@ lfj0:
     sgrightref: 0.0
     sign: 0.0
 lfj3:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -69,6 +74,7 @@ lfj3:
     sgrightref: 0.0
     sign: 0.0
 lfj4:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -83,6 +89,7 @@ lfj4:
     sgrightref: 0.0
     sign: 0.0
 lfj5:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -97,6 +104,7 @@ lfj5:
     sgrightref: 0.0
     sign: 0.0
 mfj0:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -111,6 +119,7 @@ mfj0:
     sgrightref: 0.0
     sign: 0.0
 mfj3:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -125,6 +134,7 @@ mfj3:
     sgrightref: 0.0
     sign: 0.0
 mfj4:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -139,6 +149,7 @@ mfj4:
     sgrightref: 0.0
     sign: 0.0
 rfj0:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -153,6 +164,7 @@ rfj0:
     sgrightref: 0.0
     sign: 0.0
 rfj3:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -167,6 +179,7 @@ rfj3:
     sgrightref: 0.0
     sign: 0.0
 rfj4:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -181,6 +194,7 @@ rfj4:
     sgrightref: 0.0
     sign: 0.0
 thj1:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -195,6 +209,7 @@ thj1:
     sgrightref: 0.0
     sign: 0.0
 thj2:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -209,6 +224,7 @@ thj2:
     sgrightref: 0.0
     sign: 0.0
 thj3:
+  backlash_compensation: True
   pid:
     d: 18000
     deadband: 5.0
@@ -223,6 +239,7 @@ thj3:
     sgrightref: 0.0
     sign: 0.0
 thj4:
+  backlash_compensation: False
   pid:
     d: 18000.0
     deadband: 5.0
@@ -237,6 +254,7 @@ thj4:
     sgrightref: 0.0
     sign: 0.0
 thj5:
+  backlash_compensation: False
   pid:
     d: 18000.0
     deadband: 5.0
@@ -251,6 +269,7 @@ thj5:
     sgrightref: 0.0
     sign: 0.0
 wrj1:
+  backlash_compensation: False
   pid:
     d: 18000.0
     deadband: 5.0
@@ -265,6 +284,7 @@ wrj1:
     sgrightref: 0.0
     sign: 1.0
 wrj2:
+  backlash_compensation: False
   pid:
     d: 18000.0
     deadband: 5.0
