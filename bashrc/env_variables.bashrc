@@ -23,7 +23,7 @@ export ETHERCAT=1
 export ETHERCAT_PORT=eth1
 
 #set to 1 if you're using PWM control on the etherCAT hand motors by default
-export PWM_CONTROL=1
+export PWM_CONTROL=0
 
 #set to 1 if you want to have access to the internal firmware repository
 #NOTE: for Shadow employees only for the time being
@@ -33,4 +33,4 @@ export INTERNAL_FIRMWARE=0
 export ELLIPSOID=0
 
 #set to 1 if you want to publish more debug information
-export DEBUG=0
+export DEBUG=1
