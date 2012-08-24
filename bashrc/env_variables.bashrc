@@ -33,4 +33,4 @@ export INTERNAL_FIRMWARE=0
 export ELLIPSOID=0
 
 #set to 1 if you want to publish more debug information
-export DEBUG=0
+export DEBUG=1
