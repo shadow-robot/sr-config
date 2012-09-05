@@ -8,7 +8,7 @@ sh_ffj0_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_ffj3_velocity_controller:
@@ -19,7 +19,7 @@ sh_ffj3_velocity_controller:
     i: 0
     d: 0
     i_clamp: 0
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.0
     friction_deadband: 5
 sh_ffj4_velocity_controller:
@@ -30,7 +30,7 @@ sh_ffj4_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 
@@ -43,7 +43,7 @@ sh_mfj0_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_mfj3_velocity_controller:
@@ -54,7 +54,7 @@ sh_mfj3_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_mfj4_velocity_controller:
@@ -65,7 +65,7 @@ sh_mfj4_velocity_controller:
     i: -0.5
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 
@@ -79,7 +79,7 @@ sh_rfj0_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_rfj3_velocity_controller:
@@ -90,7 +90,7 @@ sh_rfj3_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_rfj4_velocity_controller:
@@ -101,7 +101,7 @@ sh_rfj4_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 
@@ -115,7 +115,7 @@ sh_lfj0_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lfj3_velocity_controller:
@@ -126,7 +126,7 @@ sh_lfj3_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lfj4_velocity_controller:
@@ -137,7 +137,7 @@ sh_lfj4_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lfj5_velocity_controller:
@@ -148,7 +148,7 @@ sh_lfj5_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 
@@ -162,7 +162,7 @@ sh_thj1_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_thj2_velocity_controller:
@@ -173,7 +173,7 @@ sh_thj2_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_thj3_velocity_controller:
@@ -184,7 +184,7 @@ sh_thj3_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_thj4_velocity_controller:
@@ -195,7 +195,7 @@ sh_thj4_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_thj5_velocity_controller:
@@ -206,7 +206,7 @@ sh_thj5_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 
@@ -220,7 +220,7 @@ sh_wrj1_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_wrj2_velocity_controller:
@@ -231,7 +231,7 @@ sh_wrj2_velocity_controller:
     i: 0
     d: 0
     i_clamp: 1
-    max_force: 1023
+    max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
 
