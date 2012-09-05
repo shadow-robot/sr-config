@@ -16,10 +16,13 @@ export REAL_ARM=0
 #set to 1 if you have a muscle arm or hand
 export MUSCLE=0
 
-#set to 1 if you want to build the compatibility interface for the etherCAT hand
+#set to 1 if you want to build the compatibility interface
+# for the etherCAT hand (makes it possible to run  your programs
+# developed for the CAN Hand on the etherCAT hand)
+# default is 1 as it just builds an other node.
 export ETHERCAT=1
 
-#set to 1 if you want to build the compatibility interface for the etherCAT hand
+#port in which the etherCAT hand is plugged in
 export ETHERCAT_PORT=eth1
 
 #set to 1 if you're using PWM control on the etherCAT hand motors by default
@@ -33,4 +36,5 @@ export INTERNAL_FIRMWARE=0
 export ELLIPSOID=0
 
 #set to 1 if you want to publish more debug information
+# on the etherCAT hand.
 export DEBUG=1
