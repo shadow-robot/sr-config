@@ -33,11 +33,10 @@ export PWM_CONTROL=0
 
 #set to 1 if you want to have access to the internal firmware repository
 #NOTE: for Shadow employees only for the time being
-export INTERNAL_FIRMWARE=0
+export INTERNAL_FIRMWARE=1
 
 #set to 1 if you have ellipsoid fingertips (ATI nano sensors)
 export ELLIPSOID=0
 
-#set to 1 if you want to publish more debug information
-# on the etherCAT hand.
-export DEBUG=1
+#set to 1 if you want to use the simulation for the manipulation stack
+export SIMULATED=1
