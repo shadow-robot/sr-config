@@ -67,6 +67,7 @@ sh_lfj4_position_controller:
     i_clamp: 0
     max_force: 0
     p: 0
+    position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_lfj5_position_controller:
   joint: LFJ5
