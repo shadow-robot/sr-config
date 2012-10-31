@@ -1,7 +1,8 @@
 #set to 1 to compile sr_hand and sr_tactiles with the gazebo interface
 export GAZEBO=1
 
-export GAZEBO_NO_X=1
+#set to 1 if you dont want gazebo to start with the GUI
+export GAZEBO_NO_X=0
 
 # set to 1 for one finger hands
 export ONE_FINGER=0
@@ -40,5 +41,3 @@ export ELLIPSOID=0
 #set to 1 if you want to publish more debug information
 # on the etherCAT hand.
 export DEBUG=1
-
-export SIMULATED=1
