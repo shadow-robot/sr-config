@@ -1,7 +1,7 @@
 <package>
   <description brief="sr_cyberglove_config">
 
-    sr_cyberglove_config contains configuration files for the cyberglove (calibration, mapping)
+    sr_cyberglove_config contains configuration files for the cyberglove (calibration, mapping) for the Shadow Robot hand
 
   </description>
   <author>Toni Oliver</author>
