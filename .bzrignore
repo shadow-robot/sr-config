@@ -1,3 +1,5 @@
 sr_ethercat_hand_config/bin
 sr_ethercat_hand_config/build
 ./auto
+sr_cyberglove_config/bin
+sr_cyberglove_config/build
