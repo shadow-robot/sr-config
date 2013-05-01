@@ -37,3 +37,8 @@ biotac_sensor_data_update_rate: {
   TACTILE_SENSOR_TYPE_BIOTAC_TAC: -1.,
   TACTILE_SENSOR_TYPE_BIOTAC_TDC: -1.
   }
+
+ubi0_sensor_data_update_rate: {
+  TACTILE_SENSOR_TYPE_UBI0_TACTILE: -1.
+  }
+
