@@ -40,3 +40,7 @@ export ELLIPSOID=0
 
 #set to 1 if you want to use the simulation for the manipulation stack
 export SIMULATED=1
+
+#set to 1 if you want the hand self collision detection and reaction nodes to be running
+export HAND_COLLISION_REACTION=1
+
