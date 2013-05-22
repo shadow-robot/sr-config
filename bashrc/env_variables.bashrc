@@ -29,7 +29,7 @@ export ETHERCAT=1
 export ETHERCAT_PORT=eth1
 
 #set to 1 if you're using PWM control on the etherCAT hand motors by default
-export PWM_CONTROL=0
+export PWM_CONTROL=1
 
 #set to 1 if you want to have access to the internal firmware repository
 #NOTE: for Shadow employees only for the time being
