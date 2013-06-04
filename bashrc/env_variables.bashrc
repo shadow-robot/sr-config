@@ -40,3 +40,6 @@ export ELLIPSOID=0
 
 #set to 1 if you want to use the simulation for the manipulation stack
 export SIMULATED=1
+
+# set to 1 for biotac hands (hands with biotac sensors)
+export BIOTAC_HAND=1
