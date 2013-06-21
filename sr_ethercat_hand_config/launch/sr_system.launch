@@ -1,6 +1,8 @@
 <launch>
 
   <group ns="rh">
+    <remap from="/diagnostics" to="/rh/diagnostics" />
+    <remap from="/diagnostics_agg" to="/rh/diagnostics_agg" />
     <include file="$(find sr_edc_launch)/sr_edc.launch" >
       <arg name="config_dir" value="" />
       <arg name="eth_port" value="eth1" />
@@ -10,6 +12,8 @@
   </group>
 
   <group ns="lh">
+    <remap from="/diagnostics" to="/lh/diagnostics" />
+    <remap from="/diagnostics_agg" to="/lh/diagnostics_agg" />
     <include file="$(find sr_edc_launch)/sr_edc.launch" >
       <arg name="config_dir" value="" />
       <arg name="eth_port" value="eth0" />
