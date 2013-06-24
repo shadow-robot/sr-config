@@ -247,7 +247,7 @@ thj4:
     i: 150
     imax: 70
     max_pwm: 1023
-    p: 6200
+    p: 8200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -262,7 +262,7 @@ thj5:
     i: 150
     imax: 70
     max_pwm: 1023
-    p: 6200
+    p: 8200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
