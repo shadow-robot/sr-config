@@ -10,10 +10,13 @@
   <arg name="set_namespace" default="0" />
   <arg name="namespace" default="" />
 
+
   <!-- <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers_stopped.yaml" />  -->
   <!-- <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers_ff_and_th.yaml" /> -->
   <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers.yaml" />
   <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/friction_compensation.yaml" />
+
+
 
   <group unless="$(arg set_namespace)">
     <!-- Parameters for the controllers if we're using torque control mode, i.e. sending force commands to
@@ -30,6 +33,9 @@
     <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_mixed_position_velocity_joint_controllers_PWM.yaml" />
     <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_velocity_controllers_PWM.yaml" />
   </group>
+
+
+
   <group if="$(arg set_namespace)">
     <group ns="$(arg namespace)">
       <!-- Parameters for the controllers if we're using torque control mode, i.e. sending force commands to
