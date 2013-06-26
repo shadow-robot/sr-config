@@ -3,12 +3,12 @@
   <include file="$(find sr_edc_launch)/sr_edc.launch" />
 
 
-  <group if="$(optenv HAND_COLLISION_REACTION 0)">
+  <!--group if="$(optenv HAND_COLLISION_REACTION 0)"-->
     <!-- Run the hand self-collision detection -->
-    <include file="$(find sr_collision_detection)/launch/tf_sr_collision_detection.launch" />
+    <!--include file="$(find sr_collision_detection)/launch/tf_sr_collision_detection.launch" /-->
     <!-- Run the collision reaction (publishes a topic to reduce the max force of the joints that are close to collision) -->
-    <node name="collision_reaction" pkg="sr_collision_detection" type="collision_reaction.py" output="screen" />
-  </group>
+    <!--node name="collision_reaction" pkg="sr_collision_detection" type="collision_reaction.py" output="screen" /-->
+  <!--/group-->
 
   <!-- Run the position controllers -->
   <include file="$(find sr_edc_controller_configuration)/sr_edc_position_controllers.launch" />
