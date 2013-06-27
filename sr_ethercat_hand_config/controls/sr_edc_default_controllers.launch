@@ -13,12 +13,13 @@
 
   <!-- <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers_stopped.yaml" />  -->
   <!-- <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers_ff_and_th.yaml" /> -->
-  <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers.yaml" />
-  <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/friction_compensation.yaml" />
-
 
 
   <group unless="$(arg set_namespace)">
+
+    <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/$(arg config_dir)motor_board_effort_controllers.yaml" />
+    <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/friction_compensation.yaml" />
+
     <!-- Parameters for the controllers if we're using torque control mode, i.e. sending force commands to
          the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
     <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_effort_controllers.yaml" />
@@ -38,6 +39,10 @@
 
   <group if="$(arg set_namespace)">
     <group ns="$(arg namespace)">
+
+      <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/$(arg config_dir)motor_board_effort_controllers.yaml" />
+      <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/friction_compensation.yaml" />
+
       <!-- Parameters for the controllers if we're using torque control mode, i.e. sending force commands to
            the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
       <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_effort_controllers.yaml" />
