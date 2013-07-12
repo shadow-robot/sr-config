@@ -4,6 +4,8 @@
 # Every joint is controlled by two muscles.
 #
 # Some joints are virtual joints that group other joints. e.g. FFJ0 is the combination of FFJ1 and FFJ2, that are actuated by the same pair of muscles
+# The first muscle of every pair is the flexor muscle, the second is the extensor muscle
+#
 #
 # Every muscle is defined by a pair [muscle_driver_ID, muscle_ID]
 # the muscle_ID is relative to a certain muscle driver, e.g. [0, 6] is the 6th muscle of the muscle driver 0.
@@ -11,37 +13,39 @@
 ##
 
 joint_to_muscle_mapping: [
-  [[0, 6], [3, 0]],         #FFJ0
+#  Flex      Extend
+#  ----------------
+  [[0, 8], [2, 0]],         #FFJ0
   [[-1, -1], [-1, -1]],     #FFJ1
   [[-1, -1], [-1, -1]],     #FFJ2
-  [[0, 0], [0, 1]],         #FFJ3
-  [[0, 0], [0, 1]],         #FFJ4
+  [[0, 0], [1, 2]],         #FFJ3
+  [[0, 1], [0, 3]],         #FFJ4
 
-  [[0, 0], [0, 1]],         #MFJ0
+  [[-1, -1], [-1, -1]],     #MFJ0
   [[-1, -1], [-1, -1]],     #MFJ1
   [[-1, -1], [-1, -1]],     #MFJ2
-  [[0, 0], [0, 1]],         #MFJ3
-  [[0, 0], [0, 1]],         #MFJ4
+  [[-1, -1], [-1, -1]],     #MFJ3
+  [[-1, -1], [-1, -1]],     #MFJ4
 
-  [[0, 0], [0, 1]],         #RFJ0
+  [[2, 7], [2, 2]],         #RFJ0
   [[-1, -1], [-1, -1]],     #RFJ1
   [[-1, -1], [-1, -1]],     #RFJ2
-  [[0, 0], [0, 1]],         #RFJ3
-  [[0, 0], [0, 1]],         #RFJ4
+  [[1, 0], [1, 9]],         #RFJ3
+  [[2, 4], [2, 3]],         #RFJ4
 
-  [[0, 0], [0, 1]],         #LFJ0
+  [[-1, -1], [-1, -1]],     #LFJ0
   [[-1, -1], [-1, -1]],     #LFJ1
   [[-1, -1], [-1, -1]],     #LFJ2
-  [[0, 0], [0, 1]],         #LFJ3
-  [[0, 0], [0, 1]],         #LFJ4
-  [[0, 0], [0, 1]],         #LFJ5
+  [[-1, -1], [-1, -1]],     #LFJ3
+  [[-1, -1], [-1, -1]],     #LFJ4
+  [[-1, -1], [-1, -1]],     #LFJ5
 
-  [[0, 0], [0, 1]],         #THJ1
-  [[0, 0], [0, 1]],         #THJ2
-  [[0, 0], [0, 1]],         #THJ3
-  [[0, 0], [0, 1]],         #THJ4
-  [[0, 0], [0, 1]],         #THJ5
+  [[-1, -1], [-1, -1]],     #THJ1
+  [[0, 6], [0, 9]],         #THJ2
+  [[1, 5], [2, 8]],         #THJ3
+  [[2, 6], [1, 3]],         #THJ4
+  [[2, 9], [1, 7]],         #THJ5
 
-  [[0, 0], [0, 1]],         #WRJ1
-  [[0, 0], [0, 1]],         #WRJ2
+  [[1, 4], [2, 5]],         #WRJ1
+  [[1, 8], [2, 1]],         #WRJ2
 ]
