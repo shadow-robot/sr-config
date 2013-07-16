@@ -2,6 +2,7 @@
   <include file="$(find sr_edc_launch)/sr_edc.launch" >
     <arg name="eth_port" value="eth1" />
     <arg name="set_description" value="1" />
+    <arg name="calibration_controllers" value="0" />
     <arg name="hand_description" value="$(find sr_description)/robots/shadowhand_muscle_biotac.urdf.xacro" />
   </include>
 </launch>
