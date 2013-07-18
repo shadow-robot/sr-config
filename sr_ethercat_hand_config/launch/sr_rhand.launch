@@ -3,6 +3,6 @@
     <arg name="eth_port" value="eth1" />
     <arg name="set_description" value="1" />
     <arg name="calibration_controllers" value="0" />
-    <arg name="hand_description" value="$(find sr_description)/robots/shadowhand_muscle_biotac.urdf.xacro" />
+    <arg name="hand_description" value="$(find sr_description)/robots/sr_three_finger_edc_muscle_biotac.urdf.xacro" />
   </include>
 </launch>
