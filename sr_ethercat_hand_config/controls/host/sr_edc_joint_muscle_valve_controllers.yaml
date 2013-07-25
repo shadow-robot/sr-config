@@ -1,77 +1,77 @@
 # First Finger (Index finger)
-sh_ffj0_effort_controller:
+sh_ffj0_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: FFJ0
-sh_ffj3_effort_controller:
+sh_ffj3_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: FFJ3
-sh_ffj4_effort_controller:
+sh_ffj4_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: FFJ4
 
 
 # Middle Finger
-sh_mfj0_effort_controller:
+sh_mfj0_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: MFJ0
-sh_mfj3_effort_controller:
+sh_mfj3_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: MFJ3
-sh_mfj4_effort_controller:
+sh_mfj4_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: MFJ4
 
 
 # Ring Finger
-sh_rfj0_effort_controller:
+sh_rfj0_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: RFJ0
-sh_rfj3_effort_controller:
+sh_rfj3_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: RFJ3
-sh_rfj4_effort_controller:
+sh_rfj4_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: RFJ4
 
 
 # Little Finger
-sh_lfj0_effort_controller:
+sh_lfj0_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: LFJ0
-sh_lfj3_effort_controller:
+sh_lfj3_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: LFJ3
-sh_lfj4_effort_controller:
+sh_lfj4_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: LFJ4
-sh_lfj5_effort_controller:
+sh_lfj5_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: LFJ5
 
 
 # Thumb
-sh_thj1_effort_controller:
+sh_thj1_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: THJ1
-sh_thj2_effort_controller:
+sh_thj2_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: THJ2
-sh_thj3_effort_controller:
+sh_thj3_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: THJ3
-sh_thj4_effort_controller:
+sh_thj4_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: THJ4
-sh_thj5_effort_controller:
+sh_thj5_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: THJ5
 
 
 # Wrist
-sh_wrj1_effort_controller:
+sh_wrj1_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: WRJ1
-sh_wrj2_effort_controller:
+sh_wrj2_muscle_valve_controller:
   type: sr_mechanism_controllers/SrhJointMuscleValveController
   joint: WRJ2
 
