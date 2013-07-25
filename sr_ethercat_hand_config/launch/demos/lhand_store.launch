@@ -1,0 +1,4 @@
+<launch>
+  <node ns="lh" name="lhand_store" pkg="sr_ethercat_hand_config" type="demo_ls.py" output="screen"/>
+</launch>
+

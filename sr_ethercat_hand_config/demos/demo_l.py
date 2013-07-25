@@ -91,14 +91,14 @@ class FancyDemo(object):
 		          joint(joint_name = "THJ4", joint_target = 70),
 		          joint(joint_name = "THJ5", joint_target = 0) ]
     # flex thumb step 2
-    flex_th_2 = [ joint(joint_name = "THJ1", joint_target = 70),
-		          joint(joint_name = "THJ2", joint_target = 26),
-		          joint(joint_name = "THJ3", joint_target = 0),
-		          joint(joint_name = "THJ4", joint_target = 70),
+    flex_th_2 = [ joint(joint_name = "THJ1", joint_target = 42),
+		          joint(joint_name = "THJ2", joint_target = 32),
+		          joint(joint_name = "THJ3", joint_target = 6),
+		          joint(joint_name = "THJ4", joint_target = 68),
 		          joint(joint_name = "THJ5", joint_target = 50) ]
     # extend thumb step 1
-    ext_th_1 = [ joint(joint_name = "THJ1", joint_target = 70),
-	             joint(joint_name = "THJ2", joint_target = 15),
+    ext_th_1 = [ joint(joint_name = "THJ1", joint_target = 20),
+	             joint(joint_name = "THJ2", joint_target = 8),
 	             joint(joint_name = "THJ3", joint_target = 0),
 	             joint(joint_name = "THJ4", joint_target = 70),
 	             joint(joint_name = "THJ5", joint_target = 0) ]
@@ -114,12 +114,15 @@ class FancyDemo(object):
 		        joint(joint_name = "THJ3", joint_target = 0),
 		        joint(joint_name = "THJ4", joint_target = 0),
 		        joint(joint_name = "THJ5", joint_target = 0) ]
+
+    # Pre O.K. with first finger
+    pre_ff_ok = [ joint(joint_name = "THJ4", joint_target = 50) ]
     # O.K. with first finger
     ff_ok = [ joint(joint_name = "FFJ0", joint_target = 93),
 	          joint(joint_name = "FFJ3", joint_target = 37),
 	          joint(joint_name = "FFJ4", joint_target = -0.2),
 	          joint(joint_name = "MFJ0", joint_target = 42),
-    	      joint(joint_name = "MFJ3", joint_target = 33),
+    	          joint(joint_name = "MFJ3", joint_target = 33),
 	          joint(joint_name = "MFJ4", joint_target = -3),
 	          joint(joint_name = "RFJ0", joint_target = 50),
 	          joint(joint_name = "RFJ3", joint_target = 18),
@@ -205,7 +208,7 @@ class FancyDemo(object):
 	          joint(joint_name = "LFJ4", joint_target = -6),
 	          joint(joint_name = "LFJ5", joint_target = 7),	      
 	          joint(joint_name = "THJ1", joint_target = 44),
-	          joint(joint_name = "THJ2", joint_target = 8),
+	          joint(joint_name = "THJ2", joint_target = 9),
 	          joint(joint_name = "THJ3", joint_target = 15),
 	          joint(joint_name = "THJ4", joint_target = 70),
 	          joint(joint_name = "THJ5", joint_target = 27) ]
@@ -241,7 +244,7 @@ class FancyDemo(object):
 	          joint(joint_name = "LFJ0", joint_target = 100),
 	          joint(joint_name = "LFJ3", joint_target = 9),
 	          joint(joint_name = "LFJ4", joint_target = -7.6),
-	          joint(joint_name = "LFJ5", joint_target = 37),	      
+	          joint(joint_name = "LFJ5", joint_target = 42),	      
 	          joint(joint_name = "THJ1", joint_target = 40),
 	          joint(joint_name = "THJ2", joint_target = 10),
 	          joint(joint_name = "THJ3", joint_target = 10),
@@ -354,6 +357,12 @@ class FancyDemo(object):
 	            joint(joint_name = "LFJ5", joint_target = 0),
 	            joint(joint_name = "WRJ1", joint_target = 0),
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
+    # store step 3
+    store_3 = [ joint(joint_name = "THJ1", joint_target = 0),
+	           joint(joint_name = "THJ2", joint_target = 0),
+		   joint(joint_name = "THJ3", joint_target = 0),
+	           joint(joint_name = "THJ4", joint_target = 65),
+	           joint(joint_name = "THJ5", joint_target = 0) ]
     # business card pre-zero position
     bc_pre_zero = [ joint(joint_name = "FFJ0", joint_target = 13.6),
 	                joint(joint_name = "FFJ3", joint_target = 7),
@@ -461,7 +470,7 @@ class FancyDemo(object):
         self.hand_publishers = self.create_hand_publishers()
 
         #send the start position to the hand
-        self.hand_publish(self.start_pos_hand)
+        #self.hand_publish(self.start_pos_hand)
 
         #wait for the node to be initialized and then go to the starting position
         time.sleep(1)
@@ -549,6 +558,8 @@ class FancyDemo(object):
         rospy.loginfo("FF touched, running basic demo ")
 
         #send the start position to the hand
+	self.hand_publish( self.store_3 )
+	time.sleep(1)
         self.hand_publish( self.start_pos_hand )
 	time.sleep(1)
 	self.hand_publish( self.flex_ff )
@@ -587,6 +598,8 @@ class FancyDemo(object):
 	time.sleep(1)
 	self.hand_publish( self.zero_wr )
 	time.sleep(1)
+	self.hand_publish( self.pre_ff_ok )
+	time.sleep(0.3)
 	self.hand_publish( self.ff_ok )
 	time.sleep(1)
 	self.hand_publish( self.ff2mf_ok )
@@ -651,6 +664,8 @@ class FancyDemo(object):
 	time.sleep(0.2)
 	self.hand_publish( self.ext_lf )
 	time.sleep(1.0)
+	self.hand_publish( self.pre_ff_ok )
+	time.sleep(0.3)
 	self.hand_publish( self.ff_ok )
 	time.sleep(1)
 	self.hand_publish( self.ne_wr )
@@ -871,7 +886,7 @@ def main():
     fancy_demo.ff_pressed(0)
 
     # subscribe until interrupted
-    rospy.spin()
+    # rospy.spin()
 
 
 if __name__ == '__main__':

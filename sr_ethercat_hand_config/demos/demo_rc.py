@@ -97,8 +97,8 @@ class FancyDemo(object):
 		          joint(joint_name = "THJ4", joint_target = 70),
 		          joint(joint_name = "THJ5", joint_target = 50) ]
     # extend thumb step 1
-    ext_th_1 = [ joint(joint_name = "THJ1", joint_target = 20),
-	             joint(joint_name = "THJ2", joint_target = 8),
+    ext_th_1 = [ joint(joint_name = "THJ1", joint_target = 70),
+	             joint(joint_name = "THJ2", joint_target = 15),
 	             joint(joint_name = "THJ3", joint_target = 0),
 	             joint(joint_name = "THJ4", joint_target = 70),
 	             joint(joint_name = "THJ5", joint_target = 0) ]
@@ -359,10 +359,10 @@ class FancyDemo(object):
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
     # store step 3
     store_3 = [ joint(joint_name = "THJ1", joint_target = 0),
-	           joint(joint_name = "THJ2", joint_target = 0),
-		   joint(joint_name = "THJ3", joint_target = 0),
-	           joint(joint_name = "THJ4", joint_target = 65),
-	           joint(joint_name = "THJ5", joint_target = 0) ]
+	            joint(joint_name = "THJ2", joint_target = 0),
+                    joint(joint_name = "THJ3", joint_target = 0),
+	            joint(joint_name = "THJ4", joint_target = 65),
+	            joint(joint_name = "THJ5", joint_target = 0)]
     # business card pre-zero position
     bc_pre_zero = [ joint(joint_name = "FFJ0", joint_target = 13.6),
 	                joint(joint_name = "FFJ3", joint_target = 7),
@@ -558,8 +558,6 @@ class FancyDemo(object):
         rospy.loginfo("FF touched, running basic demo ")
 
         #send the start position to the hand
-	self.hand_publish( self.store_3 )
-	time.sleep(1)
         self.hand_publish( self.start_pos_hand )
 	time.sleep(1)
 	self.hand_publish( self.flex_ff )
@@ -712,6 +710,8 @@ class FancyDemo(object):
         time.sleep(.2)
 
         #send the start position to the hand
+	self.hand_publish( self.store_3 )
+	time.sleep(1)
         self.hand_publish( self.start_pos_hand )
 	time.sleep(1)
 	self.hand_publish( self.bc_pre_zero )
@@ -883,7 +883,7 @@ def main():
 
     fancy_demo = FancyDemo()
 
-    fancy_demo.ff_pressed(0)
+    fancy_demo.mf_pressed(0)
 
     # subscribe until interrupted
     # rospy.spin()
