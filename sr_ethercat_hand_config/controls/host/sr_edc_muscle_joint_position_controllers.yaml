@@ -123,8 +123,8 @@ sh_rfj0_muscle_position_controller:
     friction_deadband: 2000
     i: 0
     i_clamp: 1
-    max_force: 0.0
-    p: 2
+    max_force: 200.0
+    p: 2000
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhMuscleJointPositionController
 sh_rfj3_muscle_position_controller:
@@ -193,7 +193,7 @@ sh_thj4_muscle_position_controller:
     d: 100
     deadband: 0.0
     friction_deadband: 2000000.0
-    i: 1000
+    i: 0
     i_clamp: 3000
     max_force: 0.0
     p: 4000
