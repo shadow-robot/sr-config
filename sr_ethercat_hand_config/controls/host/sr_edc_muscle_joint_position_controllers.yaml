@@ -7,7 +7,7 @@ sh_ffj0_muscle_position_controller:
     i: 0.0
     i_clamp: 220.0
     max_force: 2000.0
-    p: 800.0
+    p: 400
     position_deadband: 0.02
   type: sr_mechanism_controllers/SrhMuscleJointPositionController
 sh_ffj3_muscle_position_controller:
@@ -19,7 +19,7 @@ sh_ffj3_muscle_position_controller:
     i: 0.0
     i_clamp: 220.0
     max_force: 2000.0
-    p: 800.0
+    p: 400
     position_deadband: 0.02
   type: sr_mechanism_controllers/SrhMuscleJointPositionController
 sh_ffj4_muscle_position_controller:
@@ -31,7 +31,7 @@ sh_ffj4_muscle_position_controller:
     i: 0.0
     i_clamp: 220.0
     max_force: 2000.0
-    p: 800.0
+    p: 400
     position_deadband: 0.02
   type: sr_mechanism_controllers/SrhMuscleJointPositionController
 sh_lfj0_muscle_position_controller:
