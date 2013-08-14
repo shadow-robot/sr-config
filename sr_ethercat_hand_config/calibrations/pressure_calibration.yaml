@@ -1,9 +1,11 @@
 {'sr_pressure_calibrations': [
 # Each joint has 2 pressure sensors 0 and 1. So we have a row per joint/sensor combination.
-# ["<joint_name>_<sensor>", [[<raw sensor value>, <calibrated bar pressure>], [<raw sensor value>, <calibrated bar pressure>]]], 
+# ["<joint_name>_<sensor>", [[<raw sensor value>, <calibrated millibar pressure>], [<raw sensor value>, <calibrated millibar pressure>]]], 
 # e.g.
 #["FFJ1_0", [[0.0, 0.0], [1.0, 1.0]]], 
 #["FFJ1_1", [[0.0, 0.0], [1.0, 1.0]]], 
+#
+# Note the calibrated value should be in millibars as the output in the message is an integer.
 #
 ["FFJ0_0", [[0.0, 0.0], [1.0, 1.0]]], 
 ["FFJ0_1", [[0.0, 0.0], [1.0, 1.0]]], 
