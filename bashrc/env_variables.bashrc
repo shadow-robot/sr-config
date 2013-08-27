@@ -7,6 +7,9 @@ export GAZEBO_NO_X=0
 # set to 1 for one finger hands
 export ONE_FINGER=0
 
+# set to 1 for three fingers hands
+export THREE_FINGER=0
+
 # set to 1 for left hands
 export LEFT_HAND=0
 
@@ -42,5 +45,8 @@ export ELLIPSOID=0
 export SIMULATED=1
 
 #set to 1 if you want the hand self collision detection and reaction nodes to be running
-export HAND_COLLISION_REACTION=1
+export HAND_COLLISION_REACTION=0
+
+# set to 1 for biotac hands (hands with biotac sensors)
+export BIOTAC_HAND=0
 
