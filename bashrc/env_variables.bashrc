@@ -7,6 +7,9 @@ export GAZEBO_NO_X=0
 # set to 1 for one finger hands
 export ONE_FINGER=0
 
+# set to 1 for three fingers hands
+export THREE_FINGER=0
+
 # set to 1 for left hands
 export LEFT_HAND=0
 
@@ -29,7 +32,7 @@ export ETHERCAT=1
 export ETHERCAT_PORT=eth1
 
 #set to 1 if you're using PWM control on the etherCAT hand motors by default
-export PWM_CONTROL=0
+export PWM_CONTROL=1
 
 #set to 1 if you want to have access to the internal firmware repository
 #NOTE: for Shadow employees only for the time being
@@ -40,3 +43,10 @@ export ELLIPSOID=0
 
 #set to 1 if you want to use the simulation for the manipulation stack
 export SIMULATED=1
+
+#set to 1 if you want the hand self collision detection and reaction nodes to be running
+export HAND_COLLISION_REACTION=0
+
+# set to 1 for biotac hands (hands with biotac sensors)
+export BIOTAC_HAND=0
+
