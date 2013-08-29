@@ -8,7 +8,7 @@ export GAZEBO_NO_X=0
 export ONE_FINGER=0
 
 # set to 1 for three fingers hands
-export THREE_FINGER=0
+export THREE_FINGER=1
 
 # set to 1 for left hands
 export LEFT_HAND=0
