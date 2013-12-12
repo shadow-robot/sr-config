@@ -1,0 +1,5 @@
+muscle_data_update_rate: {
+  muscle_data_pressure: -1.,
+  muscle_data_can_stats: 0.1,
+  muscle_data_slow_misc: -2.
+}
