@@ -6,7 +6,7 @@
       <arg name="config_dir" value="" />
       <arg name="eth_port" value="eth1" />
       <arg name="set_description" value="1" />
-      <arg name="hand_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
+      <arg name="hand_description" value="$(find sr_description)/robots/shadowhand_motor_biotac.urdf.xacro" />
       <arg name="tf_prefix" value="rh" />
     </include>
   </group>

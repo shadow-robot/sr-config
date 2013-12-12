@@ -6,7 +6,7 @@ ffj0:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -51,7 +51,7 @@ lfj0:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -111,7 +111,7 @@ mfj0:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -156,7 +156,7 @@ rfj0:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
