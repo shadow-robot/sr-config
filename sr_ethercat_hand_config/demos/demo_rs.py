@@ -26,7 +26,7 @@ from sensor_msgs.msg import *
 from std_msgs.msg import Float64
 
 #the threshold for pdc above which the tactile is considered "pressed"
-PDC_THRESHOLD = 2000
+PDC_THRESHOLD = 3000
 #the threshold for the PSTs above which the tactile is considered "pressed"
 PST_THRESHOLD = 420
 
@@ -319,7 +319,7 @@ class FancyDemo(object):
     store_1 = [ joint(joint_name = "THJ1", joint_target = 0),
 	            joint(joint_name = "THJ2", joint_target = 0),
                 joint(joint_name = "THJ3", joint_target = 0),
-	            joint(joint_name = "THJ4", joint_target = 65),
+	            joint(joint_name = "THJ4", joint_target = 30),
 	            joint(joint_name = "THJ5", joint_target = 0),
 	            joint(joint_name = "FFJ0", joint_target = 180),
 	            joint(joint_name = "FFJ3", joint_target = 90),
@@ -337,11 +337,11 @@ class FancyDemo(object):
 	            joint(joint_name = "WRJ1", joint_target = 0),
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
     # store step 2
-    store_2 = [ joint(joint_name = "THJ1", joint_target = 50),
-	            joint(joint_name = "THJ2", joint_target = 13),
-	            joint(joint_name = "THJ3", joint_target = 11),
-	            joint(joint_name = "THJ4", joint_target = 65),
-	            joint(joint_name = "THJ5", joint_target = 27),
+    store_2 = [ joint(joint_name = "THJ1", joint_target = 20),
+	            joint(joint_name = "THJ2", joint_target = 36),
+	            joint(joint_name = "THJ3", joint_target = 0),
+	            joint(joint_name = "THJ4", joint_target = 30),
+	            joint(joint_name = "THJ5", joint_target = -3),
 	            joint(joint_name = "FFJ0", joint_target = 180),
 	            joint(joint_name = "FFJ3", joint_target = 90),
 	            joint(joint_name = "FFJ4", joint_target = 0),
@@ -471,8 +471,8 @@ class FancyDemo(object):
         rospy.loginfo("OK, ready for the demo")
 
         # We subscribe to the data being published by the biotac sensors.
-        #self.sub_biotacs = rospy.Subscriber("/tactiles", BiotacAll, self.callback_biotacs, queue_size=1)
-        #self.sub_psts    = rospy.Subscriber("/tactile", ShadowPST, self.callback_psts, queue_size=1)
+        self.sub_biotacs = rospy.Subscriber("/rh/tactile", BiotacAll, self.callback_biotacs, queue_size=1)
+        #self.sub_psts   = rospy.Subscriber("/rh/tactiles", ShadowPST, self.callback_psts, queue_size=1)
 
     def create_hand_publishers(self):
         """
