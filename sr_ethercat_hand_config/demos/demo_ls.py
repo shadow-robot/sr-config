@@ -315,8 +315,50 @@ class FancyDemo(object):
         		      joint(joint_name = "LFJ3", joint_target = 41),
         		      joint(joint_name = "LFJ4", joint_target = 0),
 		              joint(joint_name = "LFJ5", joint_target = 0) ]
-    # store step 1
-    store_1 = [ joint(joint_name = "THJ1", joint_target = 0),
+    # store step 1 PST
+    store_1_PST = [ joint(joint_name = "THJ1", joint_target = 0),
+	            joint(joint_name = "THJ2", joint_target = 0),
+                joint(joint_name = "THJ3", joint_target = 0),
+	            joint(joint_name = "THJ4", joint_target = 60),
+	            joint(joint_name = "THJ5", joint_target = 0),
+	            joint(joint_name = "FFJ0", joint_target = 180),
+	            joint(joint_name = "FFJ3", joint_target = 90),
+	            joint(joint_name = "FFJ4", joint_target = 0),
+	            joint(joint_name = "MFJ0", joint_target = 180),
+	            joint(joint_name = "MFJ3", joint_target = 90),
+	            joint(joint_name = "MFJ4", joint_target = 0),
+	            joint(joint_name = "RFJ0", joint_target = 180),
+	            joint(joint_name = "RFJ3", joint_target = 90),
+	            joint(joint_name = "RFJ4", joint_target = 0),
+	            joint(joint_name = "LFJ0", joint_target = 180),
+	            joint(joint_name = "LFJ3", joint_target = 90),
+	            joint(joint_name = "LFJ4", joint_target = 0),
+	            joint(joint_name = "LFJ5", joint_target = 0),
+	            joint(joint_name = "WRJ1", joint_target = 0),
+	            joint(joint_name = "WRJ2", joint_target = 0) ]
+    # store step 2 PST
+    store_2_PST = [ joint(joint_name = "THJ1", joint_target = 50),
+	            joint(joint_name = "THJ2", joint_target = 12),
+	            joint(joint_name = "THJ3", joint_target = 0),
+	            joint(joint_name = "THJ4", joint_target = 60),
+	            joint(joint_name = "THJ5", joint_target = 27),
+	            joint(joint_name = "FFJ0", joint_target = 180),
+	            joint(joint_name = "FFJ3", joint_target = 90),
+	            joint(joint_name = "FFJ4", joint_target = 0),
+	            joint(joint_name = "MFJ0", joint_target = 180),
+	            joint(joint_name = "MFJ3", joint_target = 90),
+	            joint(joint_name = "MFJ4", joint_target = 0),
+	            joint(joint_name = "RFJ0", joint_target = 180),
+	            joint(joint_name = "RFJ3", joint_target = 90),
+	            joint(joint_name = "RFJ4", joint_target = 0),
+	            joint(joint_name = "LFJ0", joint_target = 180),
+	            joint(joint_name = "LFJ3", joint_target = 90),
+	            joint(joint_name = "LFJ4", joint_target = 0),
+	            joint(joint_name = "LFJ5", joint_target = 0),
+	            joint(joint_name = "WRJ1", joint_target = 0),
+	            joint(joint_name = "WRJ2", joint_target = 0) ]
+    # store step 1 BioTac
+    store_1_BioTac = [ joint(joint_name = "THJ1", joint_target = 0),
 	            joint(joint_name = "THJ2", joint_target = 0),
                 joint(joint_name = "THJ3", joint_target = 0),
 	            joint(joint_name = "THJ4", joint_target = 30),
@@ -336,8 +378,8 @@ class FancyDemo(object):
 	            joint(joint_name = "LFJ5", joint_target = 0),
 	            joint(joint_name = "WRJ1", joint_target = 0),
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
-    # store step 2
-    store_2 = [ joint(joint_name = "THJ1", joint_target = 20),
+    # store step 2 BioTac
+    store_2_BioTac = [ joint(joint_name = "THJ1", joint_target = 20),
 	            joint(joint_name = "THJ2", joint_target = 36),
 	            joint(joint_name = "THJ3", joint_target = 0),
 	            joint(joint_name = "THJ4", joint_target = 30),
@@ -471,8 +513,8 @@ class FancyDemo(object):
         rospy.loginfo("OK, ready for the demo")
 
         # We subscribe to the data being published by the biotac sensors.
-        self.sub_biotacs = rospy.Subscriber("/lh/tactile", BiotacAll, self.callback_biotacs, queue_size=1)
-        #self.sub_psts   = rospy.Subscriber("/lh/tactiles", ShadowPST, self.callback_psts, queue_size=1)
+        # self.sub_biotacs = rospy.Subscriber("/lh/tactile", BiotacAll, self.callback_biotacs, queue_size=1)
+        # self.sub_psts   = rospy.Subscriber("/lh/tactile", ShadowPST, self.callback_psts, queue_size=1)
 
     def create_hand_publishers(self):
         """
@@ -832,9 +874,11 @@ class FancyDemo(object):
 	time.sleep(0.2)
 	self.hand_publish( self.flex_ff )
 	time.sleep(1)
-	self.hand_publish( self.store_1 )
+	#self.hand_publish( self.store_1_PST )
+    self.hand_publish( self.store_1_BioTac )
 	time.sleep(1)
-	self.hand_publish( self.store_2 )
+	#self.hand_publish( self.store_2_PST )
+    self.hand_publish( self.store_2_BioTac )
 	time.sleep(1)
  
         #wait before next possible action
