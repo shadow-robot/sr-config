@@ -2,13 +2,16 @@
   <name>sr_cyberglove_config</name>
   <version>1.2.0</version>
   <description>sr_cyberglove_config contains configuration files for the cyberglove (calibration, mapping) for the Shadow Robot hand</description>
-  <maintainer email="">Toni Oliver</maintainer>
+  <maintainer email="software@shadowrobot.com">Shadow Robot's software team</maintainer>
 
-  <license>BSD</license>
+  <license>GPL</license>
 
   <url type="website">http://ros.org/wiki/sr_cyberglove_config</url>
-  <!-- <url type="bugtracker"></url> -->
+  <url type="website">http://www.shadowrobot.com/products/dexterous-hand/</url>
+  <url type="repository">https://github.com/shadow-robot/sr-config</url>
+  <url type="bugtracker">https://github.com/shadow-robot/sr-config/issues</url>
 
+  <author>Ugo Cupcic</author>
   <author>Toni Oliver</author>
 
   <!-- Dependencies which this package needs to build itself. -->
