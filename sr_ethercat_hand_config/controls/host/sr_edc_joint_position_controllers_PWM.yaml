@@ -7,13 +7,13 @@ sh_ffj0_position_controller:
     i: 0.0
     i_clamp: 1500.0
     max_force: 600.0
-    p: 4200.0
+    p: 5200.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_ffj3_position_controller:
   joint: FFJ3
   pid:
-    d: 280.0
+    d: 300.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
@@ -31,7 +31,7 @@ sh_ffj4_position_controller:
     i: 0.0
     i_clamp: 300.0
     max_force: 600.0
-    p: -3700.0
+    p: -4000.0
     position_deadband: 0.005
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_lfj0_position_controller:
@@ -42,7 +42,7 @@ sh_lfj0_position_controller:
     i: 0.0
     i_clamp: 1500.0
     max_force: 600.0
-    p: -3200.0
+    p: -4500.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_lfj3_position_controller:
@@ -66,13 +66,13 @@ sh_lfj4_position_controller:
     i: 0.0
     i_clamp: 300.0
     max_force: 600.0
-    p: 4000.0
+    p: 5000.0
     position_deadband: 0.005
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_lfj5_position_controller:
   joint: LFJ5
   pid:
-    d: -200.0
+    d: -250.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
@@ -84,12 +84,12 @@ sh_lfj5_position_controller:
 sh_mfj0_position_controller:
   joint: MFJ0
   pid:
-    d: 0.0
+    d: 30.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 1500.0
     max_force: 600.0
-    p: 4700.0
+    p: 4400.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_mfj3_position_controller:
@@ -107,7 +107,7 @@ sh_mfj3_position_controller:
 sh_mfj4_position_controller:
   joint: MFJ4
   pid:
-    d: -150.0
+    d: -175.0
     deadband: 0
     friction_deadband: 2000.0
     i: 0.0
@@ -119,7 +119,7 @@ sh_mfj4_position_controller:
 sh_rfj0_position_controller:
   joint: RFJ0
   pid:
-    d: 0.0
+    d: 50.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 1500.0
@@ -136,7 +136,7 @@ sh_rfj3_position_controller:
     i: -180.0
     i_clamp: 220.0
     max_force: 600.0
-    p: -8400.0
+    p: -5700.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rfj4_position_controller:
@@ -154,37 +154,37 @@ sh_rfj4_position_controller:
 sh_thj1_position_controller:
   joint: THJ1
   pid:
-    d: -170.0
+    d: -160.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 220.0
     max_force: 600.0
-    p: -4000.0
+    p: -3900.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_thj2_position_controller:
   joint: THJ2
   pid:
-    d: 260.0
+    d: 300.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 220.0
     max_force: 600.0
-    p: 7000.0
+    p: 6500.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_thj3_position_controller:
   joint: THJ3
   pid:
-    d: 250.0
+    d: 320.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 400.0
     i_clamp: 220.0
     max_force: 600.0
-    p: 5500.0
+    p: 6500.0
     position_deadband: 0.005
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_thj4_position_controller:
@@ -196,7 +196,7 @@ sh_thj4_position_controller:
     i: 300.0
     i_clamp: 220.0
     max_force: 700.0
-    p: 5000.0
+    p: 5300.0
     position_deadband: 0.005
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_thj5_position_controller:
