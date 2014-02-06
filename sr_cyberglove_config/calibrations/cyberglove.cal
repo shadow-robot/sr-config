@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <Cyberglove_calibration>
 <Joint name="G_PinkieRingAb">
-<calib raw_value="0.208661422133" calibrated_value="50"/>
-<calib raw_value="0.515748023987" calibrated_value="0"/>
+<calib raw_value="0.736755555555" calibrated_value="50"/>
+<calib raw_value="0.999999999999" calibrated_value="0"/>
 </Joint>
 <Joint name="G_IndexDIJ">
 <calib raw_value="0.185039371252" calibrated_value="0"/>
