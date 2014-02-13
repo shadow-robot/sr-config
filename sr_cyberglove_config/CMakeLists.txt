@@ -7,12 +7,7 @@ find_package(catkin REQUIRED )
 
 
 # catkin_package parameters: http://ros.org/doc/groovy/api/catkin/html/dev_guide/generated_cmake_api.html#catkin-package
-catkin_package(
-    DEPENDS # TODO add dependencies
-    CATKIN_DEPENDS # TODO
-    INCLUDE_DIRS # TODO include
-    LIBRARIES # TODO
-)
+catkin_package()
 
 #############
 ## Install ##
