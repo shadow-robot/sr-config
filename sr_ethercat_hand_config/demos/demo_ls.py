@@ -26,7 +26,7 @@ from sensor_msgs.msg import *
 from std_msgs.msg import Float64
 
 #the threshold for pdc above which the tactile is considered "pressed"
-PDC_THRESHOLD = 2000
+PDC_THRESHOLD = 3000
 #the threshold for the PSTs above which the tactile is considered "pressed"
 PST_THRESHOLD = 420
 
@@ -91,21 +91,21 @@ class FancyDemo(object):
 		          joint(joint_name = "THJ4", joint_target = 70),
 		          joint(joint_name = "THJ5", joint_target = 0) ]
     # flex thumb step 2
-    flex_th_2 = [ joint(joint_name = "THJ1", joint_target = 42),
-		          joint(joint_name = "THJ2", joint_target = 32),
-		          joint(joint_name = "THJ3", joint_target = 6),
-		          joint(joint_name = "THJ4", joint_target = 68),
-		          joint(joint_name = "THJ5", joint_target = 50) ]
+    flex_th_2 = [ joint(joint_name = "THJ1", joint_target = 20),
+		          joint(joint_name = "THJ2", joint_target = 40),
+		          joint(joint_name = "THJ3", joint_target = 10),
+		          joint(joint_name = "THJ4", joint_target = 70),
+		          joint(joint_name = "THJ5", joint_target = 60) ]
     # extend thumb step 1
-    ext_th_1 = [ joint(joint_name = "THJ1", joint_target = 70),
-	             joint(joint_name = "THJ2", joint_target = 15),
+    ext_th_1 = [ joint(joint_name = "THJ1", joint_target = 20),
+	             joint(joint_name = "THJ2", joint_target = 8),
 	             joint(joint_name = "THJ3", joint_target = 0),
 	             joint(joint_name = "THJ4", joint_target = 70),
 	             joint(joint_name = "THJ5", joint_target = 0) ]
     # extend thumb step 2
     ext_th_2 = [ joint(joint_name = "THJ1", joint_target = 0),
 	             joint(joint_name = "THJ2", joint_target = 0),
-	             joint(joint_name = "THJ3", joint_target = -12),
+	             joint(joint_name = "THJ3", joint_target = 0),
 	             joint(joint_name = "THJ4", joint_target = 0),
 	             joint(joint_name = "THJ5", joint_target = -50) ]
     # zero thumb
@@ -118,7 +118,7 @@ class FancyDemo(object):
     # Pre O.K. with first finger
     pre_ff_ok = [ joint(joint_name = "THJ4", joint_target = 50) ]
     # O.K. with first finger
-    ff_ok = [ joint(joint_name = "FFJ0", joint_target = 93),
+    ff_ok = [ joint(joint_name = "FFJ0", joint_target = 94),
 	          joint(joint_name = "FFJ3", joint_target = 37),
 	          joint(joint_name = "FFJ4", joint_target = -0.2),
 	          joint(joint_name = "MFJ0", joint_target = 42),
@@ -131,9 +131,9 @@ class FancyDemo(object):
 	          joint(joint_name = "LFJ3", joint_target = 0),
 	          joint(joint_name = "LFJ4", joint_target = -6),
 	          joint(joint_name = "LFJ5", joint_target = 7),	      
-	          joint(joint_name = "THJ1", joint_target = 40),
-	          joint(joint_name = "THJ2", joint_target = 12),
-	          joint(joint_name = "THJ3", joint_target = -10),
+	          joint(joint_name = "THJ1", joint_target = 20),
+	          joint(joint_name = "THJ2", joint_target = 20),
+	          joint(joint_name = "THJ3", joint_target = 0),
 	          joint(joint_name = "THJ4", joint_target = 50),
 	          joint(joint_name = "THJ5", joint_target = 11) ]
     # O.K. transition from first finger to middle finger
@@ -159,21 +159,21 @@ class FancyDemo(object):
     mf_ok = [ joint(joint_name = "FFJ0", joint_target = 13.6),
 	          joint(joint_name = "FFJ3", joint_target = 7),
 	          joint(joint_name = "FFJ4", joint_target = -0.4),
-	          joint(joint_name = "MFJ0", joint_target = 89),
-	          joint(joint_name = "MFJ3", joint_target = 45),
+	          joint(joint_name = "MFJ0", joint_target = 87),
+	          joint(joint_name = "MFJ3", joint_target = 49),
 	          joint(joint_name = "MFJ4", joint_target = 8),
 	          joint(joint_name = "RFJ0", joint_target = 50),
-	          joint(joint_name = "RFJ3", joint_target = 18),
-	          joint(joint_name = "RFJ4", joint_target = 0.5),
+	          joint(joint_name = "RFJ3", joint_target = 19),
+	          joint(joint_name = "RFJ4", joint_target = -10),
 	          joint(joint_name = "LFJ0", joint_target = 30),
 	          joint(joint_name = "LFJ3", joint_target = 0),
 	          joint(joint_name = "LFJ4", joint_target = -6),
 	          joint(joint_name = "LFJ5", joint_target = 7),	      
-	          joint(joint_name = "THJ1", joint_target = 45),
-	          joint(joint_name = "THJ2", joint_target = 7),
-	          joint(joint_name = "THJ3", joint_target = -10),
+	          joint(joint_name = "THJ1", joint_target = 20),
+	          joint(joint_name = "THJ2", joint_target = 16),
+	          joint(joint_name = "THJ3", joint_target = 6),
 	          joint(joint_name = "THJ4", joint_target = 66),
-	          joint(joint_name = "THJ5", joint_target = 23) ]
+	          joint(joint_name = "THJ5", joint_target = 21) ]
     # O.K. transition from middle finger to ring finger
     mf2rf_ok = [ joint(joint_name = "FFJ0", joint_target = 13.6),
                  joint(joint_name = "FFJ3", joint_target = 7),
@@ -183,14 +183,14 @@ class FancyDemo(object):
        	         joint(joint_name = "MFJ4", joint_target = -1),
 	             joint(joint_name = "RFJ0", joint_target = 50),
 	             joint(joint_name = "RFJ3", joint_target = 18),
-                 joint(joint_name = "RFJ4", joint_target = 0.5),
+                 joint(joint_name = "RFJ4", joint_target = -14),
                  joint(joint_name = "LFJ0", joint_target = 30),
 	             joint(joint_name = "LFJ3", joint_target = 0),
 	             joint(joint_name = "LFJ4", joint_target = -6),
                  joint(joint_name = "LFJ5", joint_target = 7),	      
 	             joint(joint_name = "THJ1", joint_target = 45),
 	             joint(joint_name = "THJ2", joint_target = 8),
-	             joint(joint_name = "THJ3", joint_target = -9.2),
+	             joint(joint_name = "THJ3", joint_target = 12),
 	             joint(joint_name = "THJ4", joint_target = 64),
 	             joint(joint_name = "THJ5", joint_target = 13.2) ]
     # O.K. with ring finger
@@ -200,18 +200,18 @@ class FancyDemo(object):
 	          joint(joint_name = "MFJ0", joint_target = 45),
 	          joint(joint_name = "MFJ3", joint_target = 3.7),
 	          joint(joint_name = "MFJ4", joint_target = -1),
-	          joint(joint_name = "RFJ0", joint_target = 90),
-	          joint(joint_name = "RFJ3", joint_target = 48),
-	          joint(joint_name = "RFJ4", joint_target = -20),
+	          joint(joint_name = "RFJ0", joint_target = 109),
+	          joint(joint_name = "RFJ3", joint_target = 40),
+	          joint(joint_name = "RFJ4", joint_target = -19),
 	          joint(joint_name = "LFJ0", joint_target = 30),
 	          joint(joint_name = "LFJ3", joint_target = 0),
-	          joint(joint_name = "LFJ4", joint_target = -6),
+	          joint(joint_name = "LFJ4", joint_target = -12),
 	          joint(joint_name = "LFJ5", joint_target = 7),	      
-	          joint(joint_name = "THJ1", joint_target = 44),
-	          joint(joint_name = "THJ2", joint_target = 9),
+	          joint(joint_name = "THJ1", joint_target = 20),
+	          joint(joint_name = "THJ2", joint_target = 10),
 	          joint(joint_name = "THJ3", joint_target = 15),
 	          joint(joint_name = "THJ4", joint_target = 70),
-	          joint(joint_name = "THJ5", joint_target = 27) ]
+	          joint(joint_name = "THJ5", joint_target = 38) ]
     # O.K. transition from ring finger to little finger
     rf2lf_ok = [ joint(joint_name = "FFJ0", joint_target = 13.6),
                  joint(joint_name = "FFJ3", joint_target = 7),
@@ -242,14 +242,14 @@ class FancyDemo(object):
 	          joint(joint_name = "RFJ3", joint_target = 6.5),
 	          joint(joint_name = "RFJ4", joint_target = 0.5),
 	          joint(joint_name = "LFJ0", joint_target = 100),
-	          joint(joint_name = "LFJ3", joint_target = 9),
+	          joint(joint_name = "LFJ3", joint_target = 17),
 	          joint(joint_name = "LFJ4", joint_target = -7.6),
-	          joint(joint_name = "LFJ5", joint_target = 42),	      
+	          joint(joint_name = "LFJ5", joint_target = 41),	      
 	          joint(joint_name = "THJ1", joint_target = 40),
-	          joint(joint_name = "THJ2", joint_target = 10),
+	          joint(joint_name = "THJ2", joint_target = 0),
 	          joint(joint_name = "THJ3", joint_target = 10),
 	          joint(joint_name = "THJ4", joint_target = 68),
-	          joint(joint_name = "THJ5", joint_target = 20) ]
+	          joint(joint_name = "THJ5", joint_target = 25) ]
     # zero wrist
     zero_wr = [ joint(joint_name = "WRJ1", joint_target = 0),
 		        joint(joint_name = "WRJ2", joint_target = 0) ]
@@ -277,6 +277,46 @@ class FancyDemo(object):
     # southeast wrist
     se_wr = [ joint(joint_name = "WRJ1", joint_target = -20),
 	          joint(joint_name = "WRJ2", joint_target = 8) ]
+    # zero wrist
+    zero_wr = [ joint(joint_name = "WRJ1", joint_target = 0),
+		        joint(joint_name = "WRJ2", joint_target = 0) ]
+    # lateral lf ext side
+    l_ext_lf = [ joint(joint_name = "LFJ4", joint_target = -15)]
+    # lateral rf ext side
+    l_ext_rf = [ joint(joint_name = "RFJ4", joint_target = -15)]
+    # lateral mf ext side
+    l_ext_mf = [ joint(joint_name = "MFJ4", joint_target = 15)]
+    # lateral ff ext side
+    l_ext_ff = [ joint(joint_name = "FFJ4", joint_target = 15)]
+    # lateral all int side
+    l_int_all = [ joint(joint_name = "FFJ4", joint_target = -15),
+	          joint(joint_name = "MFJ4", joint_target = -15),
+                  joint(joint_name = "RFJ4", joint_target = 15),
+	          joint(joint_name = "LFJ4", joint_target = 15) ]
+    # lateral all ext side
+    l_ext_all = [ joint(joint_name = "FFJ4", joint_target = 15),
+	          joint(joint_name = "MFJ4", joint_target = 15),
+                  joint(joint_name = "RFJ4", joint_target = -15),
+	          joint(joint_name = "LFJ4", joint_target = -15) ]
+    # lateral ff int side
+    l_int_ff = [ joint(joint_name = "FFJ4", joint_target = -15)]
+    # lateral mf int side
+    l_int_mf = [ joint(joint_name = "MFJ4", joint_target = -15)]
+    # lateral rf int side
+    l_int_rf = [ joint(joint_name = "RFJ4", joint_target = 15)]
+    # lateral lf int side
+    l_int_lf = [ joint(joint_name = "LFJ4", joint_target = 15)]
+    # all zero
+    l_zero_all = [ joint(joint_name = "FFJ4", joint_target = 0),
+	          joint(joint_name = "MFJ4", joint_target = 0),
+                  joint(joint_name = "RFJ4", joint_target = 0),
+	          joint(joint_name = "LFJ4", joint_target = 0) ]
+    # spock
+    l_spock = [ joint(joint_name = "FFJ4", joint_target = -20),
+	          joint(joint_name = "MFJ4", joint_target = -20),
+                  joint(joint_name = "RFJ4", joint_target = -20),
+	          joint(joint_name = "LFJ4", joint_target = -20) ]
+   
     # grasp for shaking hands step 1
     shake_grasp_1 = [ joint(joint_name = "THJ1", joint_target = 0),
 	        	      joint(joint_name = "THJ2", joint_target = 6),
@@ -338,7 +378,7 @@ class FancyDemo(object):
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
     # store step 2
     store_2 = [ joint(joint_name = "THJ1", joint_target = 20),
-	            joint(joint_name = "THJ2", joint_target = 36),
+	            joint(joint_name = "THJ2", joint_target = 39),
 	            joint(joint_name = "THJ3", joint_target = 0),
 	            joint(joint_name = "THJ4", joint_target = 30),
 	            joint(joint_name = "THJ5", joint_target = -3),
@@ -357,6 +397,81 @@ class FancyDemo(object):
 	            joint(joint_name = "LFJ5", joint_target = 0),
 	            joint(joint_name = "WRJ1", joint_target = 0),
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
+    # store step 3
+    store_3 = [ joint(joint_name = "THJ1", joint_target = 0),
+	           joint(joint_name = "THJ2", joint_target = 0),
+		   joint(joint_name = "THJ3", joint_target = 0),
+	           joint(joint_name = "THJ4", joint_target = 65),
+	           joint(joint_name = "THJ5", joint_target = 0) ]
+    # touching position 
+    touch_pos = [ joint(joint_name = "THJ1", joint_target = 20),
+	            joint(joint_name = "THJ2", joint_target = 11),
+	            joint(joint_name = "THJ3", joint_target = -4),
+	            joint(joint_name = "THJ4", joint_target = 6),
+	            joint(joint_name = "THJ5", joint_target = -57),
+	            joint(joint_name = "FFJ0", joint_target = 30),
+	            joint(joint_name = "FFJ3", joint_target = 23),
+	            joint(joint_name = "FFJ4", joint_target = -19),
+	            joint(joint_name = "MFJ0", joint_target = 30),
+	            joint(joint_name = "MFJ3", joint_target = 33),
+	            joint(joint_name = "MFJ4", joint_target = -10),
+	            joint(joint_name = "RFJ0", joint_target = 27),
+	            joint(joint_name = "RFJ3", joint_target = 43),
+	            joint(joint_name = "RFJ4", joint_target = 0),
+	            joint(joint_name = "LFJ0", joint_target = 24),
+	            joint(joint_name = "LFJ3", joint_target = 38),
+	            joint(joint_name = "LFJ4", joint_target = -18),
+	            joint(joint_name = "LFJ5", joint_target = 12),
+	            joint(joint_name = "WRJ1", joint_target = -2),
+	            joint(joint_name = "WRJ2", joint_target = -7) ]
+    # touching lf close 
+    touch_lf_clo = [   joint(joint_name = "LFJ0", joint_target = 24),
+	            joint(joint_name = "LFJ3", joint_target = 38),
+	            joint(joint_name = "LFJ4", joint_target = -18),
+ 		    joint(joint_name = "LFJ5", joint_target = 12)]
+    # touching lf open
+    touch_lf_op = [   joint(joint_name = "LFJ0", joint_target = 0),
+	            joint(joint_name = "LFJ3", joint_target = 0),
+	            joint(joint_name = "LFJ4", joint_target = 0),
+ 		    joint(joint_name = "LFJ5", joint_target = 0)]
+    # touching rf close 
+    touch_rf_clo = [   joint(joint_name = "RFJ0", joint_target = 27),
+	            joint(joint_name = "RFJ3", joint_target = 43),
+	            joint(joint_name = "RFJ4", joint_target = 0)]
+    # touching rf open
+    touch_rf_op = [   joint(joint_name = "RFJ0", joint_target = 0),
+	            joint(joint_name = "RFJ3", joint_target = 0),
+	            joint(joint_name = "RFJ4", joint_target = 0)]
+    # touching mf close 
+    touch_mf_clo = [   joint(joint_name = "MFJ0", joint_target = 30),
+	            joint(joint_name = "MFJ3", joint_target = 33),
+	            joint(joint_name = "MFJ4", joint_target = -10)]
+    # touching mf open
+    touch_mf_op = [   joint(joint_name = "MFJ0", joint_target = 0),
+	            joint(joint_name = "MFJ3", joint_target = 0),
+	            joint(joint_name = "MFJ4", joint_target = 0)]
+    # touching ff close 
+    touch_ff_clo = [   joint(joint_name = "FFJ0", joint_target = 30),
+	            joint(joint_name = "FFJ3", joint_target = 23),
+	            joint(joint_name = "FFJ4", joint_target = -19)]
+    # touching ff open
+    touch_ff_op = [   joint(joint_name = "FFJ0", joint_target = 0),
+	            joint(joint_name = "FFJ3", joint_target = 0),
+	            joint(joint_name = "FFJ4", joint_target = 0)]
+    # touching th close 
+    touch_th_clo = [   joint(joint_name = "THJ1", joint_target = 20),
+	            joint(joint_name = "THJ2", joint_target = 11),
+	            joint(joint_name = "THJ3", joint_target = 6),
+                    joint(joint_name = "THJ4", joint_target = 8),
+	            joint(joint_name = "THJ5", joint_target = -54)]
+    # touching th open
+    touch_th_op = [   joint(joint_name = "THJ1", joint_target = 20),
+	            joint(joint_name = "THJ2", joint_target = 0),
+	            joint(joint_name = "THJ3", joint_target = 0),
+                    joint(joint_name = "THJ4", joint_target = 0),
+	            joint(joint_name = "THJ5", joint_target = -20)]
+
+	
     # business card pre-zero position
     bc_pre_zero = [ joint(joint_name = "FFJ0", joint_target = 13.6),
 	                joint(joint_name = "FFJ3", joint_target = 7),
@@ -391,7 +506,7 @@ class FancyDemo(object):
 	            joint(joint_name = "LFJ4", joint_target = -24),
 	            joint(joint_name = "LFJ5", joint_target = 7),	      
 	            joint(joint_name = "THJ1", joint_target = 17.2),
-	            joint(joint_name = "THJ2", joint_target = 10.4),
+	            joint(joint_name = "THJ2", joint_target = 12),
 	            joint(joint_name = "THJ3", joint_target = -4),
 	            joint(joint_name = "THJ4", joint_target = 50),
 	            joint(joint_name = "THJ5", joint_target = -13.6) ]
@@ -405,7 +520,7 @@ class FancyDemo(object):
     bc_3 = [ joint(joint_name = "FFJ0", joint_target = 137),
 	         joint(joint_name = "FFJ3", joint_target = 58) ]
     # business card position 4
-    bc_4 = [ joint(joint_name = "FFJ0", joint_target = 66),
+    bc_4 = [ joint(joint_name = "FFJ0", joint_target = 71),
 	         joint(joint_name = "FFJ3", joint_target = 58) ]
     # business card position 5
     bc_5 = [ joint(joint_name = "FFJ0", joint_target = 180),
@@ -432,7 +547,7 @@ class FancyDemo(object):
     bc_12 = [ joint(joint_name = "FFJ0", joint_target = 137),
 	          joint(joint_name = "FFJ3", joint_target = 58) ]
     # business card position 13
-    bc_13 = [ joint(joint_name = "FFJ0", joint_target = 66),
+    bc_13 = [ joint(joint_name = "FFJ0", joint_target = 71),
 	          joint(joint_name = "FFJ3", joint_target = 58) ]
     # business card position 14
     bc_14 = [ joint(joint_name = "MFJ3", joint_target = 64),
@@ -531,7 +646,7 @@ class FancyDemo(object):
             #here we're just checking the pressure
             # to see if a finger has been pressed
             # 18456 is the value the PST takes when the sensor is not plugged in
-            if tactile >= PST_THRESHOLD and tactile != 18456:
+            if tactile >= PST_THRESHOLD and tactile != 18896:
                 # the tactile has been pressed, call the
                 # corresponding function
                 self.fingers_pressed_functions[index](tactile)
@@ -552,6 +667,8 @@ class FancyDemo(object):
         rospy.loginfo("FF touched, running basic demo ")
 
         #send the start position to the hand
+	self.hand_publish( self.store_3 )
+	time.sleep(1)
         self.hand_publish( self.start_pos_hand )
 	time.sleep(1)
 	self.hand_publish( self.flex_ff )
@@ -589,6 +706,32 @@ class FancyDemo(object):
 	self.hand_publish( self.w_wr )
 	time.sleep(1)
 	self.hand_publish( self.zero_wr )
+	time.sleep(1)
+	self.hand_publish( self.l_ext_lf )
+	time.sleep(0.5)
+	self.hand_publish( self.l_ext_rf )
+	time.sleep(0.5)
+	self.hand_publish( self.l_ext_mf )
+	time.sleep(0.5)
+	self.hand_publish( self.l_ext_ff )
+	time.sleep(0.5)
+	self.hand_publish( self.l_int_all )
+	time.sleep(0.5)
+	self.hand_publish( self.l_ext_all )
+	time.sleep(0.5)
+	self.hand_publish( self.l_int_ff )
+	time.sleep(0.5)
+	self.hand_publish( self.l_int_mf )
+	time.sleep(0.5)
+	self.hand_publish( self.l_int_rf )
+	time.sleep(0.5)
+        self.hand_publish( self.l_int_lf )
+	time.sleep(0.5)
+	self.hand_publish( self.l_zero_all )
+	time.sleep(1)
+	self.hand_publish( self.l_spock )
+	time.sleep(1)
+	self.hand_publish( self.l_zero_all )
 	time.sleep(1)
 	self.hand_publish( self.pre_ff_ok )
 	time.sleep(0.3)
@@ -704,45 +847,108 @@ class FancyDemo(object):
         time.sleep(.2)
 
         #send the start position to the hand
-        self.hand_publish( self.start_pos_hand )
-	time.sleep(1)
-	self.hand_publish( self.bc_pre_zero )
-	time.sleep(2)
-	self.hand_publish( self.bc_zero )
-	time.sleep(3)
-	self.hand_publish( self.bc_1 )
-	time.sleep(1)
+     
+#	self.hand_publish( self.start_pos_hand )
+#	time.sleep(1)
+#	self.hand_publish( self.touch_pos )
+#	time.sleep(1)
+	self.hand_publish( self.touch_lf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_rf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_mf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_ff_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_th_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_lf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_rf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_mf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_ff_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_th_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_lf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_rf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_mf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_ff_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_th_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_lf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_rf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_mf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_ff_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_th_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_lf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_rf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_mf_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_ff_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_th_op )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_lf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_rf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_mf_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_ff_clo )
+	time.sleep(0.1)
+	self.hand_publish( self.touch_th_clo )
+	time.sleep(0.1)
+#	self.hand_publish( self.bc_pre_zero )
+#	time.sleep(2)
+#	self.hand_publish( self.bc_zero )
+#	time.sleep(3)
+#	self.hand_publish( self.bc_1 )
+#	time.sleep(1)
 #	self.hand_publish( self.bc_2 )
 #	time.sleep(1)
-	self.hand_publish( self.bc_3 )
-	time.sleep(1)
-	self.hand_publish( self.bc_4 )
-	time.sleep(1)
-	self.hand_publish( self.bc_5 )
-	time.sleep(1)
-	self.hand_publish( self.bc_6 )
-	time.sleep(1)
-	self.hand_publish( self.bc_7 )
-	time.sleep(1)
-	self.hand_publish( self.bc_8 )
-	time.sleep(1)
+#	self.hand_publish( self.bc_3 )
+#	time.sleep(1)
+#	self.hand_publish( self.bc_4 )
+#	time.sleep(1)
+#	self.hand_publish( self.bc_5 )
+#	time.sleep(1)
+#	self.hand_publish( self.bc_6 )
+#	time.sleep(1)
+#	self.hand_publish( self.bc_7 )
+#	time.sleep(1)
+#	self.hand_publish( self.bc_8 )
+#	time.sleep(1)
 #	self.hand_publish( self.bc_9 )
 #	time.sleep(1)
 #	self.hand_publish( self.bc_10 )
 #	time.sleep(1)
 #	self.hand_publish( self.bc_11 )
 #	time.sleep(1)
-	self.hand_publish( self.bc_12 )
-	time.sleep(1)
-	self.hand_publish( self.bc_13 )
-	time.sleep(1)
+#	self.hand_publish( self.bc_12 )
+#	time.sleep(1)
+#	self.hand_publish( self.bc_13 )
+#	time.sleep(1)
 #	self.hand_publish( self.bc_14 )
 #	time.sleep(1)
-	self.hand_publish( self.bc_15 )
-	time.sleep(1)
-	self.hand_publish( self.bc_16 )
-	time.sleep(3)
-	self.hand_publish( self.start_pos_hand )
+#	self.hand_publish( self.bc_15 )
+#	time.sleep(1)
+#	self.hand_publish( self.bc_16 )
+#	time.sleep(3)
+#	self.hand_publish( self.start_pos_hand )
 
         #wait before next possible action
         time.sleep(3)
@@ -875,10 +1081,14 @@ def main():
 
     fancy_demo = FancyDemo()
 
+#    fancy_demo.ff_pressed(0)
+
+#    fancy_demo.mf_pressed(0)
+
     fancy_demo.lf_pressed(0)
 
     # subscribe until interrupted
-    # rospy.spin()
+    #rospy.spin()
 
 
 if __name__ == '__main__':
