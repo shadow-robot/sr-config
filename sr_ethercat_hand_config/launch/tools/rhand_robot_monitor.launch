@@ -1,6 +1,7 @@
 <launch>
-  <group ns="rh">
+  <!-- For a bimanual system uncomment the ns tag-->
+  <!-- group ns="rh" -->
     <node name="rhand_robot_monitor" pkg="robot_monitor" type="robot_monitor" output="screen"/>
-  </group>
+  <!-- /group -->
 </launch>
 

@@ -1,6 +1,7 @@
 <launch>
-  <group ns="rh">
+  <!-- For a bimanual system uncomment the ns tag-->
+  <!-- group ns="rh" -->
     <node name="rhand_tactile_gui" pkg="st_biotac_gui" type="st_biotac_gui" output="screen"/>
-  </group>
+  <!-- /group -->
 </launch>
 
