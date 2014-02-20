@@ -15,37 +15,37 @@ analyzers:
         num_items: 5
       first_finger:
         type: GenericAnalyzer
-        path: Fingers/First Finger
+        path: First Finger
         timeout: 5.0
         regex: 'SRDMotor .*FFJ[0-9].*'
         num_items: 5
       right_finger:
         type: GenericAnalyzer
-        path: Fingers/Ring Finger
+        path: Ring Finger
         timeout: 5.0
         regex: 'SRDMotor .*RFJ[0-9].*'
         num_items: 5
       middle_finger:
         type: GenericAnalyzer
-        path: Fingers/Middle Finger
+        path: Middle Finger
         timeout: 5.0
         regex: 'SRDMotor .*MFJ[0-9].*'
         num_items: 5
       little_finger:
         type: GenericAnalyzer
-        path: Fingers/Little Finger
+        path: Little Finger
         timeout: 5.0
         regex: 'SRDMotor .*LFJ[0-9].*'
         num_items: 6
       thumb:
         type: GenericAnalyzer
-        path: Fingers/Thumb
+        path: Thumb
         timeout: 5.0
         regex: 'SRDMotor .*THJ[0-9].*'
         num_items: 5
       wrist:
         type: GenericAnalyzer
-        path: Fingers/Wrist
+        path: Wrist
         timeout: 5.0
         regex: 'SRDMotor .*WRJ[0-9].*'
         num_items: 2
