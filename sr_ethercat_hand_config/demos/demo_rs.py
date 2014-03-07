@@ -586,7 +586,7 @@ class FancyDemo(object):
         """
         #if we're already performing an action, don't do anything
         if not self.action_running.testandset():
-        return
+            return
         
         #ok the finger sensor was pressed
         #p = subprocess.Popen('beep')
@@ -735,7 +735,7 @@ class FancyDemo(object):
         """
         #if we're already performing an action, don't do anything
         if not self.action_running.testandset():
-        return
+            return
         
         #ok finger was pressed
         #p = subprocess.Popen('beep')
@@ -799,7 +799,7 @@ class FancyDemo(object):
         """
         #if we're already performing an action, don't do anything
         if not self.action_running.testandset():
-        return
+            return
         
         #ok finger was pressed
         #p = subprocess.Popen('beep')
@@ -837,7 +837,7 @@ class FancyDemo(object):
         """
         #if we're already performing an action, don't do anything
         if not self.action_running.testandset():
-        return
+            return
         
         #ok finger pressed
         #p = subprocess.Popen('beep')
