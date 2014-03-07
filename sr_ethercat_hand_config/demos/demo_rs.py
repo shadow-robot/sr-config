@@ -876,14 +876,14 @@ class FancyDemo(object):
 	time.sleep(1)
 	#self.hand_publish( self.store_1_PST )
     self.hand_publish( self.store_1_BioTac )
-	time.sleep(1)
-	#self.hand_publish( self.store_2_PST )
+    time.sleep(1)
+    #self.hand_publish( self.store_2_PST )
     self.hand_publish( self.store_2_BioTac )
-	time.sleep(1)
- 
-        #wait before next possible action
-        time.sleep(.2)
-        self.action_running.unlock()
+    time.sleep(1)
+
+    #wait before next possible action
+    time.sleep(.2)
+    self.action_running.unlock()
 
     def th_pressed(self, data):
         """
