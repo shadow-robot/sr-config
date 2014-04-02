@@ -3,39 +3,39 @@ sh_ffj0_mixed_position_velocity_controller:
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
-    i: -1.5
-    i_clamp: 0.3
-    max_velocity: 3.0
-    min_velocity: -3.0
-    p: -4.0
+    i: 0.0
+    i_clamp: 0.0
+    max_velocity: 5.0
+    min_velocity: -5.0
+    p: 20.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhMixedPositionVelocityJointController
   velocity_pid:
-    d: 0.0
+    d: 50.0
     friction_deadband: 100.0
-    i: 210.0
-    i_clamp: 160.0
-    max_force: 0.0
-    p: 150.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 210.0
+    p: 600.0
 sh_ffj3_mixed_position_velocity_controller:
   joint: FFJ3
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
-    i: -1.5
-    i_clamp: 0.3
-    max_velocity: 1.5
-    min_velocity: -1.5
-    p: -4.0
+    i: 0.0
+    i_clamp: 0.0
+    max_velocity: 5.5
+    min_velocity: -5.5
+    p: 10.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhMixedPositionVelocityJointController
   velocity_pid:
     d: 0.0
     friction_deadband: 100.0
-    i: 210.0
-    i_clamp: 160.0
-    max_force: 0.0
-    p: 150.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 300.0
+    p: -400.0
 sh_ffj4_mixed_position_velocity_controller:
   joint: FFJ4
   motor_min_force_threshold: 40
