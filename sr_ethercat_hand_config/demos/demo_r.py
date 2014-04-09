@@ -91,7 +91,7 @@ class FancyDemo(object):
 		          joint(joint_name = "THJ4", joint_target = 70),
 		          joint(joint_name = "THJ5", joint_target = 0) ]
     # flex thumb step 2
-    flex_th_2 = [ joint(joint_name = "THJ1", joint_target = 20),
+    flex_th_2 = [ joint(joint_name = "THJ1", joint_target = 32),
 		          joint(joint_name = "THJ2", joint_target = 40),
 		          joint(joint_name = "THJ3", joint_target = 10),
 		          joint(joint_name = "THJ4", joint_target = 70),
@@ -118,8 +118,8 @@ class FancyDemo(object):
     # Pre O.K. with first finger
     pre_ff_ok = [ joint(joint_name = "THJ4", joint_target = 50) ]
     # O.K. with first finger
-    ff_ok = [ joint(joint_name = "FFJ0", joint_target = 94),
-	          joint(joint_name = "FFJ3", joint_target = 37),
+    ff_ok = [ joint(joint_name = "FFJ0", joint_target = 98),
+	          joint(joint_name = "FFJ3", joint_target = 32),
 	          joint(joint_name = "FFJ4", joint_target = -0.2),
 	          joint(joint_name = "MFJ0", joint_target = 42),
     	          joint(joint_name = "MFJ3", joint_target = 33),
@@ -131,7 +131,7 @@ class FancyDemo(object):
 	          joint(joint_name = "LFJ3", joint_target = 0),
 	          joint(joint_name = "LFJ4", joint_target = -6),
 	          joint(joint_name = "LFJ5", joint_target = 7),	      
-	          joint(joint_name = "THJ1", joint_target = 20),
+	          joint(joint_name = "THJ1", joint_target = 43),
 	          joint(joint_name = "THJ2", joint_target = 20),
 	          joint(joint_name = "THJ3", joint_target = 0),
 	          joint(joint_name = "THJ4", joint_target = 50),
@@ -145,14 +145,14 @@ class FancyDemo(object):
 	             joint(joint_name = "MFJ4", joint_target = -3),
 	             joint(joint_name = "RFJ0", joint_target = 50),
 	             joint(joint_name = "RFJ3", joint_target = 18),
-	             joint(joint_name = "RFJ4", joint_target = 0.5),
+	             joint(joint_name = "RFJ4", joint_target = -5),
 	             joint(joint_name = "LFJ0", joint_target = 30),
 	             joint(joint_name = "LFJ3", joint_target = 0),
 	             joint(joint_name = "LFJ4", joint_target = -6),
 	             joint(joint_name = "LFJ5", joint_target = 7),	      
-	             joint(joint_name = "THJ1", joint_target = 40),
+	             joint(joint_name = "THJ1", joint_target = 20),
 	             joint(joint_name = "THJ2", joint_target = 12),
-	             joint(joint_name = "THJ3", joint_target = -10),
+	             joint(joint_name = "THJ3", joint_target = 7),
 	             joint(joint_name = "THJ4", joint_target = 50),
 	             joint(joint_name = "THJ5", joint_target = 2) ]
     # O.K. with middle finger
@@ -201,15 +201,15 @@ class FancyDemo(object):
 	          joint(joint_name = "MFJ3", joint_target = 3.7),
 	          joint(joint_name = "MFJ4", joint_target = -1),
 	          joint(joint_name = "RFJ0", joint_target = 108),
-	          joint(joint_name = "RFJ3", joint_target = 34),
+	          joint(joint_name = "RFJ3", joint_target = 29),
 	          joint(joint_name = "RFJ4", joint_target = -19),
 	          joint(joint_name = "LFJ0", joint_target = 30),
 	          joint(joint_name = "LFJ3", joint_target = 0),
 	          joint(joint_name = "LFJ4", joint_target = -12),
 	          joint(joint_name = "LFJ5", joint_target = 7),	      
 	          joint(joint_name = "THJ1", joint_target = 20),
-	          joint(joint_name = "THJ2", joint_target = 14),
-	          joint(joint_name = "THJ3", joint_target = 15),
+	          joint(joint_name = "THJ2", joint_target = 23),
+	          joint(joint_name = "THJ3", joint_target = 14),
 	          joint(joint_name = "THJ4", joint_target = 70),
 	          joint(joint_name = "THJ5", joint_target = 37) ]
     # O.K. transition from ring finger to little finger
@@ -226,7 +226,7 @@ class FancyDemo(object):
  	             joint(joint_name = "LFJ3", joint_target = 0),
 	             joint(joint_name = "LFJ4", joint_target = -6),
 	             joint(joint_name = "LFJ5", joint_target = 7),	      
-	             joint(joint_name = "THJ1", joint_target = 42),
+	             joint(joint_name = "THJ1", joint_target = 10),
 	             joint(joint_name = "THJ2", joint_target = 4.5),
 	             joint(joint_name = "THJ3", joint_target = 7.7),
 	             joint(joint_name = "THJ4", joint_target = 73),
@@ -520,7 +520,7 @@ class FancyDemo(object):
 
         # We subscribe to the data being published by the biotac sensors.
         # self.sub_biotacs = rospy.Subscriber("/rh/tactile", BiotacAll, self.callback_biotacs, queue_size=1)
-        # self.sub_psts   = rospy.Subscriber("/rh/tactile", ShadowPST, self.callback_psts, queue_size=1)
+        self.sub_psts   = rospy.Subscriber("/tactile", ShadowPST, self.callback_psts, queue_size=1)
 
     def create_hand_publishers(self):
         """
@@ -605,21 +605,21 @@ class FancyDemo(object):
         self.hand_publish( self.start_pos_hand )
         time.sleep(1)
         self.hand_publish( self.flex_ff )
-        time.sleep(1)
+        time.sleep(1.2)
         self.hand_publish( self.ext_ff )
-        time.sleep(1)
-        self.hand_publish( self.flex_mf )
-        time.sleep(1)
-        self.hand_publish( self.ext_mf )
-        time.sleep(1)
+        time.sleep(1.2)
+        #self.hand_publish( self.flex_mf )
+        #time.sleep(1)
+        #self.hand_publish( self.ext_mf )
+        #time.sleep(1)
         self.hand_publish( self.flex_rf )
-        time.sleep(1)
+        time.sleep(1.2)
         self.hand_publish( self.ext_rf )
-        time.sleep(1)
-        self.hand_publish( self.flex_lf )
-        time.sleep(1)
-        self.hand_publish( self.ext_lf )
-        time.sleep(1)
+        time.sleep(1.2)
+        #self.hand_publish( self.flex_lf )
+        #time.sleep(1)
+        #self.hand_publish( self.ext_lf )
+        #time.sleep(1)
         self.hand_publish( self.flex_th_1 )
         time.sleep(1)
         self.hand_publish( self.flex_th_2 )
@@ -646,66 +646,66 @@ class FancyDemo(object):
         time.sleep(1)
         self.hand_publish( self.ff2mf_ok )
         time.sleep(1)
-        self.hand_publish( self.mf_ok )
-        time.sleep(1)
-        self.hand_publish( self.mf2rf_ok )
-        time.sleep(1)
+        #self.hand_publish( self.mf_ok )
+        #time.sleep(1)
+        #self.hand_publish( self.mf2rf_ok )
+        #time.sleep(1)
         self.hand_publish( self.rf_ok )
         time.sleep(1)
-        self.hand_publish( self.rf2lf_ok )
-        time.sleep(1)
-        self.hand_publish( self.lf_ok )
-        time.sleep(1)
+        #self.hand_publish( self.rf2lf_ok )
+        #time.sleep(1)
+        #self.hand_publish( self.lf_ok )
+        #time.sleep(1)
         self.hand_publish( self.start_pos_hand )
         time.sleep(1)
         self.hand_publish( self.flex_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_lf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_lf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_lf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_lf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_lf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_lf )
-        time.sleep(1.0)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_lf )
+        #time.sleep(1.0)
         self.hand_publish( self.pre_ff_ok )
         time.sleep(0.3)
         self.hand_publish( self.ff_ok )
@@ -858,35 +858,35 @@ class FancyDemo(object):
         #send the start position to the hand
         self.hand_publish( self.start_pos_hand )
         time.sleep(1)
-        self.hand_publish( self.flex_lf )
-        time.sleep(0.2)
+        #self.hand_publish( self.flex_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_lf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.ext_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.ext_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.ext_ff )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_lf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_lf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_rf )
-        time.sleep(0.2)
-        self.hand_publish( self.flex_mf )
-        time.sleep(0.2)
+        time.sleep(0.5)
+        #self.hand_publish( self.flex_mf )
+        #time.sleep(0.2)
         self.hand_publish( self.flex_ff )
         time.sleep(1)
-        #self.hand_publish( self.store_1_PST )
-        self.hand_publish( self.store_1_BioTac )
+        self.hand_publish( self.store_1_PST )
+        #self.hand_publish( self.store_1_BioTac )
         time.sleep(1)
-        #self.hand_publish( self.store_2_PST )
-        self.hand_publish( self.store_2_BioTac )
+        self.hand_publish( self.store_2_PST )
+        #self.hand_publish( self.store_2_BioTac )
         time.sleep(1)
         
         #wait before next possible action
