@@ -27,7 +27,7 @@ ffj3:
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
-    sign: 0
+    sign: 1
 ffj4:
   backlash_compensation: true
   pid:
@@ -72,7 +72,7 @@ lfj3:
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
-    sign: 0
+    sign: 1
 lfj4:
   backlash_compensation: true
   pid:
@@ -102,7 +102,7 @@ lfj5:
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
-    sign: 0
+    sign: 1
 mfj0:
   backlash_compensation: true
   pid:
@@ -177,7 +177,7 @@ rfj3:
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
-    sign: 0
+    sign: 1
 rfj4:
   backlash_compensation: true
   pid:
@@ -192,7 +192,7 @@ rfj4:
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
-    sign: 0
+    sign: 1
 thj1:
   backlash_compensation: true
   pid:
@@ -207,7 +207,7 @@ thj1:
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
-    sign: 0
+    sign: 1
 thj2:
   backlash_compensation: true
   pid:
@@ -222,7 +222,7 @@ thj2:
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
-    sign: 0
+    sign: 1
 thj3:
   backlash_compensation: true
   pid:
@@ -231,7 +231,7 @@ thj3:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
