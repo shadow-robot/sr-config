@@ -53,7 +53,7 @@ class FancyDemo(object):
                        joint(joint_name = "WRJ1", joint_target = 0),
                        joint(joint_name = "WRJ2", joint_target = 0) ]
     # flex first finger
-    flex_ff = [ joint(joint_name = "FFJ0", joint_target = 180),
+    flex_ff = [ joint(joint_name = "FFJ0", joint_target = 140),
 		        joint(joint_name = "FFJ3", joint_target = 90),
         		joint(joint_name = "FFJ4", joint_target = 0) ]
     # extend first finger
@@ -61,7 +61,7 @@ class FancyDemo(object):
 	           joint(joint_name = "FFJ3", joint_target = 0),
 	           joint(joint_name = "FFJ4", joint_target = 0) ]
     # flex middle finger
-    flex_mf = [ joint(joint_name = "MFJ0", joint_target = 180),
+    flex_mf = [ joint(joint_name = "MFJ0", joint_target = 140),
 		        joint(joint_name = "MFJ3", joint_target = 90),
 		        joint(joint_name = "MFJ4", joint_target = 0) ]
     # extend middle finger
@@ -69,7 +69,7 @@ class FancyDemo(object):
 	           joint(joint_name = "MFJ3", joint_target = 0),
 	           joint(joint_name = "MFJ4", joint_target = 0) ]
     # flex ring finger
-    flex_rf = [ joint(joint_name = "RFJ0", joint_target = 180),
+    flex_rf = [ joint(joint_name = "RFJ0", joint_target = 140),
 		        joint(joint_name = "RFJ3", joint_target = 90),
 		        joint(joint_name = "RFJ4", joint_target = 0) ]
     # extend ring finger
@@ -77,7 +77,7 @@ class FancyDemo(object):
 	           joint(joint_name = "RFJ3", joint_target = 0),
 	           joint(joint_name = "RFJ4", joint_target = 0) ]
     # flex little finger
-    flex_lf = [ joint(joint_name = "LFJ0", joint_target = 180),
+    flex_lf = [ joint(joint_name = "LFJ0", joint_target = 140),
 		        joint(joint_name = "LFJ3", joint_target = 90),
 		        joint(joint_name = "LFJ4", joint_target = 0) ]
     # extend little finger
@@ -363,16 +363,16 @@ class FancyDemo(object):
                 joint(joint_name = "THJ3", joint_target = 0),
 	            joint(joint_name = "THJ4", joint_target = 30),
 	            joint(joint_name = "THJ5", joint_target = 0),
-	            joint(joint_name = "FFJ0", joint_target = 180),
+	            joint(joint_name = "FFJ0", joint_target = 140),
 	            joint(joint_name = "FFJ3", joint_target = 90),
 	            joint(joint_name = "FFJ4", joint_target = 0),
-	            joint(joint_name = "MFJ0", joint_target = 180),
+	            joint(joint_name = "MFJ0", joint_target = 140),
 	            joint(joint_name = "MFJ3", joint_target = 90),
 	            joint(joint_name = "MFJ4", joint_target = 0),
-	            joint(joint_name = "RFJ0", joint_target = 180),
+	            joint(joint_name = "RFJ0", joint_target = 140),
 	            joint(joint_name = "RFJ3", joint_target = 90),
 	            joint(joint_name = "RFJ4", joint_target = 0),
-	            joint(joint_name = "LFJ0", joint_target = 180),
+	            joint(joint_name = "LFJ0", joint_target = 140),
 	            joint(joint_name = "LFJ3", joint_target = 90),
 	            joint(joint_name = "LFJ4", joint_target = 0),
 	            joint(joint_name = "LFJ5", joint_target = 0),
@@ -384,16 +384,16 @@ class FancyDemo(object):
 	            joint(joint_name = "THJ3", joint_target = 0),
 	            joint(joint_name = "THJ4", joint_target = 30),
 	            joint(joint_name = "THJ5", joint_target = -3),
-	            joint(joint_name = "FFJ0", joint_target = 180),
+	            joint(joint_name = "FFJ0", joint_target = 140),
 	            joint(joint_name = "FFJ3", joint_target = 90),
 	            joint(joint_name = "FFJ4", joint_target = 0),
-	            joint(joint_name = "MFJ0", joint_target = 180),
+	            joint(joint_name = "MFJ0", joint_target = 140),
 	            joint(joint_name = "MFJ3", joint_target = 90),
 	            joint(joint_name = "MFJ4", joint_target = 0),
-	            joint(joint_name = "RFJ0", joint_target = 180),
+	            joint(joint_name = "RFJ0", joint_target = 140),
 	            joint(joint_name = "RFJ3", joint_target = 90),
 	            joint(joint_name = "RFJ4", joint_target = 0),
-	            joint(joint_name = "LFJ0", joint_target = 180),
+	            joint(joint_name = "LFJ0", joint_target = 140),
 	            joint(joint_name = "LFJ3", joint_target = 90),
 	            joint(joint_name = "LFJ4", joint_target = 0),
 	            joint(joint_name = "LFJ5", joint_target = 0),

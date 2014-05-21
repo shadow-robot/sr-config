@@ -231,7 +231,7 @@ thj3:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 0
+    max_pwm: 1023
     p: 6200
     sg_left: 0
     sg_right: 0
