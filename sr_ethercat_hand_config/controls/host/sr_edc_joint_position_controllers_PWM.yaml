@@ -190,13 +190,13 @@ sh_thj3_position_controller:
 sh_thj4_position_controller:
   joint: THJ4
   pid:
-    d: -360.0
+    d: 360.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
     max_force: 450.0
-    p: -7000.0
+    p: 7000.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_thj5_position_controller:
