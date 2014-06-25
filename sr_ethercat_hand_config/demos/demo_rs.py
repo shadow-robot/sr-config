@@ -319,7 +319,7 @@ class FancyDemo(object):
     store_1_PST = [ joint(joint_name = "THJ1", joint_target = 0),
 	            joint(joint_name = "THJ2", joint_target = 0),
                 joint(joint_name = "THJ3", joint_target = 0),
-	            joint(joint_name = "THJ4", joint_target = 60),
+	            joint(joint_name = "THJ4", joint_target = 69),
 	            joint(joint_name = "THJ5", joint_target = 0),
 	            joint(joint_name = "FFJ0", joint_target = 180),
 	            joint(joint_name = "FFJ3", joint_target = 90),
@@ -340,8 +340,8 @@ class FancyDemo(object):
     store_2_PST = [ joint(joint_name = "THJ1", joint_target = 39),
 	            joint(joint_name = "THJ2", joint_target = 34),
 	            joint(joint_name = "THJ3", joint_target = 7.7),
-	            joint(joint_name = "THJ4", joint_target = 62),
-	            joint(joint_name = "THJ5", joint_target = 17),
+	            joint(joint_name = "THJ4", joint_target = 69),
+	            joint(joint_name = "THJ5", joint_target = 24),
 	            joint(joint_name = "FFJ0", joint_target = 180),
 	            joint(joint_name = "FFJ3", joint_target = 90),
 	            joint(joint_name = "FFJ4", joint_target = 0),
@@ -849,37 +849,37 @@ class FancyDemo(object):
         
         #send the start position to the hand
         self.hand_publish( self.start_pos_hand )
-        time.sleep(1)
+        time.sleep(0.8)
         #self.hand_publish( self.flex_lf )
         #time.sleep(0.2)
         self.hand_publish( self.flex_rf )
-        time.sleep(0.5)
+        time.sleep(0.4)
         #self.hand_publish( self.flex_mf )
         #time.sleep(0.2)
         self.hand_publish( self.flex_ff )
-        time.sleep(0.5)
+        time.sleep(0.4)
         #self.hand_publish( self.ext_lf )
         #time.sleep(0.2)
         self.hand_publish( self.ext_rf )
-        time.sleep(0.5)
+        time.sleep(0.4)
         #self.hand_publish( self.ext_mf )
         #time.sleep(0.2)
         self.hand_publish( self.ext_ff )
-        time.sleep(0.5)
+        time.sleep(0.4)
         #self.hand_publish( self.flex_lf )
         #time.sleep(0.2)
         self.hand_publish( self.flex_rf )
-        time.sleep(0.5)
+        time.sleep(0.4)
         #self.hand_publish( self.flex_mf )
         #time.sleep(0.2)
         self.hand_publish( self.flex_ff )
-        time.sleep(1)
+        time.sleep(0.8)
         self.hand_publish( self.store_1_PST )
         #self.hand_publish( self.store_1_BioTac )
-        time.sleep(1)
+        time.sleep(0.8)
         self.hand_publish( self.store_2_PST )
         #self.hand_publish( self.store_2_BioTac )
-        time.sleep(1)
+        time.sleep(0.8)
         
         #wait before next possible action
         time.sleep(.2)
