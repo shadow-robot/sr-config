@@ -874,11 +874,11 @@ class FancyDemo(object):
         time.sleep(0.2)
         self.hand_publish( self.flex_ff )
         time.sleep(1)
-        #self.hand_publish( self.store_1_PST )
-        self.hand_publish( self.store_1_BioTac )
+        self.hand_publish( self.store_1_PST )
+        #self.hand_publish( self.store_1_BioTac )
         time.sleep(1)
-        #self.hand_publish( self.store_2_PST )
-        self.hand_publish( self.store_2_BioTac )
+        self.hand_publish( self.store_2_PST )
+        #self.hand_publish( self.store_2_BioTac )
         time.sleep(1)
         
         #wait before next possible action
