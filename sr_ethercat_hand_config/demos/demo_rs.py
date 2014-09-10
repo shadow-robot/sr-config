@@ -380,10 +380,10 @@ class FancyDemo(object):
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
     # store step 2 BioTac
     store_2_BioTac = [ joint(joint_name = "THJ1", joint_target = 20),
-	            joint(joint_name = "THJ2", joint_target = 36),
+	            joint(joint_name = "THJ2", joint_target = 26),
 	            joint(joint_name = "THJ3", joint_target = 0),
 	            joint(joint_name = "THJ4", joint_target = 30),
-	            joint(joint_name = "THJ5", joint_target = -3),
+	            joint(joint_name = "THJ5", joint_target = 16),
 	            joint(joint_name = "FFJ0", joint_target = 180),
 	            joint(joint_name = "FFJ3", joint_target = 90),
 	            joint(joint_name = "FFJ4", joint_target = 0),
