@@ -18,7 +18,7 @@
 import rospy
 import random
 import time
-from math import degrees
+from math import degrees, abs
 from sr_hand.shadowhand_commander import Commander
 
 rospy.init_node('receiver_example')
@@ -26,6 +26,9 @@ c = Commander()
 ##########
 # RANGES #
 ##########
+#force change for biotacs on pac0
+epsilon_force = 30
+
 # Minimum alllowed range for the joints in this particular script
 min_range = {"THJ2": -40, "THJ3": -12, "THJ4": 0, "THJ5": -55,
             "FFJ0": 20, "FFJ3": 0, "FFJ4": -20,
@@ -280,7 +283,7 @@ def secuence_ff():
         # Record current joint positions
         # hand_pos = c.get_hand_position()
         # If the tacticle sensor is triggered stop movement
-        if ( tactile_values['TH'] > force_zero['TH'] ):
+        if ( abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force):
             # c.move_hand(hand_pos)
             print 'Thumb contact'
             break
@@ -333,7 +336,7 @@ def secuence_ff():
         # Record current joint positions
         # hand_pos = c.get_hand_position()
         # If the tacticle sensor is triggered stop movement
-        if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['FF'] > force_zero['FF'] ):
+        if ( abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force or abs(tactile_values['FF'] - force_zero['FF']) > epsilon_force ):
             # c.move_hand(hand_pos)
             print 'First finger contact'
             break
@@ -358,7 +361,7 @@ def secuence_ff():
         # Record current joint positions
         # hand_pos = c.get_hand_position()
         # If the tacticle sensor is triggered stop movement
-        if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['MF'] > force_zero['MF'] ):
+        if ( abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force or abs(tactile_values['MF'] - force_zero['MF']) > epsilon_force ):
             # c.move_hand(hand_pos)
             print 'Middle finger contact'
             break
@@ -383,7 +386,7 @@ def secuence_ff():
         # Record current joint positions
         # hand_pos = c.get_hand_position()
         # If the tacticle sensor is triggered stop movement
-        if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['RF'] > force_zero['RF'] ):
+        if ( abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force or abs(tactile_values['RF'] - force_zero['RF']) > epsilon_force ):
             # c.move_hand(hand_pos)
             print 'Ring finger contact'
             break
@@ -408,7 +411,7 @@ def secuence_ff():
         # Record current joint positions
         # hand_pos = c.get_hand_position()
         # If the tacticle sensor is triggered stop movement
-        if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['LF'] > force_zero['LF'] ):
+        if ( abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force or abs(tactile_values['LF'] - force_zero['LF']) > epsilon_force ):
             # c.move_hand(hand_pos)
             print 'Little finger contact'
             break
@@ -483,7 +486,7 @@ def secuence_ff():
         # Record current joint positions
         # hand_pos = c.get_hand_position()
         # If the tacticle sensor is triggered stop movement
-        if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['FF'] > force_zero['FF'] ):
+        if ( abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force or abs(tactile_values['FF'] - force_zero['FF'] ) > epsilon_force ):
             # c.move_hand(hand_pos)
             print 'First finger contact'
             break
@@ -537,7 +540,7 @@ def secuence_mf():
             print 'HAND TOUCHED!'
             rospy.sleep(2.0)
 
-            if ( tactile_values['TH'] > force_zero['TH'] ):
+            if ( abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force ):
                break
         # If the tactile sensors have not been triggered and the Hand
         # is not in the middle of a movement, generate a random position
@@ -604,7 +607,7 @@ def secuence_lf():
 
         # If any tacticle sensor has been triggered, send
         # the corresponding digit to its current position
-        if ( tactile_values['FF'] > force_zero['FF'] and tactile_values['TH'] > force_zero['TH'] ):
+        if ( abs(tactile_values['FF'] - force_zero['FF'])>epsilon_force and abs(tactile_values['TH'] - force_zero['TH'])> epsilon_force ):
             c.move_hand({"FFJ0": hand_pos['FFJ0'] + offset1, "FFJ3": hand_pos['FFJ3'] + offset1,
                          "THJ2": hand_pos['THJ2'] + offset1, "THJ5": hand_pos['THJ5'] + offset1})
             print 'First finger and thumb contact'
@@ -672,11 +675,6 @@ def zero_tactile_sensors():
             force_zero['LF'] = tactile_values['LF']
         if tactile_values['TH'] > force_zero['TH']:
             force_zero['TH'] = tactile_values['TH']
-    force_zero['FF'] = force_zero['FF'] + 7
-    force_zero['MF'] = force_zero['MF'] + 7
-    force_zero['RF'] = force_zero['RF'] + 7
-    force_zero['LF'] = force_zero['LF'] + 7
-    force_zero['TH'] = force_zero['TH'] + 7
     
     print 'Force Zero', force_zero
 
@@ -698,11 +696,11 @@ def read_tactile_values():
     tactile_state = c.get_tactile_state()
     
     if tactile_type == "biotac":
-        tactile_values['FF'] = tactile_state.tactiles[0].pdc
-        tactile_values['MF'] = tactile_state.tactiles[1].pdc
-        tactile_values['RF'] = tactile_state.tactiles[2].pdc
-        tactile_values['LF'] = tactile_state.tactiles[3].pdc
-        tactile_values['TH'] = tactile_state.tactiles[4].pdc
+        tactile_values['FF'] = tactile_state.tactiles[0].pac0
+        tactile_values['MF'] = tactile_state.tactiles[1].pac0
+        tactile_values['RF'] = tactile_state.tactiles[2].pac0
+        tactile_values['LF'] = tactile_state.tactiles[3].pac0
+        tactile_values['TH'] = tactile_state.tactiles[4].pac0
     
     elif tactile_type == "PST":
         tactile_values['FF'] = tactile_state.pressure[0]
@@ -733,27 +731,27 @@ while not rospy.is_shutdown():
     read_tactile_values()
 
     # If the tactile is touched, trigger the corresponding function
-    if (tactile_values['FF'] > force_zero['FF']):
+    if (abs(tactile_values['FF'] - force_zero['FF']) > epsilon_force):
         print 'First finger contact'
         secuence_ff()
         print 'FF demo completed'
         zero_tactile_sensors()
-    if (tactile_values['MF'] > force_zero['MF']):
+    if (abs(tactile_values['MF'] - force_zero['MF']) > epsilon_force):
         print 'Middle finger contact'
         secuence_mf()
         print 'MF demo completed'
         zero_tactile_sensors()
-    if (tactile_values['RF'] > force_zero['RF']):
+    if (abs(tactile_values['RF'] - force_zero['RF']) > epsilon_force):
         print 'Ring finger contact'
         secuence_rf()
         print 'RF demo completed'
         zero_tactile_sensors()
-    if (tactile_values['LF'] > force_zero['LF']):
+    if (abs(tactile_values['LF'] - force_zero['LF']) > epsilon_force):
         print 'Little finger contact'
         secuence_lf()
         print 'LF demo completed'
         zero_tactile_sensors()
-    if (tactile_values['TH'] > force_zero['TH']):
+    if (abs(tactile_values['TH'] - force_zero['TH']) > epsilon_force):
         print 'Thumb finger contact'
         secuence_th()
         print 'TH demo completed'
