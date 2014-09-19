@@ -1,0 +1,237 @@
+sh_ffj0_muscle_position_controller:
+  joint: FFJ0
+  pid:
+    d: 25.0
+    deadband: 0.0
+    friction_deadband: 5000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 2000.0
+    p: 200.0
+    position_deadband: 0.007000000000000117
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_ffj3_muscle_position_controller:
+  joint: FFJ3
+  pid:
+    d: 50.0
+    deadband: 0.0
+    friction_deadband: 5000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 2000.0
+    p: 200.0
+    position_deadband: 0.007
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_ffj4_muscle_position_controller:
+  joint: FFJ4
+  pid:
+    d: 60.0
+    deadband: 0.0
+    friction_deadband: 5000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 2000.0
+    p: 300.0
+    position_deadband: 0.005
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_lfj0_muscle_position_controller:
+  joint: LFJ0
+  pid:
+    d: 0.0
+    friction_deadband: 2000.0
+    i: -0.5
+    i_clamp: 1.0
+    max_force: 0.0
+    p: -2.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_lfj3_muscle_position_controller:
+  joint: LFJ3
+  pid:
+    d: 2.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 3000.0
+    i_clamp: 5000.0
+    max_force: 0.0
+    p: 5000.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_lfj4_muscle_position_controller:
+  joint: LFJ4
+  pid:
+    d: 0.0
+    deadband: 0
+    friction_deadband: 0.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 0.0
+    p: 0.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_lfj5_muscle_position_controller:
+  joint: LFJ5
+  pid:
+    d: 0.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 1.0
+    max_force: 0.0
+    p: 0.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_mfj0_muscle_position_controller:
+  joint: MFJ0
+  pid:
+    d: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 1.0
+    max_force: 0.0
+    p: 29.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_mfj3_muscle_position_controller:
+  joint: MFJ3
+  pid:
+    d: -2.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: -6000.0
+    i_clamp: 8500.0
+    max_force: 0.0
+    p: -7900.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_mfj4_muscle_position_controller:
+  joint: MFJ4
+  pid:
+    d: 50.0
+    deadband: 0
+    friction_deadband: 2000.0
+    i: 1000.0
+    i_clamp: 3000.0
+    max_force: 0.0
+    p: 4000.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_rfj0_muscle_position_controller:
+  joint: RFJ0
+  pid:
+    d: 30.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 200.0
+    position_deadband: 0.007
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_rfj3_muscle_position_controller:
+  joint: RFJ3
+  pid:
+    d: 80.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 250.0
+    position_deadband: 0.007
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_rfj4_muscle_position_controller:
+  joint: RFJ4
+  pid:
+    d: 60.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 300.0
+    position_deadband: 0.005
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_thj1_muscle_position_controller:
+  joint: THJ1
+  pid:
+    d: 0.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 400.0
+    position_deadband: 0.02
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_thj2_muscle_position_controller:
+  joint: THJ2
+  pid:
+    d: 10.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 400.0
+    position_deadband: 0.005
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_thj3_muscle_position_controller:
+  joint: THJ3
+  pid:
+    d: 20.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 200.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_thj4_muscle_position_controller:
+  joint: THJ4
+  pid:
+    d: 30.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 0.0
+    p: 500.0
+    position_deadband: 0.005
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_thj5_muscle_position_controller:
+  joint: THJ5
+  pid:
+    d: 0.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 400.0
+    position_deadband: 0.005
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_wrj1_muscle_position_controller:
+  joint: WRJ1
+  pid:
+    d: 0.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 500.0
+    position_deadband: 0.01
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
+sh_wrj2_muscle_position_controller:
+  joint: WRJ2
+  pid:
+    d: 0.0
+    deadband: 0.0
+    friction_deadband: 65535.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 20000.0
+    p: 700.0
+    position_deadband: 0.01
+  type: sr_mechanism_controllers/SrhMuscleJointPositionController
