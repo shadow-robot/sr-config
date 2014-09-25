@@ -1,5 +1,5 @@
-sh_lh_ffj0_mixed_position_velocity_controller:
-  joint:  lh_FFJ0
+sh_rh_ffj0_mixed_position_velocity_controller:
+  joint: rh_FFJ0
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -17,8 +17,8 @@ sh_lh_ffj0_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_ffj3_mixed_position_velocity_controller:
-  joint:  lh_FFJ3
+sh_rh_ffj3_mixed_position_velocity_controller:
+  joint: rh_FFJ3
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -36,8 +36,8 @@ sh_lh_ffj3_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_ffj4_mixed_position_velocity_controller:
-  joint:  lh_FFJ4
+sh_rh_ffj4_mixed_position_velocity_controller:
+  joint: rh_FFJ4
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -55,8 +55,8 @@ sh_lh_ffj4_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: -150.0
-sh_lh_lfj0_mixed_position_velocity_controller:
-  joint:  lh_LFJ0
+sh_rh_lfj0_mixed_position_velocity_controller:
+  joint: rh_LFJ0
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -74,8 +74,8 @@ sh_lh_lfj0_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: -150.0
-sh_lh_lfj3_mixed_position_velocity_controller:
-  joint:  lh_LFJ3
+sh_rh_lfj3_mixed_position_velocity_controller:
+  joint: rh_LFJ3
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -93,8 +93,8 @@ sh_lh_lfj3_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: -150.0
-sh_lh_lfj4_mixed_position_velocity_controller:
-  joint:  lh_LFJ4
+sh_rh_lfj4_mixed_position_velocity_controller:
+  joint: rh_LFJ4
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -112,8 +112,8 @@ sh_lh_lfj4_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_lfj5_mixed_position_velocity_controller:
-  joint:  lh_LFJ5
+sh_rh_lfj5_mixed_position_velocity_controller:
+  joint: rh_LFJ5
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -131,8 +131,8 @@ sh_lh_lfj5_mixed_position_velocity_controller:
     i_clamp: 410.0
     max_force: 0.0
     p: -150.0
-sh_lh_mfj0_mixed_position_velocity_controller:
-  joint:  lh_MFJ0
+sh_rh_mfj0_mixed_position_velocity_controller:
+  joint: rh_MFJ0
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -150,8 +150,8 @@ sh_lh_mfj0_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_mfj3_mixed_position_velocity_controller:
-  joint:  lh_MFJ3
+sh_rh_mfj3_mixed_position_velocity_controller:
+  joint: rh_MFJ3
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -169,8 +169,8 @@ sh_lh_mfj3_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_mfj4_mixed_position_velocity_controller:
-  joint:  lh_MFJ4
+sh_rh_mfj4_mixed_position_velocity_controller:
+  joint: rh_MFJ4
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -188,8 +188,8 @@ sh_lh_mfj4_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: -150.0
-sh_lh_rfj0_mixed_position_velocity_controller:
-  joint:  lh_RFJ0
+sh_rh_rfj0_mixed_position_velocity_controller:
+  joint: rh_RFJ0
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -207,8 +207,8 @@ sh_lh_rfj0_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: -150.0
-sh_lh_rfj3_mixed_position_velocity_controller:
-  joint:  lh_RFJ3
+sh_rh_rfj3_mixed_position_velocity_controller:
+  joint: rh_RFJ3
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -226,8 +226,8 @@ sh_lh_rfj3_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: -150.0
-sh_lh_rfj4_mixed_position_velocity_controller:
-  joint:  lh_RFJ4
+sh_rh_rfj4_mixed_position_velocity_controller:
+  joint: rh_RFJ4
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -245,8 +245,8 @@ sh_lh_rfj4_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: -150.0
-sh_lh_thj1_mixed_position_velocity_controller:
-  joint:  lh_THJ1
+sh_rh_thj1_mixed_position_velocity_controller:
+  joint: rh_THJ1
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -264,8 +264,8 @@ sh_lh_thj1_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_thj2_mixed_position_velocity_controller:
-  joint:  lh_THJ2
+sh_rh_thj2_mixed_position_velocity_controller:
+  joint: rh_THJ2
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -283,8 +283,8 @@ sh_lh_thj2_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_thj3_mixed_position_velocity_controller:
-  joint:  lh_THJ3
+sh_rh_thj3_mixed_position_velocity_controller:
+  joint: rh_THJ3
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -302,8 +302,8 @@ sh_lh_thj3_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_thj4_mixed_position_velocity_controller:
-  joint:  lh_THJ4
+sh_rh_thj4_mixed_position_velocity_controller:
+  joint: rh_THJ4
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -321,8 +321,8 @@ sh_lh_thj4_mixed_position_velocity_controller:
     i_clamp: 180.0
     max_force: 0.0
     p: -210.0
-sh_lh_thj5_mixed_position_velocity_controller:
-  joint:  lh_THJ5
+sh_rh_thj5_mixed_position_velocity_controller:
+  joint: rh_THJ5
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -340,8 +340,8 @@ sh_lh_thj5_mixed_position_velocity_controller:
     i_clamp: 160.0
     max_force: 0.0
     p: 150.0
-sh_lh_wrj1_mixed_position_velocity_controller:
-  joint:  lh_WRJ1
+sh_rh_wrj1_mixed_position_velocity_controller:
+  joint: rh_WRJ1
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0
@@ -359,8 +359,8 @@ sh_lh_wrj1_mixed_position_velocity_controller:
     i_clamp: 270.0
     max_force: 0.0
     p: 320.0
-sh_lh_wrj2_mixed_position_velocity_controller:
-  joint:  lh_WRJ2
+sh_rh_wrj2_mixed_position_velocity_controller:
+  joint: rh_WRJ2
   motor_min_force_threshold: 40
   position_pid:
     d: 0.0

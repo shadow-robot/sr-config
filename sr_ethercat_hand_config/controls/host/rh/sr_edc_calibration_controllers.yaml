@@ -1,0 +1,130 @@
+
+# Shadow Hand Defines
+
+cal_sh_rh_ffj0:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: FFJ2
+  actuator: FFJ0
+  transmission: ffmiddle_transmission
+cal_sh_rh_ffj3:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: FFJ3
+  actuator: FFJ3
+  transmission: ffproximal_transmission
+cal_sh_rh_ffj4:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: FFJ4
+  actuator: FFJ4
+  transmission: ffknuckle_transmission
+
+
+cal_sh_rh_mfj0:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: MFJ2
+  actuator: MFJ0
+  transmission: mfmiddle_transmission
+cal_sh_rh_mfj3:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: MFJ3
+  actuator: MFJ3
+  transmission: mfproximal_transmission
+cal_sh_rh_mfj4:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: MFJ4
+  actuator: MFJ4
+  transmission: mfknuckle_transmission
+
+cal_sh_rh_rfj0:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: RFJ2
+  actuator: RFJ0
+  transmission: rfmiddle_transmission
+cal_sh_rh_rfj3:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: RFJ3
+  actuator: RFJ3
+  transmission: rfproximal_transmission
+cal_sh_rh_rfj4:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: RFJ4
+  actuator: RFJ4
+  transmission: rfknuckle_transmission
+
+cal_sh_rh_lfj0:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: LFJ2
+  actuator: LFJ0
+  transmission: lfmiddle_transmission
+cal_sh_rh_lfj3:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: LFJ3
+  actuator: LFJ3
+  transmission: lfproximal_transmission
+cal_sh_rh_lfj4:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: LFJ4
+  actuator: LFJ4
+  transmission: lfknuckle_transmission
+cal_sh_rh_lfj5:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: LFJ5
+  actuator: LFJ5
+  transmission: lfmetacarpal_transmission
+
+
+cal_sh_rh_thj1:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: THJ1
+  actuator: THJ1
+  transmission: thdistal_transmission
+cal_sh_rh_thj2:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: THJ2
+  actuator: THJ2
+  transmission: thmiddle_transmission
+cal_sh_rh_thj3:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: THJ3
+  actuator: THJ3
+  transmission: thhub_transmission
+cal_sh_rh_thj4:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: THJ4
+  actuator: THJ4
+  transmission: thproximal_transmission
+cal_sh_rh_thj5:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: THJ5
+  actuator: THJ5
+  transmission: thbase_transmission
+
+cal_sh_rh_wrj1:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: WRJ1
+  actuator: WRJ1
+  transmission: palm_transmission
+cal_sh_rh_wrj2:
+  type: sr_mechanism_controllers/SrhFakeJointCalibrationController
+  robot_id: rh
+  joint: WRJ2
+  actuator: WRJ2
+  transmission: wrist_transmission
