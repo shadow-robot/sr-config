@@ -18,7 +18,7 @@
 import rospy
 import random
 import time
-from math import degrees, abs
+from math import degrees
 from sr_hand.shadowhand_commander import Commander
 
 rospy.init_node('receiver_example')
@@ -27,7 +27,7 @@ c = Commander()
 # RANGES #
 ##########
 #force change for biotacs on pac0
-epsilon_force = 30
+epsilon_force = 800
 
 # Minimum alllowed range for the joints in this particular script
 min_range = {"THJ2": -40, "THJ3": -12, "THJ4": 0, "THJ5": -55,
@@ -529,12 +529,14 @@ def secuence_mf():
     while True:
         # Check if any of the tactile senors have been triggered
         # If so, send the Hand to its start position
+        
         read_tactile_values()
-        if ( tactile_values['FF'] > force_zero['FF'] or
-             tactile_values['MF'] > force_zero['MF'] or
-             tactile_values['RF'] > force_zero['RF'] or
-             tactile_values['LF'] > force_zero['LF'] or
-             tactile_values['TH'] > force_zero['TH'] ):
+
+        if ( abs(tactile_values['FF'] - force_zero['FF'] ) > epsilon_force or
+             abs(tactile_values['MF'] - force_zero['MF'] ) > epsilon_force or
+             abs(tactile_values['RF'] - force_zero['RF'] ) > epsilon_force or
+             abs(tactile_values['LF'] - force_zero['LF'] ) > epsilon_force or
+             abs(tactile_values['TH'] - force_zero['TH'] ) > epsilon_force ):
 
             c.move_hand(start_pos)
             print 'HAND TOUCHED!'
