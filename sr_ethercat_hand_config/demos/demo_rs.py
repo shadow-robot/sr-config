@@ -338,10 +338,10 @@ class FancyDemo(object):
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
     # store step 2 PST
     store_2_PST = [ joint(joint_name = "THJ1", joint_target = 50),
-	            joint(joint_name = "THJ2", joint_target = 12),
+	            joint(joint_name = "THJ2", joint_target = 19),
 	            joint(joint_name = "THJ3", joint_target = 0),
-	            joint(joint_name = "THJ4", joint_target = 60),
-	            joint(joint_name = "THJ5", joint_target = 27),
+	            joint(joint_name = "THJ4", joint_target = 64),
+	            joint(joint_name = "THJ5", joint_target = 20),
 	            joint(joint_name = "FFJ0", joint_target = 180),
 	            joint(joint_name = "FFJ3", joint_target = 90),
 	            joint(joint_name = "FFJ4", joint_target = 0),
@@ -874,11 +874,11 @@ class FancyDemo(object):
         time.sleep(0.2)
         self.hand_publish( self.flex_ff )
         time.sleep(1)
-        #self.hand_publish( self.store_1_PST )
-        self.hand_publish( self.store_1_BioTac )
+        self.hand_publish( self.store_1_PST )
+        #self.hand_publish( self.store_1_BioTac )
         time.sleep(1)
-        #self.hand_publish( self.store_2_PST )
-        self.hand_publish( self.store_2_BioTac )
+        self.hand_publish( self.store_2_PST )
+        #self.hand_publish( self.store_2_BioTac )
         time.sleep(1)
         
         #wait before next possible action
