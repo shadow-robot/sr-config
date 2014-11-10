@@ -17,7 +17,7 @@
 <calib raw_value="0.700787425041" calibrated_value="30"/>
 </Joint>
 <Joint name="G_RingMiddleAb">
-<calib raw_value="0.02" calibrated_value="50"/>
+<calib raw_value="0.0" calibrated_value="45"/>
 <calib raw_value="0.602362215519" calibrated_value="0"/>
 </Joint>
 <Joint name="G_PalmArch">
@@ -50,7 +50,7 @@
 </Joint>
 <Joint name="G_PinkieDIJ">
 <calib raw_value="1.0" calibrated_value="0"/>
-<calib raw_value="1.0" calibrated_value="90"/>
+<calib raw_value="1.00001" calibrated_value="90"/>
 </Joint>
 <Joint name="G_IndexPIJ">
 <calib raw_value="0.145669296384" calibrated_value="0"/>
