@@ -5,9 +5,9 @@ ffj0:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 330
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -20,9 +20,9 @@ ffj3:
     deadband: 5
     f: 300
     i: 190
-    imax: 120
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -35,9 +35,9 @@ ffj4:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -50,9 +50,9 @@ lfj0:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -65,9 +65,9 @@ lfj3:
     deadband: 5
     f: 300
     i: 190
-    imax: 120
+    imax: 380
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -80,9 +80,9 @@ lfj4:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 320
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -95,9 +95,9 @@ lfj5:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -110,9 +110,9 @@ mfj0:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -125,9 +125,9 @@ mfj3:
     deadband: 5
     f: 300
     i: 190
-    imax: 120
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -140,9 +140,9 @@ mfj4:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -155,9 +155,9 @@ rfj0:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -170,9 +170,9 @@ rfj3:
     deadband: 5
     f: 300
     i: 190
-    imax: 120
+    imax: 380
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -185,9 +185,9 @@ rfj4:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 360
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -200,9 +200,9 @@ thj1:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -215,9 +215,9 @@ thj2:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -230,9 +230,9 @@ thj3:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -245,9 +245,9 @@ thj4:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 250
     max_pwm: 1023
-    p: 8200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -260,9 +260,9 @@ thj5:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 250
     max_pwm: 1023
-    p: 8200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -275,9 +275,9 @@ wrj1:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -290,9 +290,9 @@ wrj2:
     deadband: 5
     f: 300
     i: 150
-    imax: 70
+    imax: 300
     max_pwm: 1023
-    p: 6200
+    p: 64
     sg_left: 0
     sg_right: 0
     sgleftref: 0
