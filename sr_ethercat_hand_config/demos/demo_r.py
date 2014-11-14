@@ -114,7 +114,7 @@ ff2mf_ok = {"THJ1": 5, "THJ2": 12, "THJ3": -10, "THJ4": 60, "THJ5": 2,
             "RFJ0": 50, "RFJ3": 18, "RFJ4": 0.5,
             "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
 # O.K. with middle finger
-mf_ok = {"THJ1": 14, "THJ2": 23, "THJ3": 7, "THJ4": 66, "THJ5": 24,
+mf_ok = {"THJ1": 28, "THJ2": 23, "THJ3": 7, "THJ4": 66, "THJ5": 24,
          "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
          "MFJ0": 75, "MFJ3": 56, "MFJ4": 17,
          "RFJ0": 50, "RFJ3": 18, "RFJ4": -10,
@@ -126,10 +126,10 @@ mf2rf_ok = {"THJ1": 5, "THJ2": -5, "THJ3": 15, "THJ4": 70, "THJ5": 19,
             "RFJ0": 50, "RFJ3": 18, "RFJ4": -19,
             "LFJ0": 30, "LFJ3": 0, "LFJ4": -12, "LFJ5": 7 }
 # O.K. with ring finger
-rf_ok = {"THJ1": 18, "THJ2": 40, "THJ3": 15, "THJ4": 70, "THJ5": 28,
+rf_ok = {"THJ1": 17, "THJ2": 40, "THJ3": 15, "THJ4": 70, "THJ5": 36,
         "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
         "MFJ0": 45, "MFJ3": 4, "MFJ4": -1,
-        "RFJ0": 95, "RFJ3": 36, "RFJ4": -20,
+        "RFJ0": 128, "RFJ3": 15, "RFJ4": 7,
         "LFJ0": 30, "LFJ3": 0, "LFJ4": -12, "LFJ5": 7 }
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"THJ1": 5, "THJ2": 4.5, "THJ3": 8, "THJ4": 60, "THJ5": 21,
@@ -227,7 +227,40 @@ store_2_BioTac = {"THJ1": 20, "THJ2": 36, "THJ3": 0, "THJ4": 30, "THJ5": -3,
                     "WRJ1": 0, "WRJ2": 0 }
 # store step 3
 store_3 = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 65, "THJ5": 0 }
-
+# business card pre-zero position 
+bc_pre_zero = {"THJ1": 15, "THJ2": 7, "THJ3": -4, "THJ4": 50, "THJ5": -17,
+		  "FFJ0": 14, "FFJ3": 7, "FFJ4": -1,
+		  "MFJ0": 51, "MFJ3": 33, "MFJ4": 20,
+		  "RFJ0": 50, "RFJ3": 18, "RFJ4": -20,
+		  "LFJ0": 30, "LFJ3": 0, "LFJ4": -20, "LFJ5": 7 }
+# business card zero position 
+bc_zero = {"THJ1": 17, "THJ2": 12, "THJ3": -4, "THJ4": 50, "THJ5": -10,
+		  "MFJ0": 55, "MFJ3": 28, "MFJ4": 20 }
+# business card position 1 
+bc_1 = {"FFJ0": 137, "FFJ3": 7 }
+# business card position 2 
+bc_2 = {"FFJ0": 137, "FFJ3": 58 }
+# business card position 3 
+bc_3 = {"FFJ0": 65, "FFJ3": 58 }
+# business card position 4 
+bc_4 = {"FFJ0": 180, "FFJ3": 58 }
+# business card position 5 
+bc_5 = {"FFJ0": 180, "FFJ3": 0 }
+# business card position 6 
+bc_6 = {"FFJ0": 0, "FFJ3": 0 }
+# business card position 7 
+bc_7 = {"FFJ0": 137, "FFJ3": 15 }
+# business card position 8 
+bc_8 = {"FFJ0": 137, "FFJ3": 58 }
+# business card position 9 
+bc_9 = {"FFJ0": 71, "FFJ3": 58 }
+# business card position 10 
+bc_10 = {"MFJ3": 64, "FFJ4": 20 }
+# business card position 11 
+bc_11 = {"FFJ0": 82, "FFJ3": 44, "FFJ4": -17, 
+        "THJ4": 60, "THJ5": 25, }
+# business card position 12 
+bc_12 = {"MFJ0": 20, "MFJ3": 10, "MFJ4": 0 }
 
 ########################
 # FUNCTION DEFINITIONS #
@@ -496,6 +529,209 @@ def secuence_ff():
     return
 
 def secuence_mf():
+#    # Start the secuence 2
+#    rospy.sleep(2.0)
+#    # Initialize wake time
+#    wake_time = time.time()
+#    
+#    while True:
+#        # Check if any of the tactile senors have been triggered
+#        # If so, send the Hand to its start position
+#        read_tactile_values()
+#        if ( tactile_values['FF'] > force_zero['FF'] or
+#            tactile_values['MF'] > force_zero['MF'] or
+#            tactile_values['RF'] > force_zero['RF'] or
+#            tactile_values['LF'] > force_zero['LF'] or
+#            tactile_values['TH'] > force_zero['TH'] ):
+#
+#            c.move_hand(start_pos)
+#            print 'HAND TOUCHED!'
+#            rospy.sleep(2.0)
+#            if ( tactile_values['TH'] > force_zero['TH'] ):
+#                break
+#        # If the tactile sensors have not been triggered and the Hand
+#        # is not in the middle of a movement, generate a random position
+#        # and interpolation time
+#        else:
+#            if time.time() > wake_time:
+#                for i in rand_pos:
+#                    rand_pos[i] = random.randrange(min_range[i],max_range[i])
+#                rand_pos['FFJ4'] = random.randrange(min_range['FFJ4'],rand_pos['MFJ4'])
+#                rand_pos['LFJ4'] = random.randrange(min_range['LFJ4'],rand_pos['RFJ4'])
+#                rand_pos['interpolation_time'] = max_range['interpolation_time'] * random.random()
+#
+#                c.move_hand(rand_pos)
+#                wake_time = time.time() + rand_pos['interpolation_time']*0.9
+
+
+   # Start the secuence 3
+#   rospy.sleep(0.5)
+#   c.move_hand(start_pos)
+#   rospy.sleep(1.5)
+#   c.move_hand(shake_grasp_1)
+#   rospy.sleep(2.5)
+#   c.move_hand(shake_grasp_2)
+#   rospy.sleep(1)
+#   c.move_hand(e_wr)
+#   rospy.sleep(0.4)
+#   c.move_hand(w_wr)
+#   rospy.sleep(0.4)
+#   c.move_hand(zero_wr)
+#   rospy.sleep(0.8)
+#   c.move_hand(shake_grasp_1)
+#   rospy.sleep(1.5)
+#   c.move_hand(start_pos)
+#   rospy.sleep(1.5)
+
+   rospy.sleep(0.5)
+   c.move_hand(start_pos)
+   rospy.sleep(1)
+   c.move_hand(bc_pre_zero)
+   rospy.sleep(2)
+   c.move_hand(bc_zero)
+   rospy.sleep(3)
+   c.move_hand(bc_1)
+   rospy.sleep(1)
+   c.move_hand(bc_2)
+   rospy.sleep(1)
+   c.move_hand(bc_3)
+   rospy.sleep(1)
+   c.move_hand(bc_4)
+   rospy.sleep(1)
+   c.move_hand(bc_5)
+   rospy.sleep(1)
+   c.move_hand(bc_6)
+   rospy.sleep(1)
+   c.move_hand(bc_7)
+   rospy.sleep(1)
+   c.move_hand(bc_8)
+   rospy.sleep(1)
+   c.move_hand(bc_9)
+   rospy.sleep(1)
+   c.move_hand(bc_11)
+   rospy.sleep(1)
+   c.move_hand(bc_12)
+   rospy.sleep(3)
+   c.move_hand(start_pos)
+   rospy.sleep(1.5)
+
+   return
+
+#def secuence_rf():
+def secuence_lf():
+    # Start the secuence 3
+    rospy.sleep(0.5)
+    c.move_hand(start_pos)
+    rospy.sleep(1.5)
+    c.move_hand(shake_grasp_1)
+    rospy.sleep(2.5)
+    c.move_hand(shake_grasp_2)
+    rospy.sleep(1)
+    c.move_hand(e_wr)
+    rospy.sleep(0.4)
+    c.move_hand(w_wr)
+    rospy.sleep(0.4)
+    c.move_hand(zero_wr)
+    rospy.sleep(0.8)
+    c.move_hand(shake_grasp_1)
+    rospy.sleep(1.5)
+    c.move_hand(start_pos)
+    rospy.sleep(1.5)
+    return
+
+#def secuence_lf():
+def secuence_rf():
+#    # Start the secuence 4
+#    # Trigger flag array
+#    trigger = [0,0,0,0,0]
+#
+#    # Move Hand to zero position
+#    c.move_hand(start_pos)
+#    rospy.sleep(2.0)
+#
+#    # Move Hand to starting position
+#    c.move_hand(pregrasp_pos)
+#    rospy.sleep(2.0)
+#
+#    # Move Hand to close position
+#    c.move_hand(grasp_pos)
+#    offset1 = 3
+#
+#    # Initialize end time
+#    end_time = time.time() + 11
+#
+#    while True:
+#        # Check the state of the tactile senors
+#        read_tactile_values()
+#        # Record current joint positions
+#        hand_pos = c.get_hand_position()
+#        # If any tacticle sensor has been triggered, send
+#        # the corresponding digit to its current position
+#        if ( tactile_values['FF'] > force_zero['FF'] and trigger[0] == 0 ):
+#            c.move_hand({"FFJ0": hand_pos['FFJ0'] + offset1, "FFJ3": hand_pos['FFJ3'] + offset1})
+#            print 'First finger contact'
+#            trigger[0] = 1
+#        
+#        if ( tactile_values['MF'] > force_zero['MF'] and trigger[1] == 0 ):
+#            c.move_hand({"MFJ0": hand_pos['MFJ0'] + offset1, "MFJ3": hand_pos['MFJ3'] + offset1})
+#            print 'Middle finger contact'
+#            trigger[1] = 1
+#        
+#        if ( tactile_values['RF'] > force_zero['RF'] and trigger[2] == 0 ):
+#            c.move_hand({"RFJ0": hand_pos['RFJ0'] + offset1, "RFJ3": hand_pos['RFJ3'] + offset1})
+#            print 'Ring finger contact'
+#            trigger[2] = 1
+#
+#        if ( tactile_values['LF'] > force_zero['LF'] and trigger[3] == 0 ):
+#            c.move_hand({"LFJ0": hand_pos['LFJ0'] + offset1, "LFJ3": hand_pos['LFJ3'] + offset1})
+#            print 'Little finger contact'
+#            trigger[3] = 1
+#
+#
+#        if ( tactile_values['TH'] > force_zero['TH'] and trigger[4] == 0 ):
+#            c.move_hand({"THJ2": hand_pos['THJ2'] + offset1, "THJ5": hand_pos['THJ5'] + offset1 })
+#            print 'Thumb contact'
+#            trigger[4] = 1
+#
+#        if ( trigger[0] == 1 and
+#            trigger[1] == 1 and
+#            trigger[2] == 1 and
+#            trigger[3] == 1 and
+#            trigger[4] == 1 ):
+#            break
+#
+#        if time.time() > end_time:
+#            break
+#
+#    # Send all joints to current position to compensate
+#    # for minor offsets created in the previous loop
+#    hand_pos = c.get_hand_position()
+#    c.move_hand(hand_pos)
+#    rospy.sleep(2.0)
+#    
+#    # Generate new values to squeeze object slightly
+#    offset2 = 3
+#    squeeze = hand_pos.copy()
+#    squeeze.update({"THJ5": hand_pos['THJ5'] + offset2, "THJ2": hand_pos['THJ2'] + offset2,
+#                    "FFJ3": hand_pos['FFJ3'] + offset2, "FFJ0": hand_pos['FFJ0'] + offset2,
+#                    "MFJ3": hand_pos['MFJ3'] + offset2, "MFJ0": hand_pos['MFJ0'] + offset2,
+#                    "RFJ3": hand_pos['RFJ3'] + offset2, "RFJ0": hand_pos['RFJ0'] + offset2,
+#                    "LFJ3": hand_pos['LFJ3'] + offset2, "LFJ0": hand_pos['LFJ0'] + offset2})
+#
+#    # Squeeze object gently
+#    c.move_hand(squeeze)
+#    rospy.sleep(0.5)
+#    c.move_hand(hand_pos)
+#    rospy.sleep(0.5)
+#    c.move_hand(squeeze)
+#    rospy.sleep(0.5)
+#    c.move_hand(hand_pos)
+#    rospy.sleep(2.0)
+#    c.move_hand(pregrasp_pos)
+#    rospy.sleep(2.0)
+#    c.move_hand(start_pos)
+#    rospy.sleep(2.0)
+
     # Start the secuence 2
     rospy.sleep(2.0)
     # Initialize wake time
@@ -529,121 +765,7 @@ def secuence_mf():
 
                 c.move_hand(rand_pos)
                 wake_time = time.time() + rand_pos['interpolation_time']*0.9
-    return
 
-#def secuence_rf():
-def secuence_lf():
-    # Start the secuence 3
-    rospy.sleep(0.5)
-    c.move_hand(start_pos)
-    rospy.sleep(1.5)
-    c.move_hand(shake_grasp_1)
-    rospy.sleep(2.5)
-    c.move_hand(shake_grasp_2)
-    rospy.sleep(1)
-    c.move_hand(e_wr)
-    rospy.sleep(0.4)
-    c.move_hand(w_wr)
-    rospy.sleep(0.4)
-    c.move_hand(zero_wr)
-    rospy.sleep(0.8)
-    c.move_hand(shake_grasp_1)
-    rospy.sleep(1.5)
-    c.move_hand(start_pos)
-    rospy.sleep(1.5)
-    return
-
-#def secuence_lf():
-def secuence_rf():
-    # Start the secuence 4
-    # Trigger flag array
-    trigger = [0,0,0,0,0]
-
-    # Move Hand to zero position
-    c.move_hand(start_pos)
-    rospy.sleep(2.0)
-
-    # Move Hand to starting position
-    c.move_hand(pregrasp_pos)
-    rospy.sleep(2.0)
-
-    # Move Hand to close position
-    c.move_hand(grasp_pos)
-    offset1 = 3
-
-    # Initialize end time
-    end_time = time.time() + 11
-
-    while True:
-        # Check the state of the tactile senors
-        read_tactile_values()
-        # Record current joint positions
-        hand_pos = c.get_hand_position()
-        # If any tacticle sensor has been triggered, send
-        # the corresponding digit to its current position
-        if ( tactile_values['FF'] > force_zero['FF'] and trigger[0] == 0 ):
-            c.move_hand({"FFJ0": hand_pos['FFJ0'] + offset1, "FFJ3": hand_pos['FFJ3'] + offset1})
-            print 'First finger contact'
-            trigger[0] = 1
-        
-        if ( tactile_values['MF'] > force_zero['MF'] and trigger[1] == 0 ):
-            c.move_hand({"MFJ0": hand_pos['MFJ0'] + offset1, "MFJ3": hand_pos['MFJ3'] + offset1})
-            print 'Middle finger contact'
-            trigger[1] = 1
-        
-        if ( tactile_values['RF'] > force_zero['RF'] and trigger[2] == 0 ):
-            c.move_hand({"RFJ0": hand_pos['RFJ0'] + offset1, "RFJ3": hand_pos['RFJ3'] + offset1})
-            print 'Ring finger contact'
-            trigger[2] = 1
-
-        if ( tactile_values['LF'] > force_zero['LF'] and trigger[3] == 0 ):
-            c.move_hand({"LFJ0": hand_pos['LFJ0'] + offset1, "LFJ3": hand_pos['LFJ3'] + offset1})
-            print 'Little finger contact'
-            trigger[3] = 1
-
-        if ( tactile_values['TH'] > force_zero['TH'] and trigger[4] == 0 ):
-            c.move_hand({"THJ2": hand_pos['THJ2'] + offset1, "THJ5": hand_pos['THJ5'] + offset1 })
-            print 'Thumb contact'
-            trigger[4] = 1
-
-        if ( trigger[0] == 1 and
-            trigger[1] == 1 and
-            trigger[2] == 1 and
-            trigger[3] == 1 and
-            trigger[4] == 1 ):
-            break
-
-        if time.time() > end_time:
-            break
-
-    # Send all joints to current position to compensate
-    # for minor offsets created in the previous loop
-    hand_pos = c.get_hand_position()
-    c.move_hand(hand_pos)
-    rospy.sleep(2.0)
-    
-    # Generate new values to squeeze object slightly
-    offset2 = 3
-    squeeze = hand_pos.copy()
-    squeeze.update({"THJ5": hand_pos['THJ5'] + offset2, "THJ2": hand_pos['THJ2'] + offset2,
-                    "FFJ3": hand_pos['FFJ3'] + offset2, "FFJ0": hand_pos['FFJ0'] + offset2,
-                    "MFJ3": hand_pos['MFJ3'] + offset2, "MFJ0": hand_pos['MFJ0'] + offset2,
-                    "RFJ3": hand_pos['RFJ3'] + offset2, "RFJ0": hand_pos['RFJ0'] + offset2,
-                    "LFJ3": hand_pos['LFJ3'] + offset2, "LFJ0": hand_pos['LFJ0'] + offset2})
-
-    # Squeeze object gently
-    c.move_hand(squeeze)
-    rospy.sleep(0.5)
-    c.move_hand(hand_pos)
-    rospy.sleep(0.5)
-    c.move_hand(squeeze)
-    rospy.sleep(0.5)
-    c.move_hand(hand_pos)
-    rospy.sleep(2.0)
-    c.move_hand(pregrasp_pos)
-    rospy.sleep(2.0)
-    c.move_hand(start_pos)
-    rospy.sleep(2.0)
     return
 
 def secuence_th():
@@ -689,8 +811,9 @@ def zero_tactile_sensors():
 
     print "\nPRESS ONE OF THE TACTILES TO START A DEMO"
     print " FF: Standard Demo"
-    print " MF: Shy Hand Demo"
-    print " RF: Grasp Demo"
+#    print " MF: Shy Hand Demo"
+    print " MF: Card Trick Demo"
+    print " RF: Shy Hand Demo"
 #    print " RF: Handshake Demo"
 #    print " LF: Grasp Demo"
     print " TH: Open Hand"
