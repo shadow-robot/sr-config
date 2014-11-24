@@ -20,7 +20,7 @@ ffj3:
     deadband: 5
     f: 300
     i: 190
-    imax: 300
+    imax: 350
     max_pwm: 1023
     p: 64
     sg_left: 0
@@ -35,7 +35,7 @@ ffj4:
     deadband: 5
     f: 300
     i: 150
-    imax: 300
+    imax: 320
     max_pwm: 1023
     p: 64
     sg_left: 0

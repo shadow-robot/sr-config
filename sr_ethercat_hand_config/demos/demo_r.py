@@ -56,19 +56,19 @@ start_pos = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 0, "THJ5": 0,
             "LFJ0": 0, "LFJ3": 0, "LFJ4": 0, "LFJ5": 0,
             "WRJ1": 0, "WRJ2": 0 }
 # Start position for the Hand
-pregrasp_pos = {'FFJ4': degrees(0.3), 'FFJ3': degrees(0.05), 'FFJ0': degrees(0.2), 
-                'MFJ4': degrees(0.3), 'MFJ3': degrees(0.05), 'MFJ0': degrees(0.2), 
-                'RFJ4': degrees( -0.3), 'RFJ3': degrees( 0.05), 'RFJ0': degrees( 0.2),
-                'LFJ5': degrees( 0.0), 'LFJ4': degrees(-0.3), 'LFJ3': degrees(0.05), 'LFJ0': degrees( 0.2),
-                'THJ5': degrees( -0.1), 'THJ4': degrees( 1.017566), 'THJ3': degrees( -0.0651), 'THJ2': degrees(0.024467), 'THJ1': degrees( 0.149),
+pregrasp_pos = {'FFJ4': -18, 'FFJ3': 10, 'FFJ0': 10, 
+                'MFJ4': -8, 'MFJ3': 10, 'MFJ0': 10, 
+                'RFJ4': -8, 'RFJ3': 10, 'RFJ0': 10,
+                'LFJ5': 0, 'LFJ4': -18, 'LFJ3': 10, 'LFJ0': 10,
+                'THJ5': -30, 'THJ4': 60, 'THJ3': 0, 'THJ2': -20, 'THJ1': 20,
                 "WRJ1": 0, "WRJ2": 0}
 # Close position for the Hand
 #grasp business card
-grasp_pos = {'FFJ4': 17, 'FFJ3':70, 'FFJ0' : 44.6, 
-             'MFJ4': degrees(0.3), 'MFJ3': degrees(0.05), 'MFJ0': degrees(0.2), 
-             'RFJ4': degrees( -0.3), 'RFJ3': degrees( 0.05), 'RFJ0': degrees( 0.2),
-             'LFJ5': degrees( 0.0), 'LFJ4': degrees(-0.3), 'LFJ3': degrees(0.05), 'LFJ0': degrees( 0.2),
-             'THJ5': degrees( 0.2907936), 'THJ4': degrees( 1.017566), 'THJ3': degrees( -0.0651), 'THJ2': degrees(0.124467), 'THJ1': degrees( 0.349),
+grasp_pos = {'FFJ4': -18, 'FFJ3': 50, 'FFJ0' : 70, 
+             'MFJ4': -8, 'MFJ3': 50, 'MFJ0': 70, 
+             'RFJ4': -8, 'RFJ3': 50, 'RFJ0': 70,
+             'LFJ5': 10, 'LFJ4': -20, 'LFJ3': 50, 'LFJ0': 70,
+             'THJ5': 15, 'THJ4': 70, 'THJ3': 15, 'THJ2': 25, 'THJ1': 20,
              "interpolation_time": 4.0}
 
 # {"THJ2": 30, "THJ3": 15, "THJ4": 69, "THJ5": -3,
@@ -598,7 +598,7 @@ def secuence_lf():
     offset1 = 3
 
     # Initialize end time
-    end_time = time.time() + 11
+    end_time = time.time() + 8
     
     while True:
         # Check the state of the tactile senors
