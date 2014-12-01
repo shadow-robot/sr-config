@@ -77,8 +77,9 @@
 <calib raw_value="0.748031497002" calibrated_value="90"/>
 </Joint>
 <Joint name="G_WristPitch">
-<calib raw_value="0.374015748501" calibrated_value="-30"/>
-<calib raw_value="0.76181101799" calibrated_value="40"/>
+<calib raw_value="0.57" calibrated_value="-30"/>
+<calib raw_value="0.61" calibrated_value="0"/>
+<calib raw_value="0.69" calibrated_value="40"/>
 </Joint>
 <Joint name="G_WristYaw">
 <calib raw_value="0.346456706524" calibrated_value="10"/>
