@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find cyberglove)/launch/cyberglove.launch" />
+  <include file="$(find sr_remappers)/launch/remapper_glove.launch" />
+  <include file="$(find sr_hand)/launch/advanced/srh_etherCAT_noTF.launch" />
+</launch>
+
+
