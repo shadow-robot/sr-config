@@ -51,7 +51,7 @@ lfj0:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -66,7 +66,7 @@ lfj3:
     f: 300
     i: 190
     imax: 120
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -81,7 +81,7 @@ lfj4:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -96,7 +96,7 @@ lfj5:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -231,7 +231,7 @@ thj3:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -276,7 +276,7 @@ wrj1:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -291,7 +291,7 @@ wrj2:
     f: 300
     i: 150
     imax: 70
-    max_pwm: 1023
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
