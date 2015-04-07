@@ -2,8 +2,8 @@
 Changelog for package sr_ethercat_hand_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.0 (2015-04-07)
+------------------
 * Fix J0 names for effort controllers
 * Fix diagnostics prefix
 * Add bimanual diagnostic analyzer
