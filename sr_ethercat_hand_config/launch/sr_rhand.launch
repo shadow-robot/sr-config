@@ -1,7 +1,15 @@
 <launch>
   <include file="$(find sr_edc_launch)/sr_edc.launch" >
     <arg name="config_dir" value="" />
-    <arg name="eth_port" value="eth1" />
+    <arg name="eth_port" value="eth0" />
     <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
+    <arg name="pwm_control" value="true" />
   </include>
+
+  <node name="controllers_spawner" pkg="controller_manager" type="spawner" output="screen"
+    args="--wait-for=/calibrated --shutdown-timeout=1.0 sh_ffj0_position_controller sh_ffj3_position_controller sh_ffj4_position_controller sh_mfj0_position_controller sh_mfj3_position_controller sh_mfj4_position_controller sh_rfj0_position_controller sh_rfj3_position_controller sh_rfj4_position_controller sh_lfj0_position_controller sh_lfj3_position_controller sh_lfj4_position_controller sh_lfj5_position_controller sh_thj1_position_controller sh_thj2_position_controller sh_thj3_position_controller sh_thj4_position_controller sh_thj5_position_controller sh_wrj1_position_controller sh_wrj2_position_controller" />
+
+  <!-- trajectory controller -->
+  <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/host/hand_trajectory_controller.yaml"/>
+  <node name="hand_trajectory_controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="shutdown-timeout=1.0 trajectory_controller "/>
 </launch>
