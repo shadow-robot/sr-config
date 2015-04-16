@@ -101,7 +101,7 @@ ext_lf = {"LFJ0": 0, "LFJ3": 0, "LFJ4": 0 }
 # flex thumb step 1
 flex_th_1 = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 70, "THJ5": 0 }
 # flex thumb step 2
-flex_th_2 = {"THJ1": 35, "THJ2": 38, "THJ3": 10, "THJ4": 70, "THJ5": 58 }
+flex_th_2 = {"THJ1": 35, "THJ2": 40, "THJ3": 10, "THJ4": 70, "THJ5": 60 }
 # extend thumb step 1
 ext_th_1 = {"THJ1": 10, "THJ2": 20, "THJ3": 5, "THJ4": 35, "THJ5": 25 }
 # extend thumb step 2
@@ -111,21 +111,21 @@ zero_th = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 0, "THJ5": 0 }
 # Pre O.K. with first finger
 pre_ff_ok = {"THJ4": 70 }
 # O.K. with first finger
-ff_ok = {"THJ1": 15, "THJ2": 20, "THJ3": 0, "THJ4": 56, "THJ5": 20,
-	 "FFJ0": 75, "FFJ3": 45, "FFJ4": -0.2,
+ff_ok = {"THJ1": 15, "THJ2": 4, "THJ3": 0, "THJ4": 56, "THJ5": 20,
+	 "FFJ0": 85, "FFJ3": 45, "FFJ4": -0.2,
 	 "MFJ0": 42, "MFJ3": 33, "MFJ4": -3,
 	 "RFJ0": 50, "RFJ3": 18, "RFJ4": 0.5,
 	 "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
 # O.K. transition from first finger to middle finger
-ff2mf_ok = {"THJ1": 5, "THJ2": 12, "THJ3": 4, "THJ4": 60, "THJ5": 2,
+ff2mf_ok = {"THJ1": 5, "THJ2": -5, "THJ3": 4, "THJ4": 60, "THJ5": 2,
 	    "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
 	    "MFJ0": 42, "MFJ3": 33, "MFJ4": -3,
 	    "RFJ0": 50, "RFJ3": 18, "RFJ4": 0.5,
 	    "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
 # O.K. with middle finger
-mf_ok = {"THJ1": 15, "THJ2": 18, "THJ3": 7, "THJ4": 66, "THJ5": 30,
+mf_ok = {"THJ1": 15, "THJ2": 0, "THJ3": 7, "THJ4": 66, "THJ5": 30,
 	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	 "MFJ0": 71, "MFJ3": 54, "MFJ4": 11,
+	 "MFJ0": 80, "MFJ3": 54, "MFJ4": 11,
 	 "RFJ0": 50, "RFJ3": 18, "RFJ4": -10,
 	 "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
 # O.K. transition from middle finger to ring finger
@@ -135,10 +135,10 @@ mf2rf_ok = {"THJ1": 5, "THJ2": -5, "THJ3": 15, "THJ4": 70, "THJ5": 19,
 	    "RFJ0": 50, "RFJ3": 18, "RFJ4": -19,
 	    "LFJ0": 30, "LFJ3": 0, "LFJ4": -12, "LFJ5": 7 }
 # O.K. with ring finger
-rf_ok = {"THJ1": 6, "THJ2": 15, "THJ3": 15, "THJ4": 70, "THJ5": 45,
+rf_ok = {"THJ1": 6, "THJ2": -6, "THJ3": 12, "THJ4": 70, "THJ5": 45,
 	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
 	 "MFJ0": 45, "MFJ3": 4, "MFJ4": -1,
-	 "RFJ0": 93, "RFJ3": 42, "RFJ4": -19,
+	 "RFJ0": 101, "RFJ3": 40, "RFJ4": -19,
 	 "LFJ0": 30, "LFJ3": 0, "LFJ4": -12, "LFJ5": 7 }
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"THJ1": 5, "THJ2": 4.5, "THJ3": 8, "THJ4": 60, "THJ5": 21,
@@ -147,11 +147,11 @@ rf2lf_ok = {"THJ1": 5, "THJ2": 4.5, "THJ3": 8, "THJ4": 60, "THJ5": 21,
 	    "RFJ0": 30, "RFJ3": 6, "RFJ4": 0.5,
 	    "LFJ0": 30, "LFJ3": 0, "LFJ4": -10, "LFJ5": 7 }
 # O.K. with little finger
-lf_ok = {"THJ1": 21, "THJ2": 11, "THJ3": 10, "THJ4": 69, "THJ5": 26,
+lf_ok = {"THJ1": 21, "THJ2": -10, "THJ3": 10, "THJ4": 69, "THJ5": 29,
 	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
 	 "MFJ0": 15, "MFJ3": 4, "MFJ4": -1,
 	 "RFJ0": 15, "RFJ3": 6, "RFJ4": 0.5,
-	 "LFJ0": 76, "LFJ3": 26, "LFJ4": 6, "LFJ5": 35 }
+	 "LFJ0": 77, "LFJ3": 35, "LFJ4": 6, "LFJ5": 35 }
 # zero wrist
 zero_wr = {"WRJ1": 0, "WRJ2": 0 }
 # north wrist
@@ -492,25 +492,25 @@ def secuence_ff():
 
    rospy.sleep(1)
    c.move_hand(ne_wr)
-   rospy.sleep(1.4)
+   rospy.sleep(1)
    c.move_hand(nw_wr)
-   rospy.sleep(1.4)
+   rospy.sleep(1)
    c.move_hand(sw_wr)
-   rospy.sleep(1.4)
+   rospy.sleep(1)
    c.move_hand(se_wr)
-   rospy.sleep(1.4)
+   rospy.sleep(1)
    c.move_hand(ne_wr)
-   rospy.sleep(0.7)
+   rospy.sleep(0.5)
    c.move_hand(nw_wr)
-   rospy.sleep(0.7)
+   rospy.sleep(0.5)
    c.move_hand(sw_wr)
-   rospy.sleep(0.7)
+   rospy.sleep(0.5)
    c.move_hand(se_wr)
-   rospy.sleep(0.7)
+   rospy.sleep(0.5)
    c.move_hand(zero_wr)
    rospy.sleep(0.4)
    c.move_hand(start_pos)
-   rospy.sleep(1.5)    
+   rospy.sleep(1)    
    return
 
 def secuence_mf():
@@ -554,55 +554,55 @@ def secuence_mf():
 
 def secuence_rf():
    # Start the secuence 3
-#   rospy.sleep(0.5)
-#   c.move_hand(start_pos)
-#   rospy.sleep(1.5)
-#   c.move_hand(shake_grasp_1)
-#   rospy.sleep(2.5)
-#   c.move_hand(shake_grasp_2)
-#   rospy.sleep(1)
-#   c.move_hand(e_wr)
-#   rospy.sleep(0.4)
-#   c.move_hand(w_wr)
-#   rospy.sleep(0.4)
-#   c.move_hand(zero_wr)
-#   rospy.sleep(0.8)
-#   c.move_hand(shake_grasp_1)
-#   rospy.sleep(1.5)
-#   c.move_hand(start_pos)
-#   rospy.sleep(1.5)
-
    rospy.sleep(0.5)
    c.move_hand(start_pos)
+   rospy.sleep(1.5)
+   c.move_hand(shake_grasp_1)
+   rospy.sleep(2.5)
+   c.move_hand(shake_grasp_2)
    rospy.sleep(1)
-   c.move_hand(bc_pre_zero)
-   rospy.sleep(2)
-   c.move_hand(bc_zero)
-   rospy.sleep(4)
-   c.move_hand(bc_1)
-   rospy.sleep(1)
-   c.move_hand(bc_2)
-   rospy.sleep(1)
-   c.move_hand(bc_3)
-   rospy.sleep(1)
-   c.move_hand(bc_4)
-   rospy.sleep(1)
-   c.move_hand(bc_5)
-   rospy.sleep(1)
-   c.move_hand(bc_6)
-   rospy.sleep(1)
-   c.move_hand(bc_7)
-   rospy.sleep(1)
-   c.move_hand(bc_8)
-   rospy.sleep(1)
-   c.move_hand(bc_9)
-   rospy.sleep(1)
-   c.move_hand(bc_11)
-   rospy.sleep(1)
-   c.move_hand(bc_12)
-   rospy.sleep(3)
+   c.move_hand(e_wr)
+   rospy.sleep(0.4)
+   c.move_hand(w_wr)
+   rospy.sleep(0.4)
+   c.move_hand(zero_wr)
+   rospy.sleep(0.8)
+   c.move_hand(shake_grasp_1)
+   rospy.sleep(1.5)
    c.move_hand(start_pos)
    rospy.sleep(1.5)
+
+#   rospy.sleep(0.5)
+#   c.move_hand(start_pos)
+#   rospy.sleep(1)
+#   c.move_hand(bc_pre_zero)
+#   rospy.sleep(2)
+#   c.move_hand(bc_zero)
+#   rospy.sleep(4)
+#   c.move_hand(bc_1)
+#   rospy.sleep(1)
+#   c.move_hand(bc_2)
+#   rospy.sleep(1)
+#   c.move_hand(bc_3)
+#   rospy.sleep(1)
+#   c.move_hand(bc_4)
+#   rospy.sleep(1)
+#   c.move_hand(bc_5)
+#   rospy.sleep(1)
+#   c.move_hand(bc_6)
+#   rospy.sleep(1)
+#   c.move_hand(bc_7)
+#   rospy.sleep(1)
+#   c.move_hand(bc_8)
+#   rospy.sleep(1)
+#   c.move_hand(bc_9)
+#   rospy.sleep(1)
+#   c.move_hand(bc_11)
+#   rospy.sleep(1)
+#   c.move_hand(bc_12)
+#   rospy.sleep(3)
+#   c.move_hand(start_pos)
+#   rospy.sleep(1.5)
       
    return
 
@@ -745,7 +745,7 @@ def zero_tactile_sensors():
    print "\nPRESS ONE OF THE TACTILES TO START A DEMO"
    print "   FF: Standard Demo"
    print "   MF: Shy Hand Demo"
-   print "   RF: Card Trick Demo"
+   print "   RF: Shake Hand Demo"
    print "   LF: Grasp Demo"
    print "   TH: Open Hand"
 
