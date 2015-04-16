@@ -1,4 +1,4 @@
-ffj0:
+rh_ffj0:
   backlash_compensation: true
   pid:
     d: 64
@@ -13,7 +13,7 @@ ffj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-ffj3:
+rh_ffj3:
   backlash_compensation: true
   pid:
     d: 64
@@ -28,7 +28,7 @@ ffj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-ffj4:
+rh_ffj4:
   backlash_compensation: true
   pid:
     d: 64
@@ -43,7 +43,7 @@ ffj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-lfj0:
+rh_lfj0:
   backlash_compensation: true
   pid:
     d: 64
@@ -58,7 +58,7 @@ lfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-lfj3:
+rh_lfj3:
   backlash_compensation: true
   pid:
     d: 64
@@ -73,7 +73,7 @@ lfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-lfj4:
+rh_lfj4:
   backlash_compensation: true
   pid:
     d: 64
@@ -88,7 +88,7 @@ lfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-lfj5:
+rh_lfj5:
   backlash_compensation: true
   pid:
     d: 64
@@ -103,7 +103,7 @@ lfj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-mfj0:
+rh_mfj0:
   backlash_compensation: true
   pid:
     d: 64
@@ -118,7 +118,7 @@ mfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-mfj3:
+rh_mfj3:
   backlash_compensation: true
   pid:
     d: 64
@@ -133,7 +133,7 @@ mfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-mfj4:
+rh_mfj4:
   backlash_compensation: true
   pid:
     d: 64
@@ -148,7 +148,7 @@ mfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-rfj0:
+rh_rfj0:
   backlash_compensation: true
   pid:
     d: 64
@@ -163,7 +163,7 @@ rfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-rfj3:
+rh_rfj3:
   backlash_compensation: true
   pid:
     d: 64
@@ -178,7 +178,7 @@ rfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-rfj4:
+rh_rfj4:
   backlash_compensation: true
   pid:
     d: 64
@@ -193,7 +193,7 @@ rfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-thj1:
+rh_thj1:
   backlash_compensation: true
   pid:
     d: 64
@@ -208,7 +208,7 @@ thj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-thj2:
+rh_thj2:
   backlash_compensation: true
   pid:
     d: 64
@@ -223,7 +223,7 @@ thj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-thj3:
+rh_thj3:
   backlash_compensation: true
   pid:
     d: 64
@@ -238,7 +238,7 @@ thj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-thj4:
+rh_thj4:
   backlash_compensation: false
   pid:
     d: 64
@@ -253,7 +253,7 @@ thj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-thj5:
+rh_thj5:
   backlash_compensation: false
   pid:
     d: 64
@@ -268,7 +268,7 @@ thj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-wrj1:
+rh_wrj1:
   backlash_compensation: false
   pid:
     d: 64
@@ -283,7 +283,7 @@ wrj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-wrj2:
+rh_wrj2:
   backlash_compensation: false
   pid:
     d: 64
