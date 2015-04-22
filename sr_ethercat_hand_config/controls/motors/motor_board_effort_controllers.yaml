@@ -65,7 +65,7 @@ lfj3:
     deadband: 5
     f: 300
     i: 0
-    imax: 390
+    imax: 410
     max_pwm: 1023
     p: 6200
     sg_left: 0
