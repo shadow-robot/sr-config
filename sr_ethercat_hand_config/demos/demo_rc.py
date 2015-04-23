@@ -28,7 +28,7 @@ from std_msgs.msg import Float64
 #the threshold for pdc above which the tactile is considered "pressed"
 PDC_THRESHOLD = 2000
 #the threshold for the PSTs above which the tactile is considered "pressed"
-PST_THRESHOLD = 420
+PST_THRESHOLD = 520
 
 class FancyDemo(object):
     # starting position for the hand (DON't use until reviewed. Should be executed in two movement sequences)
@@ -478,7 +478,7 @@ class FancyDemo(object):
 
         # We subscribe to the data being published by the biotac sensors.
         #self.sub_biotacs = rospy.Subscriber("/tactiles", BiotacAll, self.callback_biotacs, queue_size=1)
-        #self.sub_psts    = rospy.Subscriber("/tactile", ShadowPST, self.callback_psts, queue_size=1)
+        self.sub_psts    = rospy.Subscriber("/tactile", ShadowPST, self.callback_psts, queue_size=1)
 
     def create_hand_publishers(self):
         """
@@ -883,10 +883,10 @@ def main():
 
     fancy_demo = FancyDemo()
 
-    fancy_demo.mf_pressed(0)
+    #fancy_demo.mf_pressed(0)
 
     # subscribe until interrupted
-    # rospy.spin()
+    rospy.spin()
 
 
 if __name__ == '__main__':
