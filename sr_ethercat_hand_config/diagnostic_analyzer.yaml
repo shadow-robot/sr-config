@@ -11,48 +11,48 @@ analyzers:
         type: GenericAnalyzer
         path: Tactiles
         timeout: 5.0
-        regex: 'Tactile .*[1-5].*'
+        regex: '.*Tactile .*[1-5].*'
         num_items: 5
       first_finger:
         type: GenericAnalyzer
         path: First Finger
         timeout: 5.0
-        regex: 'SRDMotor .*FFJ[0-9].*'
+        regex: '.*SRDMotor .*FFJ[0-9].*'
         num_items: 5
       right_finger:
         type: GenericAnalyzer
         path: Ring Finger
         timeout: 5.0
-        regex: 'SRDMotor .*RFJ[0-9].*'
+        regex: '.*SRDMotor .*RFJ[0-9].*'
         num_items: 5
       middle_finger:
         type: GenericAnalyzer
         path: Middle Finger
         timeout: 5.0
-        regex: 'SRDMotor .*MFJ[0-9].*'
+        regex: '.*SRDMotor .*MFJ[0-9].*'
         num_items: 5
       little_finger:
         type: GenericAnalyzer
         path: Little Finger
         timeout: 5.0
-        regex: 'SRDMotor .*LFJ[0-9].*'
+        regex: '.*SRDMotor .*LFJ[0-9].*'
         num_items: 6
       thumb:
         type: GenericAnalyzer
         path: Thumb
         timeout: 5.0
-        regex: 'SRDMotor .*THJ[0-9].*'
+        regex: '.*SRDMotor .*THJ[0-9].*'
         num_items: 5
       wrist:
         type: GenericAnalyzer
         path: Wrist
         timeout: 5.0
-        regex: 'SRDMotor .*WRJ[0-9].*'
+        regex: '.*SRDMotor .*WRJ[0-9].*'
         num_items: 2
       controllers:
         type: GenericAnalyzer
         path: Devices
         timeout: 5.0
-        regex: [ 'SRDMotor : [0-9]+', 'SRBridge.*', 'EtherCAT Dual CAN Palm' ]
+        regex: [ '.*SRDMotor : [0-9]+', '.*SRBridge.*', '.*EtherCAT Dual CAN Palm' ]
         num_items: 2
 
