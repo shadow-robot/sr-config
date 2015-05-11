@@ -1,7 +1,0 @@
-<launch>
-  <!-- For a single hand system -->
-  <node name="rhand_demo" pkg="sr_ethercat_hand_config" type="demo_r.py" output="screen"/>
-  <!-- For a bimanual system -->
-  <!-- node ns="rh" name="rhand_demo" pkg="sr_ethercat_hand_config" type="demo_r.py" output="screen"/ -->
-</launch>
-

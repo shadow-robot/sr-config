@@ -1,4 +1,0 @@
-<launch>
-  <include file="$(find sr_ethercat_hand_config)/launch/demos/rhand_demo.launch" />
-  <include file="$(find sr_ethercat_hand_config)/launch/demos/lhand_demo.launch" />
-</launch>

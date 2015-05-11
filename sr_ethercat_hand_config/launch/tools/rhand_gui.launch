@@ -1,7 +1,0 @@
-<launch>
-  <!-- For a bimanual system uncomment the ns tag-->
-  <!-- group ns="rh" -->
-    <node name="rhand_gui" pkg="rqt_gui" type="rqt_gui" output="screen"/>
-  <!-- /group -->
-</launch>
-

@@ -1,6 +1,0 @@
-<launch>
-  <group ns="lh">
-    <node name="lhand_gui" pkg="rqt_gui" type="rqt_gui" output="screen"/>
-  </group>
-</launch>
-
