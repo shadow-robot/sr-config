@@ -1,0 +1,40 @@
+#Hand, left or right
+hand: right
+
+#Hand prefix, r or l
+right_hand_id: &hand_id rh
+
+#Serial number
+rh_serial: &serial '1050'
+
+#Robot description xacro
+robot_description_file: shadowhand_motor.urdf.xacro
+
+#PWM control, default := False
+pwm_control: False
+
+#pwm_control, PWM or FORCE, if pwm_control, dcm = PWM. default := FORCE
+realtime_loop:
+  *hand_id:
+    default_control_mode: FORCE
+
+# Default := False
+use_sim_time: False
+
+use_ns: False
+
+#Defines the sub-directory used in
+#  $(find sr_ethercat_hand_config)/mappings/
+#  and $(find sr_ethercat_hand_config)/calibrations/
+#  and $(find sr_ethercat_hand_config)/controls/host/
+#  to know where to find the parameters for a certain hand.
+#  In case we only have one hand this parameter will normally be "", meaning that the desired par
+#  If it's not "" then it must be followed by a "/" e.g. "hand_2/"  -->
+config_dir: ''
+
+#Hand mapping, do not edit
+hand:
+  mapping:
+    *serial: *hand_id
+  joint_prefix:
+    *serial: *hand_id
