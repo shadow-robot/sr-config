@@ -1,7 +1,7 @@
 #Hand, left or right
 hand: right
 
-#Hand prefix, r or l
+#Hand prefix, rh or lh. If this is set, ns must be used.
 right_hand_id: &hand_id rh
 
 #Serial number
@@ -11,13 +11,15 @@ rh_serial: &serial '1130'
 rh_eth_port: eth0
 
 #Robot description xacro
-robot_description_file: shadowhand_motor.urdf.xacro
+robot_description_file: hand.urdf.xacro
+
+robot_description_path: /home/kirsty/catkin_ws/src/sr-config/
 
 #Set namespace, default is 'true' as it is required for bimanual
-use_ns: False
+use_ns: True
 
 #PWM control, default := False
-pwm_control: True
+pwm_control: False
 
 #Default := False
 use_sim_time: False
