@@ -2,20 +2,20 @@
 hand: right
 
 #Hand prefix, rh or lh. If this is set, ns must be used.
-right_hand_id: &hand_id rh
+hand_id: &hand_id rh
 
 #Serial number
 rh_serial: &serial '1130'
 
 #Ethernet port
-rh_eth_port: eth0
+rh__eth_port: eth0
 
 #Robot description xacro
 robot_description_file: hand.urdf.xacro
 
 robot_description_path: /home/kirsty/catkin_ws/src/sr-config/
 
-#Set namespace, default is 'true' as it is required for bimanual
+#Set namespace, default is 'true' as it is required for bimanual and prefix
 use_ns: True
 
 #PWM control, default := False
@@ -24,7 +24,7 @@ pwm_control: False
 #Default := False
 use_sim_time: False
 
-#Hand mapping, do not edit
+#Hand mapping and joint prefix, prefix must be set for lh_ or rh_
 hand:
   mapping:
     *serial: *hand_id
