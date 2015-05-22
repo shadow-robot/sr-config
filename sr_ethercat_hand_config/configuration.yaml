@@ -13,7 +13,7 @@ rh__eth_port: eth0
 #Robot description xacro
 robot_description_file: hand.urdf.xacro
 
-robot_description_path: /home/kirsty/catkin_ws/src/sr-config/
+robot_description_path: /etc/shadow/right/sr-config/
 
 #Set namespace, default is 'true' as it is required for bimanual and prefix
 use_ns: True
