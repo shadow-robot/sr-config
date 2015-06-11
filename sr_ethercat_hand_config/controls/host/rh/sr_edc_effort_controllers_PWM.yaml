@@ -107,12 +107,12 @@ sh_rh_thj5_effort_controller:
 sh_rh_wrj1_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_WRJ1
-  max_force: 800
+  max_force: 700
   friction_deadband: 5
 sh_rh_wrj2_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_WRJ2
-  max_force: 800
+  max_force: 700
   friction_deadband: 5
 
 
