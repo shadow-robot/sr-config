@@ -337,11 +337,11 @@ class FancyDemo(object):
 	            joint(joint_name = "WRJ1", joint_target = 0),
 	            joint(joint_name = "WRJ2", joint_target = 0) ]
     # store step 2 PST
-    store_2_PST = [ joint(joint_name = "THJ1", joint_target = 55),
-	            joint(joint_name = "THJ2", joint_target = 12),
+    store_2_PST = [ joint(joint_name = "THJ1", joint_target = 50),
+	            joint(joint_name = "THJ2", joint_target = 35),
 	            joint(joint_name = "THJ3", joint_target = 0),
-	            joint(joint_name = "THJ4", joint_target = 69),
-	            joint(joint_name = "THJ5", joint_target = 28),
+	            joint(joint_name = "THJ4", joint_target = 65),
+	            joint(joint_name = "THJ5", joint_target = 12),
 	            joint(joint_name = "FFJ0", joint_target = 180),
 	            joint(joint_name = "FFJ3", joint_target = 90),
 	            joint(joint_name = "FFJ4", joint_target = 0),
@@ -927,4 +927,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
