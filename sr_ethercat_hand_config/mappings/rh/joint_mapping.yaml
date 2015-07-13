@@ -1,0 +1,3 @@
+##
+# This provides the file name for the mapping from joint to motor/muscle index
+joint_mapping: mapping_1
