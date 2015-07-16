@@ -3,9 +3,7 @@
     <remap from="/diagnostics" to="/rh/diagnostics" />
     <remap from="/diagnostics_agg" to="/rh/diagnostics_agg" />
     <include file="$(find sr_edc_launch)/sr_edc.launch" >
-      <arg name="config_dir" value="rh/" />
       <arg name="eth_port" value="eth1" />
-      <arg name="tf_prefix" value="rh" />
     </include>
   </group>
 </launch>
