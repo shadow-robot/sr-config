@@ -1,7 +1,9 @@
 <launch>
-  <include file="$(find sr_edc_launch)/sr_edc.launch" >
-    <arg name="config_dir" value="" />
-    <arg name="eth_port" value="eth1" />
-    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
-  </include>
+  <group ns="rh">
+    <remap from="/diagnostics" to="/rh/diagnostics" />
+    <remap from="/diagnostics_agg" to="/rh/diagnostics_agg" />
+    <include file="$(find sr_edc_launch)/sr_edc.launch" >
+      <arg name="eth_port" value="eth1" />
+    </include>
+  </group>
 </launch>
