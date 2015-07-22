@@ -111,7 +111,7 @@ zero_th = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 0, "THJ5": 0 }
 # Pre O.K. with first finger
 pre_ff_ok = {"THJ4": 70 }
 # O.K. with first finger
-ff_ok = {"THJ1": 15, "THJ2": 20, "THJ3": 0, "THJ4": 56, "THJ5": 20,
+ff_ok = {"THJ1": 15, "THJ2": 20, "THJ3": 0, "THJ4": 56, "THJ5": 18,
 	 "FFJ0": 75, "FFJ3": 45, "FFJ4": -0.2,
 	 "MFJ0": 42, "MFJ3": 33, "MFJ4": -3,
 	 "RFJ0": 50, "RFJ3": 18, "RFJ4": 0.5,
@@ -125,7 +125,7 @@ ff2mf_ok = {"THJ1": 5, "THJ2": 12, "THJ3": 4, "THJ4": 60, "THJ5": 2,
 # O.K. with middle finger
 mf_ok = {"THJ1": 15, "THJ2": 18, "THJ3": 7, "THJ4": 66, "THJ5": 30,
 	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	 "MFJ0": 71, "MFJ3": 54, "MFJ4": 11,
+	 "MFJ0": 71, "MFJ3": 49, "MFJ4": 11,
 	 "RFJ0": 50, "RFJ3": 18, "RFJ4": -10,
 	 "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
 # O.K. transition from middle finger to ring finger
@@ -147,7 +147,7 @@ rf2lf_ok = {"THJ1": 5, "THJ2": 4.5, "THJ3": 8, "THJ4": 60, "THJ5": 21,
 	    "RFJ0": 30, "RFJ3": 6, "RFJ4": 0.5,
 	    "LFJ0": 30, "LFJ3": 0, "LFJ4": -10, "LFJ5": 7 }
 # O.K. with little finger
-lf_ok = {"THJ1": 21, "THJ2": 11, "THJ3": 10, "THJ4": 69, "THJ5": 26,
+lf_ok = {"THJ1": 24, "THJ2": 11, "THJ3": 10, "THJ4": 69, "THJ5": 22,
 	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
 	 "MFJ0": 15, "MFJ3": 4, "MFJ4": -1,
 	 "RFJ0": 15, "RFJ3": 6, "RFJ4": 0.5,
@@ -243,14 +243,14 @@ bc_pre_zero = {"THJ1": 15, "THJ2": 7, "THJ3": -4, "THJ4": 50, "THJ5": -17,
 		  "RFJ0": 50, "RFJ3": 18, "RFJ4": -20,
 		  "LFJ0": 30, "LFJ3": 0, "LFJ4": -20, "LFJ5": 7 }
 # business card zero position 
-bc_zero = {"THJ1": 23, "THJ2": 6, "THJ3": -1, "THJ4": 43, "THJ5": -11,
+bc_zero = {"THJ1": 23, "THJ2": 6, "THJ3": -1, "THJ4": 42, "THJ5": -12,
 		  "MFJ0": 63, "MFJ3": 24, "MFJ4": 20 }
 # business card position 1 
 bc_1 = {"FFJ0": 137, "FFJ3": 7 }
 # business card position 2 
-bc_2 = {"FFJ0": 137, "FFJ3": 58 }
+bc_2 = {"FFJ0": 137, "FFJ3": 60 }
 # business card position 3 
-bc_3 = {"FFJ0": 72, "FFJ3": 62 }
+bc_3 = {"FFJ0": 62, "FFJ3": 60 }
 # business card position 4 
 bc_4 = {"FFJ0": 180, "FFJ3": 58 }
 # business card position 5 
@@ -262,12 +262,12 @@ bc_7 = {"FFJ0": 137, "FFJ3": 15 }
 # business card position 8 
 bc_8 = {"FFJ0": 137, "FFJ3": 58 }
 # business card position 9 
-bc_9 = {"FFJ0": 80, "FFJ3": 58 }
+bc_9 = {"FFJ0": 71, "FFJ3": 58 }
 # business card position 10 
 bc_10 = {"MFJ3": 64, "FFJ4": 20 }
 # business card position 11 
 bc_11 = {"FFJ0": 81, "FFJ3": 50, "FFJ4": 20, 
-        "THJ4": 57, "THJ5": 25, }
+        "THJ4": 57, "THJ5": 20, }
 # business card position 12 
 bc_12 = {"MFJ0": 20, "MFJ3": 10, "MFJ4": 0 }
 
@@ -578,7 +578,7 @@ def secuence_rf():
    c.move_hand(bc_pre_zero)
    rospy.sleep(2)
    c.move_hand(bc_zero)
-   rospy.sleep(4)
+   rospy.sleep(3)
    c.move_hand(bc_1)
    rospy.sleep(1)
    c.move_hand(bc_2)
