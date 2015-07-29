@@ -1,5 +1,5 @@
 <launch>
-  <arg name="hand_id" default="" />
+  <arg name="hand_id" default="rh" />
   <!-- The control mode PWM (true) or torque (false) -->
   <arg name="pwm_control" default="$(optenv PWM_CONTROL 0)"/>
 
