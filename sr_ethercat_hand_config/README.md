@@ -1,12 +1,12 @@
 Hand Configuration
 ==================
 
-* [Calibrations] - Both Left and Right hand calibration files, including the calibration of each joint and the 2 pressure sensors per joint. These are set by Shadow Robot prior to the delivery of a hand and should only be changed by a person that has received training for the calibration procedure.
-* [Controls] - Yaml files containing definitions for calibration, effort, joint, position and motor controllers
-* [Demos] - Demo files for store position (demo_rs.py or demo_ls.py), general demo (demo_r.py or demo_l.py), and card trick demo (demo_rc.py).
-* [Launch] - Launch files for Left/Right/Bimanual hands, specific to an install
-* [Mappings] - The file which provides the mapping between hand joints and actuators is specified here. 
-* [Rates] - Sensor and actuator update rate files.
+* [Calibrations](calibrations) - Both Left and Right hand calibration files, including the calibration of each joint and the 2 pressure sensors per joint. These are set by Shadow Robot prior to the delivery of a hand and should only be changed by a person that has received training for the calibration procedure.
+* [Controls](controls) - Yaml files containing definitions for calibration, effort, joint, position and motor controllers
+* [Demos](demos) - Demo files for store position (demo_rs.py or demo_ls.py), general demo (demo_r.py or demo_l.py), and card trick demo (demo_rc.py).
+* [Launch](launch) - Launch files for Left/Right/Bimanual hands, specific to an install
+* [Mappings](mappings) - The file which provides the mapping between hand joints and actuators is specified here. 
+* [Rates](rates) - Sensor and actuator update rate files.
 
 ## Joint to actuator mappings
 The mapping files for each type of hand can be found [here](https://github.com/shadow-robot/sr-ros-interface-ethercat/tree/indigo-devel/sr_edc_launch/mappings/default_mappings). The mapping which corresponds to the system that you are launching, i.e. right hand/left hand/motor actuated/muscle actuated, should be specified in the corresponding lh (left hand) or rh (right hand) load_joint_mapping.xml, in the mappings directory. 
