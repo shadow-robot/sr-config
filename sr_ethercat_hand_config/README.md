@@ -16,11 +16,11 @@ Changing the joint to actuator mapping should be done with caution, as an incorr
 ## Launching a hand
 This directory includes launch files for left hand/right hand/bimanual systems.
 
-The ethernet port in which the hand is connected is specified in the launch file, if the port is changed, then it should be edited here. The hand_serial parameter is hand specific, so should only be changed if launching a different hand. The serial of a hand can be found by running the launch file with no serial specified, argument and then check the program output. You should see something like:
+The ethernet port in which the hand is connected is specified in the launch file. If the port is changed, then it should be edited here. The hand_serial parameter is hand specific, so should only be changed if launching a different hand. To find the hand serial you can launch the command without the hand_serial argument and then check the program output. You should see something like:
 ```bash
 Trying to read mapping for: /hand/mapping/1178
 ```
-To lauch a right hand, run:
+To launch a right hand, run:
 
 ```bash
 roslaunch sr_ethercat_hand_config sr_rhand.launch
