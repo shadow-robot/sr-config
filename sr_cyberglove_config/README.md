@@ -1,8 +1,8 @@
 CyberGlove Configuration
 ========================
 
-* [Calibrations] - Calibration files for CyberGlove to Shadow Robot hand
-* [Mappings] - Files specifying the mapping of sensor readings from the CyberGlove to Shadow Robot hand joints.
+* [Calibrations](calibrations) - Calibration files for CyberGlove to Shadow Robot hand
+* [Mappings](mappings) - Files specifying the mapping of sensor readings from the CyberGlove to Shadow Robot hand joints.
 
 ## Adjusting CyberGlove calibration
 
