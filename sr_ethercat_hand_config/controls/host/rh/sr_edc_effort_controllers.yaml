@@ -1,117 +1,117 @@
 # First Finger (Index finger)
-sh_rh_ffj0_effort_controller:
+sh_ffj0_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_FFJ0
+  joint: FFJ0
   max_force: 0
   friction_deadband: 5000
-sh_rh_ffj3_effort_controller:
+sh_ffj3_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_FFJ3
+  joint: FFJ3
   max_force: 0
   friction_deadband: 5000
-sh_rh_ffj4_effort_controller:
+sh_ffj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_FFJ4
+  joint: FFJ4
   max_force: 0
   friction_deadband: 5
 
 
 # Middle Finger
-sh_rh_mfj0_effort_controller:
+sh_mfj0_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_MFJ0
+  joint: MFJ0
   max_force: 0
   friction_deadband: 5
-sh_rh_mfj3_effort_controller:
+sh_mfj3_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_MFJ3
+  joint: MFJ3
   max_force: 0
   friction_deadband: 5
-sh_rh_mfj4_effort_controller:
+sh_mfj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_MFJ4
+  joint: MFJ4
   max_force: 0
   friction_deadband: 5
 
 
 # Ring Finger
-sh_rh_rfj0_effort_controller:
+sh_rfj0_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_RFJ0
+  joint: RFJ0
   max_force: 0
   friction_deadband: 5
-sh_rh_rfj3_effort_controller:
+sh_rfj3_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_RFJ3
+  joint: RFJ3
   max_force: 0
   friction_deadband: 5
-sh_rh_rfj4_effort_controller:
+sh_rfj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_RFJ4
+  joint: RFJ4
   max_force: 0
   friction_deadband: 5
 
 
 # Little Finger
-sh_rh_lfj0_effort_controller:
+sh_lfj0_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_LFJ0
+  joint: LFJ0
   max_force: 0
   friction_deadband: 5
-sh_rh_lfj3_effort_controller:
+sh_lfj3_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_LFJ3
+  joint: LFJ3
   max_force: 0
   friction_deadband: 5
-sh_rh_lfj4_effort_controller:
+sh_lfj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_LFJ4
+  joint: LFJ4
   max_force: 0
   friction_deadband: 5
-sh_rh_lfj5_effort_controller:
+sh_lfj5_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_LFJ5
+  joint: LFJ5
   max_force: 0
   friction_deadband: 5
 
 
 # Thumb
-sh_rh_thj1_effort_controller:
+sh_thj1_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_THJ1
+  joint: THJ1
   max_force: 0
   friction_deadband: 5
-sh_rh_thj2_effort_controller:
+sh_thj2_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_THJ2
+  joint: THJ2
   max_force: 0
   friction_deadband: 5
-sh_rh_thj3_effort_controller:
+sh_thj3_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_THJ3
+  joint: THJ3
   max_force: 0
   friction_deadband: 5
-sh_rh_thj4_effort_controller:
+sh_thj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_THJ4
+  joint: THJ4
   max_force: 0
   friction_deadband: 5
-sh_rh_thj5_effort_controller:
+sh_thj5_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_THJ5
+  joint: THJ5
   max_force: 0
   friction_deadband: 5
 
 
 # Wrist
-sh_rh_wrj1_effort_controller:
+sh_wrj1_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_WRJ1
+  joint: WRJ1
   max_force: 0
   friction_deadband: 5
-sh_rh_wrj2_effort_controller:
+sh_wrj2_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
-  joint: rh_WRJ2
+  joint: WRJ2
   max_force: 0
   friction_deadband: 5
 
