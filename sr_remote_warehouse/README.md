@@ -11,31 +11,34 @@ The easiest way to launch the database connection is with ```roslaunch sr_remote
 
 Add ```launch_services:=false``` to the launch command if you don't want the services for some reason.
 
-The connection can also be launched for existing Shadow Robot moveit configurations:
+The connection can also be launched for the following existing Shadow Robot moveit configurations:
 * ```right_sr_ur10_moveit_config```
 * ```left_sr_ur10_moveit_config```
 * ```sr_hand_moveit_config```
 
-by using ```roslaunch moveit_config_package_name default_warehouse_db.launch remote_warehouse:=true```
+Launch using ```roslaunch moveit_config_package_name default_warehouse_db.launch remote_warehouse:=true```
 
 ## Connection details
 Default access is read only, using the details stored in ```sr_remote_warehouse/launch/remote_warehouse.yaml```
 
-If you want write access for some reason, [contact us](mailto:software@shadowrobot.com).
+If you want write access for some reason (and we'll always be greatful for contributions :), please [contact us](mailto:software@shadowrobot.com).
 
 ## Accessing Poses
 
-*Services*
+###Services
+
 The poses stored in the database can be most easily accessed using the following services, launched by default with the database connection.
 
 * ```/list_robot_states``` returns a list of the names of the robot states available in the db. If you provide a ```robot``` argument, only posess for the named robot are returned.
 * ```/has_robot_state``` returns a bool describing if the named state is available. If ```robot``` is provided, the service returns true only if the named pose is available, and for the named robot.
 * ```/get_robot_state``` returns a ```moveit_msgs/RobotState``` containing the saved pose. The ```robot``` argument can be used to filter poses only for the named robot as before.
 
-*Rviz*
+###Rviz
+
 If the database connection has been launched, the rviz motion planning plugin can connect in the same way as it would to a local db, although obviously read only access.
 
-*Other*
+###Other
+
 Support for transparent access from ```sr_robot_commander```, ```sr_grasp_controller``` and eventually directly frmo ```move_group_commander```. Watch this space for further details.
 
 
