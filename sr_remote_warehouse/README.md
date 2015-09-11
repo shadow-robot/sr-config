@@ -39,8 +39,7 @@ If the database connection has been launched, the rviz motion planning plugin ca
 
 ###Other
 
-Support for transparent access from ```sr_robot_commander```, ```sr_grasp_controller``` and eventually directly frmo ```move_group_commander```. Watch this space for further details.
-
+Support for transparent access from ```sr_robot_commander```, ```sr_grasp_controller``` and eventually directly from ```move_group_commander``` Watch this space for further details.
 
 
 ## Cloning Locally
