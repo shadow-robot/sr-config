@@ -2,7 +2,7 @@
 
 This package allows connection to a mongodb warehouse for storing robot poses for use with the Shadow Robot Hand. 
 
-It provides a cloud alternative to local a mongo warehouse as provided by [mongodb (http://wiki.ros.org/mongodb)]. As for the local warehouse, the remote one also provides storage for constraints and planning scenes. These features aren't used by our code, and so will be left unexplained.
+It provides a cloud alternative to local a mongo warehouse as provided by [mongodb](http://wiki.ros.org/mongodb). As for the local warehouse, the remote one also provides storage for constraints and planning scenes. These features aren't used by our code, and so will be left unexplained.
 
 
 ## Launching
@@ -16,7 +16,7 @@ The connection can also be launched for existing shadow robot moviet configurati
 by using ```roslaunch moveit_config_package_name default_warehouse_db.launch remote_warehouse:=true```
 
 ## Connection details
-Default access is read only, using the authentication details stored in ```sr_remote_warehouse/launch/remote_warehouse.yaml```. If you want write access for some reason, [contact us(mailto:software@shadowrobot.com)].
+Default access is read only, using the authentication details stored in ```sr_remote_warehouse/launch/remote_warehouse.yaml```. If you want write access for some reason, [contact us](mailto:software@shadowrobot.com).
 ## Accessing Poses
 
 The poses stored in the database can be most easily accessed using the following services, launched by default with the database connection.
