@@ -21,7 +21,7 @@ Launch using ```roslaunch moveit_config_package_name default_warehouse_db.launch
 ## Connection details
 Default access is read only, using the details stored in ```sr_remote_warehouse/launch/remote_warehouse.yaml```
 
-If you want write access for some reason (and we'll always be greatful for contributions :), please [contact us](mailto:software@shadowrobot.com).
+If you want write access for some reason (and we'll always be grateful for contributions :), please [contact us](mailto:software@shadowrobot.com).
 
 ## Accessing Poses
 
@@ -29,7 +29,7 @@ If you want write access for some reason (and we'll always be greatful for contr
 
 The poses stored in the database can be most easily accessed using the following services, launched by default with the database connection.
 
-* ```/list_robot_states``` returns a list of the names of the robot states available in the db. If you provide a ```robot``` argument, only posess for the named robot are returned.
+* ```/list_robot_states``` returns a list of the names of the robot states available in the db. If you provide a ```robot``` argument, only poses for the named robot are returned.
 * ```/has_robot_state``` returns a bool describing if the named state is available. If ```robot``` is provided, the service returns true only if the named pose is available, and for the named robot.
 * ```/get_robot_state``` returns a ```moveit_msgs/RobotState``` containing the saved pose. The ```robot``` argument can be used to filter poses only for the named robot as before.
 
