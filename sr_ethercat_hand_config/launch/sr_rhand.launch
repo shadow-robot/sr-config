@@ -1,9 +1,9 @@
 <launch>
-  <group ns="rh">
-    <remap from="/diagnostics" to="/rh/diagnostics" />
-    <remap from="/diagnostics_agg" to="/rh/diagnostics_agg" />
-    <include file="$(find sr_edc_launch)/sr_edc.launch" >
-      <arg name="eth_port" value="eth1" />
-    </include>
-  </group>
+  <include file="$(find sr_edc_launch)/sr_edc.launch" >
+    <arg name="eth_port" value="eth0" />
+    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_extra_lite.urdf.xacro"/>
+    <arg name="pwm_control" value="true"/>
+    <arg name="hand_serial" value="1306"/>
+    <arg name="debug" value="false"/>
+  </include>
 </launch>
