@@ -11,13 +11,6 @@ The easiest way to launch the database connection is with ```roslaunch sr_remote
 
 Add ```launch_services:=false``` to the launch command if you don't want the services for some reason.
 
-The connection can also be launched for the following existing Shadow Robot moveit configurations:
-* ```right_sr_ur10_moveit_config```
-* ```left_sr_ur10_moveit_config```
-* ```sr_hand_moveit_config```
-
-Launch using ```roslaunch moveit_config_package_name default_warehouse_db.launch remote_warehouse:=true```
-
 ## Connection details
 Default access is read only, using the details stored in ```sr_remote_warehouse/launch/remote_warehouse.yaml```
 
