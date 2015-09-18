@@ -1,3 +1,4 @@
 sr_pst_tactile_sensor_controller:
   type: sr_tactile_sensor_controller/SrPSTTactileSensorController
   publish_rate: 100
+  prefix: rh
