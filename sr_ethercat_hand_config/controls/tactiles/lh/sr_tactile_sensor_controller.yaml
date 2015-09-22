@@ -1,0 +1,4 @@
+sr_lh_tactile_sensor_controller:
+  type: sr_tactile_sensor_controller/SrTactileSensorController
+  publish_rate: 100
+  prefix: lh
