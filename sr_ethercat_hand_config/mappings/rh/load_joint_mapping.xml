@@ -1,3 +1,0 @@
-<launch>
-  <rosparam command="load" file="$(find sr_edc_launch)/mappings/default_mappings/rh_ethercat.yaml" />
-</launch>
