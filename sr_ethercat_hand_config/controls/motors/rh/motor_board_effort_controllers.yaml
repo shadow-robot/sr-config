@@ -6,7 +6,7 @@ ffj0:
     f: 300
     i: 0
     imax: 550
-    max_pwm: 600
+    max_pwm: 0
     p: 6200
     sg_left: 0
     sg_right: 0
