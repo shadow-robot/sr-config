@@ -235,3 +235,4 @@ sh_rh_wrj2_position_controller:
     p: -8300.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
+
