@@ -159,8 +159,8 @@ sh_rh_thj1_position_controller:
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
-    p: 5900.0
+    max_force: 550.0
+    p: 5600.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_thj2_position_controller:
@@ -171,32 +171,32 @@ sh_rh_thj2_position_controller:
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
+    max_force: 550.0
     p: 6300.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_thj3_position_controller:
   joint: rh_THJ3
   pid:
-    d: -270.0
+    d: -280.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
-    p: -6900.0
-    position_deadband: 0.003
+    max_force: 350.0
+    p: -6500.0
+    position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_thj4_position_controller:
   joint: rh_THJ4
   pid:
-    d: 360.0
+    d: 380.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
-    p: 6500.0
+    max_force: 550.0
+    p: 6400.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_thj5_position_controller:
@@ -207,20 +207,20 @@ sh_rh_thj5_position_controller:
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
+    max_force: 550.0
     p: 6500.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_wrj1_position_controller:
   joint: rh_WRJ1
   pid:
-    d: 280.0
+    d: 260.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
-    p: 7700.0
+    max_force: 600.0
+    p: 8000.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_wrj2_position_controller:
@@ -231,7 +231,7 @@ sh_rh_wrj2_position_controller:
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
+    max_force: 550.0
     p: -9400.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
