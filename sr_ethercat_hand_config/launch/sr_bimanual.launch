@@ -1,30 +1,9 @@
 <launch>
   <include file="$(find sr_robot_launch)/launch/sr_bimanual.launch">
-    <!-- This launch file is for bimanual system only -->
     <arg name="sim" value="false"/>
-    <arg name="calibration_controllers" value="1"/>
-    <!-- Xacro file containing the robot description we want to load -->
-    <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro"/>
-    <!-- The control mode PWM (true) or torque (false) -->
-    <arg name="pwm_control" value="0"/>
-
-    <!-- Allows to specify the ethernet interface/s to be used for ethercat devices. It defaults to the value of the env var ETHERCAT_PORT
-        More than one interface can be specified by concatenating them using underscore as a separator (e.g eth1_eth2_eth3) -->
     <arg name="eth_port" value="eth1_eth2"/>
-
-    <!-- The ethercat serial number for the right hand -->
     <arg name="rh_serial" value="1290"/>
-    <!-- The id for the right hand. It needs to be the same (but without trailing underscore) as the prefix used in the hand model. -->
-    <arg name="rh_id" value="rh"/>
-    <!-- The ethercat serial number for the left hand -->
     <arg name="lh_serial" value="1338"/>
-    <!-- The id for the left hand. It needs to be the same (but without trailing underscore) as the prefix used in the hand model. -->
-    <arg name="lh_id" value="lh"/>
-    <!-- Set to true to spawn trajectory controllers for the hands(the trajectory controller overwrites continuously the joint position command, preventing direct control via topics-->
-    <arg name="hand_trajectory" value="true"/>
-    <!-- Set to true to spawn the position controllers for the hands-->
-    <arg name="hand_ctrl" value="true"/>
-    <!-- Set to true to allow planning trajectories-->
     <arg name="use_moveit" value="true"/>
   </include>
 </launch>
