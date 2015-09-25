@@ -9,4 +9,6 @@
 
     <arg name="sim" value="false"/>
   </include>
+
+  <node name="biotac_republisher" pkg="sr_tactile_sensor_controller" type="biotac_republisher">
 </launch>
