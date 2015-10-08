@@ -3,12 +3,9 @@
     <arg name="eth_port" value="eth1" />
     <arg name="hand_serial" value="1290" />
     <arg name="hand_id" value="rh" />
+    <arg name="use_moveit" value="true"/>
     <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_ethercat.yaml"/>
-
-    <arg name="hand_trajectory" value="false"/>
-    <arg name="hand_ctrl" value="false"/>
-    <arg name="pwm_control" value="false"/>
 
     <arg name="sim" value="false"/>
   </include>

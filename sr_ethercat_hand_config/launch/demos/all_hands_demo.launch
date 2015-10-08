@@ -1,4 +1,4 @@
 <launch>
-  <include file="$(find sr_ethercat_hand_config)/launch/demos/rhand_demo.launch" />
-  <include file="$(find sr_ethercat_hand_config)/launch/demos/lhand_demo.launch" />
+  <node name="lhand_demo" pkg="sr_ethercat_hand_config" type="left_hand_demo.py" output="screen"/>
+  <node name="rhand_demo" pkg="sr_ethercat_hand_config" type="right_hand_demo.py" output="screen"/>
 </launch>
