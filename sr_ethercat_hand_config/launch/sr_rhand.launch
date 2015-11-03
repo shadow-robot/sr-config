@@ -11,5 +11,6 @@
     <arg name="sim" value="false"/>
   </include>
 
-  <include file="$(find optoforce)/launch/optoforce_hand.launch"/>
+  <node pkg="sr_moveit_hand_config" type="timed_roslaunch.sh" args="10 optoforce optoforce_hand.launch"
+    name="timed_roslaunch_optoforce" output="screen"/>
 </launch>
