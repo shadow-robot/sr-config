@@ -9,5 +9,6 @@
 
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
+    <arg name="pwm_control" value="false"/>
   </include>
 </launch>
