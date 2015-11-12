@@ -170,7 +170,7 @@ rfj3:
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 500
     max_pwm: 700
     p: 6200
     sg_left: 0
