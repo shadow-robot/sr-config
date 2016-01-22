@@ -7,8 +7,10 @@
     <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_lite.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_lite_v1.yaml"/>
 
-    <arg name="hand_ctrl" default="false"/>
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
   </include>
+
+  <node pkg="sr_moveit_hand_config" type="timed_roslaunch.sh" args="10 optoforce optoforce_hand.launch"
+    name="timed_roslaunch_optoforce" output="screen"/>
 </launch>
