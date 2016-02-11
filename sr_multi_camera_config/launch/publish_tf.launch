@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<launch>
+
+   <!-- arguments for this file -->
+   <arg name="robot1" default="camera_scene" />
+   <arg name="xacro_model" default="$(find ind_cal_multi_camera)/urdf/camera_scene.xacro" />
+   <!-- Load the xacro file of the tower and cameras onto the parameter server as a robot description -->
+   <param name="$(arg robot1)/robot_description" command="$(find xacro)/xacro.py $(arg xacro_model)" />
+
+   <!-- Launch robot state publishers for scene -->
+   <node ns="$(arg robot1)" name="camera_scene_state_publisher" pkg="robot_state_publisher" type="state_publisher" >
+            <!--param name="tf_prefix" value="" /-->
+            <param name="publish_frequency" value="50" />
+    </node>
+
+<!-- Launch mutable joint state publisher for calibratable transforms -->
+   <node  name="camera_locs" pkg="industrial_extrinsic_cal" type="mutable_joint_state_publisher" >
+       <param name="mutable_joint_state_yaml_file" value="$(find ind_cal_multi_camera)/yaml/camera_scene_mutable_joint_states.yaml" />
+       <remap from="mutable_joint_states" to="$(arg robot1)/joint_states" />
+   </node>
+
+
+</launch>
