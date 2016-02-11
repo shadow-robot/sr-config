@@ -31,7 +31,7 @@ Finally, call the service with
 
 ```rosservice call /calibration_service "{allowable_cost_per_observation: 0.25}"```
 
-The allowable_cost_per_observation sets how accurate the calibration must be to be accepted. 0.25 is the default, and it seems to work well enough. Maybe we should experiment with this a bit.
+The *allowable_cost_per_observation* sets how accurate the calibration must be to be accepted. 0.25 is the default, and it seems to work well enough. Maybe we should experiment with this a bit.
 
 
 The output of the calibration is a new yaml file called **mutable_joint_states.yamlnew**. Rename this to just ".yaml" to use the new calibration.
