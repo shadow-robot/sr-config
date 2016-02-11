@@ -17,9 +17,11 @@ The location of the target is set via the link *target_frame* and the joint whic
 
 ## Calibrating
 First launch you cameras.
+
 ```roslaunch sr_multi_camera_config cameras.launch```
 
 will in its curernt form launch two of the standard Logitech web-cams we use at shadow. Remeber to set the camera serial numbers to reflect the particular cameras you have.
+
 
 Then launch the calibration job -
 
@@ -28,11 +30,15 @@ Then launch the calibration job -
 Finally, call the service with
 
 ```rosservice call /calibration_service "{allowable_cost_per_observation: 0.25}"```
+
 The allowable_cost_per_observation sets how accurate the calibration must be to be accepted. 0.25 is the default, and it seems to work well enough. Maybe we should experiment with this a bit.
+
 
 The output of the calibration is a new yaml file called **mutable_joint_states.yamlnew**. Rename this to just ".yaml" to use the new calibration.
 
 ## Using the Calibration
 ```roslaunch sr_multi_camera_config publish_tf.launch```
 
-will look at the xacro and relevant yaml files and publish the tfs needed to use the new calibration. Running ```gen_urdf.sh``` in the urdf directory will generate a fixed urdf of the camera setup for using later.
+will look at the xacro and relevant yaml files and publish the tfs needed to use the new calibration.
+
+Running ```gen_urdf.sh``` in the urdf directory will generate a fixed urdf of the camera setup for using later.
