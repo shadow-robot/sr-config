@@ -3,7 +3,7 @@ ffj0:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 550
     max_pwm: 600
@@ -18,7 +18,7 @@ ffj3:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 450
     max_pwm: 600
@@ -33,7 +33,7 @@ ffj4:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 350
     max_pwm: 300
@@ -48,7 +48,7 @@ lfj0:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 550
     max_pwm: 600
@@ -63,7 +63,7 @@ lfj3:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 700
     max_pwm: 600
@@ -78,7 +78,7 @@ lfj4:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 350
     max_pwm: 300
@@ -93,7 +93,7 @@ lfj5:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 350
     max_pwm: 400
@@ -108,7 +108,7 @@ mfj0:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 550
     max_pwm: 600
@@ -123,7 +123,7 @@ mfj3:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 450
     max_pwm: 600
@@ -138,7 +138,7 @@ mfj4:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 350
     max_pwm: 300
@@ -153,7 +153,7 @@ rfj0:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 550
     max_pwm: 600
@@ -168,7 +168,7 @@ rfj3:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 400
     max_pwm: 600
@@ -183,7 +183,7 @@ rfj4:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 350
     max_pwm: 300
@@ -198,7 +198,7 @@ thj1:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 300
     max_pwm: 500
@@ -213,7 +213,7 @@ thj2:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 350
     max_pwm: 500
@@ -228,7 +228,7 @@ thj3:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 250
     max_pwm: 300
@@ -243,7 +243,7 @@ thj4:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 300
     max_pwm: 500
@@ -258,7 +258,7 @@ thj5:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 300
     max_pwm: 500
@@ -273,7 +273,7 @@ wrj1:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 450
     max_pwm: 800
@@ -288,7 +288,7 @@ wrj2:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 250
     max_pwm: 600
