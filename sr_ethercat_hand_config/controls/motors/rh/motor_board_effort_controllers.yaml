@@ -20,7 +20,7 @@ ffj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 450
+    imax: 600
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -65,7 +65,7 @@ lfj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 700
+    imax: 800
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -125,7 +125,7 @@ mfj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 450
+    imax: 550
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -170,7 +170,7 @@ rfj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 400
+    imax: 500
     max_pwm: 600
     p: 6200
     sg_left: 0
