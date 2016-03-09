@@ -1,13 +1,13 @@
 <launch>
   <include file="$(find sr_robot_launch)/launch/sr_bimanual.launch">
     <arg name="eth_port" value="eth1_eth2"/>
-    <arg name="rh_serial" value="1290"/>
-    <arg name="lh_serial" value="1338"/>
+    <arg name="rh_serial" value="650"/>
+    <arg name="lh_serial" value="784"/>
 
     <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro" />
 
     <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
-    <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/lh_E_v3.yaml"/>
+    <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
 
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
