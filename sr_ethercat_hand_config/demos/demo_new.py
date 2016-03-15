@@ -901,7 +901,7 @@ def main():
 
     fancy_demo = FancyDemo()
 
-    fancy_demo.rf_pressed(500)
+    #fancy_demo.rf_pressed(500)
 
     # subscribe until interrupted
     rospy.spin()
