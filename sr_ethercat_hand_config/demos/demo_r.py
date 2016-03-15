@@ -501,7 +501,7 @@ class FancyDemo(object):
 
         # We subscribe to the data being published by the biotac sensors.
         # self.sub_biotacs = rospy.Subscriber("/rh/tactile", BiotacAll, self.callback_biotacs, queue_size=1)
-        # self.sub_psts   = rospy.Subscriber("/rh/tactile", ShadowPST, self.callback_psts, queue_size=1)
+        self.sub_psts   = rospy.Subscriber("/rh/tactile", ShadowPST, self.callback_psts, queue_size=1)
 
     def create_hand_publishers(self):
         """
