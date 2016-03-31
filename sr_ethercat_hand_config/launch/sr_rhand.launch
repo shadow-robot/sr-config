@@ -1,13 +1,15 @@
-<launch>
-  <include file="$(find sr_robot_launch)/launch/srhand.launch">
-    <arg name="eth_port" value="eth0" />
-    <arg name="hand_serial" value="25" />
-    <arg name="hand_id" value="rh" />
+<launch> 
+  <include file="$(find sr_robot_launch)/launch/srhand.launch"> 
+    <arg name="eth_port" value="eth0" /> 
+    <arg name="hand_serial" value="25" /> 
+    <arg name="hand_id" value="rh" /> 
 
-    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor_biotac.urdf.xacro" />
-    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v1.yaml"/>
-
-    <arg name="use_moveit" value="true"/>
-    <arg name="sim" value="false"/>
-  </include>
+    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" /> 
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v1.yaml"/> 
+    
+    <arg name="hand_ctrl" default="false"/> 
+    <arg name="use_moveit" value="false"/> 
+    <arg name="sim" value="false"/> 
+    <arg name="pwm_control" value="false"/> 
+  </include> 
 </launch>
