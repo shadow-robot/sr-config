@@ -1,820 +1,194 @@
 #!/usr/bin/env python
-#
-# Copyright 2014 Shadow Robot Company Ltd.
-#
-# This program is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License as published by the Free
-# Software Foundation, either version 2 of the License, or (at your option)
-# any later version.
-#
-# This program is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
-# more details.
-#
-# You should have received a copy of the GNU General Public License along
-# with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
 
+# Script to move the left hand into store position.
 
 import rospy
-import random
-import time
-from sr_hand.shadowhand_commander import Commander
-rospy.init_node('receiver_example')
-c = Commander()
+from sr_robot_commander.sr_hand_commander import SrHandCommander
 
-##########
-# RANGES #
-##########
+rospy.init_node("right_hand_demo", anonymous=True)
 
-# Minimum alllowed range for the joints in this particular script
-min_range = {"THJ2": -40, "THJ3": -12, "THJ4": 0, "THJ5": -55,
-	     "FFJ0": 20, "FFJ3": 0, "FFJ4": -20,
-	     "MFJ0": 20, "MFJ3": 0, "MFJ4": -10,
-	     "RFJ0": 20, "RFJ3": 0, "RFJ4": -10,
-	     "LFJ0": 20, "LFJ3": 0, "LFJ4": -20, "LFJ5": 0,
-	     "WRJ1": -20, "WRJ2": -10,
-	     "interpolation_time": 0.0}
+hand_commander = SrHandCommander(name="right_hand")
 
-# Maximum alllowed range for the joints in this particular script
-max_range = {"THJ2": 20, "THJ3": 12, "THJ4": 70, "THJ5": 0,
-	     "FFJ0": 110, "FFJ3": 90, "FFJ4": 0,
-	     "MFJ0": 110, "MFJ3": 90, "MFJ4": 0,
-	     "RFJ0": 110, "RFJ3": 90, "RFJ4": 0,
-	     "LFJ0": 110, "LFJ3": 90, "LFJ4": 0, "LFJ5": 1,
-	     "WRJ1": 10, "WRJ2": 5,
-	     "interpolation_time": 4.0}
+open_hand = {'rh_FFJ1': 0.0, 'rh_FFJ2': 0.0, 'rh_FFJ3': 0.0, 'rh_FFJ4': 0.0,
+             'rh_MFJ1': 0.0, 'rh_MFJ2': 0.0, 'rh_MFJ3': 0.0, 'rh_MFJ4': 0.0,
+             'rh_RFJ1': 0.0, 'rh_RFJ2': 0.0, 'rh_RFJ3': 0.0, 'rh_RFJ4': 0.0,
+             'rh_LFJ1': 0.0, 'rh_LFJ2': 0.0, 'rh_LFJ3': 0.0, 'rh_LFJ4': 0.0, 'rh_LFJ5': 0.0,
+             'rh_THJ1': 0.0, 'rh_THJ2': 0.0, 'rh_THJ3': 0.0, 'rh_THJ4': 0.0, 'rh_THJ5': 0.0,
+             'rh_WRJ1': 0.0, 'rh_WRJ2': 0.0}
 
+natural_hand = {'rh_FFJ1': -0.015231161684773453, 'rh_FFJ2': 0.4707354376773168, 'rh_FFJ3': -0.020599036757731948, 'rh_FFJ4': 0.03846792953124516, 'rh_THJ4': 1.129553058484541, 'rh_THJ5': 0.17285609095207696, 'rh_THJ1': 0.270633081305584, 'rh_THJ2': 0.7282881900694186, 'rh_THJ3': -0.015406461537391941, 'rh_LFJ2': 0.5850595799574672, 'rh_LFJ3': 0.5636517849387783, 'rh_LFJ1': 0.03461076652259942, 'rh_LFJ4': -0.28529553092230801, 'rh_LFJ5': 0.14943387379671536, 'rh_RFJ4': -0.030063596923893404, 'rh_RFJ1': 0.005949986086344283, 'rh_RFJ2': 0.6274874215503423, 'rh_RFJ3': 0.44395101691519906, 'rh_MFJ1': 0.025355373778972734, 'rh_MFJ3': 0.07746660184405069, 'rh_MFJ2': 0.9605842806822085, 'rh_MFJ4': 0.02818898576846175, 'rh_WRJ2': -0.05968479660514132, 'rh_WRJ1': -0.016812134199197103}
 
+FF_Ext = {'rh_FFJ1': 0.0, 'rh_FFJ2': 0.0, 'rh_FFJ3': 0.0}
+FF_Flex = {'rh_FFJ1': 1.5707, 'rh_FFJ2': 1.5707, 'rh_FFJ3': 1.5707}
+MF_Ext = {'rh_MFJ1': 0.0, 'rh_MFJ2': 0.0, 'rh_MFJ3': 0.0}
+MF_Flex = {'rh_MFJ1': 1.5707, 'rh_MFJ2': 1.5707, 'rh_MFJ3': 1.5707}
+RF_Ext = {'rh_RFJ1': 0.0, 'rh_RFJ2': 0.0, 'rh_RFJ3': 0.0}
+RF_Flex = {'rh_RFJ1': 1.5707, 'rh_RFJ2': 1.5707, 'rh_RFJ3': 1.5707}
+LF_Ext = {'rh_LFJ1': 0.0, 'rh_LFJ2': 0.0, 'rh_LFJ3': 0.0}
+LF_Flex = {'rh_LFJ1': 1.5707, 'rh_LFJ2': 1.5707, 'rh_LFJ3': 1.5707}
+TH_Ext = {'rh_THJ1': 0.0, 'rh_THJ2': 0.0, 'rh_THJ3': 0.0, 'rh_THJ4': 0.0, 'rh_THJ5': 0.0}
+TH_Flex = {'rh_THJ1': 0.7854, 'rh_THJ2': 0.262, 'rh_THJ3': 0.209, 'rh_THJ4': 1.222, 'rh_THJ5': 1.00}
+WR1_Ext = {'rh_WRJ1': -0.349}
+WR1_Flex = {'rh_WRJ1': 0.349}
+WR2_Ext = {'rh_WRJ2': -0.349}
+WR2_Flex = {'rh_WRJ2': 0.140}
+WR_Zero = {'rh_WRJ1': 0.0, 'rh_WRJ2': 0.0}
 
-####################
-# POSE DEFINITIONS #
-####################
+AbdAdd_0 = {'rh_FFJ4': 0.0, 'rh_MFJ4': 0.0, 'rh_RFJ4': 0.0, 'rh_LFJ4': 0.0}
+AbdAdd_1 = {'rh_FFJ4': 0.0, 'rh_MFJ4': 0.0, 'rh_RFJ4': 0.0, 'rh_LFJ4': -0.349}
+AbdAdd_2 = {'rh_FFJ4': 0.0, 'rh_MFJ4': 0.0, 'rh_RFJ4': -0.349, 'rh_LFJ4': -0.349}
+AbdAdd_3 = {'rh_FFJ4': 0.0, 'rh_MFJ4': 0.349, 'rh_RFJ4': -0.349, 'rh_LFJ4': -0.349}
+AbdAdd_4 = {'rh_FFJ4': 0.349, 'rh_MFJ4': 0.349, 'rh_RFJ4': -0.349, 'rh_LFJ4': -0.349}
+AbdAdd_5 = {'rh_FFJ4': -0.349, 'rh_MFJ4': -0.349, 'rh_RFJ4': 0.349, 'rh_LFJ4': 0.349}
+AbdAdd_6 = {'rh_FFJ4': -0.349, 'rh_MFJ4': 0.349, 'rh_RFJ4': -0.349, 'rh_LFJ4': -0.349}
+AbdAdd_7 = {'rh_FFJ4': -0.349, 'rh_MFJ4': -0.349, 'rh_RFJ4': -0.349, 'rh_LFJ4': -0.349}
+AbdAdd_8 = {'rh_FFJ4': -0.349, 'rh_MFJ4': -0.349, 'rh_RFJ4': 0.349, 'rh_LFJ4': -0.349}
+AbdAdd_9 = {'rh_FFJ4': -0.349, 'rh_MFJ4': -0.349, 'rh_RFJ4': 0.349, 'rh_LFJ4': 0.349}
 
-# starting position for the hand 
-start_pos = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 0, "THJ5": 0,
-		  "FFJ0": 0, "FFJ3": 0, "FFJ4": 0,
-		  "MFJ0": 0, "MFJ3": 0, "MFJ4": 0,
-		  "RFJ0": 0, "RFJ3": 0, "RFJ4": 0,
-		  "LFJ0": 0, "LFJ3": 0, "LFJ4": 0, "LFJ5": 0,
-		  "WRJ1": 0, "WRJ2": 0 }
-# Start position for the Hand
-pregrasp_pos = {"THJ2": 12, "THJ3": 15, "THJ4": 69, "THJ5": -23,
-	        "FFJ0": 40, "FFJ3": 21, "FFJ4": -15,
-	        "MFJ0": 40, "MFJ3": 21, "MFJ4": 0,
-	        "RFJ0": 40, "RFJ3": 21, "RFJ4": -7,
-	        "LFJ0": 40, "LFJ3": 21, "LFJ4": -10, "LFJ5": 0,
-	        "WRJ1": 0, "WRJ2": 0}
-# Close position for the Hand
-grasp_pos = {"THJ2": 30, "THJ3": 15, "THJ4": 69, "THJ5": -3,
-	     "FFJ0": 77, "FFJ3": 67, "FFJ4": -19,
-	     "MFJ0": 82, "MFJ3": 62, "MFJ4": 0,
-	     "RFJ0": 89, "RFJ3": 64, "RFJ4": -18,
-	     "LFJ0": 97, "LFJ3": 64, "LFJ4": -19, "LFJ5": 0,
-	     "WRJ1": 0, "WRJ2": 0,
-	     "interpolation_time": 10.0}
-# Random position for the Hand (initialied at 0)
-rand_pos = {"THJ2": 0, "THJ3": 0, "THJ4": 0, "THJ5": 0,
-	    "FFJ0": 0, "FFJ3": 0, "FFJ4": 0,
-	    "MFJ0": 0, "MFJ3": 0, "MFJ4": 0,
-	    "RFJ0": 0, "RFJ3": 0, "RFJ4": 0,
-	    "LFJ0": 0, "LFJ3": 0, "LFJ4": 0, "LFJ5": 0,
-	    "WRJ1": 0, "WRJ2": 0,
-	    "interpolation_time": 0.0 }
-# flex first finger
-flex_ff = {"FFJ0": 180, "FFJ3": 90, "FFJ4": 0 }
-# extend first finger
-ext_ff = {"FFJ0": 0, "FFJ3": 0, "FFJ4": 0 }
-# flex middle finger
-flex_mf = {"MFJ0": 180, "MFJ3": 90, "MFJ4": 0 }
-# extend middle finger
-ext_mf = {"MFJ0": 0, "MFJ3": 0, "MFJ4": 0 }
-# flex ring finger
-flex_rf = {"RFJ0": 180, "RFJ3": 90, "RFJ4": 0 }
-# extend ring finger
-ext_rf = {"RFJ0": 0, "RFJ3": 0, "RFJ4": 0 }
-# flex little finger
-flex_lf = {"LFJ0": 180, "LFJ3": 90, "LFJ4": 0 }
-# extend middle finger
-ext_lf = {"LFJ0": 0, "LFJ3": 0, "LFJ4": 0 }
-# flex thumb step 1
-flex_th_1 = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 70, "THJ5": 0 }
-# flex thumb step 2
-flex_th_2 = {"THJ1": 35, "THJ2": 38, "THJ3": 10, "THJ4": 70, "THJ5": 58 }
-# extend thumb step 1
-ext_th_1 = {"THJ1": 10, "THJ2": 20, "THJ3": 5, "THJ4": 35, "THJ5": 25 }
-# extend thumb step 2
-ext_th_2 = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 0, "THJ5": 0 }
-# zero thumb
-zero_th = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 0, "THJ5": 0 }
-# Pre O.K. with first finger
-pre_ff_ok = {"THJ4": 70 }
-# O.K. with first finger
-ff_ok = {"THJ1": 15, "THJ2": 20, "THJ3": 0, "THJ4": 56, "THJ5": 20,
-	 "FFJ0": 75, "FFJ3": 45, "FFJ4": -0.2,
-	 "MFJ0": 42, "MFJ3": 33, "MFJ4": -3,
-	 "RFJ0": 50, "RFJ3": 18, "RFJ4": 0.5,
-	 "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
-# O.K. transition from first finger to middle finger
-ff2mf_ok = {"THJ1": 5, "THJ2": 12, "THJ3": 4, "THJ4": 60, "THJ5": 2,
-	    "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	    "MFJ0": 42, "MFJ3": 33, "MFJ4": -3,
-	    "RFJ0": 50, "RFJ3": 18, "RFJ4": 0.5,
-	    "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
-# O.K. with middle finger
-mf_ok = {"THJ1": 15, "THJ2": 18, "THJ3": 7, "THJ4": 66, "THJ5": 30,
-	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	 "MFJ0": 71, "MFJ3": 54, "MFJ4": 11,
-	 "RFJ0": 50, "RFJ3": 18, "RFJ4": -10,
-	 "LFJ0": 30, "LFJ3": 0, "LFJ4": -6, "LFJ5": 7 }
-# O.K. transition from middle finger to ring finger
-mf2rf_ok = {"THJ1": 5, "THJ2": -5, "THJ3": 15, "THJ4": 70, "THJ5": 19,
-	    "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	    "MFJ0": 45, "MFJ3": 4, "MFJ4": -1,
-	    "RFJ0": 50, "RFJ3": 18, "RFJ4": -19,
-	    "LFJ0": 30, "LFJ3": 0, "LFJ4": -12, "LFJ5": 7 }
-# O.K. with ring finger
-rf_ok = {"THJ1": 6, "THJ2": 15, "THJ3": 15, "THJ4": 70, "THJ5": 45,
-	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	 "MFJ0": 45, "MFJ3": 4, "MFJ4": -1,
-	 "RFJ0": 93, "RFJ3": 42, "RFJ4": -19,
-	 "LFJ0": 30, "LFJ3": 0, "LFJ4": -12, "LFJ5": 7 }
-# O.K. transition from ring finger to little finger
-rf2lf_ok = {"THJ1": 5, "THJ2": 4.5, "THJ3": 8, "THJ4": 60, "THJ5": 21,
-	    "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	    "MFJ0": 45, "MFJ3": 4, "MFJ4": -1,
-	    "RFJ0": 30, "RFJ3": 6, "RFJ4": 0.5,
-	    "LFJ0": 30, "LFJ3": 0, "LFJ4": -10, "LFJ5": 7 }
-# O.K. with little finger
-lf_ok = {"THJ1": 21, "THJ2": 11, "THJ3": 10, "THJ4": 69, "THJ5": 26,
-	 "FFJ0": 14, "FFJ3": 7, "FFJ4": -0.4,
-	 "MFJ0": 15, "MFJ3": 4, "MFJ4": -1,
-	 "RFJ0": 15, "RFJ3": 6, "RFJ4": 0.5,
-	 "LFJ0": 76, "LFJ3": 26, "LFJ4": 6, "LFJ5": 35 }
-# zero wrist
-zero_wr = {"WRJ1": 0, "WRJ2": 0 }
-# north wrist
-n_wr = {"WRJ1": 15, "WRJ2": 0 }
-# south wrist
-s_wr = {"WRJ1": -20, "WRJ2": 0 }
-# east wrist
-e_wr = {"WRJ1": 0, "WRJ2": 8 }
-# west wrist
-w_wr = {"WRJ1": 0, "WRJ2": -14 }
-# northeast wrist
-ne_wr = {"WRJ1": 15, "WRJ2": 8 }
-# northwest wrist
-nw_wr = {"WRJ1": 15, "WRJ2": -14 }
-# southweast wrist
-sw_wr = {"WRJ1": -20, "WRJ2": -14 }
-# southeast wrist
-se_wr = {"WRJ1": -20, "WRJ2": 8 }
-# lateral lf ext side
-l_ext_lf = {"LFJ4": -15 }
-# lateral rf ext side
-l_ext_rf = {"RFJ4": -15 }
-# lateral mf ext side
-l_ext_mf = {"MFJ4": 15 }
-# lateral ff ext side
-l_ext_ff = {"FFJ4": 15 }
-# lateral all int side
-l_int_all = {"FFJ4": -15, "MFJ4": -15, "RFJ4": 15, "LFJ4": 15 }
-# lateral all ext side
-l_ext_all = {"FFJ4": 15, "MFJ4": 15, "RFJ4": -15, "LFJ4": -15 }
-# lateral ff int side
-l_int_ff = {"FFJ4": -15 }
-# lateral mf int side
-l_int_mf = {"MFJ4": -15 }
-# lateral rf int side
-l_int_rf = {"RFJ4": 15 }
-# lateral lf int side
-l_int_lf = {"LFJ4": 15 }
-# all zero
-l_zero_all = {"FFJ4": 0, "MFJ4": 0, "RFJ4": 0, "LFJ4": 0 }
-# spock
-l_spock = {"FFJ4": -20, "MFJ4": -20, "RFJ4": -20, "LFJ4": -20 }
-# grasp for shaking hands step 1
-shake_grasp_1 = {"THJ1": 0, "THJ2": 6, "THJ3": 10, "THJ4": 37, "THJ5": 9,
-		 "FFJ0": 21, "FFJ3": 26, "FFJ4": 0,
-		 "MFJ0": 18, "MFJ3": 24, "MFJ4": 0,
-		 "RFJ0": 30, "RFJ3": 16, "RFJ4": 0,
-		 "LFJ0": 30, "LFJ3": 0, "LFJ4": -10, "LFJ5": 10 }
-# grasp for shaking hands step 2
-shake_grasp_2 = {"THJ1": 21, "THJ2": 21, "THJ3": 10, "THJ4": 42, "THJ5": 21,
-		 "FFJ0": 75, "FFJ3": 29, "FFJ4": 0,
-		 "MFJ0": 75, "MFJ3": 41, "MFJ4": 0,
-		 "RFJ0": 75, "RFJ3": 41, "RFJ4": 0,
-		 "LFJ0": 100, "LFJ3": 41, "LFJ4": 0, "LFJ5": 0 }
-# store step 1 PST
-store_1_PST = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 60, "THJ5": 0,
-	       "FFJ0": 180, "FFJ3": 90, "FFJ4": 0,
-	       "MFJ0": 180, "MFJ3": 90, "MFJ4": 0,
-	       "RFJ0": 180, "RFJ3": 90, "RFJ4": 0,
-	       "LFJ0": 180, "LFJ3": 90, "LFJ4": 0, "LFJ5": 0,
-	       "WRJ1": 0, "WRJ2": 0 }
-# store step 2 PST
-store_2_PST = {"THJ1": 50, "THJ2": 12, "THJ3": 0, "THJ4": 60, "THJ5": 27,
-	       "FFJ0": 180, "FFJ3": 90, "FFJ4": 0,
-	       "MFJ0": 180, "MFJ3": 90, "MFJ4": 0,
-	       "RFJ0": 180, "RFJ3": 90, "RFJ4": 0,
-	       "LFJ0": 180, "LFJ3": 90, "LFJ4": 0, "LFJ5": 0,
-	       "WRJ1": 0, "WRJ2": 0 }
-# store step 1 Bio_Tac
-store_1_BioTac = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 30, "THJ5": 0,
-		  "FFJ0": 180, "FFJ3": 90, "FFJ4": 0,
-		  "MFJ0": 180, "MFJ3": 90, "MFJ4": 0,
-		  "RFJ0": 180, "RFJ3": 90, "RFJ4": 0,
-		  "LFJ0": 180, "LFJ3": 90, "LFJ4": 0, "LFJ5": 0,
-		  "WRJ1": 0, "WRJ2": 0 }
-# store step 2 Bio_Tac
-store_2_BioTac = {"THJ1": 20, "THJ2": 36, "THJ3": 0, "THJ4": 30, "THJ5": -3,
-		  "FFJ0": 180, "FFJ3": 90, "FFJ4": 0,
-		  "MFJ0": 180, "MFJ3": 90, "MFJ4": 0,
-		  "RFJ0": 180, "RFJ3": 90, "RFJ4": 0,
-		  "LFJ0": 180, "LFJ3": 90, "LFJ4": 0, "LFJ5": 0,
-		  "WRJ1": 0, "WRJ2": 0 }
-# store step 3
-store_3 = {"THJ1": 0, "THJ2": 0, "THJ3": 0, "THJ4": 65, "THJ5": 0 }
-# business card pre-zero position 
-bc_pre_zero = {"THJ1": 15, "THJ2": 7, "THJ3": -4, "THJ4": 50, "THJ5": -17,
-		  "FFJ0": 14, "FFJ3": 7, "FFJ4": -1,
-		  "MFJ0": 51, "MFJ3": 33, "MFJ4": 20,
-		  "RFJ0": 50, "RFJ3": 18, "RFJ4": -20,
-		  "LFJ0": 30, "LFJ3": 0, "LFJ4": -20, "LFJ5": 7 }
-# business card zero position 
-bc_zero = {"THJ1": 23, "THJ2": 6, "THJ3": -1, "THJ4": 43, "THJ5": -11,
-		  "MFJ0": 63, "MFJ3": 24, "MFJ4": 20 }
-# business card position 1 
-bc_1 = {"FFJ0": 137, "FFJ3": 7 }
-# business card position 2 
-bc_2 = {"FFJ0": 137, "FFJ3": 58 }
-# business card position 3 
-bc_3 = {"FFJ0": 72, "FFJ3": 62 }
-# business card position 4 
-bc_4 = {"FFJ0": 180, "FFJ3": 58 }
-# business card position 5 
-bc_5 = {"FFJ0": 180, "FFJ3": 0 }
-# business card position 6 
-bc_6 = {"FFJ0": 0, "FFJ3": 0 }
-# business card position 7 
-bc_7 = {"FFJ0": 137, "FFJ3": 15 }
-# business card position 8 
-bc_8 = {"FFJ0": 137, "FFJ3": 58 }
-# business card position 9 
-bc_9 = {"FFJ0": 80, "FFJ3": 58 }
-# business card position 10 
-bc_10 = {"MFJ3": 64, "FFJ4": 20 }
-# business card position 11 
-bc_11 = {"FFJ0": 81, "FFJ3": 50, "FFJ4": 20, 
-        "THJ4": 57, "THJ5": 25, }
-# business card position 12 
-bc_12 = {"MFJ0": 20, "MFJ3": 10, "MFJ4": 0 }
+FF_OK = {'rh_FFJ1': 0.022515630316621627, 'rh_FFJ2': 1.2556036427998678, 'rh_FFJ3': 0.8447767823310574, 'rh_FFJ4': 0.04590339173466104, 'rh_THJ4': 1.0949407683205896, 'rh_THJ5': 0.14200564847861585, 'rh_THJ1': 0.3683921782143842, 'rh_THJ2': 0.6373691082133975, 'rh_THJ3': -0.0244610170861788, 'rh_LFJ2': 0.5841731260484406, 'rh_LFJ3': 0.5632873801031884, 'rh_LFJ1': 0.03461076652259942, 'rh_LFJ4': -0.28125963828545088, 'rh_LFJ5': 0.1443737718056313, 'rh_RFJ4': -0.02468880994975094, 'rh_RFJ1': 0.0047599888690754155, 'rh_RFJ2': 0.6264485350908219, 'rh_RFJ3': 0.44382005595085083, 'rh_MFJ1': 0.021644831274732823, 'rh_MFJ3': 0.06212910667048069, 'rh_MFJ2': 0.9476510773927296, 'rh_MFJ4': 0.024157387999199982, 'rh_WRJ2': -0.05952234866755241, 'rh_WRJ1': -0.017882833898283462}
+
+MF_OK = {'rh_FFJ1': 0.01192003957938792, 'rh_FFJ2': 0.8779137365294785, 'rh_FFJ3': -0.04879151632568085, 'rh_FFJ4': 0.03850631221477557, 'rh_THJ4': 1.1353427378511094, 'rh_THJ5': 0.25622286887027657, 'rh_THJ1': 0.41978526202199823, 'rh_THJ2': 0.6871574647024502, 'rh_THJ3': 0.052341509424183565, 'rh_LFJ2': 0.5832866721394142, 'rh_LFJ3': 0.5626116821752853, 'rh_LFJ1': 0.0339451748587033, 'rh_LFJ4': -0.28131817973754372, 'rh_LFJ5': 0.14504552420005684, 'rh_RFJ4': -0.023773075709565508, 'rh_RFJ1': 0.004164990260441037, 'rh_RFJ2': 0.6212541027932197, 'rh_RFJ3': 0.4446185880909443, 'rh_MFJ1': 0.15027697142171648, 'rh_MFJ3': 0.8577206183860272, 'rh_MFJ2': 1.2647385897689567, 'rh_MFJ4': 0.007472558773148949, 'rh_WRJ2': -0.05935494962092569, 'rh_WRJ1': -0.00794173869246716}
+
+RF_OK = {'rh_FFJ1': 0.012582264000465027, 'rh_FFJ2': 0.892676859901611, 'rh_FFJ3': -0.01668023341905365, 'rh_FFJ4': 0.03684708613889836, 'rh_THJ4': 1.3244270470831758, 'rh_THJ5': 0.5461264574235202, 'rh_THJ1': 0.04931913989452231, 'rh_THJ2': 0.7723593776592549, 'rh_THJ3': 0.2332251218233079, 'rh_LFJ2': 0.5380775227790644, 'rh_LFJ3': 0.5378242421019102, 'rh_LFJ1': 0.029286033211430307, 'rh_LFJ4': -0.17266088110429886, 'rh_LFJ5': 0.11609954153828721, 'rh_RFJ4': -0.1410235306590761, 'rh_RFJ1': 0.04343489843031345, 'rh_RFJ2': 1.4093381677689403, 'rh_RFJ3': 0.7687871061350975, 'rh_MFJ1': 0.03710542504239911, 'rh_MFJ3': 0.11668324341742378, 'rh_MFJ2': 0.9358936198568396, 'rh_MFJ4': 0.03313362638105717, 'rh_WRJ2': -0.06225971637785656, 'rh_WRJ1': -0.009767850763861427}
+
+LF_OK = {'rh_FFJ1': 0.00397334652646264, 'rh_FFJ2': 0.8975979010256552, 'rh_FFJ3': -0.0016476274144017463, 'rh_FFJ4': 0.03250985089166586, 'rh_THJ4': 1.2267774543912607, 'rh_THJ5': 0.24310694069887214, 'rh_THJ1': 0.2888424727858525, 'rh_THJ2': 0.5641506091726277, 'rh_THJ3': 0.23278402932191808, 'rh_LFJ2': 1.4468938248187885, 'rh_LFJ3': 0.3033478661324566, 'rh_LFJ1': 0.01406673264624339, 'rh_LFJ4': -0.22573803931632768, 'rh_LFJ5': 0.7847867069581923, 'rh_RFJ4': -0.1442490766383741, 'rh_RFJ1': 0.03331992208352813, 'rh_RFJ2': 1.2615629035756921, 'rh_RFJ3': 0.158866717571428, 'rh_MFJ1': 0.03215803503674591, 'rh_MFJ3': 0.14292484557904367, 'rh_MFJ2': 0.9464753316391405, 'rh_MFJ4': 0.023358296483200973, 'rh_WRJ2': -0.05471159545568462, 'rh_WRJ1': -0.011152559328240493}
 
 
-########################
-# FUNCTION DEFINITIONS #
-########################
+hand_commander.move_to_joint_value_target_unsafe(open_hand, 2.0, True)
+rospy.sleep(2)
+hand_commander.move_to_joint_value_target_unsafe(FF_Flex, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(FF_Ext, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(MF_Flex, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(MF_Ext, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(RF_Flex, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(RF_Ext, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(LF_Flex, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(LF_Ext, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(TH_Flex, 1.0, True)
+rospy.sleep(1)
+hand_commander.move_to_joint_value_target_unsafe(TH_Ext, 1.0, True)
+rospy.sleep(1)
+hand_commander.move_to_joint_value_target_unsafe(WR1_Flex, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(WR1_Ext, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(WR2_Flex, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(WR2_Ext, 0.75, True)
+rospy.sleep(0.75)
+hand_commander.move_to_joint_value_target_unsafe(WR_Zero, 0.75, True)
+rospy.sleep(1)
 
-def secuence_ff():   
-   # Start secuence 1
-   rospy.sleep(1)
-   c.move_hand(store_3)
-   rospy.sleep(1)
-   c.move_hand(start_pos)
-   rospy.sleep(1.2)
-   c.move_hand(flex_ff)
-   rospy.sleep(1)
-   c.move_hand(ext_ff)
-   rospy.sleep(1)
-   c.move_hand(flex_mf)
-   rospy.sleep(1)
-   c.move_hand(ext_mf)
-   rospy.sleep(1)
-   c.move_hand(flex_rf)
-   rospy.sleep(1)
-   c.move_hand(ext_rf)
-   rospy.sleep(1)
-   c.move_hand(flex_lf)
-   rospy.sleep(1)
-   c.move_hand(ext_lf)
-   rospy.sleep(1)
-   c.move_hand(flex_th_1)
-   rospy.sleep(0.7)
-   c.move_hand(flex_th_2)
-#   tmp = flex_th_2.copy()
-#   tmp.update({'interpolation_time': 2.0})
-#   c.move_hand(tmp)
-   
-#   while True:
-#      # Check  the state of the tactile senors
-#      read_tactile_values()
-#      # Record current joint positions
-#      hand_pos = c.get_hand_position()
-#      # If the tacticle sensor is triggered stop movement
-#      if ( tactile_values['TH'] > force_zero['TH'] ):
-#         c.move_hand(hand_pos)
-#         print 'Thumb contact'
-#         break
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_0, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_1, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_2, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_3, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_4, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_5, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_4, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_6, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_7, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_8, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_9, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_0, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_7, 0.25, True)
+rospy.sleep(0.25)
+hand_commander.move_to_joint_value_target_unsafe(AbdAdd_0, 0.25, True)
+rospy.sleep(0.25)
 
-   rospy.sleep(1)
-   c.move_hand(ext_th_2)
-   rospy.sleep(0.5)
-   c.move_hand(l_ext_lf)
-   rospy.sleep(0.5)
-   c.move_hand(l_ext_rf)
-   rospy.sleep(0.5)
-   c.move_hand(l_ext_mf)
-   rospy.sleep(0.5)
-   c.move_hand(l_ext_ff)
-   rospy.sleep(0.5)
-   c.move_hand(l_int_all)
-   rospy.sleep(0.5)
-   c.move_hand(l_ext_all)
-   rospy.sleep(0.5)
-   c.move_hand(l_int_ff)
-   rospy.sleep(0.5)
-   c.move_hand(l_int_mf)
-   rospy.sleep(0.5)
-   c.move_hand(l_int_rf)
-   rospy.sleep(0.5)
-   c.move_hand(l_int_lf)
-   rospy.sleep(0.5)
-   c.move_hand(l_zero_all)
-   rospy.sleep(0.5)
-   c.move_hand(l_spock)
-   rospy.sleep(0.5)
-   c.move_hand(l_zero_all)
-   rospy.sleep(0.5)	
-   c.move_hand(pre_ff_ok)
-   rospy.sleep(1)
-   c.move_hand(ff_ok)
-#   tmp = ff_ok.copy()
-#   tmp.update({'interpolation_time': 2.0})
-#   c.move_hand(tmp)
-   
-#   while True:
-#      # Check  the state of the tactile senors
-#      read_tactile_values()
-#      # Record current joint positions
-#      hand_pos = c.get_hand_position()
-#      # If the tacticle sensor is triggered stop movement
-#      if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['FF'] > force_zero['FF'] ):
-#         c.move_hand(hand_pos)
-#         print 'First finger contact'
-#         break
+hand_commander.move_to_joint_value_target_unsafe(natural_hand, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(FF_OK, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(natural_hand, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(MF_OK, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(natural_hand, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(RF_OK, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(natural_hand, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(LF_OK, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(open_hand, 0.75, True)
+rospy.sleep(0.75)
 
-   rospy.sleep(1)
-   c.move_hand(ff2mf_ok)
-   rospy.sleep(0.8)
-   c.move_hand(mf_ok)
-#   tmp = mf_ok.copy()
-#   tmp.update({'interpolation_time': 2.0})
-#   c.move_hand(tmp)
+hand_commander.move_to_joint_value_target_unsafe(FF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(MF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(RF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(LF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(FF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(MF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(RF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(LF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(FF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(MF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(RF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(LF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(FF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(MF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(RF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(LF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(FF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(MF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(RF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(LF_Flex, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(FF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(MF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(RF_Ext, 0.4, False)
+rospy.sleep(0.2)
+hand_commander.move_to_joint_value_target_unsafe(LF_Ext, 0.4, False)
+rospy.sleep(0.2)
 
-#   while True:
-#      # Check  the state of the tactile senors
-#      read_tactile_values()
-#      # Record current joint positions
-#      hand_pos = c.get_hand_position()
-#      # If the tacticle sensor is triggered stop movement
-#      if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['MF'] > force_zero['MF'] ):
-#         c.move_hand(hand_pos)
-#         print 'Middle finger contact'   
-#         break
+hand_commander.move_to_joint_value_target_unsafe(natural_hand, 0.5, True)
+rospy.sleep(0.5)
+hand_commander.move_to_joint_value_target_unsafe(FF_OK, 0.5, True)
+rospy.sleep(2)
+hand_commander.move_to_joint_value_target_unsafe(open_hand, 4.0, True)
+rospy.sleep(4)
 
-   rospy.sleep(1)
-   c.move_hand(mf2rf_ok)
-   rospy.sleep(0.8)
-   c.move_hand(rf_ok) 
-#   tmp = rf_ok.copy()
-#   tmp.update({'interpolation_time': 2.0})
-#   c.move_hand(tmp)
-
-#   while True:
-#      # Check  the state of the tactile senors
-#      read_tactile_values()
-#      # Record current joint positions
-#      hand_pos = c.get_hand_position()
-#      # If the tacticle sensor is triggered stop movement
-#      if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['RF'] > force_zero['RF'] ):
-#         c.move_hand(hand_pos)
-#         print 'Ring finger contact'
-#         break
-   
-   rospy.sleep(1)
-   c.move_hand(rf2lf_ok)
-   rospy.sleep(0.8)
-   c.move_hand(lf_ok)
-#   tmp = lf_ok.copy()
-#   tmp.update({'interpolation_time': 2.0})
-#   c.move_hand(tmp)
-   
-#   while True:
-#      # Check  the state of the tactile senors
-#      read_tactile_values()
-#      # Record current joint positions
-#      hand_pos = c.get_hand_position()
-#      # If the tacticle sensor is triggered stop movement
-#      if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['LF'] > force_zero['LF'] ):
-#         c.move_hand(hand_pos)
-#         print 'Little finger contact'
-#         break
-
-   rospy.sleep(1)
-   c.move_hand(start_pos)
-   rospy.sleep(1)
-   c.move_hand(flex_ff)
-   rospy.sleep(0.2)
-   c.move_hand(flex_mf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_rf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_lf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_ff)
-   rospy.sleep(0.2)
-   c.move_hand(ext_mf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_rf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_lf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_ff)
-   rospy.sleep(0.2)
-   c.move_hand(flex_mf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_rf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_lf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_ff)
-   rospy.sleep(0.2)
-   c.move_hand(ext_mf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_rf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_lf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_ff)
-   rospy.sleep(0.2)
-   c.move_hand(flex_mf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_rf)
-   rospy.sleep(0.2)
-   c.move_hand(flex_lf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_ff)
-   rospy.sleep(0.2)
-   c.move_hand(ext_mf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_rf)
-   rospy.sleep(0.2)
-   c.move_hand(ext_lf)
-   rospy.sleep(1)
-   c.move_hand(pre_ff_ok)
-   rospy.sleep(1)
-   c.move_hand(ff_ok)
-#   tmp = ff_ok.copy()
-#   tmp.update({'interpolation_time': 3.0})
-#   c.move_hand(tmp)
-   
-#   while True:
-#      # Check  the state of the tactile senors
-#      read_tactile_values()
-#      # Record current joint positions
-#      hand_pos = c.get_hand_position()
-#      # If the tacticle sensor is triggered stop movement
-#      if ( tactile_values['TH'] > force_zero['TH'] or tactile_values['FF'] > force_zero['FF'] ):
-#         c.move_hand(hand_pos)
-#         print 'First finger contact'
-#         break
-
-   rospy.sleep(1)
-   c.move_hand(ne_wr)
-   rospy.sleep(1.4)
-   c.move_hand(nw_wr)
-   rospy.sleep(1.4)
-   c.move_hand(sw_wr)
-   rospy.sleep(1.4)
-   c.move_hand(se_wr)
-   rospy.sleep(1.4)
-   c.move_hand(ne_wr)
-   rospy.sleep(0.7)
-   c.move_hand(nw_wr)
-   rospy.sleep(0.7)
-   c.move_hand(sw_wr)
-   rospy.sleep(0.7)
-   c.move_hand(se_wr)
-   rospy.sleep(0.7)
-   c.move_hand(zero_wr)
-   rospy.sleep(0.4)
-   c.move_hand(start_pos)
-   rospy.sleep(1.5)    
-   return
-
-def secuence_mf():
-   # Start the secuence 2
-   rospy.sleep(2.0)    
-   # Initialize wake time
-   wake_time = time.time()
-
-   while True:
-      # Check if any of the tactile senors have been triggered
-      # If so, send the Hand to its start position
-      read_tactile_values()
-      if ( tactile_values['FF'] > force_zero['FF'] or
-           tactile_values['MF'] > force_zero['MF'] or
-           tactile_values['RF'] > force_zero['RF'] or
-           tactile_values['LF'] > force_zero['LF'] or
-           tactile_values['TH'] > force_zero['TH'] ):
-
-         c.move_hand(start_pos)
-         print 'HAND TOUCHED!'
-         rospy.sleep(2.0)
-
-         if ( tactile_values['TH'] > force_zero['TH'] ):
-            break
- 
-      # If the tactile sensors have not been triggered and the Hand
-      # is not in the middle of a movement, generate a random position
-      # and interpolation time
-      else:
-         if time.time() > wake_time:
-            for i in rand_pos:
-               rand_pos[i] = random.randrange(min_range[i],max_range[i])
-
-            rand_pos['FFJ4'] = random.randrange(min_range['FFJ4'],rand_pos['MFJ4'])
-            rand_pos['LFJ4'] = random.randrange(min_range['LFJ4'],rand_pos['RFJ4'])
-            rand_pos['interpolation_time'] = max_range['interpolation_time'] * random.random()
-
-            c.move_hand(rand_pos)
-            wake_time = time.time() + rand_pos['interpolation_time']*0.9
-   return
-
-def secuence_rf():
-   # Start the secuence 3
-#   rospy.sleep(0.5)
-#   c.move_hand(start_pos)
-#   rospy.sleep(1.5)
-#   c.move_hand(shake_grasp_1)
-#   rospy.sleep(2.5)
-#   c.move_hand(shake_grasp_2)
-#   rospy.sleep(1)
-#   c.move_hand(e_wr)
-#   rospy.sleep(0.4)
-#   c.move_hand(w_wr)
-#   rospy.sleep(0.4)
-#   c.move_hand(zero_wr)
-#   rospy.sleep(0.8)
-#   c.move_hand(shake_grasp_1)
-#   rospy.sleep(1.5)
-#   c.move_hand(start_pos)
-#   rospy.sleep(1.5)
-
-   rospy.sleep(0.5)
-   c.move_hand(start_pos)
-   rospy.sleep(1)
-   c.move_hand(bc_pre_zero)
-   rospy.sleep(2)
-   c.move_hand(bc_zero)
-   rospy.sleep(4)
-   c.move_hand(bc_1)
-   rospy.sleep(1)
-   c.move_hand(bc_2)
-   rospy.sleep(1)
-   c.move_hand(bc_3)
-   rospy.sleep(1)
-   c.move_hand(bc_4)
-   rospy.sleep(1)
-   c.move_hand(bc_5)
-   rospy.sleep(1)
-   c.move_hand(bc_6)
-   rospy.sleep(1)
-   c.move_hand(bc_7)
-   rospy.sleep(1)
-   c.move_hand(bc_8)
-   rospy.sleep(1)
-   c.move_hand(bc_9)
-   rospy.sleep(1)
-   c.move_hand(bc_11)
-   rospy.sleep(1)
-   c.move_hand(bc_12)
-   rospy.sleep(3)
-   c.move_hand(start_pos)
-   rospy.sleep(1.5)
-      
-   return
-
-def secuence_lf():
-   # Start the secuence 4
-   # Trigger flag array
-   trigger = [0,0,0,0,0]
-
-   # Move Hand to zero position
-   c.move_hand(start_pos)
-   rospy.sleep(2.0)
-
-   # Move Hand to starting position
-   c.move_hand(pregrasp_pos)
-   rospy.sleep(2.0)
-
-   # Move Hand to close position
-   c.move_hand(grasp_pos)
-   offset1 = 3
-
-   # Initialize end time
-   end_time = time.time() + 11
-
-   while True:
-      # Check  the state of the tactile senors
-      read_tactile_values()
-
-      # Record current joint positions
-      hand_pos = c.get_hand_position()
-
-      # If any tacticle sensor has been triggered, send
-      # the corresponding digit to its current position
-      if ( tactile_values['FF'] > force_zero['FF'] and trigger[0] == 0 ):
-         c.move_hand({"FFJ0": hand_pos['FFJ0'] + offset1, "FFJ3": hand_pos['FFJ3'] + offset1})
-         print 'First finger contact'
-         trigger[0] = 1
-
-      if ( tactile_values['MF'] > force_zero['MF'] and trigger[1] == 0 ):
-         c.move_hand({"MFJ0": hand_pos['MFJ0'] + offset1, "MFJ3": hand_pos['MFJ3'] + offset1})
-         print 'Middle finger contact'
-         trigger[1] = 1
-
-      if ( tactile_values['RF'] > force_zero['RF'] and trigger[2] == 0 ):
-         c.move_hand({"RFJ0": hand_pos['RFJ0'] + offset1, "RFJ3": hand_pos['RFJ3'] + offset1})
-         print 'Ring finger contact'
-         trigger[2] = 1
-
-      if ( tactile_values['LF'] > force_zero['LF'] and trigger[3] == 0 ):
-         c.move_hand({"LFJ0": hand_pos['LFJ0'] + offset1, "LFJ3": hand_pos['LFJ3'] + offset1})
-         print 'Little finger contact'
-         trigger[3] = 1
-
-      if ( tactile_values['TH'] > force_zero['TH'] and trigger[4] == 0 ):
-         c.move_hand({"THJ2": hand_pos['THJ2'] + offset1, "THJ5": hand_pos['THJ5'] + offset1 })
-         print 'Thumb contact'
-         trigger[4] = 1
-
-      if ( trigger[0] == 1 and
-	   trigger[1] == 1 and
-	   trigger[2] == 1 and
-	   trigger[3] == 1 and
-	   trigger[4] == 1 ):
-         break
-
-      if time.time() > end_time:
-         break
-
-   # Send all joints to current position to compensate
-   # for minor offsets created in the previous loop
-   hand_pos = c.get_hand_position()
-   c.move_hand(hand_pos)
-   rospy.sleep(2.0)
-
-   # Generate new values to squeeze object slightly
-   offset2 = 3
-   squeeze = hand_pos.copy()
-   squeeze.update({"THJ5": hand_pos['THJ5'] + offset2, "THJ2": hand_pos['THJ2'] + offset2,
-		   "FFJ3": hand_pos['FFJ3'] + offset2, "FFJ0": hand_pos['FFJ0'] + offset2,
-   		   "MFJ3": hand_pos['MFJ3'] + offset2, "MFJ0": hand_pos['MFJ0'] + offset2,
-		   "RFJ3": hand_pos['RFJ3'] + offset2, "RFJ0": hand_pos['RFJ0'] + offset2,
-		   "LFJ3": hand_pos['LFJ3'] + offset2, "LFJ0": hand_pos['LFJ0'] + offset2})
-
-   # Squeeze object gently
-   c.move_hand(squeeze)
-   rospy.sleep(0.5)
-   c.move_hand(hand_pos)
-   rospy.sleep(0.5)
-   c.move_hand(squeeze)
-   rospy.sleep(0.5)
-   c.move_hand(hand_pos)
-   rospy.sleep(2.0)
-   c.move_hand(pregrasp_pos)
-   rospy.sleep(2.0)
-   c.move_hand(start_pos)
-   rospy.sleep(2.0)
-
-   return
-
-def secuence_th():
-   # Start the secuence 5
-   rospy.sleep(0.5)
-   c.move_hand(start_pos)
-   rospy.sleep(1.5)
-   return
-
-def zero_tactile_sensors():
-   # Move Hand to zero position
-   rospy.sleep(0.5)
-   c.move_hand(start_pos)
-
-   print '\n\nPLEASE ENSURE THAT THE TACTILE SENSORS ARE NOT PRESSED\n'
-   #raw_input ('Press ENTER to continue')
-   rospy.sleep(1.0)
-
-   for x in xrange (1,1000):
-      # Read current state of tactile sensors to zero them
-      read_tactile_values()
-
-      if tactile_values['FF'] > force_zero['FF']:
-         force_zero['FF'] = tactile_values['FF']
-      if tactile_values['MF'] > force_zero['MF']:
-         force_zero['MF'] = tactile_values['MF']
-      if tactile_values['RF'] > force_zero['RF']:
-         force_zero['RF'] = tactile_values['RF']
-      if tactile_values['LF'] > force_zero['LF']:
-         force_zero['LF'] = tactile_values['LF']
-      if tactile_values['TH'] > force_zero['TH']:
-         force_zero['TH'] = tactile_values['TH']
-
-   force_zero['FF'] = force_zero['FF'] + 3
-   force_zero['MF'] = force_zero['MF'] + 3
-   force_zero['RF'] = force_zero['RF'] + 3
-   force_zero['LF'] = force_zero['LF'] + 3
-   force_zero['TH'] = force_zero['TH'] + 3
-
-   print 'Force Zero', force_zero
-
-   rospy.loginfo("\n\nOK, ready for the demo")
-   
-   print "\nPRESS ONE OF THE TACTILES TO START A DEMO"
-   print "   FF: Standard Demo"
-   print "   MF: Shy Hand Demo"
-   print "   RF: Card Trick Demo"
-   print "   LF: Grasp Demo"
-   print "   TH: Open Hand"
-
-   return
-
-def read_tactile_values():
-   # Read tactile type
-   tactile_type = c.get_tactile_type()
-   # Read current state of tactile sensors
-   tactile_state = c.get_tactile_state()
-
-   if tactile_type == "biotac":
-      tactile_values['FF'] = tactile_state.tactiles[0].pdc
-      tactile_values['MF'] = tactile_state.tactiles[1].pdc
-      tactile_values['RF'] = tactile_state.tactiles[2].pdc
-      tactile_values['LF'] = tactile_state.tactiles[3].pdc
-      tactile_values['TH'] = tactile_state.tactiles[4].pdc
-
-   elif tactile_type == "PST":
-      tactile_values['FF'] = tactile_state.pressure[0]
-      tactile_values['MF'] = tactile_state.pressure[1]
-      tactile_values['RF'] = tactile_state.pressure[2]
-      tactile_values['LF'] = tactile_state.pressure[3]
-      tactile_values['TH'] = tactile_state.pressure[4]
-
-   elif tactile_type == None:
-      print "You don't have tactile sensors. Talk to your Shadow representative to purchase some"
-
-   return
-
-########
-# MAIN #
-########
-
-# Zero values in dictionary for tactile sensors (initialized at 0)
-force_zero = {"FF": 0,"MF": 0,"RF": 0,"LF": 0,"TH": 0}
-# Initialize values for current tactile values
-tactile_values = {"FF": 0,"MF": 0,"RF": 0,"LF": 0,"TH": 0}
-# Zero tactile sensors
-zero_tactile_sensors()
-
-while not rospy.is_shutdown():
-   # Check the state of the tactile senors
-   read_tactile_values()
-   
-   # If the tactile is touched, trigger the corresponding function
-   if (tactile_values['FF'] > force_zero['FF']):
-      print 'First finger contact'
-      secuence_ff()
-      print 'FF demo completed'
-      zero_tactile_sensors()
-   if (tactile_values['MF'] > force_zero['MF']):
-      print 'Middle finger contact'
-      secuence_mf()
-      print 'MF demo completed'
-      zero_tactile_sensors()
-   if (tactile_values['RF'] > force_zero['RF']):
-      print 'Ring finger contact'
-      secuence_rf()
-      print 'RF demo completed'
-      zero_tactile_sensors()
-   if (tactile_values['LF'] > force_zero['LF']):
-      print 'Little finger contact'
-      secuence_lf()
-      print 'LF demo completed'
-      zero_tactile_sensors()
-   if (tactile_values['TH'] > force_zero['TH']):
-      print 'Thumb finger contact'
-      secuence_th()
-      print 'TH demo completed'
-      zero_tactile_sensors()
 
