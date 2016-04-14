@@ -9,6 +9,8 @@ rospy.init_node("store_left_hand", anonymous=True)
 
 hand_commander = SrHandCommander(name="left_hand")
 
+pre_pack_hand_1 = {'lh_THJ1': 0.0, 'lh_THJ2': 0.0, 'lh_THJ5': 0.0}
+
 open_hand = {'lh_FFJ1': 0.0, 'lh_FFJ2': 0.0, 'lh_FFJ3': 0.0, 'lh_FFJ4': 0.0,
              'lh_MFJ1': 0.0, 'lh_MFJ2': 0.0, 'lh_MFJ3': 0.0, 'lh_MFJ4': 0.0,
              'lh_RFJ1': 0.0, 'lh_RFJ2': 0.0, 'lh_RFJ3': 0.0, 'lh_RFJ4': 0.0,
@@ -23,8 +25,14 @@ pack_hand_1 = {'lh_FFJ1': 1.5707, 'lh_FFJ2': 1.5707, 'lh_FFJ3': 1.5707, 'lh_FFJ4
 
 pack_hand_2 = {'lh_THJ4': 1.2}
 
-pack_hand_3 = {'lh_THJ1': 0.52, 'lh_THJ2': 0.61, 'lh_THJ5': 0.43}
+pack_hand_3 = {'lh_THJ1': 1.12, 'lh_THJ2': 0.0, 'lh_THJ5': 0.43}
 
+
+#Open the thumb
+joint_states = pre_pack_hand_1
+rospy.loginfo("Moving thumb to open position")
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
+rospy.sleep(2)
 
 # Move hand to open position
 joint_states = open_hand
