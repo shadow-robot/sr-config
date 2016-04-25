@@ -28,16 +28,19 @@ install(DIRECTORY calibrations/
 install(DIRECTORY controls/
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/controls)
 
+install(DIRECTORY demos/
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/mappings)
+
 install(DIRECTORY launch/
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
-
-install(DIRECTORY mappings/
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/mappings)
 
 install(DIRECTORY rates/
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rates)
 
 install(FILES diagnostic_analyzer.yaml
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+
+install(FILES diagnostic_analyzer_bimanual.yaml
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 
