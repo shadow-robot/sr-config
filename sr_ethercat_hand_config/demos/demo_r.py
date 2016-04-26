@@ -497,7 +497,6 @@ def sequence_lf():
     rospy.sleep(2.0)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, True, angle_degrees=True)
     rospy.sleep(2.0)
-
     return
 
 
