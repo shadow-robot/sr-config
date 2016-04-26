@@ -92,8 +92,8 @@ zero_th = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ4": 0, "rh_THJ5": 0}
 # Pre O.K. with first finger
 pre_ff_ok = {"rh_THJ4": 70}
 # O.K. with first finger
-ff_ok = {"rh_THJ1": 15, "rh_THJ2": 20, "rh_THJ4": 56, "rh_THJ5": 18,
-         "rh_FFJ1": 0, "rh_FFJ2": 75, "rh_FFJ3": 45, "rh_FFJ4": -0.2,
+ff_ok = {"rh_THJ1": 18, "rh_THJ2": 20, "rh_THJ4": 56, "rh_THJ5": 18,
+         "rh_FFJ1": 0, "rh_FFJ2": 75, "rh_FFJ3": 48, "rh_FFJ4": -0.2,
          "rh_MFJ1": 0, "rh_MFJ2": 42, "rh_MFJ3": 33, "rh_MFJ4": -3,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5}
 # O.K. transition from first finger to middle finger
@@ -102,9 +102,9 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ4": 60, "rh_THJ5": 2,
             "rh_MFJ1": 0, "rh_MFJ2": 42, "rh_MFJ3": 33, "rh_MFJ4": -3,
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5}
 # O.K. with middle finger
-mf_ok = {"rh_THJ1": 15, "rh_THJ2": 18, "rh_THJ4": 66, "rh_THJ5": 30,
+mf_ok = {"rh_THJ1": 18, "rh_THJ2": 18, "rh_THJ4": 66, "rh_THJ5": 30,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
-         "rh_MFJ1": 0, "rh_MFJ2": 71, "rh_MFJ3": 49, "rh_MFJ4": 11,
+         "rh_MFJ1": 0, "rh_MFJ2": 71, "rh_MFJ3": 54, "rh_MFJ4": 11,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10}
 # O.K. transition from middle finger to ring finger
 mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ4": 70, "rh_THJ5": 19,
@@ -112,10 +112,10 @@ mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ4": 70, "rh_THJ5": 19,
             "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -19}
 # O.K. with ring finger
-rf_ok = {"rh_THJ1": 6, "rh_THJ2": 15, "rh_THJ4": 70, "rh_THJ5": 45,
+rf_ok = {"rh_THJ1": 7, "rh_THJ2": 32, "rh_THJ4": 70, "rh_THJ5": 36,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
-         "rh_RFJ1": 3, "rh_RFJ2": 90, "rh_RFJ3": 42, "rh_RFJ4": -19}
+         "rh_RFJ1": 0, "rh_RFJ2": 90, "rh_RFJ3": 34, "rh_RFJ4": -19}
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"rh_THJ1": 5, "rh_THJ2": 4.5, "rh_THJ4": 60, "rh_THJ5": 21,
             "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
@@ -179,7 +179,7 @@ store_2_BioTac = {"rh_THJ1": 20, "rh_THJ2": 36, "rh_THJ4": 30, "rh_THJ5": -3,
 # store step 3
 store_3 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ4": 65, "rh_THJ5": 0}
 # business card pre-zero position 
-bc_pre_zero = {"rh_THJ1": 15, "rh_THJ2": 7, "rh_THJ4": 50, "rh_THJ5": -17,
+bc_pre_zero = {"rh_THJ1": 15, "rh_THJ2": 7, "rh_THJ4": 48, "rh_THJ5": -17,
                "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -1,
                "rh_MFJ1": 0, "rh_MFJ2": 51, "rh_MFJ3": 33, "rh_MFJ4": 20,
                "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -20}
@@ -191,7 +191,7 @@ bc_1 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 7}
 # business card position 2 
 bc_2 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 3 
-bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 60, "rh_FFJ3": 58}
+bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 70, "rh_FFJ3": 58}
 # business card position 4 
 bc_4 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 5 
@@ -207,7 +207,7 @@ bc_9 = {"rh_FFJ1": 0, "rh_FFJ2": 71, "rh_FFJ3": 58}
 # business card position 10 
 bc_10 = {"rh_MFJ3": 64, "rh_FFJ4": 20}
 # business card position 11 
-bc_11 = {"rh_FFJ1": 0, "rh_FFJ2": 81, "rh_FFJ3": 50, "rh_FFJ4": 20,
+bc_11 = {"rh_FFJ1": 0, "rh_FFJ2": 70, "rh_FFJ3": 57, "rh_FFJ4": 20,
          "rh_THJ4": 57, "rh_THJ5": 20,}
 # business card position 12 
 bc_12 = {"rh_MFJ1": 0, "rh_MFJ2": 20, "rh_MFJ3": 10, "rh_MFJ4": 0}
@@ -220,105 +220,105 @@ bc_12 = {"rh_MFJ1": 0, "rh_MFJ2": 20, "rh_MFJ3": 10, "rh_MFJ4": 0}
 def sequence_ff():
     # Start sequence 1
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(store_3, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(store_3, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.2, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.2, False, angle_degrees=True)
     rospy.sleep(1.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(flex_th_1, 0.7, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_th_1, 0.7, False, angle_degrees=True)
     rospy.sleep(0.7)
-    hand_commander.move_to_joint_value_target_unsafe(flex_th_2, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(flex_th_2, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.0)
+    hand_commander.move_to_joint_value_target_unsafe(ext_th_2, 1.7, False, angle_degrees=True)
+    rospy.sleep(1.9)
+    hand_commander.move_to_joint_value_target_unsafe(l_ext_rf, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_ext_mf, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_ext_ff, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_int_all, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_ext_all, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_int_ff, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_int_mf, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_int_rf, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_zero_all, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(l_spock, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.0)
+    hand_commander.move_to_joint_value_target_unsafe(l_zero_all, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_th_2, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_ext_rf, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_ext_mf, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_ext_ff, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_int_all, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_ext_all, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_int_ff, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_int_mf, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_int_rf, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_zero_all, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_spock, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(l_zero_all, 0.5, True, angle_degrees=True)
-    rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(pre_ff_ok, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(pre_ff_ok, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ff_ok, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ff_ok, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.7)
+    hand_commander.move_to_joint_value_target_unsafe(ff2mf_ok, 0.8, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ff2mf_ok, 0.8, True, angle_degrees=True)
-    rospy.sleep(0.8)
-    hand_commander.move_to_joint_value_target_unsafe(mf_ok, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(mf_ok, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.7)
+    hand_commander.move_to_joint_value_target_unsafe(mf2rf_ok, 0.8, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(mf2rf_ok, 0.8, True, angle_degrees=True)
-    rospy.sleep(0.8)
-    hand_commander.move_to_joint_value_target_unsafe(rf_ok, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(rf_ok, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.7)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, False, angle_degrees=True)
+    rospy.sleep(1.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.2, False, angle_degrees=True)
+    rospy.sleep(0.2)
+    hand_commander.move_to_joint_value_target_unsafe(pre_ff_ok, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_ff, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_ff, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.2, True, angle_degrees=True)
-    rospy.sleep(0.2)
-    hand_commander.move_to_joint_value_target_unsafe(pre_ff_ok, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ff_ok, 2.0, True, angle_degrees=True)
-    rospy.sleep(2)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ff_ok, 2.0, False, angle_degrees=True)
+    rospy.sleep(3.0)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
     return
 
@@ -339,9 +339,9 @@ def sequence_mf():
                     tactile_values['LF'] > force_zero['LF'] or
                     tactile_values['TH'] > force_zero['TH']):
 
-            hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, True, angle_degrees=True)
+            hand_commander.move_to_joint_value_target_unsafe(start_pos, 0.7, False, angle_degrees=True)
             print 'HAND TOUCHED!'
-            rospy.sleep(2.0)
+            rospy.sleep(1.2)
 
             if tactile_values['TH'] > force_zero['TH']:
                 break
@@ -359,7 +359,7 @@ def sequence_mf():
                 inter_time = inter_time_max * random.random()
                 #            rand_pos['interpolation_time'] = max_range['interpolation_time'] * random.random()
 
-                hand_commander.move_to_joint_value_target_unsafe(rand_pos, inter_time, True, angle_degrees=True)
+                hand_commander.move_to_joint_value_target_unsafe(rand_pos, inter_time, False, angle_degrees=True)
                 wake_time = time.time() + inter_time * 0.9
     return
 
@@ -367,35 +367,35 @@ def sequence_mf():
 def sequence_rf():
     # Start the sequence 3
     rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_pre_zero, 2.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(bc_pre_zero, 2.0, False, angle_degrees=True)
     rospy.sleep(2)
-    hand_commander.move_to_joint_value_target_unsafe(bc_zero, 3.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(bc_zero, 1.0, False, angle_degrees=True)
+    rospy.sleep(5)
+    hand_commander.move_to_joint_value_target_unsafe(bc_1, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_2, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_3, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_4, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_5, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_6, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_7, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_8, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_9, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
+    hand_commander.move_to_joint_value_target_unsafe(bc_11, 0.5, False, angle_degrees=True)
+    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(bc_12, 0.5, False, angle_degrees=True)
     rospy.sleep(3)
-    hand_commander.move_to_joint_value_target_unsafe(bc_1, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_2, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_3, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_4, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_5, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_6, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_7, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_8, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_9, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_11, 1.0, True, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_12, 3.0, True, angle_degrees=True)
-    rospy.sleep(3)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
 
     return
@@ -407,11 +407,11 @@ def sequence_lf():
     trigger = [0, 0, 0, 0, 0]
 
     # Move Hand to zero position
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
     rospy.sleep(2.0)
 
     # Move Hand to starting position
-    hand_commander.move_to_joint_value_target_unsafe(pregrasp_pos, 2.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(pregrasp_pos, 2.0, False, angle_degrees=True)
     rospy.sleep(2.0)
 
     # Move Hand to close position
@@ -432,31 +432,31 @@ def sequence_lf():
         # the corresponding digit to its current position
         if tactile_values['FF'] > force_zero['FF'] and trigger[0] == 0:
             hand_pos_incr_f = {"rh_FFJ1": hand_pos['rh_FFJ1'] + offset1, "rh_FFJ3": hand_pos['rh_FFJ3'] + offset1}
-            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_f, 0.5, True, angle_degrees=True)
+            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_f, 0.5, False, angle_degrees=True)
             print 'First finger contact'
             trigger[0] = 1
 
         if tactile_values['MF'] > force_zero['MF'] and trigger[1] == 0:
             hand_pos_incr_m = {"rh_MFJ1": hand_pos['rh_MFJ1'] + offset1, "rh_MFJ3": hand_pos['rh_MFJ3'] + offset1}
-            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_m, 0.5, True, angle_degrees=True)
+            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_m, 0.5, False, angle_degrees=True)
             print 'Middle finger contact'
             trigger[1] = 1
 
         if tactile_values['RF'] > force_zero['RF'] and trigger[2] == 0:
             hand_pos_incr_r = {"rh_RFJ1": hand_pos['rh_RFJ1'] + offset1, "rh_RFJ3": hand_pos['rh_RFJ3'] + offset1}
-            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_r, 0.5, True, angle_degrees=True)
+            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_r, 0.5, False, angle_degrees=True)
             print 'Ring finger contact'
             trigger[2] = 1
 
         #      if ( tactile_values['LF'] > force_zero['LF'] and trigger[3] == 0 ):
         #         hand_pos_incr_l = {"rh_LFJ1": hand_pos['rh_LFJ1'] + offset1, "rh_LFJ3": hand_pos['rh_LFJ3'] + offset1}
-        #         hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_l, 0.5, True, angle_degrees=True)
+        #         hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_l, 0.5, False, angle_degrees=True)
         #         print 'Little finger contact'
         #         trigger[3] = 1
 
         if tactile_values['TH'] > force_zero['TH'] and trigger[4] == 0:
             hand_pos_incr_th = {"rh_THJ2": hand_pos['rh_THJ2'] + offset1, "rh_THJ5": hand_pos['rh_THJ5'] + offset1}
-            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_th, 0.5, True, angle_degrees=True)
+            hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_th, 0.5, False, angle_degrees=True)
             print 'Thumb contact'
             trigger[4] = 1
 
@@ -485,17 +485,17 @@ def sequence_lf():
                     "rh_RFJ3": hand_pos['rh_RFJ3'] + offset2, "rh_RFJ1": hand_pos['rh_RFJ1'] + offset2})
 
     # Squeeze object gently
-    hand_commander.move_to_joint_value_target_unsafe(squeeze, 0.5, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(squeeze, 0.5, False, angle_degrees=True)
     rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(hand_pos, 0.5, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(hand_pos, 0.5, False, angle_degrees=True)
     rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(squeeze, 0.5, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(squeeze, 0.5, False, angle_degrees=True)
     rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(hand_pos, 2.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(hand_pos, 2.0, False, angle_degrees=True)
     rospy.sleep(2.0)
-    hand_commander.move_to_joint_value_target_unsafe(pregrasp_pos, 2.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(pregrasp_pos, 2.0, False, angle_degrees=True)
     rospy.sleep(2.0)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
     rospy.sleep(2.0)
     return
 
@@ -503,7 +503,7 @@ def sequence_lf():
 def sequence_th():
     # Start the sequence 5
     rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
     return
 
@@ -511,7 +511,7 @@ def sequence_th():
 def zero_tactile_sensors():
     # Move Hand to zero position
     rospy.sleep(0.5)
-    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, True, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, False, angle_degrees=True)
 
     print '\n\nPLEASE ENSURE THAT THE TACTILE SENSORS ARE NOT PRESSED\n'
     # raw_input ('Press ENTER to continue')
