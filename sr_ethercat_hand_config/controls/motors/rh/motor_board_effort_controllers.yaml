@@ -246,7 +246,7 @@ thj4:
     f: 600
     i: 0
     imax: 300
-    max_pwm: 500
+    max_pwm: 0
     p: 8200
     sg_left: 0
     sg_right: 0
