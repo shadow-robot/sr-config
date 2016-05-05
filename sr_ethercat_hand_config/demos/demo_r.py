@@ -690,7 +690,6 @@ while not rospy.is_shutdown():
    # Check the state of the tactile senors
    read_tactile_values()
 
-   secuence_ff()
    
    # If the tactile is touched, trigger the corresponding function
    if (tactile_values['FF'] > force_zero['FF']):
