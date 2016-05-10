@@ -5,7 +5,7 @@
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
-rospy.init_node("store_left_hand", anonymous=True)
+rospy.init_node("store_right_hand", anonymous=True)
 
 hand_commander = SrHandCommander(name="right_hand")
 
