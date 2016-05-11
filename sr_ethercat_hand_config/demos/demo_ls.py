@@ -35,13 +35,13 @@ rospy.sleep(2)
 # Move hand to closed position
 joint_states = pack_hand_1
 rospy.loginfo("Moving hand to pack position")
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
 
 joint_states = pack_hand_2
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
 
 joint_states = pack_hand_3
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
