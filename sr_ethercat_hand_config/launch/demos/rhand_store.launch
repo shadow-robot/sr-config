@@ -1,4 +1,5 @@
 <launch>
-  <node ns="rh" name="rhand_store" pkg="sr_ethercat_hand_config" type="demo_rs.py" output="screen"/>
+  <node name="rhand_store" pkg="sr_ethercat_hand_config" type="demo_rs.py" output="screen"/>
 </launch>
+
 
