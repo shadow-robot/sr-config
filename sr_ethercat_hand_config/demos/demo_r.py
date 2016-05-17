@@ -120,9 +120,9 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ3": 4, "rh_THJ4": 60, "rh_THJ5":
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. with middle finger
-mf_ok = {"rh_THJ1": 15, "rh_THJ2": 18, "rh_THJ3": 7, "rh_THJ4": 66, "rh_THJ5": 30,
+mf_ok = {"rh_THJ1": 15, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 66, "rh_THJ5": 31,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
-         "rh_MFJ1": 0, "rh_MFJ2": 71, "rh_MFJ3": 49, "rh_MFJ4": 11,
+         "rh_MFJ1": 11, "rh_MFJ2": 67, "rh_MFJ3": 49, "rh_MFJ4": 10,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. transition from middle finger to ring finger
@@ -148,7 +148,7 @@ lf_ok = {"rh_THJ1": 24, "rh_THJ2": 11, "rh_THJ3": 10, "rh_THJ4": 69, "rh_THJ5": 
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 15, "rh_MFJ3": 4, "rh_MFJ4": -1,
          "rh_RFJ1": 0, "rh_RFJ2": 15, "rh_RFJ3": 6, "rh_RFJ4": 0.5,
-         "rh_LFJ1": 0, "rh_LFJ2": 76, "rh_LFJ3": 26, "rh_LFJ4": 6, "rh_LFJ5": 35}
+         "rh_LFJ1": 0, "rh_LFJ2": 78, "rh_LFJ3": 26, "rh_LFJ4": 5, "rh_LFJ5": 37}
 # zero wrist
 zero_wr = {"rh_WRJ1": 0, "rh_WRJ2": 0}
 # north wrist
@@ -240,8 +240,8 @@ bc_pre_zero = {"rh_THJ1": 15, "rh_THJ2": 7, "rh_THJ3": -4, "rh_THJ4": 50, "rh_TH
                "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -20,
                "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -20, "rh_LFJ5": 7}
 # business card zero position 
-bc_zero = {"rh_THJ1": 23, "rh_THJ2": 6, "rh_THJ3": -1, "rh_THJ4": 43, "rh_THJ5": -12,
-           "rh_MFJ1": 0, "rh_MFJ2": 63, "rh_MFJ3": 24, "rh_MFJ4": 20}
+bc_zero = {"rh_THJ1": 38, "rh_THJ2": 4, "rh_THJ3": -8, "rh_THJ4": 49, "rh_THJ5": -10,
+           "rh_MFJ1": 7, "rh_MFJ2": 64, "rh_MFJ3": 20, "rh_MFJ4": 18}
 # business card position 1 
 bc_1 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 7}
 # business card position 2 
@@ -284,17 +284,17 @@ def secuence_ff():
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(ext_ff, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 1.0, False, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(flex_mf, 0.95, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 1.0, False, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ext_mf, 0.9, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 1.0, False, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(flex_rf, 0.85, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 1.0, False, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.8, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(flex_lf, 1.0, False, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(flex_lf, 0.75, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_lf, 1.0, False, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ext_lf, 0.7, False, angle_degrees=True)
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(flex_th_1, 0.7, False, angle_degrees=True)
     rospy.sleep(0.7)
@@ -469,8 +469,8 @@ def secuence_rf():
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(bc_pre_zero, 2.0, False, angle_degrees=True)
     rospy.sleep(2)
-    hand_commander.move_to_joint_value_target_unsafe(bc_zero, 3.0, False, angle_degrees=True)
-    rospy.sleep(3)
+    hand_commander.move_to_joint_value_target_unsafe(bc_zero, 1.0, False, angle_degrees=True)
+    rospy.sleep(4)
     hand_commander.move_to_joint_value_target_unsafe(bc_1, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(bc_2, 1.0, False, angle_degrees=True)
@@ -492,7 +492,7 @@ def secuence_rf():
     hand_commander.move_to_joint_value_target_unsafe(bc_11, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(bc_12, 3.0, False, angle_degrees=True)
-    rospy.sleep(3)
+    rospy.sleep(4)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
 
