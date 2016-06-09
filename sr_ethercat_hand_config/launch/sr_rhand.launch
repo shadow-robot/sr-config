@@ -10,5 +10,5 @@
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
   </include>
-  <node pgk="sr_config" type="sr_limit_logger" name="force_logging" />
+  <node pgk="sr_ethercat_hand_config" type="sr_limit_logger" name="force_logging" />
 </launch>
