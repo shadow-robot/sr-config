@@ -37,6 +37,9 @@ install(DIRECTORY launch/
 install(DIRECTORY rates/
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rates)
 
+install(DIRECTORY scripts/
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/scripts)
+
 install(FILES diagnostic_analyzer.yaml
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
