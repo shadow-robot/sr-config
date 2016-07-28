@@ -13,6 +13,8 @@ ffj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 ffj3:
   backlash_compensation: true
   pid:
@@ -28,6 +30,8 @@ ffj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 ffj4:
   backlash_compensation: true
   pid:
@@ -43,6 +47,8 @@ ffj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 lfj0:
   backlash_compensation: true
   pid:
@@ -58,6 +64,8 @@ lfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 lfj3:
   backlash_compensation: true
   pid:
@@ -73,6 +81,8 @@ lfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 lfj4:
   backlash_compensation: true
   pid:
@@ -88,6 +98,8 @@ lfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 lfj5:
   backlash_compensation: true
   pid:
@@ -103,6 +115,8 @@ lfj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 mfj0:
   backlash_compensation: true
   pid:
@@ -118,6 +132,8 @@ mfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 mfj3:
   backlash_compensation: true
   pid:
@@ -133,6 +149,8 @@ mfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 mfj4:
   backlash_compensation: true
   pid:
@@ -148,6 +166,8 @@ mfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 rfj0:
   backlash_compensation: true
   pid:
@@ -163,6 +183,8 @@ rfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 rfj3:
   backlash_compensation: true
   pid:
@@ -178,6 +200,8 @@ rfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 rfj4:
   backlash_compensation: true
   pid:
@@ -193,6 +217,8 @@ rfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 thj1:
   backlash_compensation: true
   pid:
@@ -208,6 +234,8 @@ thj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 thj2:
   backlash_compensation: true
   pid:
@@ -223,6 +251,8 @@ thj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 thj3:
   backlash_compensation: true
   pid:
@@ -238,6 +268,8 @@ thj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 thj4:
   backlash_compensation: false
   pid:
@@ -253,6 +285,8 @@ thj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 thj5:
   backlash_compensation: false
   pid:
@@ -268,6 +302,8 @@ thj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 wrj1:
   backlash_compensation: false
   pid:
@@ -283,6 +319,8 @@ wrj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
 wrj2:
   backlash_compensation: false
   pid:
@@ -298,3 +336,5 @@ wrj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+  pos_filter:
+    tau: 0.05
