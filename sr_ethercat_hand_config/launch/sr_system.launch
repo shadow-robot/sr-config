@@ -3,7 +3,7 @@
   
   <include file="$(find sr_robot_launch)/launch/sr_right_ur5arm_hand.launch">
     <arg name="eth_port" value="eth0" />
-    <arg name="hand_serial" value="1418"/>
+    <arg name="hand_serial" value="1306"/>
     <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_lite_ur5.urdf.xacro"/>
     <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/right_sh_lite_ur5.yaml"/>
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_lite_v1.yaml"/>
