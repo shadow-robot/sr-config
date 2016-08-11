@@ -108,7 +108,7 @@ zero_th = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 0}
 # Pre O.K. with first finger
 pre_ff_ok = {"rh_THJ4": 70}
 # O.K. with first finger
-ff_ok = {"rh_THJ1": 15, "rh_THJ2": 20, "rh_THJ3": 0, "rh_THJ4": 56, "rh_THJ5": 18,
+ff_ok = {"rh_THJ1": 15, "rh_THJ2": 22, "rh_THJ3": 0, "rh_THJ4": 56, "rh_THJ5": 18,
          "rh_FFJ1": 0, "rh_FFJ2": 75, "rh_FFJ3": 45, "rh_FFJ4": -0.2,
          "rh_MFJ1": 0, "rh_MFJ2": 42, "rh_MFJ3": 33, "rh_MFJ4": -3,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
@@ -120,9 +120,9 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ3": 4, "rh_THJ4": 60, "rh_THJ5":
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. with middle finger
-mf_ok = {"rh_THJ1": 15, "rh_THJ2": 18, "rh_THJ3": 7, "rh_THJ4": 66, "rh_THJ5": 30,
+mf_ok = {"rh_THJ1": 15, "rh_THJ2": 20, "rh_THJ3": 7, "rh_THJ4": 66, "rh_THJ5": 30,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
-         "rh_MFJ1": 0, "rh_MFJ2": 71, "rh_MFJ3": 49, "rh_MFJ4": 11,
+         "rh_MFJ1": 0, "rh_MFJ2": 74, "rh_MFJ3": 49, "rh_MFJ4": 11,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. transition from middle finger to ring finger
@@ -247,7 +247,7 @@ bc_1 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 7}
 # business card position 2 
 bc_2 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 3 
-bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 60, "rh_FFJ3": 58}
+bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 59, "rh_FFJ3": 58}
 # business card position 4 
 bc_4 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 5 
@@ -437,9 +437,9 @@ def secuence_mf():
                     tactile_values['LF'] > force_zero['LF'] or
                     tactile_values['TH'] > force_zero['TH']):
 
-            hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
+            hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, False, angle_degrees=True)
             print 'HAND TOUCHED!'
-            rospy.sleep(2.0)
+            rospy.sleep(1.0)
 
             if (tactile_values['TH'] > force_zero['TH']):
                 break
@@ -469,8 +469,8 @@ def secuence_rf():
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(bc_pre_zero, 2.0, False, angle_degrees=True)
     rospy.sleep(2)
-    hand_commander.move_to_joint_value_target_unsafe(bc_zero, 3.0, False, angle_degrees=True)
-    rospy.sleep(3)
+    hand_commander.move_to_joint_value_target_unsafe(bc_zero, 1.0, False, angle_degrees=True)
+    rospy.sleep(7)
     hand_commander.move_to_joint_value_target_unsafe(bc_1, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(bc_2, 1.0, False, angle_degrees=True)
@@ -491,8 +491,8 @@ def secuence_rf():
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(bc_11, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_12, 3.0, False, angle_degrees=True)
-    rospy.sleep(3)
+    hand_commander.move_to_joint_value_target_unsafe(bc_12, 1.0, False, angle_degrees=True)
+    rospy.sleep(4)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
 

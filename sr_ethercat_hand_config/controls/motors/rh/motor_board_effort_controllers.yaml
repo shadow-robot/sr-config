@@ -5,7 +5,7 @@ ffj0:
     deadband: 5
     f: 300
     i: 0
-    imax: 300
+    imax: 400
     max_pwm: 600
     p: 6200
     sg_left: 0
