@@ -5,7 +5,7 @@ ffj0:
     deadband: 5
     f: 600
     i: 0
-    imax: 550
+    imax: 350
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -20,7 +20,7 @@ ffj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 600
+    imax: 400
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -50,7 +50,7 @@ lfj0:
     deadband: 5
     f: 600
     i: 0
-    imax: 550
+    imax: 400
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -65,7 +65,7 @@ lfj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 800
+    imax: 550
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -110,7 +110,7 @@ mfj0:
     deadband: 5
     f: 600
     i: 0
-    imax: 550
+    imax: 350
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -125,7 +125,7 @@ mfj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 550
+    imax: 400
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -155,7 +155,7 @@ rfj0:
     deadband: 5
     f: 600
     i: 0
-    imax: 550
+    imax: 400
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -170,7 +170,7 @@ rfj3:
     deadband: 5
     f: 600
     i: 0
-    imax: 500
+    imax: 450
     max_pwm: 600
     p: 6200
     sg_left: 0
