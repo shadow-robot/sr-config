@@ -184,7 +184,7 @@ bc_pre_zero = {"rh_THJ1": 15, "rh_THJ2": 7, "rh_THJ4": 48, "rh_THJ5": -17,
                "rh_MFJ1": 0, "rh_MFJ2": 51, "rh_MFJ3": 33, "rh_MFJ4": 20,
                "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -20}
 # business card zero position 
-bc_zero = {"rh_THJ1": 23, "rh_THJ2": 9, "rh_THJ4": 44, "rh_THJ5": -12,
+bc_zero = {"rh_THJ1": 23, "rh_THJ2": 9, "rh_THJ4": 44, "rh_THJ5": -10,
            "rh_MFJ1": 0, "rh_MFJ2": 63, "rh_MFJ3": 24, "rh_MFJ4": 20}
 # business card position 1 
 bc_1 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 7}
