@@ -1,5 +1,6 @@
 <launch>
   <arg name="gui" default="false"/>
+  <arg name="initial_z" default="0.687"/>
   <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
     <arg name="eth_port" value="eth2" />
     <arg name="hand_serial" value="1370" />
@@ -8,5 +9,8 @@
     <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
     <arg name="sim" value="false"/>
+    <arg name="initial_z" value="$(arg initial_z)"/>
   </include>
+
+  <include file="$(find sr_manipulation_simulation)/launch/load_moveit_scene.launch"/>
 </launch>
