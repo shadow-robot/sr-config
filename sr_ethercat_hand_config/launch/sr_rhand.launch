@@ -4,8 +4,8 @@
     <arg name="hand_serial" value="1626" />
     <arg name="hand_id" value="rh" />
 
-    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
-    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
+    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor_no_mf_rf_lf.urdf.xacro" />
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3_no_mf_rf_lf.yaml"/>
 
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
