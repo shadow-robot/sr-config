@@ -4,10 +4,13 @@
     <arg name="hand_serial" value="1050" />
     <arg name="hand_id" value="rh" />
 
-    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
-    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
+    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_lite.urdf.xacro" />
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_lite_v1.yaml"/>
 
     <arg name="use_moveit" value="true"/>
-    <arg name="sim" value="false"/>
+    <arg name="sim" value="true"/>
   </include>
+
+  <node pkg="sr_moveit_hand_config" type="timed_roslaunch.sh" args="10 sr_ethercat_hand_config optoforce_hand.launch port:=/dev/ttyACM1"
+    name="timed_roslaunch_optoforce" output="screen"/>
 </launch>
