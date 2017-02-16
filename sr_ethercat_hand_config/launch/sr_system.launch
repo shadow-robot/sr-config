@@ -1,0 +1,20 @@
+<launch>
+  <arg name="gui" default="true"/>
+  
+  <include file="$(find sr_robot_launch)/launch/sr_right_ur5arm_hand.launch">
+    <arg name="eth_port" value="eth0" />
+    <arg name="hand_serial" value="1642"/>
+    <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_lite_ur5.urdf.xacro"/>
+    <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/right_sh_lite_ur5.yaml"/>
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_lite_v1.yaml"/>
+
+    <arg name="sim" value="false"/>
+    <arg name="use_moveit" value="true"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <node pkg="sr_moveit_hand_config" type="timed_roslaunch.sh" args="10 sr_ethercat_hand_config optoforce_hand.launch port:=/dev/optoforce_SHW0A001"
+    name="timed_roslaunch_optoforce" output="screen"/>
+
+
+</launch>
