@@ -277,7 +277,7 @@ thj4:
     deadband: 5
     f: 300
     i: 0
-    imax: 300
+    imax: 150
     max_pwm: 500
     p: 8200
     sg_left: 0
@@ -294,7 +294,7 @@ thj5:
     deadband: 5
     f: 300
     i: 0
-    imax: 300
+    imax: 150
     max_pwm: 500
     p: 8200
     sg_left: 0
