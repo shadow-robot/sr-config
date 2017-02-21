@@ -12,7 +12,7 @@ sh_rh_ffj3_effort_controller:
 sh_rh_ffj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_FFJ4
-  max_force: 600
+  max_force: 300
   friction_deadband: 5
 
 
@@ -30,7 +30,7 @@ sh_rh_mfj3_effort_controller:
 sh_rh_mfj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_MFJ4
-  max_force: 600
+  max_force: 300
   friction_deadband: 5
 
 
@@ -48,7 +48,7 @@ sh_rh_rfj3_effort_controller:
 sh_rh_rfj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_RFJ4
-  max_force: 600
+  max_force: 0300
   friction_deadband: 5
 
 
@@ -89,17 +89,17 @@ sh_rh_thj2_effort_controller:
 sh_rh_thj3_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_THJ3
-  max_force: 0
+  max_force: 300
   friction_deadband: 5
 sh_rh_thj4_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_THJ4
-  max_force: 600
+  max_force: 400
   friction_deadband: 5
 sh_rh_thj5_effort_controller:
   type: sr_mechanism_controllers/SrhEffortJointController
   joint: rh_THJ5
-  max_force: 600
+  max_force: 400
   friction_deadband: 5
 
 
@@ -114,5 +114,3 @@ sh_rh_wrj2_effort_controller:
   joint: rh_WRJ2
   max_force: 0
   friction_deadband: 5
-
-
