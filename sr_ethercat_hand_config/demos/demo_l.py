@@ -20,10 +20,10 @@ import rospy
 import random
 import time
 from sr_robot_commander.sr_hand_commander import SrHandCommander
+from sr_utilities.hand_finder import HandFinder
 
 rospy.init_node("left_hand_demo", anonymous=True)
 
-#hand_commander = SrHandCommander(name="left_hand")
 hand_finder = HandFinder()
 
 hand_parameters = hand_finder.get_hand_parameters()
