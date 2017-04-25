@@ -4,10 +4,19 @@
 
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
+from sr_utilities.hand_finder import HandFinder
 
 rospy.init_node("store_left_hand", anonymous=True)
 
-hand_commander = SrHandCommander(name="left_hand")
+hand_finder = HandFinder()
+
+hand_parameters = hand_finder.get_hand_parameters()
+hand_serial = hand_parameters.mapping.keys()[0]
+
+hand_commander = SrHandCommander(hand_parameters=hand_parameters,
+                                 hand_serial=hand_serial)
+
+rospy.sleep(0.5)
 
 open_hand = {'lh_FFJ1': 0.0, 'lh_FFJ2': 0.0, 'lh_FFJ3': 0.0, 'lh_FFJ4': 0.0,
              'lh_MFJ1': 0.0, 'lh_MFJ2': 0.0, 'lh_MFJ3': 0.0, 'lh_MFJ4': 0.0,
