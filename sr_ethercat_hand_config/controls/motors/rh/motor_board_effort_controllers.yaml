@@ -3,143 +3,202 @@ ffj0:
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 550
-    max_pwm: 600
+    max_pwm: 700
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 ffj3:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
-    imax: 450
-    max_pwm: 600
+    imax: 500
+    max_pwm: 700
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 ffj4:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 400
     i: 0
     imax: 350
-    max_pwm: 300
+    max_pwm: 500
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 lfj0:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 550
-    max_pwm: 600
+    max_pwm: 700
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 lfj3:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
-    imax: 700
-    max_pwm: 600
+    imax: 500
+    max_pwm: 700
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 lfj4:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 400
     i: 0
     imax: 350
-    max_pwm: 300
+    max_pwm: 500
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 lfj5:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 350
-    max_pwm: 400
+    max_pwm: 500
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 mfj0:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
     imax: 550
-    max_pwm: 600
+    max_pwm: 700
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 mfj3:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
+    i: 0
+    imax: 500
+    max_pwm: 700
+    p: 6200
+    sg_left: 0
+    sg_right: 0
+    sgleftref: 0
+    sgrightref: 0
+    sign: 0
+mfj4:
+  backlash_compensation: true
+  pid:
+    d: 64
+    deadband: 5
+    f: 400
+    i: 0
+    imax: 350
+    max_pwm: 500
+    p: 6200
+    sg_left: 0
+    sg_right: 0
+    sgleftref: 0
+    sgrightref: 0
+    sign: 0
+rfj0:
+  backlash_compensation: true
+  pid:
+    d: 64
+    deadband: 5
+    f: 600
+    i: 0
+    imax: 550
+    max_pwm: 700
+    p: 6200
+    sg_left: 0
+    sg_right: 0
+    sgleftref: 0
+    sgrightref: 0
+    sign: 0
+rfj3:
+  backlash_compensation: true
+  pid:
+    d: 64
+    deadband: 5
+    f: 600
+    i: 0
+    imax: 500
+    max_pwm: 700
+    p: 6200
+    sg_left: 0
+    sg_right: 0
+    sgleftref: 0
+    sgrightref: 0
+    sign: 0
+rfj4:
+  backlash_compensation: true
+  pid:
+    d: 64
+    deadband: 5
+    f: 400
+    i: 0
+    imax: 350
+    max_pwm: 500
+    p: 6200
+    sg_left: 0
+    sg_right: 0
+    sgleftref: 0
+    sgrightref: 0
+    sign: 0
+thj1:
+  backlash_compensation: true
+  pid:
+    d: 64
+    deadband: 5
+    f: 600
     i: 0
     imax: 450
     max_pwm: 600
@@ -149,110 +208,21 @@ mfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
-mfj4:
-  backlash_compensation: true
-  pid:
-    d: 64
-    deadband: 5
-    f: 300
-    i: 0
-    imax: 350
-    max_pwm: 300
-    p: 6200
-    sg_left: 0
-    sg_right: 0
-    sgleftref: 0
-    sgrightref: 0
-    sign: 0
-  pos_filter:
-    tau: 0.05
-rfj0:
-  backlash_compensation: true
-  pid:
-    d: 64
-    deadband: 5
-    f: 300
-    i: 0
-    imax: 550
-    max_pwm: 600
-    p: 6200
-    sg_left: 0
-    sg_right: 0
-    sgleftref: 0
-    sgrightref: 0
-    sign: 0
-  pos_filter:
-    tau: 0.05
-rfj3:
-  backlash_compensation: true
-  pid:
-    d: 64
-    deadband: 5
-    f: 300
-    i: 0
-    imax: 400
-    max_pwm: 600
-    p: 6200
-    sg_left: 0
-    sg_right: 0
-    sgleftref: 0
-    sgrightref: 0
-    sign: 0
-  pos_filter:
-    tau: 0.05
-rfj4:
-  backlash_compensation: true
-  pid:
-    d: 64
-    deadband: 5
-    f: 300
-    i: 0
-    imax: 350
-    max_pwm: 300
-    p: 6200
-    sg_left: 0
-    sg_right: 0
-    sgleftref: 0
-    sgrightref: 0
-    sign: 0
-  pos_filter:
-    tau: 0.05
-thj1:
-  backlash_compensation: true
-  pid:
-    d: 64
-    deadband: 5
-    f: 300
-    i: 0
-    imax: 300
-    max_pwm: 500
-    p: 6200
-    sg_left: 0
-    sg_right: 0
-    sgleftref: 0
-    sgrightref: 0
-    sign: 0
-  pos_filter:
-    tau: 0.05
 thj2:
   backlash_compensation: true
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 600
     i: 0
-    imax: 350
-    max_pwm: 500
+    imax: 450
+    max_pwm: 600
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 thj3:
   backlash_compensation: true
   pid:
@@ -260,58 +230,52 @@ thj3:
     deadband: 5
     f: 300
     i: 0
-    imax: 250
-    max_pwm: 300
+    imax: 300
+    max_pwm: 400
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 thj4:
   backlash_compensation: false
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 500
     i: 0
-    imax: 300
-    max_pwm: 500
+    imax: 150
+    max_pwm: 800
     p: 8200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 thj5:
   backlash_compensation: false
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 500
     i: 0
-    imax: 300
-    max_pwm: 500
+    imax: 150
+    max_pwm: 800
     p: 8200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 wrj1:
   backlash_compensation: false
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 800
     i: 0
-    imax: 450
+    imax: 250
     max_pwm: 800
     p: 6200
     sg_left: 0
@@ -319,22 +283,20 @@ wrj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
 wrj2:
   backlash_compensation: false
   pid:
     d: 64
     deadband: 5
-    f: 300
+    f: 700
     i: 0
-    imax: 250
-    max_pwm: 600
+    imax: 200
+    max_pwm: 700
     p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-  pos_filter:
-    tau: 0.05
+
+
