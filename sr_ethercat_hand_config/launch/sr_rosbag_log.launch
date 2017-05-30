@@ -1,0 +1,26 @@
+<launch>
+  <arg name="split_logs_by_duration" default="True"/>
+  <arg name="log_split_duration" default="10m"/>
+
+  <arg name="split_logs_by_size" default="false"/>
+  <arg name="log_split_size" default="1024"/>
+
+  <arg name="log_max_splits" default="6"/>
+  <arg name="log_directory" default="."/>
+  <arg name="log_bag_prefix" default="sr_hand_log"/>
+
+  <arg name="log_location" value="$(arg log_directory)/$(arg log_bag_prefix)"/>
+
+  <arg name="log_topics" default='-e ".*(controller|debug_etherCAT_data).*" /joint_states /tf /tf_static /rosout /diagnostics /mechanism_statistics'/>
+
+  <group unless="$(arg split_logs_by_size)">
+    <node  if="$(arg split_logs_by_duration)" pkg="rosbag" type="record"
+           args='-o $(arg log_location) --lz4 --split --max-splits=$(arg log_max_splits) --duration $(arg log_split_duration) $(arg log_topics)' name="record"/>
+  </group>
+
+  <group unless="$(arg split_logs_by_duration)">
+    <node if="$(arg split_logs_by_size)" pkg="rosbag" type="record"
+          args='-o $(arg log_location) --lz4 --split --max-splits=$(arg log_max_splits) --size $(arg log_split_size) $(arg log_topics) ' name="record"/>
+  </group>
+
+</launch>
