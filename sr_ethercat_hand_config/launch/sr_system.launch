@@ -1,0 +1,13 @@
+<launch>
+  <arg name="gui" default="false"/>
+  <arg name="initial_z" default="0.687"/>
+  <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
+    <arg name="eth_port" value="enxa0cec809561b" />
+    <arg name="hand_serial" value="1802" />
+    <arg name="use_moveit" value="true"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
+    <arg name="sim" value="false"/>
+  </include>
+
+</launch>
