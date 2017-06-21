@@ -2,7 +2,7 @@
   <arg name="gui" default="true"/>
   <arg name="initial_z" default="0.0"/>
   <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
-    <arg name="eth_port" value="enxa0cec809561b"/>
+    <arg name="eth_port" value="enp4s0"/>
     <arg name="hand_serial" value="1802" />
 
     <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_stand_ur10_bt_sp_biotacs.urdf.xacro" />
