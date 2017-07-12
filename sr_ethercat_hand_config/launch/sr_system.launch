@@ -1,6 +1,6 @@
 
 <launch>
-  <arg name="sim" default="true"/>
+  <arg name="sim" default="false"/>
   <arg name="gui" default="true"/>
   <arg name="scene" default="true"/>
   
