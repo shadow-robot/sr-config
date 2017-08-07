@@ -5,7 +5,7 @@
   <arg name="split_logs_by_size" default="false"/>
   <arg name="log_split_size" default="1024"/>
 
-  <arg name="log_max_splits" default="6"/>
+  <arg name="log_max_splits" default="100"/>
   <arg name="log_directory" default="."/>
   <arg name="log_bag_prefix" default="sr_log"/>
 
