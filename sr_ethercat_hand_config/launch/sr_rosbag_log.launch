@@ -27,6 +27,6 @@
 
   <node if="$(arg clear_old_sessions)" pkg="sr_ethercat_hand_config" type="bag_rotate.py" name="bag_rotate">
     <param name="bag_files_num" value="$(arg log_max_splits)"/>
-    <param name="$(arg log_directory)"/>
-
+    <param name="bag_files_path" value="$(arg log_directory)"/>
+  </node>
 </launch>
