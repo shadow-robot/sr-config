@@ -11,6 +11,8 @@
 
   <arg name="log_location" value="$(arg log_directory)/$(arg log_bag_prefix)"/>
 
+  <arg name="clear_old_sessions" default="true"/>
+
   <arg name="log_topics" default='-e ".*(controller|debug_etherCAT_data).*" /joint_states /tf /tf_static /rosout /diagnostics /mechanism_statistics'/>
 
   <group unless="$(arg split_logs_by_size)">
@@ -22,5 +24,9 @@
     <node if="$(arg split_logs_by_size)" pkg="rosbag" type="record"
           args='-o $(arg log_location) --lz4 --split --max-splits=$(arg log_max_splits) --size $(arg log_split_size) $(arg log_topics) ' name="record"/>
   </group>
+
+  <node if="$(arg clear_old_sessions)" pkg="sr_ethercat_hand_config" type="bag_rotate.py" name="bag_rotate">
+    <param name="bag_files_num" value="$(arg log_max_splits)"/>
+    <param name="$(arg log_directory)"/>
 
 </launch>
