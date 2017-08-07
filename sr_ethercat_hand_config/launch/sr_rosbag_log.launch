@@ -7,7 +7,7 @@
 
   <arg name="log_max_splits" default="6"/>
   <arg name="log_directory" default="."/>
-  <arg name="log_bag_prefix" default="sr_hand_log"/>
+  <arg name="log_bag_prefix" default="sr_log"/>
 
   <arg name="log_location" value="$(arg log_directory)/$(arg log_bag_prefix)"/>
 

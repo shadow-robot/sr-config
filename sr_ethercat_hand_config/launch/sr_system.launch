@@ -1,7 +1,9 @@
 <launch>
   <arg name="gui" default="true"/>
   <arg name="initial_z" default="0.0"/>
-  <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch"/>
+  <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch">
+    <arg name="log_bag_prefix" value="sr_hand_and_arm_log"/>
+  </include>
   <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
     <arg name="eth_port" value="enp4s0"/>
     <arg name="hand_serial" value="1802" />
