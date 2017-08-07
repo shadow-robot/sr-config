@@ -24,7 +24,6 @@ from sr_robot_commander.sr_hand_commander import SrHandCommander
 rospy.init_node("right_hand_demo", anonymous=True)
 
 hand_commander = SrHandCommander(name="right_hand")
-
 ##########
 # RANGES #
 ##########
@@ -36,16 +35,14 @@ min_range = {"rh_THJ2": -40, "rh_THJ3": -12, "rh_THJ4": 0, "rh_THJ5": -55,
              "rh_FFJ1": 0, "rh_FFJ2": 20, "rh_FFJ3": 0, "rh_FFJ4": -20,
              "rh_MFJ1": 0, "rh_MFJ2": 20, "rh_MFJ3": 0, "rh_MFJ4": -10,
              "rh_RFJ1": 0, "rh_RFJ2": 20, "rh_RFJ3": 0, "rh_RFJ4": -10,
-             "rh_LFJ1": 10, "rh_LFJ2": 10, "rh_LFJ3": 0, "rh_LFJ4": -20, "rh_LFJ5": 0,
-             "rh_WRJ1": -20, "rh_WRJ2": -10}
+             "rh_LFJ1": 10, "rh_LFJ2": 10, "rh_LFJ3": 0, "rh_LFJ4": -20, "rh_LFJ5": 0}
 
 # Maximum alllowed range for the joints in this particular script
 max_range = {"rh_THJ2": 20, "rh_THJ3": 12, "rh_THJ4": 70, "rh_THJ5": 0,
              "rh_FFJ1": 20, "rh_FFJ2": 90, "rh_FFJ3": 90, "rh_FFJ4": 0,
              "rh_MFJ1": 20, "rh_MFJ2": 90, "rh_MFJ3": 90, "rh_MFJ4": 0,
              "rh_RFJ1": 20, "rh_RFJ2": 90, "rh_RFJ3": 90, "rh_RFJ4": 0,
-             "rh_LFJ1": 20, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 1,
-             "rh_WRJ1": 10, "rh_WRJ2": 5}
+             "rh_LFJ1": 20, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 1}
 
 ####################
 # POSE DEFINITIONS #
@@ -56,29 +53,25 @@ start_pos = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 
              "rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0, "rh_FFJ4": 0,
              "rh_MFJ1": 0, "rh_MFJ2": 0, "rh_MFJ3": 0, "rh_MFJ4": 0,
              "rh_RFJ1": 0, "rh_RFJ2": 0, "rh_RFJ3": 0, "rh_RFJ4": 0,
-             "rh_LFJ1": 0, "rh_LFJ2": 0, "rh_LFJ3": 0, "rh_LFJ4": 0, "rh_LFJ5": 0,
-             "rh_WRJ1": 0, "rh_WRJ2": 0}
+             "rh_LFJ1": 0, "rh_LFJ2": 0, "rh_LFJ3": 0, "rh_LFJ4": 0, "rh_LFJ5": 0}
 # Start position for the Hand
 pregrasp_pos = {"rh_THJ2": 12, "rh_THJ3": 15, "rh_THJ4": 69, "rh_THJ5": -23,
                 "rh_FFJ1": 0, "rh_FFJ2": 40, "rh_FFJ3": 21, "rh_FFJ4": -15,
                 "rh_MFJ1": 0, "rh_MFJ2": 40, "rh_MFJ3": 21, "rh_MFJ4": 0,
                 "rh_RFJ1": 0, "rh_RFJ2": 40, "rh_RFJ3": 21, "rh_RFJ4": -7,
-                "rh_LFJ1": 0, "rh_LFJ2": 40, "rh_LFJ3": 21, "rh_LFJ4": -10, "rh_LFJ5": 0,
-                "rh_WRJ1": 0, "rh_WRJ2": 0}
+                "rh_LFJ1": 0, "rh_LFJ2": 40, "rh_LFJ3": 21, "rh_LFJ4": -10, "rh_LFJ5": 0}
 # Close position for the Hand
 grasp_pos = {"rh_THJ2": 30, "rh_THJ3": 15, "rh_THJ4": 69, "rh_THJ5": -3,
              "rh_FFJ1": 0, "rh_FFJ2": 77, "rh_FFJ3": 67, "rh_FFJ4": -19,
              "rh_MFJ1": 0, "rh_MFJ2": 82, "rh_MFJ3": 62, "rh_MFJ4": 0,
              "rh_RFJ1": 0, "rh_RFJ2": 89, "rh_RFJ3": 64, "rh_RFJ4": -18,
-             "rh_LFJ1": 7, "rh_LFJ2": 90, "rh_LFJ3": 64, "rh_LFJ4": -19, "rh_LFJ5": 0,
-             "rh_WRJ1": 0, "rh_WRJ2": 0}
+             "rh_LFJ1": 7, "rh_LFJ2": 90, "rh_LFJ3": 64, "rh_LFJ4": -19, "rh_LFJ5": 0}
 # Random position for the Hand (initialied at 0)
 rand_pos = {"rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 0,
             "rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0, "rh_FFJ4": 0,
             "rh_MFJ1": 0, "rh_MFJ2": 0, "rh_MFJ3": 0, "rh_MFJ4": 0,
             "rh_RFJ1": 0, "rh_RFJ2": 0, "rh_RFJ3": 0, "rh_RFJ4": 0,
-            "rh_LFJ1": 0, "rh_LFJ2": 0, "rh_LFJ3": 0, "rh_LFJ4": 0, "rh_LFJ5": 0,
-            "rh_WRJ1": 0, "rh_WRJ2": 0}
+            "rh_LFJ1": 0, "rh_LFJ2": 0, "rh_LFJ3": 0, "rh_LFJ4": 0, "rh_LFJ5": 0}
 # flex first finger
 flex_ff = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 90, "rh_FFJ4": 0}
 # extend first finger
@@ -208,29 +201,25 @@ store_1_PST = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 60, "rh_THJ5
                "rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 90, "rh_FFJ4": 0,
                "rh_MFJ1": 90, "rh_MFJ2": 90, "rh_MFJ3": 90, "rh_MFJ4": 0,
                "rh_RFJ1": 90, "rh_RFJ2": 90, "rh_RFJ3": 90, "rh_RFJ4": 0,
-               "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0,
-               "rh_WRJ1": 0, "rh_WRJ2": 0}
+               "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0}
 # store step 2 PST
 store_2_PST = {"rh_THJ1": 50, "rh_THJ2": 12, "rh_THJ3": 0, "rh_THJ4": 60, "rh_THJ5": 27,
                "rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 90, "rh_FFJ4": 0,
                "rh_MFJ1": 90, "rh_MFJ2": 90, "rh_MFJ3": 90, "rh_MFJ4": 0,
                "rh_RFJ1": 90, "rh_RFJ2": 90, "rh_RFJ3": 90, "rh_RFJ4": 0,
-               "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0,
-               "rh_WRJ1": 0, "rh_WRJ2": 0}
+               "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0}
 # store step 1 Bio_Tac
 store_1_BioTac = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 30, "rh_THJ5": 0,
                   "rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 90, "rh_FFJ4": 0,
                   "rh_MFJ1": 90, "rh_MFJ2": 90, "rh_MFJ3": 90, "rh_MFJ4": 0,
                   "rh_RFJ1": 90, "rh_RFJ2": 90, "rh_RFJ3": 90, "rh_RFJ4": 0,
-                  "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0,
-                  "rh_WRJ1": 0, "rh_WRJ2": 0}
+                  "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0}
 # store step 2 Bio_Tac
 store_2_BioTac = {"rh_THJ1": 20, "rh_THJ2": 36, "rh_THJ3": 0, "rh_THJ4": 30, "rh_THJ5": -3,
                   "rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 90, "rh_FFJ4": 0,
                   "rh_MFJ1": 90, "rh_MFJ2": 90, "rh_MFJ3": 90, "rh_MFJ4": 0,
                   "rh_RFJ1": 90, "rh_RFJ2": 90, "rh_RFJ3": 90, "rh_RFJ4": 0,
-                  "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0,
-                  "rh_WRJ1": 0, "rh_WRJ2": 0}
+                  "rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0, "rh_LFJ5": 0}
 # store step 3
 store_3 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 65, "rh_THJ5": 0}
 # business card pre-zero position 
