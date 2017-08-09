@@ -1,5 +1,7 @@
-
 <launch>
+  <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch">
+    <arg name="log_bag_prefix" value="sr_system"/>
+  </include>
   <arg name="sim" default="false"/>
   <arg name="gui" default="true"/>
   <arg name="scene" default="true"/>
