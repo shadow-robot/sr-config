@@ -253,7 +253,7 @@ thj1:
     f: 300
     i: 0
     imax: 0
-    max_pwm: 400
+    max_pwm: 500
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -272,7 +272,7 @@ thj2:
     f: 300
     i: 0
     imax: 0
-    max_pwm: 400
+    max_pwm: 500
     p: 6200
     sg_left: 0
     sg_right: 0
