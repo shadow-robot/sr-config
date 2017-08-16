@@ -21,6 +21,10 @@ for (@dirs)
 
 my $z = new IO::Compress::Gzip $out_file;
 
+$z->print($output);
+
+#--------------------------------------------------------------------
+
 sub recursive_diff
 {
     my ($path) = @_;
@@ -48,4 +52,4 @@ sub recursive_diff
     return $output;
 }
 
-$z->print($output);
+
