@@ -20,5 +20,4 @@ if __name__ == '__main__':
     rospy.init_node('bag_rotate', anonymous=True)
     desired_bag_number = rospy.get_param('~bag_files_num')
     path = rospy.get_param('~bag_files_path')
-    rospy.logwarn(path)
     remover(desired_bag_number, path)
