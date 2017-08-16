@@ -5,7 +5,7 @@ import datetime
 
 rospy.init_node("param_dump", anonymous=True)
 
-run_time= datetime.datetime.fromtimestamp(rospy.get_rostime().secs)
+run_time = datetime.datetime.fromtimestamp(rospy.get_rostime().secs)
 
 name_string = "run_params_%04d-%02d-%02d-%02d-%02d-%02d" % (
     run_time.year, run_time.month, run_time.day, run_time.hour, run_time.minute, run_time.second)
