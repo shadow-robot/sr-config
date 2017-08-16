@@ -16,6 +16,7 @@
   <arg name="log_topics" default='-e ".*(controller|debug_etherCAT_data).*" /joint_states /tf /tf_static /rosout /diagnostics /mechanism_statistics'/>
 
   <arg name="save_params" default="true"/>
+  <arg name="diff_ws" default="true"/>
 
   <group unless="$(arg split_logs_by_size)">
     <node  if="$(arg split_logs_by_duration)" pkg="rosbag" type="record"
@@ -36,4 +37,6 @@
     <param name="log_directory" value="$(arg log_directory)" />
   </node>
 
+  <node if="$(arg diff_ws)" pkg="sr_ethercat_hand_config" type="ws_diff.pl" name="ws_diff" args='$(arg log_location)'/>
+  
 </launch>
