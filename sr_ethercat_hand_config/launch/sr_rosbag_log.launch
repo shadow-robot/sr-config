@@ -5,7 +5,7 @@
   <arg name="split_logs_by_size" default="false"/>
   <arg name="log_split_size" default="1024"/>
 
-  <arg name="log_max_splits" default="100"/>
+  <arg name="log_max_splits" default="600"/>
   <arg name="log_directory" default="."/>
   <arg name="log_bag_prefix" default="sr_log"/>
 
@@ -14,6 +14,8 @@
   <arg name="clear_old_sessions" default="true"/>
 
   <arg name="log_topics" default='-e ".*(controller|debug_etherCAT_data).*" /joint_states /tf /tf_static /rosout /diagnostics /mechanism_statistics'/>
+
+  <arg name="save_params" default="true"/>
 
   <group unless="$(arg split_logs_by_size)">
     <node  if="$(arg split_logs_by_duration)" pkg="rosbag" type="record"
@@ -29,4 +31,9 @@
     <param name="bag_files_num" value="$(arg log_max_splits)"/>
     <param name="bag_files_path" value="$(arg log_directory)"/>
   </node>
+
+  <node if="$(arg save_params)" pkg="sr_ethercat_hand_config" type="record_params.py" name="param_dump">
+    <param name="log_directory" value="$(arg log_directory)" />
+  </node>
+
 </launch>
