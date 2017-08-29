@@ -10,6 +10,7 @@ def is_dir(path):
 def recursive_diff(path):
     if not is_dir(path):
         return ""
+    print path
     current_directory = os.getcwd()
     os.chdir(path)
     output = ""
@@ -19,12 +20,14 @@ def recursive_diff(path):
     os.chdir(current_directory)
     return output
 
+rospy.init_node("ws_diff")
+
 
 package_path = os.environ['ROS_PACKAGE_PATH']
-package_dirs = filter (lamda x: return "/opt/ros" not in x, package_path.split(":"))
+package_dirs = filter (lambda x: ("/opt/ros" not in x), package_path.split(":"))
 
 run_time = datetime.datetime.fromtimestamp(rospy.get_rostime().secs)
-name_string = "run_params_%04d-%02d-%02d-%02d-%02d-%02d" % (
+name_string = "ws_diff_%04d-%02d-%02d-%02d-%02d-%02d" % (
     run_time.year, run_time.month, run_time.day, run_time.hour, run_time.minute, run_time.second)
 
 output_dir = rospy.get_param("~log_directory", ".")
