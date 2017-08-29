@@ -37,6 +37,7 @@
     <param name="log_directory" value="$(arg log_directory)" />
   </node>
 
-  <node if="$(arg diff_ws)" pkg="sr_ethercat_hand_config" type="ws_diff.pl" name="ws_diff" args='$(arg log_location)'/>
-  
+  <node if="$(arg diff_ws)" pkg="sr_ethercat_hand_config" type="ws_diff.py" name="ws_diff">
+    <param name="log_directory" value="$(arg log_directory)"/>
+  </node>  
 </launch>

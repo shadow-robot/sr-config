@@ -3,19 +3,24 @@
 import os
 import rospy
 import datetime
+import subprocess
+import gzip
 
-def is_dir(path):
-    return os.path.exists(path) and not (os.path.isfile(path) or os.path.islink(path))
 
 def recursive_diff(path):
-    if not is_dir(path):
+    if not os.path.isdir(path):
         return ""
-    print path
     current_directory = os.getcwd()
     os.chdir(path)
     output = ""
-    if is_dir("./.git"):
-        print path
+    if os.path.isdir("./.git"):
+        output = "\n\n------------------" + path + "------------------\n\n"
+        output += subprocess.check_output(['git', 'show'])
+        output += subprocess.check_output(['git', 'status'])
+        output += subprocess.check_output(['git', 'diff'])
+
+    for subdir in filter (os.path.isdir, os.listdir(".")):
+        output += recursive_diff(subdir)
 
     os.chdir(current_directory)
     return output
@@ -34,41 +39,9 @@ output_dir = rospy.get_param("~log_directory", ".")
 
 output_path = "%s/wsdiff_%s.gz" % (output_dir, name_string)
 
-output = package_path
+output = package_path + "\n"
 
 for directory in package_dirs:
     output = output + recursive_diff(directory)
-
-
-# my $z = new IO::Compress::Gzip $out_file;
-
-# $z->print($output);
-
-# #--------------------------------------------------------------------
-
-# sub recursive_diff
-# {
-#     my ($path) = @_;
-#     return if (! -d $path);
-
-#     my $output = "";
-
-#     if (-d "$path/.git")
-#     {
-#         chdir($path);
-#         $output .=  "\n\n-----$path-----\n";
-#         $output .=  `git show`;
-#         $output .=  `git status`;
-#         $output .=  `git diff`;
-#     }
-
-#     opendir(PATH, $path);
-#     my @sub_dir = grep {/[^\.]/ && $_ ne ".git" && -d "$path/$_"} readdir(PATH);
-#     @sub_dir = map {"$path/$_"} @sub_dir;
-
-#     for (@sub_dir)
-#     {
-#         $output .= recursive_diff($_);
-#     }
-#     return $output;
-# }
+with gzip.open(output_path,'wb') as f:
+    f.write(output)
