@@ -6,7 +6,6 @@ import datetime
 import subprocess
 import gzip
 
-
 def recursive_diff(path):
     if not os.path.isdir(path):
         return ""
@@ -26,7 +25,6 @@ def recursive_diff(path):
     return output
 
 rospy.init_node("ws_diff")
-
 
 package_path = os.environ['ROS_PACKAGE_PATH']
 package_dirs = filter (lambda x: ("/opt/ros" not in x), package_path.split(":"))
