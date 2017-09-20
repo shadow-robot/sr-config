@@ -1,0 +1,23 @@
+<launch>
+  <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch">
+    <arg name="log_bag_prefix" value="sr_system"/>
+  </include>
+  <arg name="sim" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="scene" default="false"/>
+  
+  <include file="$(find sr_robot_launch)/launch/sr_right_two_ur10arm_hand.launch">
+    <arg name="eth_port" value="enp1s0"/>
+    <arg name="hand_serial" value="1818" />
+    <arg name="scene" value="$(arg scene)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="sim" value="$(arg sim)"/>
+    <arg name="arm_1_z" value="0.0"/>
+    <arg name="arm_2_z" value="0.0"/>
+    <arg name="arm_separation" value="1.0"/>
+    <arg name="arm_robot_hw_1" default="$(find sr_config)/config/ur_arm_1_robot_hw.yaml"/>
+    <arg name="arm_robot_hw_2" default="$(find sr_config)/config/ur_arm_2_robot_hw.yaml"/>
+    <arg name="arm_1_program_path" default="$(find sr_config)/config/ur_arm_1_programs"/>
+    <arg name="arm_2_program_path" default="$(find sr_config)/config/ur_arm_2_programs"/>
+  </include>
+</launch>
