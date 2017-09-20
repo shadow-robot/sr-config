@@ -1,0 +1,100 @@
+def driverProg():
+  MSG_QUIT = 1
+  MSG_STOPJ = 3
+  MSG_SERVOJ = 5
+  MSG_SET_TEACH_MODE = 7
+  MULT = 10000.0
+  SERVO_IDLE = 0
+  SERVO_RUNNING = 1
+  TEACH_MODE = 2
+  state = SERVO_IDLE
+  commanded_positions = get_actual_joint_positions()
+  def set_commanded_positions(q):
+    enter_critical
+    # while in TEACH_MODE, the servo commands will be ignored
+    if state != TEACH_MODE:
+      state = SERVO_RUNNING
+    end
+    commanded_positions = q
+    exit_critical
+  end
+  thread servoThread():
+    while True:
+      enter_critical
+      q = commanded_positions
+      exit_critical
+      
+      if state == SERVO_RUNNING:
+        enter_critical
+        # here we check again, as the state could have changed to teach mode while running the servoj
+        if state != TEACH_MODE:
+          state = SERVO_IDLE
+        end
+        exit_critical
+        servoj(q, 0, 0, 0.008)
+      else:
+        sync()
+      end
+    end
+  end
+  
+  # open socket to send the command to set the speed percentage
+  socket_open("127.0.0.1", 30002, "socket_1")
+  speed = 0.5
+  socket_send_string("set speed", "socket_1")
+  socket_send_string(speed, "socket_1")
+  socket_send_byte(10, "socket_1")
+  socket_close("socket_1")
+  
+  # open socket to receive commands from host
+  socket_open("%s", %d)
+  socket_send_string("Connected")
+  thread_servo = run servoThread()
+  # Set the Shadow hand mass (Kg) and centre of gravity (m)
+  set_payload(4.55, [0.0, 0.0, 0.12])
+  # payload if nothing is attached to the arm
+  #set_payload(0.0, [0.0, 0.0, 0.0])
+  # payload for hand adapting plate only
+  #set_payload(0.050, [0.0, 0.0, 0.20])
+  while True:
+    telegram = socket_read_binary_integer(7)
+    if telegram[0] == 7:
+      msg_type = telegram[1]
+      if msg_type == MSG_QUIT:
+        socket_send_string("Quit")
+        break
+      elif msg_type == MSG_SERVOJ:
+        q = [telegram[2]/MULT,
+             telegram[3]/MULT,
+             telegram[4]/MULT,
+             telegram[5]/MULT,
+             telegram[6]/MULT,
+             telegram[7]/MULT]
+        set_commanded_positions(q)
+      elif msg_type == MSG_STOPJ:
+        socket_send_string("Stop")
+        stopj(1.0)
+      elif msg_type == MSG_SET_TEACH_MODE:
+        if telegram[2] != 0:
+          enter_critical
+          state = TEACH_MODE
+          exit_critical
+          kill thread_servo
+          teach_mode()
+          socket_send_string("Teach mode ON")
+        else:
+          end_teach_mode()
+          kill thread_servo
+          enter_critical
+          state = SERVO_IDLE
+          exit_critical
+          thread_servo = run servoThread()
+          socket_send_string("Teach mode OFF")
+        end
+      else:
+        socket_send_string("Error")
+      end
+    end
+  end
+  socket_close()
+end
