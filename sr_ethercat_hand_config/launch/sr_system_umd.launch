@@ -15,9 +15,9 @@
     <arg name="arm_1_z" value="0.0"/>
     <arg name="arm_2_z" value="0.0"/>
     <arg name="arm_separation" value="1.0"/>
-    <arg name="arm_robot_hw_1" default="$(find sr_config)/config/ur_arm_1_robot_hw.yaml"/>
-    <arg name="arm_robot_hw_2" default="$(find sr_config)/config/ur_arm_2_robot_hw.yaml"/>
-    <arg name="arm_1_program_path" default="$(find sr_config)/config/ur_arm_1_programs"/>
-    <arg name="arm_2_program_path" default="$(find sr_config)/config/ur_arm_2_programs"/>
+    <arg name="arm_robot_hw_1" default="$(find sr_ur_arm_config)/config/ur_arm_1_robot_hw.yaml"/>
+    <arg name="arm_robot_hw_2" default="$(find sr_ur_arm_config)/config/ur_arm_2_robot_hw.yaml"/>
+    <arg name="arm_1_program_path" default="$(find sr_ur_arm_config)/config/ur_arm_1_programs"/>
+    <arg name="arm_2_program_path" default="$(find sr_ur_arm_config)/config/ur_arm_2_programs"/>
   </include>
 </launch>
