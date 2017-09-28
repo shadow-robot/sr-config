@@ -13,7 +13,7 @@ ffj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 550
+    torque_limit: 70
     torque_limiter_gain: 64
 ffj3:
   backlash_compensation: true
@@ -30,7 +30,7 @@ ffj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 500
+    torque_limit: 70
     torque_limiter_gain: 64
 ffj4:
   backlash_compensation: true
@@ -47,7 +47,7 @@ ffj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 350
+    torque_limit: 70
     torque_limiter_gain: 64
 lfj0:
   backlash_compensation: true
@@ -64,7 +64,7 @@ lfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 550
+    torque_limit: 70
     torque_limiter_gain: 64
 lfj3:
   backlash_compensation: true
@@ -81,7 +81,7 @@ lfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 500
+    torque_limit: 70
     torque_limiter_gain: 64
 lfj4:
   backlash_compensation: true
@@ -98,7 +98,7 @@ lfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 350
+    torque_limit: 70
     torque_limiter_gain: 64
 lfj5:
   backlash_compensation: true
@@ -115,7 +115,7 @@ lfj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 350
+    torque_limit: 70
     torque_limiter_gain: 64
 mfj0:
   backlash_compensation: true
@@ -132,7 +132,7 @@ mfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 550
+    torque_limit: 70
     torque_limiter_gain: 64
 mfj3:
   backlash_compensation: true
@@ -149,7 +149,7 @@ mfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 500
+    torque_limit: 70
     torque_limiter_gain: 64
 mfj4:
   backlash_compensation: true
@@ -166,7 +166,7 @@ mfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 350
+    torque_limit: 70
     torque_limiter_gain: 64
 rfj0:
   backlash_compensation: true
@@ -183,7 +183,7 @@ rfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 550
+    torque_limit: 70
     torque_limiter_gain: 64
 rfj3:
   backlash_compensation: true
@@ -200,7 +200,7 @@ rfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 500
+    torque_limit: 70
     torque_limiter_gain: 64
 rfj4:
   backlash_compensation: true
@@ -217,7 +217,7 @@ rfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 350
+    torque_limit: 70
     torque_limiter_gain: 64
 thj1:
   backlash_compensation: true
@@ -234,7 +234,7 @@ thj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 450
+    torque_limit: 70
     torque_limiter_gain: 64
 thj2:
   backlash_compensation: true
@@ -251,7 +251,7 @@ thj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 450
+    torque_limit: 70
     torque_limiter_gain: 64
 thj3:
   backlash_compensation: true
@@ -268,7 +268,7 @@ thj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 300
+    torque_limit: 70
     torque_limiter_gain: 64
 thj4:
   backlash_compensation: false
@@ -285,7 +285,7 @@ thj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 150
+    torque_limit: 10
     torque_limiter_gain: 64
 thj5:
   backlash_compensation: false
@@ -302,7 +302,7 @@ thj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 150
+    torque_limit: 10
     torque_limiter_gain: 64
 wrj1:
   backlash_compensation: false
@@ -319,7 +319,7 @@ wrj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 250
+    torque_limit: 10
     torque_limiter_gain: 64
 wrj2:
   backlash_compensation: false
@@ -336,5 +336,5 @@ wrj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 200
+    torque_limit: 10
     torque_limiter_gain: 64
