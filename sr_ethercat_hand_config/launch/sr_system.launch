@@ -14,5 +14,4 @@
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
     <arg name="sim" value="false"/>
   </include>
-
 </launch>
