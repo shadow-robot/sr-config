@@ -20,6 +20,7 @@
   <!-- Dependencies needed to compile this package. -->
 
   <!-- Dependencies needed after this package is compiled. -->
+  <run_depend>sr_logging_common</run_depend>
 
   <!-- Dependencies needed only for running tests. -->
 
