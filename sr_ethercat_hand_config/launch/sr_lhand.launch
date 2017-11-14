@@ -1,5 +1,5 @@
 <launch>
-  <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch">
+  <include file="$(find sr_logging_common)/launch/sr_rosbag_log.launch">
     <arg name="log_bag_prefix" value="sr_lhand"/>
   </include>
   <include file="$(find sr_robot_launch)/launch/srhand.launch">
