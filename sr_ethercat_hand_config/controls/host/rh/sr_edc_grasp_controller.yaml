@@ -6,7 +6,7 @@ sh_rh_ffj0_grasp_controller:
     friction_deadband: 2000.0
     i: 2650
     i_clamp: 1500
-    max_force: 0.0
+    max_force: 600.0
     p: 1150
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
