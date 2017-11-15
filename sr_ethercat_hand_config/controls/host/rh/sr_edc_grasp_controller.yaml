@@ -18,7 +18,7 @@ sh_rh_ffj3_grasp_controller:
     friction_deadband: 5000.0
     i: -2650
     i_clamp: 1500
-    max_force: 0.0
+    max_force: 600.0
     p: -1150
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -30,7 +30,7 @@ sh_rh_ffj4_grasp_controller:
     friction_deadband: 2000.0
     i: 800
     i_clamp: 300
-    max_force: 0.0
+    max_force: 300.0
     p: 4000
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -88,7 +88,7 @@ sh_rh_mfj0_grasp_controller:
     friction_deadband: 2000
     i: 0
     i_clamp: 1
-    max_force: 0.0
+    max_force: 600.0
     p: 29
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -100,7 +100,7 @@ sh_rh_mfj3_grasp_controller:
     friction_deadband: 2000000.0
     i: -6000
     i_clamp: 8500
-    max_force: 0.0
+    max_force: 600.0
     p: -7900
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -112,7 +112,7 @@ sh_rh_mfj4_grasp_controller:
     friction_deadband: 2000
     i: 1000
     i_clamp: 3000
-    max_force: 0.0
+    max_force: 300.0
     p: 4000
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -123,7 +123,7 @@ sh_rh_rfj0_grasp_controller:
     friction_deadband: 2000
     i: 0
     i_clamp: 1
-    max_force: 0.0
+    max_force: 600.0
     p: 2
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -135,7 +135,7 @@ sh_rh_rfj3_grasp_controller:
     friction_deadband: 2000000.0
     i: 3000
     i_clamp: 5000
-    max_force: 0.0
+    max_force: 600.0
     p: 5500
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -147,7 +147,7 @@ sh_rh_rfj4_grasp_controller:
     friction_deadband: 2000000.0
     i: 1000
     i_clamp: 3000
-    max_force: 0.0
+    max_force: 300.0
     p: 4000
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -159,7 +159,7 @@ sh_rh_thj1_grasp_controller:
     friction_deadband: 2000000.0
     i: 1000
     i_clamp: 3000
-    max_force: 0.0
+    max_force: 500.0
     p: 5000
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -171,7 +171,7 @@ sh_rh_thj2_grasp_controller:
     friction_deadband: 2000000.0
     i: -2000
     i_clamp: 6000
-    max_force: 0.0
+    max_force: 500.0
     p: -7000
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -195,7 +195,7 @@ sh_rh_thj4_grasp_controller:
     friction_deadband: 2000000.0
     i: 1000
     i_clamp: 3000
-    max_force: 0.0
+    max_force: 600.0
     p: 4000
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController
@@ -207,7 +207,7 @@ sh_rh_thj5_grasp_controller:
     friction_deadband: 2000000.0
     i: -1500
     i_clamp: 4000
-    max_force: 0.0
+    max_force: 600.0
     p: -5000
     position_deadband: 0.014999999999999999
   type: sr_mechanism_controllers/SrhGraspController

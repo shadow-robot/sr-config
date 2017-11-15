@@ -4,10 +4,10 @@ ffj0:
     d: 0
     deadband: 5
     f: 300
-    i: 0.0
+    i: 0
     imax: 800
     max_pwm: 800
-    p: 15000
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
