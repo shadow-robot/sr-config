@@ -1,6 +1,7 @@
 <launch>
   <arg name="gui" default="true"/>
   <arg name="initial_z" default="0.0"/>
+  <include file="$(find sr_ethercat_hand_config)/launch/sr_imu.launch"/>
   <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch">
     <arg name="log_bag_prefix" value="sr_hand_and_arm_log"/>
   </include>
