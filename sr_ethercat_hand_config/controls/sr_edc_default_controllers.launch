@@ -7,6 +7,8 @@
   <!-- Should be loaded before starting/running ros_ethercat node -->
   <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_calibration_controllers.yaml" />
 
+  <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_imu_controllers.yaml"/>
+
   <!-- Parameters for the controllers if we're using torque control mode, i.e. sending force commands to
        the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
   <rosparam unless="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_effort_controllers.yaml" />
