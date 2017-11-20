@@ -81,7 +81,7 @@ lfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 70
+    torque_limit: 150
     torque_limiter_gain: 64
 lfj4:
   backlash_compensation: true
@@ -200,7 +200,7 @@ rfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 70
+    torque_limit: 110
     torque_limiter_gain: 64
 rfj4:
   backlash_compensation: true
