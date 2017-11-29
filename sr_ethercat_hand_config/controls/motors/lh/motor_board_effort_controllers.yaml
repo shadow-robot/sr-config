@@ -5,7 +5,7 @@ ffj0:
     deadband: 5
     f: 300
     i: 0
-    imax: 550
+    imax: 500
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -40,7 +40,7 @@ ffj4:
     f: 300
     i: 0
     imax: 350
-    max_pwm: 300
+    max_pwm: 400
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -56,7 +56,7 @@ lfj0:
     deadband: 5
     f: 300
     i: 0
-    imax: 550
+    imax: 500
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -73,7 +73,7 @@ lfj3:
     deadband: 5
     f: 300
     i: 0
-    imax: 700
+    imax: 450
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -91,7 +91,7 @@ lfj4:
     f: 300
     i: 0
     imax: 350
-    max_pwm: 300
+    max_pwm: 400
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -107,8 +107,8 @@ lfj5:
     deadband: 5
     f: 300
     i: 0
-    imax: 350
-    max_pwm: 400
+    imax: 450
+    max_pwm: 500
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -124,7 +124,7 @@ mfj0:
     deadband: 5
     f: 300
     i: 0
-    imax: 550
+    imax: 500
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -159,7 +159,7 @@ mfj4:
     f: 300
     i: 0
     imax: 350
-    max_pwm: 300
+    max_pwm: 400
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -175,7 +175,7 @@ rfj0:
     deadband: 5
     f: 300
     i: 0
-    imax: 550
+    imax: 500
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -192,7 +192,7 @@ rfj3:
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 450
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -210,7 +210,7 @@ rfj4:
     f: 300
     i: 0
     imax: 350
-    max_pwm: 300
+    max_pwm: 400
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -226,7 +226,7 @@ thj1:
     deadband: 5
     f: 300
     i: 0
-    imax: 300
+    imax: 400
     max_pwm: 500
     p: 6200
     sg_left: 0
@@ -243,7 +243,7 @@ thj2:
     deadband: 5
     f: 300
     i: 0
-    imax: 350
+    imax: 400
     max_pwm: 500
     p: 6200
     sg_left: 0
@@ -260,8 +260,8 @@ thj3:
     deadband: 5
     f: 300
     i: 0
-    imax: 250
-    max_pwm: 300
+    imax: 350
+    max_pwm: 400
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -277,8 +277,8 @@ thj4:
     deadband: 5
     f: 300
     i: 0
-    imax: 300
-    max_pwm: 500
+    imax: 150
+    max_pwm: 400
     p: 8200
     sg_left: 0
     sg_right: 0
@@ -294,8 +294,8 @@ thj5:
     deadband: 5
     f: 300
     i: 0
-    imax: 300
-    max_pwm: 500
+    imax: 150
+    max_pwm: 400
     p: 8200
     sg_left: 0
     sg_right: 0
@@ -311,8 +311,8 @@ wrj1:
     deadband: 5
     f: 300
     i: 0
-    imax: 450
-    max_pwm: 800
+    imax: 200
+    max_pwm: 600
     p: 6200
     sg_left: 0
     sg_right: 0
@@ -328,8 +328,8 @@ wrj2:
     deadband: 5
     f: 300
     i: 0
-    imax: 250
-    max_pwm: 600
+    imax: 150
+    max_pwm: 500
     p: 6200
     sg_left: 0
     sg_right: 0
