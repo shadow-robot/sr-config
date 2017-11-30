@@ -1,4 +1,5 @@
 <launch>
+  <arg name="sim" default="false"/>
   <arg name="eth_port" default="enp1s0" />
   <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch">
     <arg name="log_bag_prefix" value="sr_rhand"/>
@@ -12,6 +13,6 @@
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
      
     <arg name="use_moveit" value="true"/>
-    <arg name="sim" value="false"/>
+    <arg name="sim" value="$(arg sim)"/>
   </include>
 </launch>
