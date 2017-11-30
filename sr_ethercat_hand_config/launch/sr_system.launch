@@ -17,5 +17,6 @@
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
     <arg name="sim" value="$(arg sim)"/>
     <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/right_sh_ur10_btsp_biotac.yaml"/>
+    <arg name="arm_robot_hw" default="$(find sr_ur_arm_config)/config/ur_arm_1_robot_hw.yaml"/>
   </include>
 </launch>
