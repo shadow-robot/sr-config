@@ -1,9 +1,10 @@
 <launch>
+  <arg name="eth_port" default="enp1s0" />
   <include file="$(find sr_ethercat_hand_config)/launch/sr_rosbag_log.launch">
     <arg name="log_bag_prefix" value="sr_rhand"/>
   </include>
   <include file="$(find sr_robot_launch)/launch/srhand.launch">
-    <arg name="eth_port" value="enp1s0" />
+    <arg name="eth_port" value="$(arg eth_port)" />
     <arg name="hand_serial" value="1818" />
     <arg name="hand_id" value="rh" />
 

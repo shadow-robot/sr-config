@@ -6,9 +6,10 @@
   <arg name="gui" default="true"/>
   <arg name="scene" default="false"/>
   <arg name="stand_z" default="0.9144"/>
+  <arg name="eth_port" default="enp1s0"/>
   
   <include file="$(find sr_robot_launch)/launch/sr_right_two_ur10arm_hand.launch">
-    <arg name="eth_port" value="enp1s0"/>
+    <arg name="eth_port" value="$(arg eth_port)"/>
     <arg name="hand_serial" value="1818" />
     <arg name="scene" value="$(arg scene)"/>
     <arg name="gui" value="$(arg gui)"/>
