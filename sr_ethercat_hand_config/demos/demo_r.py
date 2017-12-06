@@ -96,9 +96,9 @@ flex_lf = {"rh_LFJ1": 90, "rh_LFJ2": 90, "rh_LFJ3": 90, "rh_LFJ4": 0}
 # extend middle finger
 ext_lf = {"rh_LFJ1": 0, "rh_LFJ2": 0, "rh_LFJ3": 0, "rh_LFJ4": 0}
 # flex thumb step 1
-flex_th_1 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 70, "rh_THJ5": 0}
+flex_th_1 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 65, "rh_THJ5": 0}
 # flex thumb step 2
-flex_th_2 = {"rh_THJ1": 35, "rh_THJ2": 38, "rh_THJ3": 10, "rh_THJ4": 70, "rh_THJ5": 58}
+flex_th_2 = {"rh_THJ1": 45, "rh_THJ2": 38, "rh_THJ3": 0, "rh_THJ4": 65, "rh_THJ5": 60}
 # extend thumb step 1
 ext_th_1 = {"rh_THJ1": 10, "rh_THJ2": 20, "rh_THJ3": 5, "rh_THJ4": 35, "rh_THJ5": 25}
 # extend thumb step 2
@@ -108,8 +108,8 @@ zero_th = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 0}
 # Pre O.K. with first finger
 pre_ff_ok = {"rh_THJ4": 70}
 # O.K. with first finger
-ff_ok = {"rh_THJ1": 15, "rh_THJ2": 20, "rh_THJ3": 0, "rh_THJ4": 56, "rh_THJ5": 18,
-         "rh_FFJ1": 0, "rh_FFJ2": 75, "rh_FFJ3": 45, "rh_FFJ4": -0.2,
+ff_ok = {"rh_THJ1": 15, "rh_THJ2": 20, "rh_THJ3": 0, "rh_THJ4": 48, "rh_THJ5": 18,
+         "rh_FFJ1": 0, "rh_FFJ2": 80, "rh_FFJ3": 45, "rh_FFJ4": 2.2,
          "rh_MFJ1": 0, "rh_MFJ2": 42, "rh_MFJ3": 33, "rh_MFJ4": -3,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
@@ -120,19 +120,19 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ3": 4, "rh_THJ4": 60, "rh_THJ5":
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. with middle finger
-mf_ok = {"rh_THJ1": 15, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 66, "rh_THJ5": 31,
+mf_ok = {"rh_THJ1": 15, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 55, "rh_THJ5": 31,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 11, "rh_MFJ2": 67, "rh_MFJ3": 49, "rh_MFJ4": 10,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. transition from middle finger to ring finger
-mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 19,
+mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ3": 10, "rh_THJ4": 70, "rh_THJ5": 19,
             "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
             "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -19,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -12, "rh_LFJ5": 7}
 # O.K. with ring finger
-rf_ok = {"rh_THJ1": 6, "rh_THJ2": 15, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 45,
+rf_ok = {"rh_THJ1": 10, "rh_THJ2": 15, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 45,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
          "rh_RFJ1": 3, "rh_RFJ2": 90, "rh_RFJ3": 42, "rh_RFJ4": -19,
@@ -144,7 +144,7 @@ rf2lf_ok = {"rh_THJ1": 5, "rh_THJ2": 4.5, "rh_THJ3": 8, "rh_THJ4": 60, "rh_THJ5"
             "rh_RFJ1": 0, "rh_RFJ2": 30, "rh_RFJ3": 6, "rh_RFJ4": 0.5,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -10, "rh_LFJ5": 7}
 # O.K. with little finger
-lf_ok = {"rh_THJ1": 24, "rh_THJ2": 11, "rh_THJ3": 10, "rh_THJ4": 69, "rh_THJ5": 22,
+lf_ok = {"rh_THJ1": 10, "rh_THJ2": 11, "rh_THJ3": 5, "rh_THJ4": 62, "rh_THJ5": 35,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 15, "rh_MFJ3": 4, "rh_MFJ4": -1,
          "rh_RFJ1": 0, "rh_RFJ2": 15, "rh_RFJ3": 6, "rh_RFJ4": 0.5,
@@ -234,28 +234,28 @@ store_2_BioTac = {"rh_THJ1": 20, "rh_THJ2": 36, "rh_THJ3": 0, "rh_THJ4": 30, "rh
 # store step 3
 store_3 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 65, "rh_THJ5": 0}
 # business card pre-zero position 
-bc_pre_zero = {"rh_THJ1": 15, "rh_THJ2": 7, "rh_THJ3": -4, "rh_THJ4": 50, "rh_THJ5": -17,
+bc_pre_zero = {"rh_THJ1": 15, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 44, "rh_THJ5": -17,
                "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -1,
                "rh_MFJ1": 0, "rh_MFJ2": 51, "rh_MFJ3": 33, "rh_MFJ4": 20,
                "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -20,
                "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -20, "rh_LFJ5": 7}
 # business card zero position 
-bc_zero = {"rh_THJ1": 38, "rh_THJ2": 4, "rh_THJ3": -8, "rh_THJ4": 49, "rh_THJ5": -10,
-           "rh_MFJ1": 7, "rh_MFJ2": 64, "rh_MFJ3": 20, "rh_MFJ4": 18}
+bc_zero = {"rh_THJ1": 31, "rh_THJ2": 3, "rh_THJ3": -1, "rh_THJ4": 40, "rh_THJ5": -5,
+           "rh_MFJ1": 3, "rh_MFJ2": 57, "rh_MFJ3": 27, "rh_MFJ4": 20}
 # business card position 1 
-bc_1 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 7}
+bc_1 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 0}
 # business card position 2 
 bc_2 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 3 
-bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 60, "rh_FFJ3": 58}
+bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 75, "rh_FFJ3": 58}
 # business card position 4 
-bc_4 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 58}
+bc_4 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 58, "rh_FFJ4": 20}
 # business card position 5 
 bc_5 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 0}
 # business card position 6 
-bc_6 = {"rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0}
+bc_6 = {"rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0, "rh_FFJ4": 10}
 # business card position 7 
-bc_7 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 15}
+bc_7 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 15, "rh_FFJ4": 0}
 # business card position 8 
 bc_8 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 9 
@@ -263,8 +263,8 @@ bc_9 = {"rh_FFJ1": 0, "rh_FFJ2": 71, "rh_FFJ3": 58}
 # business card position 10 
 bc_10 = {"rh_MFJ3": 64, "rh_FFJ4": 20}
 # business card position 11 
-bc_11 = {"rh_FFJ1": 0, "rh_FFJ2": 81, "rh_FFJ3": 50, "rh_FFJ4": 20,
-         "rh_THJ4": 57, "rh_THJ5": 20,}
+bc_11 = {"rh_FFJ1": 0, "rh_FFJ2": 84, "rh_FFJ3": 53, "rh_FFJ4": 20,
+         "rh_THJ4": 50, "rh_THJ5": 20,}
 # business card position 12 
 bc_12 = {"rh_MFJ1": 0, "rh_MFJ2": 20, "rh_MFJ3": 10, "rh_MFJ4": 0}
 
@@ -437,9 +437,9 @@ def secuence_mf():
                     tactile_values['LF'] > force_zero['LF'] or
                     tactile_values['TH'] > force_zero['TH']):
 
-            hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
+            hand_commander.move_to_joint_value_target_unsafe(start_pos, 0.5, False, angle_degrees=True)
             print 'HAND TOUCHED!'
-            rospy.sleep(2.0)
+            rospy.sleep(1.0)
 
             if (tactile_values['TH'] > force_zero['TH']):
                 break
@@ -467,32 +467,32 @@ def secuence_rf():
     rospy.sleep(0.5)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_pre_zero, 2.0, False, angle_degrees=True)
-    rospy.sleep(2)
+    hand_commander.move_to_joint_value_target_unsafe(bc_pre_zero, 1.0, False, angle_degrees=True)
+    rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(bc_zero, 1.0, False, angle_degrees=True)
     rospy.sleep(4)
-    hand_commander.move_to_joint_value_target_unsafe(bc_1, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_2, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_3, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_4, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_5, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_6, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_7, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_8, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_9, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_11, 1.0, False, angle_degrees=True)
-    rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(bc_12, 3.0, False, angle_degrees=True)
-    rospy.sleep(4)
+    hand_commander.move_to_joint_value_target_unsafe(bc_1, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_2, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_3, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_4, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_5, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_6, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_7, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_8, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_9, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_11, 0.8, False, angle_degrees=True)
+    rospy.sleep(0.8)
+    hand_commander.move_to_joint_value_target_unsafe(bc_12, 1.5, False, angle_degrees=True)
+    rospy.sleep(5)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
 
