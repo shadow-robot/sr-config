@@ -249,13 +249,13 @@ bc_2 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 3 
 bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 60, "rh_FFJ3": 58}
 # business card position 4 
-bc_4 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 58}
+bc_4 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 58, "rh_FFJ4": 20}
 # business card position 5 
 bc_5 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 0}
 # business card position 6 
-bc_6 = {"rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0}
+bc_6 = {"rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0, "rh_FFJ4": 10}
 # business card position 7 
-bc_7 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 15}
+bc_7 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 15, "rh_FFJ4": 0}
 # business card position 8 
 bc_8 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
 # business card position 9 
