@@ -1,4 +1,4 @@
-hand_g_grasp_controller:
+sh_rh_grasp_controller:
   gains:
     rh_FFJ0:
       d: 0.0

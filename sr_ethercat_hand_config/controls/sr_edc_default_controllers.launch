@@ -13,6 +13,7 @@
   <rosparam unless="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_joint_position_controllers.yaml" />
   <rosparam unless="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_mixed_position_velocity_joint_controllers.yaml" />
   <rosparam unless="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_joint_velocity_controllers.yaml" />
+  <rosparam unless="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_grasp_controller.yaml" />
 
   <!-- Parameters for the controllers if we're using PWM control mode, i.e. sending direct PWM commands from the host to the motor,
        WITHOUT using the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
@@ -20,4 +21,5 @@
   <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_joint_position_controllers_PWM.yaml" />
   <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_mixed_position_velocity_joint_controllers_PWM.yaml" />
   <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_joint_velocity_controllers_PWM.yaml" />
+  <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_grasp_controller_PWM.yaml" />
 </launch>
