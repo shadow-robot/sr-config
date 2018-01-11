@@ -10,8 +10,8 @@
     <arg name="grasp_controller" value="$(arg grasp_controller)" />
     <arg name="pwm_control" value="$(arg pwm_control)" />
 
-  <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
-  <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
+    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
 
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
