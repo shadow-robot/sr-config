@@ -118,3 +118,4 @@ sh_rh_grasp_controller:
       
   type: sr_grasp_controllers/SrhGraspController
   joints: [lh_FFJ0, lh_FFJ3, lh_FFJ4, lh_MFJ0, lh_MFJ3, lh_MFJ4, lh_RFJ0, lh_RFJ3, lh_RFJ4, lh_THJ1, lh_THJ2, lh_THJ4, lh_THJ5]
+  squeeze_direction_mapping: [-1, 1, 1, -1, 1, 1, -1, 1, 1, -1, -1, -1, -1]
