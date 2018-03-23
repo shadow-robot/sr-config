@@ -23,7 +23,7 @@ pack_hand_1 = {'rh_FFJ1': 1.5707, 'rh_FFJ2': 1.5707, 'rh_FFJ3': 1.5707, 'rh_FFJ4
 
 pack_hand_2 = {'rh_THJ4': 1.17}
 
-pack_hand_3 = {'rh_THJ1': 0.97, 'rh_THJ2': 0.29, 'rh_THJ5': 0.35}
+pack_hand_3 = {'rh_THJ1': 0.97, 'rh_THJ2': 0.29, 'rh_THJ5': 0.43}
 
 
 # Move hand to open position
