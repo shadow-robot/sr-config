@@ -31,7 +31,7 @@ sh_rh_ffj4_position_controller:
     i: 0.0
     i_clamp: 0.0
     max_force: 300.0
-    p: -6800.0
+    p: -7000.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_lfj0_position_controller:
@@ -235,4 +235,3 @@ sh_rh_wrj2_position_controller:
     p: -8300.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
-
