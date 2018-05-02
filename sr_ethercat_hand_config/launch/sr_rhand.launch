@@ -3,7 +3,7 @@
     <arg name="log_bag_prefix" value="sr_rhand"/>
   </include>
   <include file="$(find sr_robot_launch)/launch/srhand.launch">
-    <arg name="eth_port" value="enp0s31f6" />
+    <arg name="eth_port" value="enp0s25" />
     <arg name="hand_serial" value="922" />
     <arg name="hand_id" value="rh" />
 
