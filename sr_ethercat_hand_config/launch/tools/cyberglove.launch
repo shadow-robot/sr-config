@@ -3,7 +3,7 @@
     <arg name="serial_port" value="/dev/ttyUSB0" />
     <arg name="joint_prefix" value="rh_" />
     <arg name="version" value="1" />
-    <arg name="trajectory_tx_delay" value="0.040" />
-    <arg name="trajectory_delay" value="0.002"/>
+    <arg name="trajectory_tx_delay" value="0.050" />
+    <arg name="trajectory_delay" value="0.05"/>
   </include>
 </launch>
