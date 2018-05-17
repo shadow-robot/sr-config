@@ -123,7 +123,7 @@ sh_rh_rfj0_position_controller:
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 600.0
+    max_force: 700.0
     p: -3300.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
