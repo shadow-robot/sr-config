@@ -5,7 +5,7 @@
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
-rospy.init_node("store_right_hand", anonymous=True)
+rospy.init_node("store_left_hand", anonymous=True)
 
 hand_commander = SrHandCommander(name="right_hand")
 
@@ -35,13 +35,13 @@ rospy.sleep(2)
 # Move hand to closed position
 joint_states = pack_hand_1
 rospy.loginfo("Moving hand to pack position")
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
 rospy.sleep(2)
 
 joint_states = pack_hand_2
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
 rospy.sleep(2)
 
 joint_states = pack_hand_3
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
 rospy.sleep(2)
