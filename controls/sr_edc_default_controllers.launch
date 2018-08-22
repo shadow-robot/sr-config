@@ -1,0 +1,61 @@
+<launch>
+  <!-- Defines the sub-directory used in 
+       $(find sr_ethercat_hand_config)/mappings/
+       and $(find sr_ethercat_hand_config)/calibrations/ 
+       to know where to find the parameters for a certain hand.
+       In case we only have one hand this parameter will normally be "", meaning that the desired params are in the root of those directories  
+       If it's not "" then it must be followed by a "/" e.g. "hand_2/"  -->
+  <arg name="config_dir" default="" />
+  <!-- Set to 0 if we don't want to manually enforce a certain namespace (e.g. when this is called from another launchfile that is already -->
+  <arg name="set_namespace" default="0" />
+  <arg name="namespace" default="" />
+
+
+  <!-- <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers_stopped.yaml" />  -->
+  <!-- <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/motor_board_effort_controllers_ff_and_th.yaml" /> -->
+
+
+  <group unless="$(arg set_namespace)">
+
+    <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/$(arg config_dir)motor_board_effort_controllers.yaml" />
+    <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/friction_compensation.yaml" />
+
+    <!-- Parameters for the controllers if we're using torque control mode, i.e. sending force commands to
+         the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
+    <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_effort_controllers.yaml" />
+    <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_position_controllers.yaml" />
+    <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_mixed_position_velocity_joint_controllers.yaml" />
+    <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_velocity_controllers.yaml" />
+
+    <!-- Parameters for the controllers if we're using PWM control mode, i.e. sending direct PWM commands from the host to the motor,
+         WITHOUT using the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
+    <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_effort_controllers_PWM.yaml" />
+    <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_position_controllers_PWM.yaml" />
+    <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_mixed_position_velocity_joint_controllers_PWM.yaml" />
+    <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_velocity_controllers_PWM.yaml" />
+  </group>
+
+
+
+  <group if="$(arg set_namespace)">
+    <group ns="$(arg namespace)">
+
+      <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/motors/$(arg config_dir)motor_board_effort_controllers.yaml" />
+      <rosparam command="load" file="$(find sr_ethercat_hand_config)/controls/friction_compensation.yaml" />
+
+      <!-- Parameters for the controllers if we're using torque control mode, i.e. sending force commands to
+           the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
+      <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_effort_controllers.yaml" />
+      <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_position_controllers.yaml" />
+      <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_mixed_position_velocity_joint_controllers.yaml" />
+      <rosparam unless="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_velocity_controllers.yaml" />
+
+      <!-- Parameters for the controllers if we're using PWM control mode, i.e. sending direct PWM commands from the host to the motor,
+           WITHOUT using the force control loop in the motor board (that uses the data from the tendon strain gauges) -->
+      <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_effort_controllers_PWM.yaml" />
+      <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_position_controllers_PWM.yaml" />
+      <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_mixed_position_velocity_joint_controllers_PWM.yaml" />
+      <rosparam if="$(optenv PWM_CONTROL 0)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg config_dir)sr_edc_joint_velocity_controllers_PWM.yaml" />
+    </group>
+  </group>
+</launch>
