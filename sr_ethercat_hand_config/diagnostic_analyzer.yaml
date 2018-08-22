@@ -11,48 +11,64 @@ analyzers:
         type: GenericAnalyzer
         path: Tactiles
         timeout: 5.0
-        regex: 'Tactile .*[1-5].*'
+        regex: '([^\s]+) Tactile .*[1-5].*'
         num_items: 5
       first_finger:
         type: GenericAnalyzer
         path: First Finger
         timeout: 5.0
-        regex: 'SRDMotor .*FFJ[0-9].*'
+        regex: '([^\s]+) SRDMotor .*FFJ[0-9].*'
         num_items: 5
       right_finger:
         type: GenericAnalyzer
         path: Ring Finger
         timeout: 5.0
-        regex: 'SRDMotor .*RFJ[0-9].*'
+        regex: '([^\s]+) SRDMotor .*RFJ[0-9].*'
         num_items: 5
       middle_finger:
         type: GenericAnalyzer
         path: Middle Finger
         timeout: 5.0
-        regex: 'SRDMotor .*MFJ[0-9].*'
+        regex: '([^\s]+) SRDMotor .*MFJ[0-9].*'
         num_items: 5
       little_finger:
         type: GenericAnalyzer
         path: Little Finger
         timeout: 5.0
-        regex: 'SRDMotor .*LFJ[0-9].*'
+        regex: '([^\s]+) SRDMotor .*LFJ[0-9].*'
         num_items: 6
       thumb:
         type: GenericAnalyzer
         path: Thumb
         timeout: 5.0
-        regex: 'SRDMotor .*THJ[0-9].*'
+        regex: '([^\s]+) SRDMotor .*THJ[0-9].*'
         num_items: 5
       wrist:
         type: GenericAnalyzer
         path: Wrist
         timeout: 5.0
-        regex: 'SRDMotor .*WRJ[0-9].*'
+        regex: '([^\s]+) SRDMotor .*WRJ[0-9].*'
         num_items: 2
-      controllers:
+  ethercat:
+    type: AnalyzerGroup
+    path: EtherCat
+    analyzers:
+      EtherCAT_slaves:
         type: GenericAnalyzer
-        path: Devices
+        path: EtherCAT Slaves
         timeout: 5.0
-        regex: [ 'SRDMotor : [0-9]+', 'SRBridge.*', 'EtherCAT Dual CAN Palm' ]
+        regex: ['SRBridge.*', '([^\s]+) EtherCAT Dual CAN Palm']
         num_items: 2
+      EtherCAT_master:
+        type: GenericAnalyzer
+        path: EtherCAT Master
+        timeout: 5.0
+        regex: 'EtherCAT Master'
+        num_items: 1
+  control_loop:
+    type: GenericAnalyzer
+    path: Realtime Control Loop
+    timeout: 5.0
+    startswith: 'Realtime Control Loop'
+    num_items: 1
 
