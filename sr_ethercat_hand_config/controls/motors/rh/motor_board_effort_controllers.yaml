@@ -1,11 +1,11 @@
 ffj0:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -13,14 +13,16 @@ ffj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 ffj3:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -28,14 +30,16 @@ ffj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 200
+    torque_limiter_gain: 64
 ffj4:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 350
+    imax: 0
     max_pwm: 300
     p: 6200
     sg_left: 0
@@ -43,14 +47,16 @@ ffj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 lfj0:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -58,14 +64,16 @@ lfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 lfj3:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -73,14 +81,16 @@ lfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 200
+    torque_limiter_gain: 64
 lfj4:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 350
+    imax: 0
     max_pwm: 300
     p: 6200
     sg_left: 0
@@ -88,14 +98,16 @@ lfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 lfj5:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 350
+    imax: 0
     max_pwm: 400
     p: 6200
     sg_left: 0
@@ -103,14 +115,16 @@ lfj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 350
+    torque_limiter_gain: 64
 mfj0:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 300
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -118,14 +132,16 @@ mfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 mfj3:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -133,14 +149,16 @@ mfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 200
+    torque_limiter_gain: 64
 mfj4:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 350
+    imax: 0
     max_pwm: 300
     p: 6200
     sg_left: 0
@@ -148,14 +166,16 @@ mfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 rfj0:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -163,14 +183,16 @@ rfj0:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 rfj3:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 400
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -178,14 +200,16 @@ rfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 200
+    torque_limiter_gain: 64
 rfj4:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 350
+    imax: 0
     max_pwm: 300
     p: 6200
     sg_left: 0
@@ -193,14 +217,16 @@ rfj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 thj1:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 200
+    imax: 0
     max_pwm: 500
     p: 6200
     sg_left: 0
@@ -208,14 +234,16 @@ thj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 thj2:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 250
+    imax: 0
     max_pwm: 500
     p: 6200
     sg_left: 0
@@ -223,14 +251,16 @@ thj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 80
+    torque_limiter_gain: 64
 thj3:
   backlash_compensation: true
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 150
+    imax: 0
     max_pwm: 300
     p: 6200
     sg_left: 0
@@ -238,14 +268,16 @@ thj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 30
+    torque_limiter_gain: 64
 thj4:
   backlash_compensation: false
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 80
+    imax: 0
     max_pwm: 500
     p: 8200
     sg_left: 0
@@ -253,14 +285,16 @@ thj4:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 20
+    torque_limiter_gain: 64
 thj5:
   backlash_compensation: false
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 80
+    imax: 0
     max_pwm: 500
     p: 8200
     sg_left: 0
@@ -268,14 +302,16 @@ thj5:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 20
+    torque_limiter_gain: 64
 wrj1:
   backlash_compensation: false
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 200
+    imax: 0
     max_pwm: 800
     p: 6200
     sg_left: 0
@@ -283,14 +319,16 @@ wrj1:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 100
+    torque_limiter_gain: 64
 wrj2:
   backlash_compensation: false
   pid:
-    d: 64
+    d: 0
     deadband: 5
     f: 300
     i: 0
-    imax: 100
+    imax: 0
     max_pwm: 600
     p: 6200
     sg_left: 0
@@ -298,3 +336,5 @@ wrj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
+    torque_limit: 50
+    torque_limiter_gain: 64
