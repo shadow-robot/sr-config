@@ -8,7 +8,7 @@
   <arg name="initial_z" default="0.7621" />
   <arg name="start_home" default="$(arg sim)" />
   <arg name="arm_group" default="right_arm_and_manipulator" />
-  <arg name="eth_port" default="enx00e04c0009b6" />
+  <arg name="eth_port" default="enx00e04c68006c" />
 
 
   <!-- SIMULATED ROBOT -->

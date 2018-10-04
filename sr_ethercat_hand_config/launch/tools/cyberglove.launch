@@ -5,5 +5,6 @@
     <arg name="version" value="1" />
     <arg name="trajectory_tx_delay" value="0.050" />
     <arg name="trajectory_delay" value="0.05"/>
+    <arg name="calibration" value="$(find sr_cyberglove_config)/calibrations/penny_cyberglove_test.yaml"/>
   </include>
 </launch>
