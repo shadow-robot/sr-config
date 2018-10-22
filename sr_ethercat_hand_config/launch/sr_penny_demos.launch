@@ -1,0 +1,28 @@
+<launch>
+  <arg name="nuc_ip_address" default="10.5.10.66" />
+  <arg name="nuc_container_ip_address" default="172.17.0.1" />
+  <arg name="sim" default="false" />
+  <arg name="scene" default="true" />
+  <arg name="octomap" default="true" />
+  <arg name="scene_file" default="$(find sr_description_common)/scenes/251_lab_table_full.scene"/>
+  <arg name="initial_z" default="0.7621" />
+  <arg name="start_home" default="$(arg sim)" />
+  <arg name="arm_group" default="right_arm_and_manipulator" />
+  <arg name="eth_port" default="enx00e04c0009b6" />
+
+
+  <!-- SIMULATED ROBOT -->
+  <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
+    <env name="GAZEBO_MODEL_PATH" value="$(find sr_description_common)/models/" />
+    <env name="GAZEBO_MODEL_DATABASE_URI" value="" />
+    <env name="MESH_WORKSPACE_PATH" value="$(find sr_description_common)/models/" />
+    <arg name="sim" value="$(arg sim)"/>
+    <arg name="hand_serial" value="1130" />
+    <arg name="scene" value="$(arg scene)" />
+    <arg name="scene_file" value="$(arg scene_file)" />
+    <arg if="$(arg sim)" name="world" default="$(find sr_description_common)/worlds/251_lab_table_full.world" />
+    <arg name="initial_z" default="$(arg initial_z)" />
+    <arg name="start_home" default="$(arg start_home)" />
+    <arg name="eth_port" default="$(arg eth_port) "/>
+  </include>
+</launch>
