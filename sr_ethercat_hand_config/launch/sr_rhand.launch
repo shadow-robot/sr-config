@@ -1,4 +1,5 @@
 <launch>
+  <include file="$(find sr_ethercat_hand_config)/launch/sr_imu.launch"/>
   <include file="$(find sr_logging_common)/launch/sr_rosbag_log.launch">
     <arg name="log_bag_prefix" value="sr_rhand"/>
   </include>
@@ -9,7 +10,7 @@
 
     <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor_btsp.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
-
+    
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
   </include>
