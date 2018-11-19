@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package>
+  <name>sr_ur_arm_config</name>
+  <version>1.0.0</version>
+  <description>Package containing Shadow's UR arm config.</description>
+  <maintainer email="software@shadowrobot.com">Shadow Robot's software team</maintainer>
+  <license>GPL</license>
+  <url type="repository">https://github.com/shadow-robot/sr-config</url>
+  <url type="bugtracker">https://github.com/shadow-robot/sr-config/issues</url>
+  <author>Ethan Fowler</author>
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>
