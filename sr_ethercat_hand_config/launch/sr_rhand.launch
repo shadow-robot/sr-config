@@ -1,19 +1,13 @@
 <launch>
-  <!-- Set to true if you want to use grasp controller -->
-  <arg name="grasp_controller" default="false"/>
-  <arg name="pwm_control" default="true"/>
   <include file="$(find sr_logging_common)/launch/sr_rosbag_log.launch">
     <arg name="log_bag_prefix" value="sr_rhand"/>
-    <arg name="log_directory" value="$(optenv HOME /tmp)"/>
   </include>
   <include file="$(find sr_robot_launch)/launch/srhand.launch">
-    <arg name="eth_port" value="enx00e04c68006c" />
+    <arg name="eth_port" value="enp0s25" />
     <arg name="hand_serial" value="1130" />
     <arg name="hand_id" value="rh" />
-    <arg name="grasp_controller" value="$(arg grasp_controller)" />
-    <arg name="pwm_control" value="$(arg pwm_control)" />
 
-    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
+    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor_btsp.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
 
     <arg name="use_moveit" value="true"/>
