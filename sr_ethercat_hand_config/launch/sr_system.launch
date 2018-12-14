@@ -7,10 +7,10 @@
   <arg name="scene" default="true"/>
   
   <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
-    <arg name="eth_port" value="enp4s0"/>
+    <arg name="eth_port" value="enp4s0f1"/>
     <arg name="hand_serial" value="1802" />
     <arg name="scene" value="$(arg scene)"/>
-    <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10.urdf.xacro" />
+    <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10_plus_biotacs.urdf.xacro" />
     <arg name="use_moveit" value="true"/>
     <arg name="gui" value="$(arg gui)"/>
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
