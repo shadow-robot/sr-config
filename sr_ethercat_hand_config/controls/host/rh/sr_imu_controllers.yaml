@@ -1,0 +1,3 @@
+sh_rh_imu_controller:
+  publish_rate: 100
+  type: imu_sensor_controller/ImuSensorController
