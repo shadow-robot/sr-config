@@ -1,0 +1,7 @@
+<launch>
+  <node name="rh_controllers_spawner" pkg="controller_manager"
+        type="spawner" output="screen"
+        args="sh_rh_imu_controller"/>
+  <param name="/rh_imu/acc_scale" value="0"/>
+  <param name="/rh_imu/gyr_scale" value="0"/>
+</launch>
