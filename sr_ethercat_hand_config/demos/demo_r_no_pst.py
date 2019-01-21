@@ -122,7 +122,7 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ3": 4, "rh_THJ4": 60, "rh_THJ5":
 # O.K. with middle finger
 mf_ok = {"rh_THJ1": 15, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 66, "rh_THJ5": 31,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
-         "rh_MFJ1": 11, "rh_MFJ2": 67, "rh_MFJ3": 45, "rh_MFJ4": 10,
+         "rh_MFJ1": 13, "rh_MFJ2": 69, "rh_MFJ3": 46, "rh_MFJ4": 10,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. transition from middle finger to ring finger
@@ -132,17 +132,17 @@ mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5"
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -19,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -12, "rh_LFJ5": 7}
 # O.K. with ring finger
-rf_ok = {"rh_THJ1": 6, "rh_THJ2": 15, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 45,
+rf_ok = {"rh_THJ1": 6, "rh_THJ2": 15, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 47,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
-         "rh_RFJ1": 3, "rh_RFJ2": 90, "rh_RFJ3": 39, "rh_RFJ4": -19,
+         "rh_RFJ1": 3, "rh_RFJ2": 90, "rh_RFJ3": 39, "rh_RFJ4": -1920,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -12, "rh_LFJ5": 7}
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"rh_THJ1": 5, "rh_THJ2": 4.5, "rh_THJ3": 8, "rh_THJ4": 60, "rh_THJ5": 21,
             "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
             "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
-            "rh_RFJ1": 0, "rh_RFJ2": 30, "rh_RFJ3": 6, "rh_RFJ4": 0.5,
-            "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -10, "rh_LFJ5": 7}
+            "rh_RFJ1": 0, "rh_RFJ2": 30, "rh_RFJ3": 6, "rh_RFJ4": -5,
+            "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -19, "rh_LFJ5": 7}
 # O.K. with little finger
 lf_ok = {"rh_THJ1": 24, "rh_THJ2": 11, "rh_THJ3": 10, "rh_THJ4": 69, "rh_THJ5": 22,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
@@ -293,7 +293,7 @@ def sequence_ff():
     hand_commander.move_to_joint_value_target_unsafe(ext_rf, 0.9, False, angle_degrees=True)
     rospy.sleep(1.2)
     hand_commander.move_to_joint_value_target_unsafe(flex_lf, 0.9, False, angle_degrees=True)
-    rospy.sleep(1.2)
+    rospy.sleep(1.7)
     hand_commander.move_to_joint_value_target_unsafe(ext_lf, 0.9, False, angle_degrees=True)
     rospy.sleep(1.2)
     hand_commander.move_to_joint_value_target_unsafe(flex_th_1, 0.7, False, angle_degrees=True)
