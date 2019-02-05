@@ -1,3 +1,5 @@
+# Copyright (C) 2019 Shadow Robot Company Ltd - All Rights Reserved.
+# Proprietary and Confidential. Unauthorized copying of the content in this file, via any medium is strictly prohibited.
 warehouse_states = {'burn_1_hand': {'rh_FFJ1': 0.0,
                  'rh_FFJ2': 0.0,
                  'rh_FFJ3': 0.0,
