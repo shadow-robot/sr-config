@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
+# Demo for hand E which runs hand demo without having to press the index pst sensor. 
+# Can be used when the hand is equipped with the biotac sensors.
 
 import rospy
 import random
