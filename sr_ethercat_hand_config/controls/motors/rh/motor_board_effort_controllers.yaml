@@ -374,7 +374,7 @@ wrj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 150
+    torque_limit: 200
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
