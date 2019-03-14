@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Script to move the left hand into store position.
+# Script to move the right hand into store position.
 
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
