@@ -1,17 +1,20 @@
 <launch>
-  <include file="$(find sr_ethercat_hand_config)/launch/sr_imu.launch"/>
+  <arg name="eth_port" default="ens1f0" />
+  <arg name="gui" default="false" /> 
   <include file="$(find sr_logging_common)/launch/sr_rosbag_log.launch">
     <arg name="log_bag_prefix" value="sr_rhand"/>
   </include>
   <include file="$(find sr_robot_launch)/launch/srhand.launch">
-    <arg name="eth_port" value="enp4s0f1" />
+    <arg name="eth_port" value="$(arg eth_port)" />
     <arg name="hand_serial" value="1802" />
     <arg name="hand_id" value="rh" />
+    <arg name="gui" value="$(arg gui)" />
 
-    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor.urdf.xacro" />
+    <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor_btsp.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
-
     <arg name="use_moveit" value="true"/>
+    <arg name="hand_trajectory" value="false"/>
     <arg name="sim" value="false"/>
+    <node pkg="sr_utilities_common" type="timed_roslaunch.sh" name="launch_imu" args="10 $(find sr_ethercat_hand_config)/launch/sr_imu.launch"/>
   </include>
 </launch>
