@@ -1,5 +1,22 @@
 #!/usr/bin/env python
 
+#
+# Copyright 2019 Shadow Robot Company Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the Free
+# Software Foundation, either version 2 of the License, or (at your option)
+# any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
 # Script to move the left hand into store position.
 
 import rospy
@@ -23,7 +40,7 @@ pack_hand_1 = {'lh_FFJ1': 1.5707, 'lh_FFJ2': 1.5707, 'lh_FFJ3': 1.5707, 'lh_FFJ4
 
 pack_hand_2 = {'lh_THJ4': 1.2}
 
-pack_hand_3 = {'lh_THJ1': 0.52, 'lh_THJ2': 0.61, 'lh_THJ5': 0.43}
+pack_hand_3 = {'lh_THJ1': 0.73, 'lh_THJ2': 0.41, 'lh_THJ5': 0.43}
 
 
 # Move hand to open position
