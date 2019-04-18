@@ -644,11 +644,11 @@ def zero_tactile_sensors():
     rospy.loginfo("\n\nOK, ready for the demo")
 
     print "\nPRESS ONE OF THE TACTILES TO START A DEMO"
-    print "   FF: Standard Demo"
+    print "   FF: Open Hand"
     print "   MF: Shy Hand Demo"
     print "   RF: Card Trick Demo"
     print "   LF: Grasp Demo"
-    print "   TH: Open Hand"
+    print "   TH: Standard Demo"
 
     return
 
@@ -695,8 +695,8 @@ while not rospy.is_shutdown():
     read_tactile_values()
 
     # If the tactile is touched, trigger the corresponding function
-    if (tactile_values['FF'] > force_zero['FF']):
-        print 'First finger contact'
+    if (tactile_values['TH'] > force_zero['TH']):
+        print 'Thumb contact'
         secuence_ff()
         print 'FF demo completed'
         zero_tactile_sensors()
@@ -715,8 +715,8 @@ while not rospy.is_shutdown():
         secuence_lf()
         print 'LF demo completed'
         zero_tactile_sensors()
-    if (tactile_values['TH'] > force_zero['TH']):
-        print 'Thumb finger contact'
+    if (tactile_values['FF'] > force_zero['FF']):
+        print 'First finger contact'
         secuence_th()
         print 'TH demo completed'
         zero_tactile_sensors()
