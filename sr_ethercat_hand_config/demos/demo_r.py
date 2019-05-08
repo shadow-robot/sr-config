@@ -104,7 +104,7 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ4": 60, "rh_THJ5": 2,
 # O.K. with middle finger
 mf_ok = {"rh_THJ1": 18, "rh_THJ2": 18, "rh_THJ4": 66, "rh_THJ5": 30,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
-         "rh_MFJ1": 0, "rh_MFJ2": 71, "rh_MFJ3": 54, "rh_MFJ4": 11,
+         "rh_MFJ1": 0, "rh_MFJ2": 75, "rh_MFJ3": 54, "rh_MFJ4": 11,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10}
 # O.K. transition from middle finger to ring finger
 mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ4": 70, "rh_THJ5": 19,
@@ -112,15 +112,15 @@ mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ4": 70, "rh_THJ5": 19,
             "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -19}
 # O.K. with ring finger
-rf_ok = {"rh_THJ1": 7, "rh_THJ2": 32, "rh_THJ4": 70, "rh_THJ5": 36,
+rf_ok = {"rh_THJ1": 20, "rh_THJ2": 35, "rh_THJ4": 70, "rh_THJ5": 35,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
-         "rh_RFJ1": 0, "rh_RFJ2": 90, "rh_RFJ3": 34, "rh_RFJ4": -19}
+         "rh_RFJ1": 25, "rh_RFJ2": 90, "rh_RFJ3": 30, "rh_RFJ4": -19}
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"rh_THJ1": 5, "rh_THJ2": 4.5, "rh_THJ4": 60, "rh_THJ5": 21,
             "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
             "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
-            "rh_RFJ1": 0, "rh_RFJ2": 30, "rh_RFJ3": 6, "rh_RFJ4": 0.5}
+            "rh_RFJ1": 0, "rh_RFJ2": 30, "rh_RFJ3": 6, "rh_RFJ4": -20}
 # O.K. with little finger
 lf_ok = {"rh_THJ1": 24, "rh_THJ2": 11, "rh_THJ4": 69, "rh_THJ5": 22,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
