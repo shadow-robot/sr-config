@@ -20,10 +20,6 @@ from copy import deepcopy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
 
-rospy.init_node("right_hand_demo", anonymous=True)
-
-hand_commander = SrHandCommander(name="right_hand")
-
 ####################
 # POSE DEFINITIONS #
 ####################
@@ -64,7 +60,6 @@ ext_th = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 0}
 def select_finger():
     flex = dict()
     extend = dict()
-    finger = None
     finger = raw_input("select which finger to move (options: ff, mf, rf, lf, th  default: ff): ")
     if finger == "ff":
         finger = "FF"
@@ -119,16 +114,15 @@ def sequence_ff():
             joint_2 = "rh_" + finger + "J2"
         else:
             joint = "rh_" + finger + "J" + joint_number_str
-        flex_degrees = None
         flex_degrees = raw_input("Select flex position in degrees (default 180): ")
         try:
             if flex_degrees:
-                type(float(flex_degrees))
+                flex_degrees_float = float(flex_degrees)
                 if joint_number_int == 0:
-                    flex[joint_1] = float(flex_degrees) / 2.0
-                    flex[joint_2] = float(flex_degrees) / 2.0
+                    flex[joint_1] = flex_degrees_float / 2.0
+                    flex[joint_2] = flex_degrees_float / 2.0
                 else:
-                    flex[joint] = float(flex_degrees)
+                    flex[joint] = flex_degrees_float
             else:
                 if joint_number_int == 0:
                     flex[joint_1] = 90
@@ -139,16 +133,15 @@ def sequence_ff():
             rospy.logerr("You didn't give a valid value")
             continue
 
-        ext_degrees = None
         ext_degrees = raw_input("Select extension position in degrees (default 0): ")
         try:
             if ext_degrees:
-                type(float(ext_degrees))
+                ext_degrees_float = float(ext_degrees)
                 if joint_number_int == 0:
-                    extend[joint_1] = float(ext_degrees) / 2.0
-                    extend[joint_2] = float(ext_degrees) / 2.0
+                    extend[joint_1] = ext_degrees_float / 2.0
+                    extend[joint_2] = ext_degrees_float / 2.0
                 else:
-                    extend[joint] = float(ext_degrees)
+                    extend[joint] = ext_degrees_float
             else:
                 if joint_number_int == 0:
                     extend[joint_1] = 0
@@ -159,11 +152,9 @@ def sequence_ff():
             rospy.logerr("You didn't give a valid value")
             continue
 
-        time_raw = None
         time_raw = raw_input("Select the time for each movement in seconds (default 1.0): ")
         try:
             if time_raw:
-                type(float(time_raw))
                 time = float(time_raw)
             else:
                 time = 1.0
@@ -185,5 +176,8 @@ def sequence_ff():
 
 
 if __name__ == "__main__":
+    rospy.init_node("right_hand_demo", anonymous=True)
+    hand_commander = SrHandCommander(name="right_hand")
+
     sequence_ff()
     rospy.loginfo("Demo finished!")
