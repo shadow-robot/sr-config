@@ -691,34 +691,34 @@ zero_tactile_sensors()
 
 while not rospy.is_shutdown():
     # Check the state of the tactile senors
-    read_tactile_values()
+#    read_tactile_values()
 
     # If the tactile is touched, trigger the corresponding function
-    if (tactile_values['FF'] > force_zero['FF']):
-        print 'First finger contact'
+#    if (tactile_values['FF'] > force_zero['FF']):
+#        print 'First finger contact'
         secuence_ff()
-        print 'FF demo completed'
-        zero_tactile_sensors()
-    if (tactile_values['MF'] > force_zero['MF']):
-        print 'Middle finger contact'
-        secuence_mf()
-        print 'MF demo completed'
-        zero_tactile_sensors()
-    if (tactile_values['RF'] > force_zero['RF']):
-        print 'Ring finger contact'
-        secuence_rf()
-        print 'RF demo completed'
-        zero_tactile_sensors()
-    if (tactile_values['LF'] > force_zero['LF']):
-        print 'Little finger contact'
-        secuence_lf()
-        print 'LF demo completed'
-        zero_tactile_sensors()
-    if (tactile_values['TH'] > force_zero['TH']):
-        print 'Thumb finger contact'
-        secuence_th()
-        print 'TH demo completed'
-        zero_tactile_sensors()
+#        print 'FF demo completed'
+#        zero_tactile_sensors()
+#    if (tactile_values['MF'] > force_zero['MF']):
+#        print 'Middle finger contact'
+#        secuence_mf()
+#        print 'MF demo completed'
+#        zero_tactile_sensors()
+#    if (tactile_values['RF'] > force_zero['RF']):
+#        print 'Ring finger contact'
+#        secuence_rf()
+#        print 'RF demo completed'
+#        zero_tactile_sensors()
+#    if (tactile_values['LF'] > force_zero['LF']):
+#        print 'Little finger contact'
+#        secuence_lf()
+#        print 'LF demo completed'
+#        zero_tactile_sensors()
+#    if (tactile_values['TH'] > force_zero['TH']):
+#        print 'Thumb finger contact'
+#        secuence_th()
+#        print 'TH demo completed'
+#        zero_tactile_sensors()
 
 
 
