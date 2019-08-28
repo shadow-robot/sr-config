@@ -1,13 +1,13 @@
 sh_rh_ffj0_variable_position_controller:
   joint: rh_FFJ0
   pid:
-    d: -30.0
+    d: -20.0
     deadband: 0
     friction_deadband: 2000.0
-    i: -450.0
+    i: -400.0
     i_clamp: 300.0
     max_force: 900.0
-    p: -450.0
+    p: -400.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointVariablePidPositionController
 sh_rh_ffj3_variable_position_controller:
@@ -37,12 +37,12 @@ sh_rh_ffj4_variable_position_controller:
 sh_rh_lfj0_variable_position_controller:
   joint: rh_LFJ0
   pid:
-    d: 30.0
+    d: 20.0
     friction_deadband: 2000.0
-    i: 450.0
+    i: 400.0
     i_clamp: 300.0
     max_force: 900.0
-    p: 450.0
+    p: 400.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointVariablePidPositionController
 sh_rh_lfj3_variable_position_controller:
@@ -84,12 +84,12 @@ sh_rh_lfj5_variable_position_controller:
 sh_rh_mfj0_variable_position_controller:
   joint: rh_MFJ0
   pid:
-    d: -25.0
+    d: -20.0
     friction_deadband: 2000.0
-    i: -450.0
+    i: -400.0
     i_clamp: 300.0
     max_force: 900.0
-    p: -450.0
+    p: -400.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointVariablePidPositionController
 sh_rh_mfj3_variable_position_controller:
@@ -119,12 +119,12 @@ sh_rh_mfj4_variable_position_controller:
 sh_rh_rfj0_variable_position_controller:
   joint: rh_RFJ0
   pid:
-    d: -30.0
+    d: -20.0
     friction_deadband: 2000.0
-    i: -450.0
+    i: -400.0
     i_clamp: 300.0
     max_force: 900.0
-    p: -450.0
+    p: -400.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointVariablePidPositionController
 sh_rh_rfj3_variable_position_controller:
@@ -154,13 +154,13 @@ sh_rh_rfj4_variable_position_controller:
 sh_rh_thj1_variable_position_controller:
   joint: rh_THJ1
   pid:
-    d: 30.0
+    d: 20.0
     deadband: 0.0
     friction_deadband: 2000.0
-    i: 450.0
+    i: 400.0
     i_clamp: 300.0
     max_force: 900.0
-    p: 450.0
+    p: 400.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointVariablePidPositionController
 sh_rh_thj2_variable_position_controller:
