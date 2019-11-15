@@ -23,7 +23,7 @@ pack_hand_1 = {'rh_FFJ1': 1.5707, 'rh_FFJ2': 1.5707, 'rh_FFJ3': 1.5707, 'rh_FFJ4
 
 pack_hand_2 = {'rh_THJ4': 1.17}
 
-pack_hand_3 = {'rh_THJ1': 0.97, 'rh_THJ2': 0.29, 'rh_THJ5': 0.35}
+pack_hand_3 = {'rh_THJ1': 0.97, 'rh_THJ2': 0.29, 'rh_THJ5': 0.47}
 
 
 # Move hand to open position
@@ -35,11 +35,11 @@ rospy.sleep(2)
 # Move hand to closed position
 joint_states = pack_hand_1
 rospy.loginfo("Moving hand to pack position")
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
-rospy.sleep(1)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
+rospy.sleep(2)
 
 joint_states = pack_hand_2
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 1.0, True)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 1.0, False)
 rospy.sleep(1)
 
 joint_states = pack_hand_3
