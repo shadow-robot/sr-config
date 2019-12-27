@@ -21,9 +21,9 @@ pack_hand_1 = {'rh_FFJ1': 1.5707, 'rh_FFJ2': 1.5707, 'rh_FFJ3': 1.5707, 'rh_FFJ4
                'rh_RFJ1': 1.5707, 'rh_RFJ2': 1.5707, 'rh_RFJ3': 1.5707, 'rh_RFJ4': 0.0,
                'rh_LFJ1': 1.5707, 'rh_LFJ2': 1.5707, 'rh_LFJ3': 1.5707, 'rh_LFJ4': 0.0, 'rh_LFJ5': 0.0}
 
-pack_hand_2 = {'rh_THJ4': 1.2}
+pack_hand_2 = {'rh_THJ4': 0.52}
 
-pack_hand_3 = {'rh_THJ1': 0.52, 'rh_THJ2': 0.61, 'rh_THJ5': 0.43}
+pack_hand_3 = {'rh_THJ1': 0.35, 'rh_THJ2': 0.20, 'rh_THJ5': 0.45}
 
 
 # Move hand to open position
