@@ -262,7 +262,7 @@ thj3:
     i: 0
     imax: 350
     max_pwm: 400
-    p: 6200
+    p: 6300
     sg_left: 0
     sg_right: 0
     sgleftref: 0
