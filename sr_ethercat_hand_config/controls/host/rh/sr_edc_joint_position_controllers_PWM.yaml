@@ -31,8 +31,8 @@ sh_rh_ffj4_position_controller:
     d: -270.0
     deadband: 0.02
     friction_deadband: 2000.0
-    i: -1000.0
-    i_clamp: 500.0
+    i: 0.0
+    i_clamp: 0.0
     max_force: 1023.0
     p: -6700.0
     position_deadband: 0.003
@@ -69,8 +69,8 @@ sh_rh_lfj4_position_controller:
     d: 270.0
     deadband: 0
     friction_deadband: 2000.0
-    i: -4000.0
-    i_clamp: 500.0
+    i: 0.0
+    i_clamp: 0.0
     max_force: 1023.0
     p: 6900.0
     position_deadband: 0.003
@@ -158,8 +158,8 @@ sh_rh_rfj4_position_controller:
     d: -270.0
     deadband: 0.0
     friction_deadband: 2000.0
-    i: -4000.0
-    i_clamp: 500.0
+    i: 0.0
+    i_clamp: 0.0
     max_force: 1023.0
     p: -6100.0
     position_deadband: 0.003
