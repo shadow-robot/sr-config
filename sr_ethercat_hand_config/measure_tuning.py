@@ -24,9 +24,6 @@ import numpy as np
 rospy.init_node("move_finger", anonymous=True)
 
 
-
-
-
 class MeasureTuning(object):
     flex = {
         "rh_FFJ0" : {"rh_FFJ1": 90, "rh_FFJ2": 90},
@@ -77,14 +74,21 @@ class MeasureTuning(object):
         self._out_file = open(output_file, 'w')
 
         self._out_file.write("joint, time, integral, stddev, diffs\n")
+        self._errors = []
 
     def _error_cb(self, msg):
         self._errors.append(msg.error)
 
     def do_run(self, time, joint, pause_time=0.2):
         topic = "/sh_%s_position_controller/state" % joint.lower()
+
+        print "length " + str(len(self._errors))
+
+        self._errors = []
+
+        print "length now " + str(len(self._errors))
+
         subscriber = rospy.Subscriber(topic, JointControllerState, self._error_cb)
-        self._errors = [];
 
         rospy.loginfo("Subscribed to " + topic)
 
@@ -97,10 +101,12 @@ class MeasureTuning(object):
             rospy.sleep(pause_time)
         if not rospy.is_shutdown():
             hand_commander.move_to_joint_value_target_unsafe(extend[joint], time, True, angle_degrees=True)
+
+        subscriber.unregister()
+        errors = self._errors
+
         rospy.sleep(1)
 
-        subscriber = None
-        errors = self._errors
         diff_list = [ abs(errors[n] - errors[n+1]) for n in range(len(errors) -1) ]
 
         integral = (str(np.sum(np.absolute(errors))/len(errors)))
@@ -112,6 +118,7 @@ class MeasureTuning(object):
         rospy.loginfo("stdev of errors: " + stdev)
         rospy.loginfo("diffs of errors: " + diffs + "\n\n")
 
+        rospy.sleep(1)
         output = ", ".join(
             [joint, str(time),  integral, stdev, diffs]
         )
@@ -124,10 +131,22 @@ print "output file - " + output_file
 
 measure = MeasureTuning(output_file);
 
-joints = ["rh_FFJ0" ,"rh_FFJ3", "rh_FFJ4", "rh_LFJ5", "rh_THJ1", "rh_THJ2", "rh_THJ3", "rh_THJ4", "rh_THJ5"]
+
+joints = ["rh_FFJ0" ,"rh_FFJ3", "rh_FFJ4",
+          "rh_MFJ0" ,"rh_MFJ3", #"rh_MFJ4",
+          "rh_RFJ0" ,"rh_RFJ3", #"rh_RFJ4",
+          "rh_LFJ0" ,"rh_LFJ3", "rh_LFJ5", #"rh_LFJ4",
+          "rh_THJ1", "rh_THJ2", "rh_THJ3", "rh_THJ4", "rh_THJ5"]
+
+#joints = ["rh_FFJ0", "rh_LFJ0" ]
+
 ts = [0.25 , 0.5, 1.0, 2.0, 10.0]
+
+rospy.sleep(1)
 
 for joint in joints:
     for t in ts:
         if not rospy.is_shutdown():
+            print "about to run"
             measure.do_run(t, joint)
+            print "did run"
