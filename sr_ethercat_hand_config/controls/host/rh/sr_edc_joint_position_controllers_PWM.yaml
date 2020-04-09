@@ -220,18 +220,18 @@ sh_rh_wrj1_position_controller:
     i: 0.0
     i_clamp: 0.0
     max_force: 800.0
-    p: 7900.0
+    p: 8200.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_wrj2_position_controller:
   joint: rh_WRJ2
   pid:
-    d: -200.0
+    d: -250.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
     max_force: 800.0
-    p: -8300.0
+    p: -8100.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
