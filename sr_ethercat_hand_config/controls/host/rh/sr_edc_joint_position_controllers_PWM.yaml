@@ -233,25 +233,25 @@ sh_rh_wrj1_position_controller:
   joint: rh_WRJ1
   pid:
     antiwindup: true
-    d: 270.0
+    d: 350.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 600.0
-    p: 6700.0
+    max_force: 800.0
+    p: 8200.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_wrj2_position_controller:
   joint: rh_WRJ2
   pid:
     antiwindup: true
-    d: -120.0
+    d: -250.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 600.0
+    max_force: 800.0
     p: -8100.0
     position_deadband: 0.003
   type: sr_mechanism_controllers/SrhJointPositionController
