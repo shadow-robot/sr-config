@@ -5,7 +5,7 @@
     <arg name="rh_serial" value="1594"/>
     <arg name="lh_serial" value="4138"/>
 
-    <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_lite_btsp_single.urdf.xacro" />
+    <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_lite_right_btsp.urdf.xacro" />
     <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/bimanual_sh_lite.yaml"/>
 
     <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_lite_v1.yaml"/>
