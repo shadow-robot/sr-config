@@ -59,12 +59,6 @@ analyzers:
     type: diagnostic_aggregator/AnalyzerGroup
     path: Left Shadow Hand
     analyzers:
-      tactiles:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Tactiles
-        timeout: 5.0
-        regex: 'lh Tactile .*[1-5].*'
-        num_items: 5
       first_finger:
         type: diagnostic_aggregator/GenericAnalyzer
         path: First Finger
