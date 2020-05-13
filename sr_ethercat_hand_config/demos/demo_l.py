@@ -98,7 +98,7 @@ ext_lf = {"lh_LFJ1": 0, "lh_LFJ2": 0, "lh_LFJ3": 0, "lh_LFJ4": 0}
 # flex thumb step 1
 flex_th_1 = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 70, "lh_THJ5": 0}
 # flex thumb step 2
-flex_th_2 = {"lh_THJ1": 35, "lh_THJ2": 38, "lh_THJ3": 10, "lh_THJ4": 70, "lh_THJ5": 58}
+flex_th_2 = {"lh_THJ1": 35, "lh_THJ2": 38, "lh_THJ3": 10, "lh_THJ4": 70, "lh_THJ5": 51}
 # extend thumb step 1
 ext_th_1 = {"lh_THJ1": 10, "lh_THJ2": 20, "lh_THJ3": 5, "lh_THJ4": 35, "lh_THJ5": 25}
 # extend thumb step 2
@@ -135,7 +135,7 @@ mf2rf_ok = {"lh_THJ1": 5, "lh_THJ2": -5, "lh_THJ3": 15, "lh_THJ4": 70, "lh_THJ5"
 rf_ok = {"lh_THJ1": 8, "lh_THJ2": 15, "lh_THJ3": 15, "lh_THJ4": 70, "lh_THJ5": 45,
          "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
          "lh_MFJ1": 0, "lh_MFJ2": 45, "lh_MFJ3": 4, "lh_MFJ4": -1,
-         "lh_RFJ1": 3, "lh_RFJ2": 90, "lh_RFJ3": 42, "lh_RFJ4": -19,
+         "lh_RFJ1": 3, "lh_RFJ2": 90, "lh_RFJ3": 35, "lh_RFJ4": -19,
          "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -12, "lh_LFJ5": 7}
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"lh_THJ1": 5, "lh_THJ2": 4.5, "lh_THJ3": 8, "lh_THJ4": 60, "lh_THJ5": 21,
@@ -148,7 +148,7 @@ lf_ok = {"lh_THJ1": 25, "lh_THJ2": 14, "lh_THJ3": 10, "lh_THJ4": 69, "lh_THJ5": 
          "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
          "lh_MFJ1": 0, "lh_MFJ2": 15, "lh_MFJ3": 4, "lh_MFJ4": -1,
          "lh_RFJ1": 0, "lh_RFJ2": 15, "lh_RFJ3": 6, "lh_RFJ4": 0.5,
-         "lh_LFJ1": 0, "lh_LFJ2": 78, "lh_LFJ3": 26, "lh_LFJ4": 5, "lh_LFJ5": 37}
+         "lh_LFJ1": 0, "lh_LFJ2": 78, "lh_LFJ3": 26, "lh_LFJ4": 5, "lh_LFJ5": 41}
 # zero wrist
 zero_wr = {"lh_WRJ1": 0, "lh_WRJ2": 0}
 # north wrist
