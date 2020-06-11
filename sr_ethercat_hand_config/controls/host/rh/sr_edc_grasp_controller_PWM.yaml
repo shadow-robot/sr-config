@@ -1,4 +1,4 @@
-hand_g_grasp_controller:
+sh_rh_grasp_controller:
   gains:
     rh_FFJ0:
       d: 0.0
@@ -116,5 +116,5 @@ hand_g_grasp_controller:
       p: 6000.0
       position_deadband: 0.003
       
-  type: sr_mechanism_controllers/SrhGraspController
+  type: sr_grasp_controllers/SrhGraspController
   joints: [rh_FFJ0, rh_FFJ3, rh_FFJ4, rh_MFJ0, rh_MFJ3, rh_MFJ4, rh_RFJ0, rh_RFJ3, rh_RFJ4, rh_THJ1, rh_THJ2, rh_THJ4, rh_THJ5]
