@@ -116,7 +116,7 @@ ff_ok = {"lh_THJ1": 17, "lh_THJ2": 17, "lh_THJ3": 0, "lh_THJ4": 56, "lh_THJ5": 9
 # O.K. transition from first finger to middle finger
 ff2mf_ok = {"lh_THJ1": 5, "lh_THJ2": 12, "lh_THJ3": 4, "lh_THJ4": 60, "lh_THJ5": 2,
             "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
-            "lh_MFJ1": 0, "lh_MFJ2": 42, "lh_MFJ3": 33, "lh_MFJ4": -3,
+            "lh_MFJ1": 0, "lh_MFJ2": 42, "lh_MFJ3": 33, "lh_MFJ4": 7,
             "lh_RFJ1": 0, "lh_RFJ2": 50, "lh_RFJ3": 18, "lh_RFJ4": 0.5,
             "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -6, "lh_LFJ5": 7}
 # O.K. with middle finger
