@@ -7,7 +7,7 @@ ffj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -26,7 +26,7 @@ ffj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -64,7 +64,7 @@ lfj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -83,7 +83,7 @@ lfj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -140,7 +140,7 @@ mfj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -159,7 +159,7 @@ mfj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -197,7 +197,7 @@ rfj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -216,7 +216,7 @@ rfj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 6200
     sg_left: 0
     sg_right: 0
     sgleftref: 0
