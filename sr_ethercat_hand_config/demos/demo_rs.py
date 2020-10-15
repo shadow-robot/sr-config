@@ -23,11 +23,7 @@ pack_hand_1 = {'rh_FFJ1': 1.5707, 'rh_FFJ2': 1.5707, 'rh_FFJ3': 1.5707, 'rh_FFJ4
 
 pack_hand_2 = {'rh_THJ4': 1.2}
 
-<<<<<<< HEAD
 pack_hand_3 = {'rh_THJ1': 0.51, 'rh_THJ2': 0.53, 'rh_THJ3': 0.17, 'rh_THJ5': 0.39}
-=======
-pack_hand_3 = {'rh_THJ1': 0.52, 'rh_THJ2': 0.61, 'rh_THJ5': 0.43}
->>>>>>> shadowrobot_201008
 
 
 # Move hand to open position
