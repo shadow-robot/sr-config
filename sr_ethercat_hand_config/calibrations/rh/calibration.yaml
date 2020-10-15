@@ -1,52 +1,237 @@
-sr_calibrations: [
-["FFJ1", [[3001.0, 0.0], [2319.0, 22.5], [1484.0, 45.0], [689.0, 67.5], [195.0, 90.0]]], 
-["FFJ2", [[2710.0, 0.0], [2455.0, 22.5], [2133.0, 45.0], [1802.0, 67.5], [1472.0, 90.0]]], 
-["FFJ3", [[1520.0, 0.0], [1988.0, 22.5], [2443.0, 45.0], [2799.0, 67.5], [3014.0, 90.0]]], 
-["FFJ4", [[784.0, -20.0], [1254.0, -10.0], [1680.0, 0.0], [1906.0, 10.0], [2013.0, 20.0]]], 
-["MFJ1", [[3188.0, 0.0], [2506.0, 22.5], [1683.0, 45.0], [1008.0, 67.5], [462.0, 90.0]]], 
-["MFJ2", [[2684.0, 0.0], [2330.0, 22.5], [1940.0, 45.0], [1568.0, 67.5], [1231.0, 90.0]]], 
-["MFJ3", [[1446.0, 0.0], [1982.0, 22.5], [2516.0, 45.0], [2963.0, 67.5], [3278.0, 90.0]]], 
-["MFJ4", [[1111.0, -20.0], [1525.0, -10.0], [1821.0, 0.0], [2026.0, 10.0], [2085.0, 20.0]]], 
-["RFJ1", [[2929.0, 0.0], [2146.0, 22.5], [1353.0, 45.0], [699.0, 67.5], [238.0, 90.0]]], 
-["RFJ2", [[2903.0, 0.0], [2655.0, 22.5], [2322.0, 45.0], [1962.0, 67.5], [1627.0, 90.0]]], 
-["RFJ3", [[1770.0, 0.0], [2186.0, 22.5], [2585.0, 45.0], [2932.0, 67.5], [3116.0, 90.0]]], 
-["RFJ4", [[2047.0, -20.0], [1997.0, -10.0], [1870.0, 0.0], [1542.0, 10.0], [782.0, 20.0]]], 
-["LFJ1", [[3281.0, 0.0], [2607.0, 22.5], [1798.0, 45.0], [834.0, 67.5], [342.0, 90.0]]], 
-["LFJ2", [[2793.0, 0.0], [2553.0, 22.5], [2202.0, 45.0], [1834.0, 67.5], [1462.0, 90.0]]], 
-["LFJ3", [[1514.0, 0.0], [1985.0, 22.5], [2493.0, 45.0], [2956.0, 67.5], [3223.0, 90.0]]], 
-["LFJ4", [[2039.0, -20.0], [1941.0, -10.0], [1702.0, 0.0], [1249.0, 10.0], [626.0, 20.0]]], 
-["LFJ5", [[1491.0, 0.0], [1876.0, 22.5], [2238.0, 45.0], [2818.0, 67.5]]], 
-["THJ3", [[1462.0, -15.0], [2145.0, 0.0], [2578.0, 15.0]]], 
-["THJ4", [[1731.0, 0.0], [2047.0, 22.5], [2328.0, 45.0], [2571.0, 67.5]]], 
-["THJ5", [[575.0, -60.0], [1196.0, -30.0], [1967.0, 0.0], [2701.0, 30.0], [3189.0, 60.0]]], 
-["WRJ1", [[2542.0, -45.0], [2375.0, -22.5], [2139.0, 0.0], [1973.0, 15.0], [1814.0, 30.0]]], 
-["WRJ2", [[3083.0, -30.0], [1713.0, 0.0], [1418.0, 10.0]]], 
-]
-
-sr_calibrations_coupled: [
-[["THJ1", "THJ2"], [[[2687.15, 2273.14], 0.0, 40.0], 
-                    [[2662.95, 2165.83], 0.0, 20.0], 
-                    [[2659.11, 1977.14], 0.0, 0.0], 
-                    [[2643.5, 1847.95], 0.0, -20.0], 
-                    [[2756.75, 1704.18], 0.0, -40.0], 
-                    [[2239.74, 2256.13], 22.5, 40.0], 
-                    [[2265.3, 2141.85], 22.5, 20.0], 
-                    [[2208.31, 1953.93], 22.5, 0.0], 
-                    [[2211.92, 1825.31], 22.5, -20.0], 
-                    [[2281.2, 1693.32], 22.5, -40.0], 
-                    [[1842.05, 2234.02], 45.0, 40.0], 
-                    [[1826.07, 2131.01], 45.0, 20.0], 
-                    [[1703.96, 1930.94], 45.0, 0.0], 
-                    [[1787.57, 1804.46], 45.0, -20.0], 
-                    [[1680.01, 1638.96], 45.0, -40.0], 
-                    [[1385.5, 2222.22], 67.5, 40.0], 
-                    [[1424.39, 2101.19], 67.5, 20.0], 
-                    [[1362.24, 1909.49], 67.5, 0.0], 
-                    [[1397.62, 1790.83], 67.5, -20.0], 
-                    [[1291.11, 1626.59], 67.5, -40.0], 
-                    [[1159.21, 2211.49], 90.0, 40.0], 
-                    [[1153.0, 2100.95], 90.0, 20.0], 
-                    [[1133.45, 1920.25], 90.0, 0.0], 
-                    [[1115.8, 1771.67], 90.0, -20.0], 
-                    [[1102.14, 1613.32], 90.0, -40.0]]]
-]
+sh_rh_ffj0_position_controller:
+  joint: rh_FFJ0
+  pid:
+    d: -90.0
+    deadband: 0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: -5700.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_ffj3_position_controller:
+  joint: rh_FFJ3
+  pid:
+    d: 280.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: 6500.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_ffj4_position_controller:
+  joint: rh_FFJ4
+  pid:
+    d: -260.0
+    deadband: 0.02
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 400.0
+    p: -6900.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_lfj0_position_controller:
+  joint: rh_LFJ0
+  pid:
+    d: 150.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: 4500.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_lfj3_position_controller:
+  joint: rh_LFJ3
+  pid:
+    d: -270.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: -5500.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_lfj4_position_controller:
+  joint: rh_LFJ4
+  pid:
+    d: 270.0
+    deadband: 0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 400.0
+    p: 7200.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_lfj5_position_controller:
+  joint: rh_LFJ5
+  pid:
+    d: 240.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 500.0
+    p: 6900.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_mfj0_position_controller:
+  joint: rh_MFJ0
+  pid:
+    d: -50.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: -6300.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_mfj3_position_controller:
+  joint: rh_MFJ3
+  pid:
+    d: 270.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: 6700.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_mfj4_position_controller:
+  joint: rh_MFJ4
+  pid:
+    d: -260.0
+    deadband: 0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 400.0
+    p: -6900.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_rfj0_position_controller:
+  joint: rh_RFJ0
+  pid:
+    d: -150.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: -4300.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_rfj3_position_controller:
+  joint: rh_RFJ3
+  pid:
+    d: 290.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: 6500.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_rfj4_position_controller:
+  joint: rh_RFJ4
+  pid:
+    d: -270.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 400.0
+    p: -6900.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_thj1_position_controller:
+  joint: rh_THJ1
+  pid:
+    d: 270.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: 6300.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_thj2_position_controller:
+  joint: rh_THJ2
+  pid:
+    d: 270.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: 6700.0
+    position_deadband: 0.002
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_thj3_position_controller:
+  joint: rh_THJ3
+  pid:
+    d: -270.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 400.0
+    p: -6900.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_thj4_position_controller:
+  joint: rh_THJ4
+  pid:
+    d: 330.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 500.0
+    p: 6900.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_thj5_position_controller:
+  joint: rh_THJ5
+  pid:
+    d: 330.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 500.0
+    p: 6700.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_wrj1_position_controller:
+  joint: rh_WRJ1
+  pid:
+    d: 270.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: 7900.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
+sh_rh_wrj2_position_controller:
+  joint: rh_WRJ2
+  pid:
+    d: -120.0
+    deadband: 0.0
+    friction_deadband: 2000.0
+    i: 0.0
+    i_clamp: 0.0
+    max_force: 600.0
+    p: -9400.0
+    position_deadband: 0.003
+  type: sr_mechanism_controllers/SrhJointPositionController
