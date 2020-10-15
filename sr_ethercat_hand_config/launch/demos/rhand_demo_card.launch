@@ -1,4 +1,0 @@
-<launch>
-  <node ns="rh" name="rhand_demo" pkg="sr_ethercat_hand_config" type="demo_rc.py" output="screen"/>
-</launch>
-

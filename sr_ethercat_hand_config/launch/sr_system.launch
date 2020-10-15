@@ -1,16 +1,22 @@
 <launch>
-  <arg name="gui" default="false"/>
-  <arg name="scene" default="false"/>
-  <arg name="initial_z" default="0.1"/>
-  <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
-    <arg name="eth_port" value="eth2" />
-    <arg name="hand_serial" value="1370" />
+  <include file="$(find sr_logging_common)/launch/sr_rosbag_log.launch">
+    <arg name="log_bag_prefix" value="sr_system"/>
+  </include>
+  <arg name="sim" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="scene" default="true"/>
+  
+  <include file="$(find sr_robot_launch)/launch/sr_bimanual_ur10arms_hands.launch">
+    <arg name="eth_port" value="enp4s0_eth2"/>
+    <arg name="rh_serial" value="1130" />
+    <arg name="lh_serial" value="4506" />
+    <arg name="scene" value="$(arg scene)"/>
+    <arg name="robot_description" value="$(find sr_multi_description)/urdf/bimanual_srhand_plus_bt_sp_biotacs_ur10e.urdf.xacro" />
+    <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/bimanual_sh_ur10e.yaml"/>
     <arg name="use_moveit" value="true"/>
     <arg name="gui" value="$(arg gui)"/>
-    <arg name="scene" value="$(arg scene)"/>
-    <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10.urdf.xacro" />
-    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
-    <arg name="sim" value="false"/>
-    <arg name="initial_z" value="$(arg initial_z)"/>
+    <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
+    <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
+    <arg name="sim" value="$(arg sim)"/>
   </include>
 </launch>
