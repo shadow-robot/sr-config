@@ -8,12 +8,13 @@
   
   <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
     <arg name="eth_port" value="enp4s0"/>
-    <arg name="hand_serial" value="1802" />
+    <arg name="hand_serial" value="4378" />
     <arg name="scene" value="$(arg scene)"/>
     <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10.urdf.xacro" />
+    <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/right_sh_ur10.yaml"/>
     <arg name="use_moveit" value="true"/>
     <arg name="gui" value="$(arg gui)"/>
-    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
     <arg name="sim" value="$(arg sim)"/>
   </include>
 </launch>
