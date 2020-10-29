@@ -33,16 +33,14 @@ open_hand = {'lh_FFJ1': 0.0, 'lh_FFJ2': 0.0, 'lh_FFJ3': 0.0, 'lh_FFJ4': 0.0,
              'lh_THJ1': 0.0, 'lh_THJ2': 0.0, 'lh_THJ3': 0.0, 'lh_THJ4': 0.0, 'lh_THJ5': 0.0,
              'lh_WRJ1': 0.0, 'lh_WRJ2': 0.0}
 
-unpack_hand_1 = {'lh_THJ1': 0.0, 'lh_THJ2': 0.0, 'lh_THJ3': 0.0, 'lh_THJ4': 1.2, 'lh_THJ5': 0.0}
+open_thumb = {'lh_THJ1': 0.0, 'lh_THJ2': 0.0, 'lh_THJ3': 0.0, 'lh_THJ4': 1.2, 'lh_THJ5': 0.0}
 
 # Open the thumb
-joint_states = unpack_hand_1
 rospy.loginfo("Moving thumb to open position")
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 1.0, False)
+hand_commander.move_to_joint_value_target_unsafe(open_thumb, 1.0, False)
 rospy.sleep(1)
 
 # Move hand to open position
-joint_states = open_hand
 rospy.loginfo("Moving hand to open position")
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
+hand_commander.move_to_joint_value_target_unsafe(open_hand, 2.0, False)
 rospy.sleep(2)
