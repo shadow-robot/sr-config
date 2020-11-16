@@ -1,15 +1,15 @@
 <launch>
   <include file="$(find sr_logging_common)/launch/sr_rosbag_log.launch"/>
   <include file="$(find sr_robot_launch)/launch/sr_bimanual.launch">
-    <arg name="eth_port" value="eth1_eth2"/>
-    <arg name="rh_serial" value="1290"/>
-    <arg name="lh_serial" value="1338"/>
+    <arg name="eth_port" value="enx000ec664fecf_enx000ec664fde6"/>
+    <arg name="rh_serial" value="4250"/>
+    <arg name="lh_serial" value="4234"/>
 
-    <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro" />
-    <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/bimanual_sh.yaml"/>
+    <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_lite_btsp.urdf.xacro" />
+    <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/bimanual_sh_lite.yaml"/>
 
-    <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
-    <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/lh_E_v3.yaml"/>
+    <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_lite_v1.yaml"/>
+    <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_lite_v1.yaml"/>
 
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
