@@ -7,7 +7,7 @@ ffj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -26,7 +26,7 @@ ffj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -45,7 +45,7 @@ ffj4:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -64,7 +64,7 @@ lfj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -83,7 +83,7 @@ lfj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -102,7 +102,7 @@ lfj4:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -121,7 +121,7 @@ lfj5:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -140,7 +140,7 @@ mfj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -159,7 +159,7 @@ mfj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -178,7 +178,7 @@ mfj4:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -197,7 +197,7 @@ rfj0:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -216,7 +216,7 @@ rfj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -235,7 +235,7 @@ rfj4:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -254,7 +254,7 @@ thj1:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -273,7 +273,7 @@ thj2:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -292,7 +292,7 @@ thj3:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -311,7 +311,7 @@ thj4:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 6000
+    p: 5000
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -330,7 +330,7 @@ thj5:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 6000
+    p: 5000
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -349,7 +349,7 @@ wrj1:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -368,7 +368,7 @@ wrj2:
     i: 0
     imax: 0
     max_pwm: 600
-    p: 4500
+    p: 3100
     sg_left: 0
     sg_right: 0
     sgleftref: 0
@@ -378,3 +378,5 @@ wrj2:
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
+
+
