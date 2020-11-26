@@ -20,5 +20,4 @@
   <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_joint_position_controllers_PWM.yaml" />
   <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_mixed_position_velocity_joint_controllers_PWM.yaml" />
   <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_joint_velocity_controllers_PWM.yaml" />
-  <rosparam if="$(arg pwm_control)" command="load" file="$(find sr_ethercat_hand_config)/controls/host/$(arg hand_id)/sr_edc_grasp_controllers_PWM.yaml" />
 </launch>
