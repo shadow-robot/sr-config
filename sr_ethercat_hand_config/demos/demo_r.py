@@ -51,7 +51,7 @@ max_range = {"rh_THJ2": 20, "rh_THJ3": 12, "rh_THJ4": 70, "rh_THJ5": 0,
 # POSE DEFINITIONS #
 ####################
 
-# starting position for the hand 
+# starting position for the hand
 start_pos = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 0,
              "rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0, "rh_FFJ4": 0,
              "rh_MFJ1": 0, "rh_MFJ2": 0, "rh_MFJ3": 0, "rh_MFJ4": 0,
@@ -98,7 +98,7 @@ ext_lf = {"rh_LFJ1": 0, "rh_LFJ2": 0, "rh_LFJ3": 0, "rh_LFJ4": 0}
 # flex thumb step 1
 flex_th_1 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 70, "rh_THJ5": 0}
 # flex thumb step 2
-flex_th_2 = {"rh_THJ1": 35, "rh_THJ2": 38, "rh_THJ3": 10, "rh_THJ4": 70, "rh_THJ5": 58}
+flex_th_2 = {"rh_THJ1": 35, "rh_THJ2": 38, "rh_THJ3": 10, "rh_THJ4": 70, "rh_THJ5": 45}
 # extend thumb step 1
 ext_th_1 = {"rh_THJ1": 10, "rh_THJ2": 20, "rh_THJ3": 5, "rh_THJ4": 35, "rh_THJ5": 25}
 # extend thumb step 2
@@ -108,8 +108,8 @@ zero_th = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 0}
 # Pre O.K. with first finger
 pre_ff_ok = {"rh_THJ4": 70}
 # O.K. with first finger
-ff_ok = {"rh_THJ1": 17, "rh_THJ2": 20, "rh_THJ3": 0, "rh_THJ4": 56, "rh_THJ5": 18,
-         "rh_FFJ1": 0, "rh_FFJ2": 75, "rh_FFJ3": 52, "rh_FFJ4": -0.2,
+ff_ok = {"rh_THJ1": 17, "rh_THJ2": 17, "rh_THJ3": 0, "rh_THJ4": 56, "rh_THJ5": 9,
+         "rh_FFJ1": 0, "rh_FFJ2": 75, "rh_FFJ3": 49, "rh_FFJ4": -0.2,
          "rh_MFJ1": 0, "rh_MFJ2": 42, "rh_MFJ3": 33, "rh_MFJ4": -3,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
@@ -120,7 +120,7 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ3": 4, "rh_THJ4": 60, "rh_THJ5":
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. with middle finger
-mf_ok = {"rh_THJ1": 19, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 66, "rh_THJ5": 31,
+mf_ok = {"rh_THJ1": 19, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 66, "rh_THJ5": 21,
          "rh_FFJ1": 0, "rh_FFJ2": 15, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 11, "rh_MFJ2": 71, "rh_MFJ3": 49, "rh_MFJ4": 10,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10,
@@ -132,7 +132,7 @@ mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5"
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -19,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -12, "rh_LFJ5": 7}
 # O.K. with ring finger
-rf_ok = {"rh_THJ1": 8, "rh_THJ2": 15, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 45,
+rf_ok = {"rh_THJ1": 8, "rh_THJ2": 15, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 32,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
          "rh_RFJ1": 3, "rh_RFJ2": 90, "rh_RFJ3": 42, "rh_RFJ4": -19,
@@ -144,11 +144,11 @@ rf2lf_ok = {"rh_THJ1": 5, "rh_THJ2": 4.5, "rh_THJ3": 8, "rh_THJ4": 60, "rh_THJ5"
             "rh_RFJ1": 0, "rh_RFJ2": 30, "rh_RFJ3": 6, "rh_RFJ4": 0.5,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -10, "rh_LFJ5": 7}
 # O.K. with little finger
-lf_ok = {"rh_THJ1": 25, "rh_THJ2": 14, "rh_THJ3": 10, "rh_THJ4": 69, "rh_THJ5": 22,
+lf_ok = {"rh_THJ1": 25, "rh_THJ2": 14, "rh_THJ3": 10, "rh_THJ4": 69, "rh_THJ5": 15,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 15, "rh_MFJ3": 4, "rh_MFJ4": -1,
          "rh_RFJ1": 0, "rh_RFJ2": 15, "rh_RFJ3": 6, "rh_RFJ4": 0.5,
-         "rh_LFJ1": 0, "rh_LFJ2": 78, "rh_LFJ3": 26, "rh_LFJ4": 5, "rh_LFJ5": 37}
+         "rh_LFJ1": 0, "rh_LFJ2": 78, "rh_LFJ3": 26, "rh_LFJ4": 5, "rh_LFJ5": 31}
 # zero wrist
 zero_wr = {"rh_WRJ1": 0, "rh_WRJ2": 0}
 # north wrist
@@ -233,39 +233,39 @@ store_2_BioTac = {"rh_THJ1": 20, "rh_THJ2": 36, "rh_THJ3": 0, "rh_THJ4": 30, "rh
                   "rh_WRJ1": 0, "rh_WRJ2": 0}
 # store step 3
 store_3 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 65, "rh_THJ5": 0}
-# business card pre-zero position 
+# business card pre-zero position
 bc_pre_zero = {"rh_THJ1": 15, "rh_THJ2": 7, "rh_THJ3": -4, "rh_THJ4": 41, "rh_THJ5": -20,
                "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -1,
                "rh_MFJ1": 0, "rh_MFJ2": 51, "rh_MFJ3": 33, "rh_MFJ4": 20,
                "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -20,
                "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -20, "rh_LFJ5": 7}
-# business card zero position 
+# business card zero position
 bc_zero = {"rh_THJ1": 38, "rh_THJ2": 4, "rh_THJ3": 0, "rh_THJ4": 48, "rh_THJ5": -5,
            "rh_MFJ1": 7, "rh_MFJ2": 64, "rh_MFJ3": 20, "rh_MFJ4": 18}
-# business card position 1 
+# business card position 1
 bc_1 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 7}
-# business card position 2 
+# business card position 2
 bc_2 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
-# business card position 3 
+# business card position 3
 bc_3 = {"rh_FFJ1": 0, "rh_FFJ2": 60, "rh_FFJ3": 58}
-# business card position 4 
+# business card position 4
 bc_4 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 58, "rh_FFJ4": 15}
-# business card position 5 
+# business card position 5
 bc_5 = {"rh_FFJ1": 90, "rh_FFJ2": 90, "rh_FFJ3": 0}
-# business card position 6 
+# business card position 6
 bc_6 = {"rh_FFJ1": 0, "rh_FFJ2": 0, "rh_FFJ3": 0, "rh_FFJ4": 10}
-# business card position 7 
+# business card position 7
 bc_7 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 15, "rh_FFJ4": 0}
-# business card position 8 
+# business card position 8
 bc_8 = {"rh_FFJ1": 47, "rh_FFJ2": 90, "rh_FFJ3": 58}
-# business card position 9 
+# business card position 9
 bc_9 = {"rh_FFJ1": 0, "rh_FFJ2": 71, "rh_FFJ3": 58}
-# business card position 10 
+# business card position 10
 bc_10 = {"rh_MFJ3": 64, "rh_FFJ4": 20}
-# business card position 11 
+# business card position 11
 bc_11 = {"rh_FFJ1": 0, "rh_FFJ2": 81, "rh_FFJ3": 50, "rh_FFJ4": 20,
-         "rh_THJ4": 57, "rh_THJ5": 20,}
-# business card position 12 
+         "rh_THJ4": 57, "rh_THJ5": 20}
+# business card position 12
 bc_12 = {"rh_MFJ1": 0, "rh_MFJ2": 20, "rh_MFJ3": 10, "rh_MFJ4": 0}
 
 
@@ -431,17 +431,15 @@ def secuence_mf():
         # Check if any of the tactile senors have been triggered
         # If so, send the Hand to its start position
         read_tactile_values()
-        if (tactile_values['FF'] > force_zero['FF'] or
-                    tactile_values['MF'] > force_zero['MF'] or
-                    tactile_values['RF'] > force_zero['RF'] or
-                    tactile_values['LF'] > force_zero['LF'] or
-                    tactile_values['TH'] > force_zero['TH']):
-
+        touched = None
+        for finger in ["FF", "MF", "RF", "LF", "TH"]:
+            if tactile_values[finger] > force_zero[finger]:
+                touched = finger
+        if touched is not None:
             hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
-            print 'HAND TOUCHED!'
+            print '{} touched!'.format(finger)
             rospy.sleep(2.0)
-
-            if (tactile_values['TH'] > force_zero['TH']):
+            if touched == "TH":
                 break
 
         # If the tactile sensors have not been triggered and the Hand
@@ -558,11 +556,7 @@ def secuence_lf():
             print 'Thumb contact'
             trigger[4] = 1
 
-        if (trigger[0] == 1 and
-                    trigger[1] == 1 and
-                    trigger[2] == 1 and
-                    trigger[3] == 1 and
-                    trigger[4] == 1):
+        if (trigger[0] == 1 and trigger[1] == 1 and trigger[2] == 1 and trigger[3] == 1 and trigger[4] == 1):
             break
 
         if time.time() > end_time:
@@ -672,7 +666,7 @@ def read_tactile_values():
         tactile_values['LF'] = tactile_state.pressure[3]
         tactile_values['TH'] = tactile_state.pressure[4]
 
-    elif tactile_type == None:
+    elif tactile_type is None:
         print "You don't have tactile sensors. Talk to your Shadow representative to purchase some"
 
     return
@@ -691,34 +685,23 @@ zero_tactile_sensors()
 
 while not rospy.is_shutdown():
     # Check the state of the tactile senors
+    touched = None
     read_tactile_values()
-
+    for finger in ["FF", "MF", "RF", "LF", "TH"]:
+        if tactile_values[finger] > force_zero[finger]:
+            touched = finger
     # If the tactile is touched, trigger the corresponding function
-    if (tactile_values['FF'] > force_zero['FF']):
-        print 'First finger contact'
-        secuence_ff()
-        print 'FF demo completed'
+    if touched is not None:
+        print "{} contact".format(touched)
+        if touched == "FF":
+            secuence_ff()
+        elif touched == "MF":
+            secuence_mf()
+        elif touched == "RF":
+            secuence_rf()
+        elif touched == "LF":
+            secuence_lf()
+        elif touched == "TH":
+            secuence_th()
+        print "{} demo completed".format(touched)
         zero_tactile_sensors()
-    if (tactile_values['MF'] > force_zero['MF']):
-        print 'Middle finger contact'
-        secuence_mf()
-        print 'MF demo completed'
-        zero_tactile_sensors()
-    if (tactile_values['RF'] > force_zero['RF']):
-        print 'Ring finger contact'
-        secuence_rf()
-        print 'RF demo completed'
-        zero_tactile_sensors()
-    if (tactile_values['LF'] > force_zero['LF']):
-        print 'Little finger contact'
-        secuence_lf()
-        print 'LF demo completed'
-        zero_tactile_sensors()
-    if (tactile_values['TH'] > force_zero['TH']):
-        print 'Thumb finger contact'
-        secuence_th()
-        print 'TH demo completed'
-        zero_tactile_sensors()
-
-
-
