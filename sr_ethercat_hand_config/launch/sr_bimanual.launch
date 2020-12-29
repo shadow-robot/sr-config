@@ -11,7 +11,8 @@
 
     <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
     <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/lh_E_v4.yaml"/>
-
+    
+    <arg name="pwm_control" default="false"/>
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
   </include>
