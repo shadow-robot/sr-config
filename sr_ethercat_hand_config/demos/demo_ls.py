@@ -17,7 +17,7 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# Script to move the left hand into store position.
+# Script to move the right hand into store position.
 
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
@@ -40,7 +40,7 @@ pack_hand_1 = {'lh_FFJ1': 1.5707, 'lh_FFJ2': 1.5707, 'lh_FFJ3': 1.5707, 'lh_FFJ4
 
 pack_hand_2 = {'lh_THJ4': 1.2}
 
-pack_hand_3 = {'lh_THJ1': 0.73, 'lh_THJ2': 0.41, 'lh_THJ5': 0.43}
+pack_hand_3 = {'lh_THJ1': 0.52, 'lh_THJ2': 0.61, 'lh_THJ5': 0.20}
 
 
 # Move hand to open position
@@ -62,3 +62,4 @@ rospy.sleep(2)
 joint_states = pack_hand_3
 hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
+
