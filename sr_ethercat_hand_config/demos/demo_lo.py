@@ -17,7 +17,7 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# Script to move the left hand into open position.
+# Script to move the right hand into open position.
 
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
@@ -44,3 +44,6 @@ rospy.sleep(1)
 rospy.loginfo("Moving hand to open position")
 hand_commander.move_to_joint_value_target_unsafe(open_hand, 2.0, False)
 rospy.sleep(2)
+
+
+
