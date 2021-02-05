@@ -1,0 +1,225 @@
+sh_lh_hybrid_controller:
+  gains:
+    lh_FFJ0:
+      d: 0.0
+      deadband: 0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 3700.0
+      position_deadband: 0.002
+    lh_FFJ3:
+      d: -280.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -5700.0
+      position_deadband: 0.002
+    lh_FFJ4:
+      d: 370.0
+      deadband: 0.02
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 7300.0
+      position_deadband: 0.003
+    lh_LFJ0:
+      d: 0.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -4900.0
+      position_deadband: 0.002
+    lh_LFJ3:
+      d: 280.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 5900.0
+      position_deadband: 0.002
+    lh_LFJ4:
+      d: -350.0
+      deadband: 0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -7500.0
+      position_deadband: 0.003
+    lh_LFJ5:
+      d: -290.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -6700.0
+      position_deadband: 0.003
+    lh_MFJ0:
+      d: 0.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 3100.0
+      position_deadband: 0.002
+    lh_MFJ3:
+      d: -290.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -5700.0
+      position_deadband: 0.002
+    lh_MFJ4:
+      d: 370.0
+      deadband: 0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 8100.0
+      position_deadband: 0.003
+    lh_RFJ0:
+      d: 0.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 3700.0
+      position_deadband: 0.002
+    lh_RFJ3:
+      d: -290.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -5900.0
+      position_deadband: 0.002
+    lh_RFJ4:
+      d: 380.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 7500.0
+      position_deadband: 0.003
+    lh_THJ1:
+      d: -270.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -5500.0
+      position_deadband: 0.002
+    lh_THJ2:
+      d: -270.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -6100.0
+      position_deadband: 0.002
+    lh_THJ3:
+      d: 390.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 7700.0
+      position_deadband: 0.003
+    lh_THJ4:
+      d: -320.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -5900.0
+      position_deadband: 0.003
+    lh_THJ5:
+      d: -330.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: -6100.0
+      position_deadband: 0.003
+    lh_WRJ1:
+      d: 270.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 7100.0
+      position_deadband: 0.003
+    lh_WRJ2:
+      d: 120.0
+      deadband: 0.0
+      friction_deadband: 2000.0
+      i: 0.0
+      i_clamp: 0.0
+      max_force: 0.0
+      p: 8900.0
+      position_deadband: 0.003
+  joints:
+  - lh_FFJ0
+  - lh_FFJ3
+  - lh_FFJ4
+  - lh_LFJ0
+  - lh_LFJ3
+  - lh_LFJ4
+  - lh_LFJ5
+  - lh_MFJ0
+  - lh_MFJ3
+  - lh_MFJ4
+  - lh_RFJ0
+  - lh_RFJ3
+  - lh_RFJ4
+  - lh_THJ1
+  - lh_THJ2
+  - lh_THJ3
+  - lh_THJ4
+  - lh_THJ5
+  - lh_WRJ1
+  - lh_WRJ2
+  torque_to_pwm_scaling:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  type: sr_hybrid_controllers/SrHybridController
