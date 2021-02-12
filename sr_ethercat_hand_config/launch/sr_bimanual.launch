@@ -8,7 +8,7 @@
     <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro" />
     <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/bimanual_sh.yaml"/>
 
-    <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
+    <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
     <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/lh_E_v4.yaml"/>
 
     <arg name="use_moveit" value="true"/>
