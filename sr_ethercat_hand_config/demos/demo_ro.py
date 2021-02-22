@@ -44,3 +44,4 @@ rospy.sleep(1)
 rospy.loginfo("Moving hand to open position")
 hand_commander.move_to_joint_value_target_unsafe(open_hand, 2.0, False)
 rospy.sleep(2)
+
