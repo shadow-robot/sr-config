@@ -108,7 +108,7 @@ zero_th = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 0, "rh_THJ5": 0}
 # Pre O.K. with first finger
 pre_ff_ok = {"rh_THJ4": 70}
 # O.K. with first finger
-ff_ok = {"rh_THJ1": 36, "rh_THJ2": 11, "rh_THJ3": 0, "rh_THJ4": 60, "rh_THJ5": 18,
+ff_ok = {"rh_THJ1": 36, "rh_THJ2": 11, "rh_THJ3": 0, "rh_THJ4": 55, "rh_THJ5": 18,
          "rh_FFJ1": 0, "rh_FFJ2": 83, "rh_FFJ3": 37, "rh_FFJ4": 6,
          "rh_MFJ1": 0, "rh_MFJ2": 42, "rh_MFJ3": 33, "rh_MFJ4": 9,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -7,
