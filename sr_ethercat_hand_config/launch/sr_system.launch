@@ -10,7 +10,6 @@
     <arg name="rh_serial" default="111"/>
     <arg name="lh_serial" default="112"/>
     <arg name="eth_port" value="enx000ec66664b4_enx000ec6bfef7b"/>
-    <arg name="hand_serial" value="1802" />
     <arg name="scene" value="$(arg scene)"/>
     <arg name="robot_description" value="$(find sr_multi_description)/urdf/bimanual_srhand_ur10e.urdf.xacro" />
     <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/bimanual_sh_ur10e.yaml"/>
