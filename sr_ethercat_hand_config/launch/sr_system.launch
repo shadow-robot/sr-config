@@ -6,15 +6,18 @@
   <arg name="gui" default="true"/>
   <arg name="scene" default="true"/>
   
-  <include file="$(find sr_robot_launch)/launch/sr_right_ur10arm_hand.launch">
-    <arg name="eth_port" value="enp4s0"/>
+  <include file="$(find sr_robot_launch)/launch/sr_bimanual_ur10arms_hands.launch">
+    <arg name="rh_serial" default="111"/>
+    <arg name="lh_serial" default="112"/>
+    <arg name="eth_port" value="enx000ec66664b4_enx000ec6bfef7b"/>
     <arg name="hand_serial" value="1802" />
     <arg name="scene" value="$(arg scene)"/>
-    <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10e.urdf.xacro" />
-    <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/right_sh_ur10e.yaml"/>
+    <arg name="robot_description" value="$(find sr_multi_description)/urdf/bimanual_srhand_ur10e.urdf.xacro" />
+    <arg name="robot_config_file" value="$(find sr_multi_moveit_config)/config/robot_configs/bimanual_sh_ur10e.yaml"/>
     <arg name="use_moveit" value="true"/>
     <arg name="gui" value="$(arg gui)"/>
-    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
+    <arg name="rh_mapping_path" default="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
+    <arg name="lh_mapping_path" default="$(find sr_edc_launch)/mappings/default_mappings/lh_E_v4.yaml"/>
     <arg name="sim" value="$(arg sim)"/>
   </include>
 </launch>
