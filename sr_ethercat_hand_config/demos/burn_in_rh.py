@@ -98,7 +98,7 @@ ext_lf = {"rh_LFJ1": 0, "rh_LFJ2": 0, "rh_LFJ3": 0, "rh_LFJ4": 0}
 # flex thumb step 1
 flex_th_1 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 70, "rh_THJ5": 0}
 # flex thumb step 2
-flex_th_2 = {"rh_THJ1": 35, "rh_THJ2": 38, "rh_THJ3": 10, "rh_THJ4": 70, "rh_THJ5": 49}
+flex_th_2 = {"rh_THJ1": 35, "rh_THJ2": 38, "rh_THJ3": 10, "rh_THJ4": 70, "rh_THJ5": 52}
 # extend thumb step 1
 ext_th_1 = {"rh_THJ1": 90, "rh_THJ2": -40, "rh_THJ3": -10, "rh_THJ4": 35, "rh_THJ5": -60}
 # extend thumb step 2
@@ -120,7 +120,7 @@ ff2mf_ok = {"rh_THJ1": 5, "rh_THJ2": 12, "rh_THJ3": 4, "rh_THJ4": 60, "rh_THJ5":
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": 0.5,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -6, "rh_LFJ5": 7}
 # O.K. with middle finger
-mf_ok = {"rh_THJ1": 19, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 66, "rh_THJ5": 22,
+mf_ok = {"rh_THJ1": 19, "rh_THJ2": 17, "rh_THJ3": 6, "rh_THJ4": 66, "rh_THJ5": 27,
          "rh_FFJ1": 0, "rh_FFJ2": 15, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 11, "rh_MFJ2": 71, "rh_MFJ3": 49, "rh_MFJ4": 10,
          "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -10,
@@ -132,10 +132,10 @@ mf2rf_ok = {"rh_THJ1": 5, "rh_THJ2": -5, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5"
             "rh_RFJ1": 0, "rh_RFJ2": 50, "rh_RFJ3": 18, "rh_RFJ4": -19,
             "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -17, "rh_LFJ5": 7}
 # O.K. with ring finger
-rf_ok = {"rh_THJ1": 8, "rh_THJ2": 15, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 36,
+rf_ok = {"rh_THJ1": 18, "rh_THJ2": 25, "rh_THJ3": 15, "rh_THJ4": 70, "rh_THJ5": 30,
          "rh_FFJ1": 0, "rh_FFJ2": 14, "rh_FFJ3": 7, "rh_FFJ4": -0.4,
          "rh_MFJ1": 0, "rh_MFJ2": 45, "rh_MFJ3": 4, "rh_MFJ4": -1,
-         "rh_RFJ1": 3, "rh_RFJ2": 90, "rh_RFJ3": 42, "rh_RFJ4": -19,
+         "rh_RFJ1": 0, "rh_RFJ2": 90, "rh_RFJ3": 46, "rh_RFJ4": -19,
          "rh_LFJ1": 0, "rh_LFJ2": 30, "rh_LFJ3": 0, "rh_LFJ4": -17, "rh_LFJ5": 7}
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"rh_THJ1": 5, "rh_THJ2": 4.5, "rh_THJ3": 8, "rh_THJ4": 60, "rh_THJ5": 21,
