@@ -114,5 +114,3 @@ sh_lh_wrj2_effort_controller:
   joint: lh_WRJ2
   max_force: 250
   friction_deadband: 5
-
-

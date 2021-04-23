@@ -235,4 +235,3 @@ sh_lh_wrj2_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 
-

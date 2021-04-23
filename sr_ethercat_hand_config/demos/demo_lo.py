@@ -17,7 +17,7 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# Script to move the left hand into open position.
+# Script to move the right hand into open position.
 
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander

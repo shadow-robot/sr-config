@@ -1,4 +1,4 @@
 <launch>
-  <node name="rhand_store" pkg="sr_ethercat_hand_config" type="demo_ro.py" output="screen"/>
+  <node name="rhand_open" pkg="sr_ethercat_hand_config" type="demo_ro.py" output="screen"/>
 </launch>
 
