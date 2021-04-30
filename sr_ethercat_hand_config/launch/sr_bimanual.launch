@@ -2,7 +2,7 @@
   <include file="$(find sr_logging_common)/launch/sr_rosbag_log.launch"/>
   <include file="$(find sr_robot_launch)/launch/sr_bimanual.launch">
     <arg name="eth_port" value="eth1_eth2"/>
-    <arg name="rh_serial" value="4666"/>
+    <arg name="rh_serial" value="4698"/>
     <arg name="lh_serial" value="4714"/>
 
     <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro" />
