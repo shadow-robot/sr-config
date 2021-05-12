@@ -1,4 +1,4 @@
 <launch>
-  <node name="lhand_demo" pkg="sr_ethercat_hand_config" type="demo_l.py" output="screen"/>
+  <node name="lhand_demo" pkg="sr_ethercat_hand_config" type="burn_in_lh.py" output="screen"/>
 </launch>
 
