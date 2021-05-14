@@ -263,8 +263,8 @@ bc_9 = {"lh_FFJ1": 0, "lh_FFJ2": 71, "lh_FFJ3": 58}
 bc_10 = {"lh_MFJ3": 64, "lh_FFJ4": 20}
 # business card position 11
 bc_11 = {"lh_FFJ1": 0, "lh_FFJ2": 81, "lh_FFJ3": 50, "lh_FFJ4": 20,
-         "lh_THJ4": 57, "lh_THJ5": 20,}
-# business card position 12 
+         "lh_THJ4": 57, "lh_THJ5": 20}
+# business card position 12
 bc_12 = {"lh_MFJ1": 0, "lh_MFJ2": 20, "lh_MFJ3": 10, "lh_MFJ4": 0}
 
 
@@ -436,9 +436,9 @@ def secuence_mf():
             tactile_values['LF'] > force_zero['LF'] or
             tactile_values['TH'] > force_zero['TH']):
 
-            hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
-            print('HAND TOUCHED!')
-            rospy.sleep(2.0)
+                hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
+                print('HAND TOUCHED!')
+                rospy.sleep(2.0)
 
             if (tactile_values['TH'] > force_zero['TH']):
                 break
@@ -562,7 +562,7 @@ def secuence_lf():
             trigger[2] == 1 and
             trigger[3] == 1 and
             trigger[4] == 1):
-            break
+                break
 
         if time.time() > end_time:
             break
