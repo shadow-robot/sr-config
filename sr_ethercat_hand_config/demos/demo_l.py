@@ -430,11 +430,11 @@ def secuence_mf():
         # Check if any of the tactile senors have been triggered
         # If so, send the Hand to its start position
         read_tactile_values()
-        if tactile_values['FF'] > force_zero['FF'] or
-           tactile_values['MF'] > force_zero['MF'] or
-           tactile_values['RF'] > force_zero['RF'] or
-           tactile_values['LF'] > force_zero['LF'] or
-           tactile_values['TH'] > force_zero['TH']:
+        if (tactile_values['FF'] > force_zero['FF'] or \
+            tactile_values['MF'] > force_zero['MF'] or \
+            tactile_values['RF'] > force_zero['RF'] or \
+            tactile_values['LF'] > force_zero['LF'] or \
+            tactile_values['TH'] > force_zero['TH']): 
 
             hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
             print('HAND TOUCHED!')
@@ -557,10 +557,10 @@ def secuence_lf():
             print('Thumb contact')
             trigger[4] = 1
 
-        if (trigger[0] == 1 and
-            trigger[1] == 1 and
-            trigger[2] == 1 and
-            trigger[3] == 1 and
+        if (trigger[0] == 1 and \
+            trigger[1] == 1 and \
+            trigger[2] == 1 and \
+            trigger[3] == 1 and \
             trigger[4] == 1):
                 break
 
