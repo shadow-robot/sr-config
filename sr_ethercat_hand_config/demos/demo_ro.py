@@ -16,6 +16,7 @@
 
 # Script to move the right hand into open position.
 
+from __future__ import absolute_import
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
