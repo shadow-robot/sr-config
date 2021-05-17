@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
-#
+
 # Copyright 2019 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
-# Software Foundation, either version 2 of the License, or (at your option)
-# any later version.
+# Software Foundation version 2 of the License.
 #
 # This program is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
 # more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
+# with this program. If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import absolute_import
 import rospy
 import random
 import time
@@ -51,7 +50,7 @@ max_range = {"lh_THJ2": 20, "lh_THJ3": 12, "lh_THJ4": 70, "lh_THJ5": 0,
 # POSE DEFINITIONS #
 ####################
 
-# starting position for the hand 
+# starting position for the hand
 start_pos = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 0, "lh_THJ5": 0,
              "lh_FFJ1": 0, "lh_FFJ2": 0, "lh_FFJ3": 0, "lh_FFJ4": 0,
              "lh_MFJ1": 0, "lh_MFJ2": 0, "lh_MFJ3": 0, "lh_MFJ4": 0,
@@ -233,39 +232,39 @@ store_2_BioTac = {"lh_THJ1": 20, "lh_THJ2": 36, "lh_THJ3": 0, "lh_THJ4": 30, "lh
                   "lh_WRJ1": 0, "lh_WRJ2": 0}
 # store step 3
 store_3 = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 65, "lh_THJ5": 0}
-# business card pre-zero position 
+# business card pre-zero position
 bc_pre_zero = {"lh_THJ1": 15, "lh_THJ2": 7, "lh_THJ3": -4, "lh_THJ4": 41, "lh_THJ5": -20,
                "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -1,
                "lh_MFJ1": 0, "lh_MFJ2": 51, "lh_MFJ3": 33, "lh_MFJ4": 20,
                "lh_RFJ1": 0, "lh_RFJ2": 50, "lh_RFJ3": 18, "lh_RFJ4": -20,
                "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -20, "lh_LFJ5": 7}
-# business card zero position 
+# business card zero position
 bc_zero = {"lh_THJ1": 38, "lh_THJ2": 4, "lh_THJ3": 0, "lh_THJ4": 48, "lh_THJ5": -5,
            "lh_MFJ1": 7, "lh_MFJ2": 64, "lh_MFJ3": 20, "lh_MFJ4": 18}
-# business card position 1 
+# business card position 1
 bc_1 = {"lh_FFJ1": 47, "lh_FFJ2": 90, "lh_FFJ3": 7}
-# business card position 2 
+# business card position 2
 bc_2 = {"lh_FFJ1": 47, "lh_FFJ2": 90, "lh_FFJ3": 58}
-# business card position 3 
+# business card position 3
 bc_3 = {"lh_FFJ1": 0, "lh_FFJ2": 60, "lh_FFJ3": 58}
-# business card position 4 
+# business card position 4
 bc_4 = {"lh_FFJ1": 90, "lh_FFJ2": 90, "lh_FFJ3": 58, "lh_FFJ4": 15}
-# business card position 5 
+# business card position 5
 bc_5 = {"lh_FFJ1": 90, "lh_FFJ2": 90, "lh_FFJ3": 0}
-# business card position 6 
+# business card position 6
 bc_6 = {"lh_FFJ1": 0, "lh_FFJ2": 0, "lh_FFJ3": 0, "lh_FFJ4": 10}
-# business card position 7 
+# business card position 7
 bc_7 = {"lh_FFJ1": 47, "lh_FFJ2": 90, "lh_FFJ3": 15, "lh_FFJ4": 0}
-# business card position 8 
+# business card position 8
 bc_8 = {"lh_FFJ1": 47, "lh_FFJ2": 90, "lh_FFJ3": 58}
-# business card position 9 
+# business card position 9
 bc_9 = {"lh_FFJ1": 0, "lh_FFJ2": 71, "lh_FFJ3": 58}
-# business card position 10 
+# business card position 10
 bc_10 = {"lh_MFJ3": 64, "lh_FFJ4": 20}
-# business card position 11 
+# business card position 11
 bc_11 = {"lh_FFJ1": 0, "lh_FFJ2": 81, "lh_FFJ3": 50, "lh_FFJ4": 20,
-         "lh_THJ4": 57, "lh_THJ5": 20,}
-# business card position 12 
+         "lh_THJ4": 57, "lh_THJ5": 20}
+# business card position 12
 bc_12 = {"lh_MFJ1": 0, "lh_MFJ2": 20, "lh_MFJ3": 10, "lh_MFJ4": 0}
 
 
@@ -431,11 +430,9 @@ def secuence_mf():
         # Check if any of the tactile senors have been triggered
         # If so, send the Hand to its start position
         read_tactile_values()
-        if (tactile_values['FF'] > force_zero['FF'] or
-                    tactile_values['MF'] > force_zero['MF'] or
-                    tactile_values['RF'] > force_zero['RF'] or
-                    tactile_values['LF'] > force_zero['LF'] or
-                    tactile_values['TH'] > force_zero['TH']):
+        if ((tactile_values['FF'] > force_zero['FF']) or (tactile_values['MF'] > force_zero['MF']) or
+            (tactile_values['RF'] > force_zero['RF']) or (tactile_values['LF'] > force_zero['LF']) or
+                (tactile_values['TH'] > force_zero['TH'])):
 
             hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
             print('HAND TOUCHED!')
@@ -558,11 +555,7 @@ def secuence_lf():
             print('Thumb contact')
             trigger[4] = 1
 
-        if (trigger[0] == 1 and
-                    trigger[1] == 1 and
-                    trigger[2] == 1 and
-                    trigger[3] == 1 and
-                    trigger[4] == 1):
+        if (trigger[0] == 1 and trigger[1] == 1 and trigger[2] == 1 and trigger[3] == 1 and trigger[4] == 1):
             break
 
         if time.time() > end_time:
@@ -672,7 +665,7 @@ def read_tactile_values():
         tactile_values['LF'] = tactile_state.pressure[3]
         tactile_values['TH'] = tactile_state.pressure[4]
 
-    elif tactile_type == None:
+    elif tactile_type is None:
         print("You don't have tactile sensors. Talk to your Shadow representative to purchase some")
 
     return
@@ -719,6 +712,3 @@ while not rospy.is_shutdown():
         secuence_th()
         print('TH demo completed')
         zero_tactile_sensors()
-
-
-
