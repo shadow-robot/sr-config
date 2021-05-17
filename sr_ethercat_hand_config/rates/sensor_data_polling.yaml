@@ -34,3 +34,7 @@ ubi0_sensor_data_update_rate: {
   TACTILE_SENSOR_TYPE_UBI0_TACTILE: -1.
   }
 
+mst_sensor_data_update_rate: {
+  TACTILE_SENSOR_TYPE_MST_MAGNETIC_INDUCTION: -1.,
+  TACTILE_SENSOR_TYPE_MST_TEMPERATURE: -1.
+  }
