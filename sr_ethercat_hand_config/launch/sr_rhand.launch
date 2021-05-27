@@ -11,8 +11,6 @@
     <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor_plus.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
 
-    <arg name="pwm_control" default="false"/>
-
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
   </include>
