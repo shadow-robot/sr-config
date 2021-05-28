@@ -24,7 +24,7 @@ from sr_robot_commander.sr_hand_commander import SrHandCommander
 
 rospy.init_node("store_right_hand", anonymous=True)
 
-hand_commander = SrHandCommander(name="right_hand")
+hand_commander = SrHandCommander(name="right_hand", prefix="rh_")
 
 open_hand = {'rh_FFJ1': 0.0, 'rh_FFJ2': 0.0, 'rh_FFJ3': 0.0, 'rh_FFJ4': 0.0,
              'rh_MFJ1': 0.0, 'rh_MFJ2': 0.0, 'rh_MFJ3': 0.0, 'rh_MFJ4': 0.0,
