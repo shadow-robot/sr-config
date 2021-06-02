@@ -16,6 +16,8 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+
+
 import rospy
 import random
 import time
@@ -439,7 +441,7 @@ def secuence_mf():
                 touched = finger
         if touched is not None:
             hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
-            print '{} touched!'.format(finger)
+            print('{} touched!'.format(finger))
             rospy.sleep(2.0)
             if touched == "TH":
                 break
@@ -531,31 +533,31 @@ def secuence_lf():
         if (tactile_values['FF'] > force_zero['FF'] and trigger[0] == 0):
             hand_pos_incr_f = {"lh_FFJ1": hand_pos['lh_FFJ1'] + offset1, "lh_FFJ3": hand_pos['lh_FFJ3'] + offset1}
             hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_f, 0.5, False, angle_degrees=True)
-            print 'First finger contact'
+            print('First finger contact')
             trigger[0] = 1
 
         if (tactile_values['MF'] > force_zero['MF'] and trigger[1] == 0):
             hand_pos_incr_m = {"lh_MFJ1": hand_pos['lh_MFJ1'] + offset1, "lh_MFJ3": hand_pos['lh_MFJ3'] + offset1}
             hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_m, 0.5, False, angle_degrees=True)
-            print 'Middle finger contact'
+            print('Middle finger contact')
             trigger[1] = 1
 
         if (tactile_values['RF'] > force_zero['RF'] and trigger[2] == 0):
             hand_pos_incr_r = {"lh_RFJ1": hand_pos['lh_RFJ1'] + offset1, "lh_RFJ3": hand_pos['lh_RFJ3'] + offset1}
             hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_r, 0.5, False, angle_degrees=True)
-            print 'Ring finger contact'
+            print('Ring finger contact')
             trigger[2] = 1
 
         if (tactile_values['LF'] > force_zero['LF'] and trigger[3] == 0):
             hand_pos_incr_l = {"lh_LFJ1": hand_pos['lh_LFJ1'] + offset1, "lh_LFJ3": hand_pos['lh_LFJ3'] + offset1}
             hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_l, 0.5, False, angle_degrees=True)
-            print 'Little finger contact'
+            print('Little finger contact')
             trigger[3] = 1
 
         if (tactile_values['TH'] > force_zero['TH'] and trigger[4] == 0):
             hand_pos_incr_th = {"lh_THJ2": hand_pos['lh_THJ2'] + offset1, "lh_THJ5": hand_pos['lh_THJ5'] + offset1}
             hand_commander.move_to_joint_value_target_unsafe(hand_pos_incr_th, 0.5, False, angle_degrees=True)
-            print 'Thumb contact'
+            print('Thumb contact')
             trigger[4] = 1
 
         if (trigger[0] == 1 and trigger[1] == 1 and trigger[2] == 1 and trigger[3] == 1 and trigger[4] == 1):
@@ -609,11 +611,11 @@ def zero_tactile_sensors():
     rospy.sleep(0.5)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.0, False, angle_degrees=True)
 
-    print '\n\nPLEASE ENSURE THAT THE TACTILE SENSORS ARE NOT PRESSED\n'
+    print('\n\nPLEASE ENSURE THAT THE TACTILE SENSORS ARE NOT PRESSED\n')
     # raw_input ('Press ENTER to continue')
     rospy.sleep(1.0)
 
-    for x in xrange(1, 1000):
+    for x in range(1, 1000):
         # Read current state of tactile sensors to zero them
         read_tactile_values()
 
@@ -634,16 +636,16 @@ def zero_tactile_sensors():
     force_zero['LF'] = force_zero['LF'] + 5
     force_zero['TH'] = force_zero['TH'] + 5
 
-    print 'Force Zero', force_zero
+    print('Force Zero', force_zero)
 
     rospy.loginfo("\n\nOK, ready for the demo")
 
-    print "\nPRESS ONE OF THE TACTILES TO START A DEMO"
-    print "   FF: Standard Demo"
-    print "   MF: Shy Hand Demo"
-    print "   RF: Card Trick Demo"
-    print "   LF: Grasp Demo"
-    print "   TH: Open Hand"
+    print("\nPRESS ONE OF THE TACTILES TO START A DEMO")
+    print("   FF: Standard Demo")
+    print("   MF: Shy Hand Demo")
+    print("   RF: Card Trick Demo")
+    print("   LF: Grasp Demo")
+    print("   TH: Open Hand")
 
     return
 
@@ -669,7 +671,7 @@ def read_tactile_values():
         tactile_values['TH'] = tactile_state.pressure[4]
 
     elif tactile_type is None:
-        print "You don't have tactile sensors. Talk to your Shadow representative to purchase some"
+        print("You don't have tactile sensors. Talk to your Shadow representative to purchase some")
 
     return
 
@@ -694,7 +696,7 @@ while not rospy.is_shutdown():
             touched = finger
     # If the tactile is touched, trigger the corresponding function
     if touched is not None:
-        print "{} contact".format(touched)
+        print("{} contact".format(touched))
         if touched == "FF":
             secuence_ff()
         elif touched == "MF":
@@ -705,7 +707,7 @@ while not rospy.is_shutdown():
             secuence_lf()
         elif touched == "TH":
             secuence_th()
-        print "{} demo completed".format(touched)
+        print("{} demo completed".format(touched))
         zero_tactile_sensors()
 
 
