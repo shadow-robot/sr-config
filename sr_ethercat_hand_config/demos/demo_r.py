@@ -437,7 +437,11 @@ def secuence_mf():
                 touched = finger
         if touched is not None:
             hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
+<<<<<<< HEAD
             print(('{} touched!'.format(finger)))
+=======
+            print('{} touched!'.format(finger))
+>>>>>>> 7849a2b... 2to3
             rospy.sleep(2.0)
             if touched == "TH":
                 break
@@ -632,7 +636,11 @@ def zero_tactile_sensors():
     force_zero['LF'] = force_zero['LF'] + 5
     force_zero['TH'] = force_zero['TH'] + 5
 
+<<<<<<< HEAD
     print(('Force Zero', force_zero))
+=======
+    print('Force Zero', force_zero)
+>>>>>>> 7849a2b... 2to3
 
     rospy.loginfo("\n\nOK, ready for the demo")
 
@@ -692,7 +700,11 @@ while not rospy.is_shutdown():
             touched = finger
     # If the tactile is touched, trigger the corresponding function
     if touched is not None:
+<<<<<<< HEAD
         print(("{} contact".format(touched)))
+=======
+        print("{} contact".format(touched))
+>>>>>>> 7849a2b... 2to3
         if touched == "FF":
             secuence_ff()
         elif touched == "MF":
@@ -703,5 +715,9 @@ while not rospy.is_shutdown():
             secuence_lf()
         elif touched == "TH":
             secuence_th()
+<<<<<<< HEAD
         print(("{} demo completed".format(touched)))
+=======
+        print("{} demo completed".format(touched))
+>>>>>>> 7849a2b... 2to3
         zero_tactile_sensors()
