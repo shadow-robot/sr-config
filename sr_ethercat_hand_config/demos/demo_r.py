@@ -18,6 +18,7 @@ from __future__ import absolute_import
 import rospy
 import random
 import time
+from math import degrees
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
 rospy.init_node("right_hand_demo", anonymous=True)
@@ -521,7 +522,7 @@ def secuence_lf():
         read_tactile_values()
 
         # Record current joint positions
-        hand_pos = hand_commander.get_joints_position()
+        hand_pos = {joint: degrees(i) for joint, i in hand_commander.get_joints_position().items()}
 
         # If any tacticle sensor has been triggered, send
         # the corresponding digit to its current position
@@ -563,7 +564,7 @@ def secuence_lf():
 
     # Send all joints to current position to compensate
     # for minor offsets created in the previous loop
-    hand_pos = hand_commander.get_joints_position()
+    hand_pos = {joint: degrees(i) for joint, i in hand_commander.get_joints_position().items()}
     hand_commander.move_to_joint_value_target_unsafe(hand_pos, 2.0, False, angle_degrees=True)
     rospy.sleep(2.0)
 
