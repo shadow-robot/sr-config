@@ -6,7 +6,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 600.0
+      max_force: 1000.0
       p: -7200.0
       position_deadband: 0.002
     rh_FFJ3:
@@ -15,7 +15,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 600.0
+      max_force: 1000.0
       p: 6200.0
       position_deadband: 0.002
     rh_FFJ4:
@@ -24,7 +24,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 500.0
+      max_force: 1000.0
       p: 7300.0
       position_deadband: 0.003
     rh_LFJ0:
@@ -120,7 +120,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 500.0
+      max_force: 1000.0
       p: 5600.0
       position_deadband: 0.002
     rh_THJ2:
@@ -129,7 +129,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 500.0
+      max_force: 1000.0
       p: 6200.0
       position_deadband: 0.002
     rh_THJ3:
@@ -138,7 +138,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 400.0
+      max_force: 1000.0
       p: 7200.0
       position_deadband: 0.003
     rh_THJ4:
@@ -156,7 +156,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 600.0
+      max_force: 1000.0
       p: 5500.0
       position_deadband: 0.003
     rh_WRJ1:
@@ -165,7 +165,7 @@ sh_rh_hybrid_controller:
       friction_deadband: 2000.0
       i: 0.0
       i_clamp: 0.0
-      max_force: 600.0
+      max_force: 1000.0
       p: 7400.0
       position_deadband: 0.003
     rh_WRJ2:
