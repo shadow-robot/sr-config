@@ -721,4 +721,3 @@ while not rospy.is_shutdown():
         zero_tactile_sensors()
 
 
-
