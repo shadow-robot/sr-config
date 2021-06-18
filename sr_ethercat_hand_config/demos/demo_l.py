@@ -672,7 +672,7 @@ def read_tactile_values():
         tactile_values['LF'] = tactile_state.pressure[3]
         tactile_values['TH'] = tactile_state.pressure[4]
 
-    elif tactile_type == None:
+    elif tactile_type is None:
         print "You don't have tactile sensors. Talk to your Shadow representative to purchase some"
 
     return
@@ -719,6 +719,5 @@ while not rospy.is_shutdown():
         secuence_th()
         print 'TH demo completed'
         zero_tactile_sensors()
-
 
 
