@@ -1,6 +1,6 @@
 sh_lh_hybrid_controller:
   gains:
-      lh_FFJ0:
+    lh_FFJ0:
       d: 150.0
       deadband: 0
       friction_deadband: 2000.0
