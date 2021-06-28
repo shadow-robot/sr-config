@@ -224,11 +224,7 @@ store_3 = {"rh_THJ1": 0, "rh_THJ2": 0, "rh_THJ3": 0, "rh_THJ4": 65, "rh_THJ5": 0
 
 
 for x in range(0, 100):
-<<<<<<< HEAD
-    print(("We're on iteration number %d" % (x)))
-=======
     print("We're on iteration number %d" % (x))
->>>>>>> 7849a2b... 2to3
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(store_3, 1.1, False, angle_degrees=True)
     rospy.sleep(1.1)
