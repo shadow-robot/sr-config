@@ -1,13 +1,29 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-# Script to move the left hand into store position.
+# Copyright 2019 Shadow Robot Company Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the Free
+# Software Foundation version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program. If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import absolute_import
 import rospy
+import random
+import time
+from math import degrees
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
-rospy.init_node("left_hand_demo", anonymous=False)
+rospy.init_node("left_hand_demo", anonymous=True)
 
-hand_commander = SrHandCommander(name="left_hand")
+hand_commander = SrHandCommander(name="left_hand", prefix="lh_")
 
 open_hand = {'lh_FFJ1': 0.0, 'lh_FFJ2': 0.0, 'lh_FFJ3': 0.0, 'lh_FFJ4': 0.0,
              'lh_MFJ1': 0.0, 'lh_MFJ2': 0.0, 'lh_MFJ3': 0.0, 'lh_MFJ4': 0.0,

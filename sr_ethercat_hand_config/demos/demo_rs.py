@@ -1,11 +1,26 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-# Script to move the left hand into store position.
+# Copyright 2019 Shadow Robot Company Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the Free
+# Software Foundation version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program. If not, see <http://www.gnu.org/licenses/>.
 
+# Script to move the right hand into store position.
+
+from __future__ import absolute_import
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
-rospy.init_node("store_left_hand", anonymous=True)
+rospy.init_node("store_right_hand", anonymous=True)
 
 hand_commander = SrHandCommander(name="right_hand")
 
@@ -35,13 +50,13 @@ rospy.sleep(2)
 # Move hand to closed position
 joint_states = pack_hand_1
 rospy.loginfo("Moving hand to pack position")
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
 
 joint_states = pack_hand_2
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
 
 joint_states = pack_hand_3
-hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, True)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
