@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
  
 import rospy
 from sr_robot_commander.sr_arm_commander import SrArmCommander
