@@ -16,9 +16,6 @@
 
 from __future__ import absolute_import
 import rospy
-import random
-import time
-from math import degrees
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
 rospy.init_node("store_left_hand", anonymous=True)
@@ -39,7 +36,7 @@ pack_hand_1 = {'lh_FFJ1': 1.5707, 'lh_FFJ2': 1.5707, 'lh_FFJ3': 1.5707, 'lh_FFJ4
 
 pack_hand_2 = {'lh_THJ4': 1.2}
 
-pack_hand_3 = {'lh_THJ1': 0.52, 'lh_THJ2': 0.61, 'lh_THJ5': 0.43}
+pack_hand_3 = {'lh_THJ1': 0.75, 'lh_THJ2': 0.45, 'lh_THJ5': 0.35}
 
 
 # Move hand to open position
