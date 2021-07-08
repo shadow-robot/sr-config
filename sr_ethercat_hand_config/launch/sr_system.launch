@@ -8,7 +8,7 @@
     <arg name="use_moveit" value="true"/>
     <arg name="gui" value="$(arg gui)"/>
     <arg name="scene" value="$(arg scene)"/>
-    <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10.urdf.xacro" />
+    <arg name="robot_description" value="$(find sr_multi_description)/urdf/right_srhand_ur10e.urdf.xacro" />
     <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
     <arg name="sim" value="false"/>
     <arg name="initial_z" value="$(arg initial_z)"/>
