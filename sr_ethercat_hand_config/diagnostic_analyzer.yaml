@@ -13,42 +13,18 @@ analyzers:
         timeout: 5.0
         regex: '([^\s]+) Tactile .*[1-5].*'
         num_items: 5
-      first_finger:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: First Finger
-        timeout: 5.0
-        regex: '([^\s]+) SRDMotor .*FFJ[0-9].*'
-        num_items: 5
-      right_finger:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Ring Finger
-        timeout: 5.0
-        regex: '([^\s]+) SRDMotor .*RFJ[0-9].*'
-        num_items: 5
       middle_finger:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Middle Finger
         timeout: 5.0
         regex: '([^\s]+) SRDMotor .*MFJ[0-9].*'
         num_items: 5
-      little_finger:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Little Finger
-        timeout: 5.0
-        regex: '([^\s]+) SRDMotor .*LFJ[0-9].*'
-        num_items: 6
       thumb:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Thumb
         timeout: 5.0
         regex: '([^\s]+) SRDMotor .*THJ[0-9].*'
         num_items: 5
-      wrist:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Wrist
-        timeout: 5.0
-        regex: '([^\s]+) SRDMotor .*WRJ[0-9].*'
-        num_items: 2
   ethercat:
     type: diagnostic_aggregator/AnalyzerGroup
     path: EtherCat
