@@ -1,0 +1,98 @@
+analyzers:
+  # The shadow hand has two motors per EtherCAT slave device.
+  # The diagnostics for the devices and motors are seperate
+  # All devices are put in one category
+  # The motors are split into multiple categories based on which finger they belong to.
+  right_shadow_hand:
+    type: diagnostic_aggregator/AnalyzerGroup
+    path: Right Shadow Hand
+    analyzers:
+      tactiles:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Tactiles
+        timeout: 5.0
+        regex: 'rh Tactile .*[1-5].*'
+        num_items: 5
+      first_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: First Finger
+        timeout: 5.0
+        regex: 'rh SRDMotor .*FFJ[0-9].*'
+        num_items: 5
+      right_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Ring Finger
+        timeout: 5.0
+        regex: 'rh SRDMotor .*RFJ[0-9].*'
+        num_items: 5
+      middle_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Middle Finger
+        timeout: 5.0
+        regex: 'rh SRDMotor .*MFJ[0-9].*'
+        num_items: 2
+      little_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Little Finger
+        timeout: 5.0
+        regex: 'rh SRDMotor .*LFJ[0-9].*'
+        num_items: 2
+      thumb:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Thumb
+        timeout: 5.0
+        regex: 'rh SRDMotor .*THJ[0-9].*'
+        num_items: 4
+      controllers:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Devices
+        timeout: 5.0
+        regex: [ 'rh SRDMotor : [0-9]+', 'rh EtherCAT Dual CAN Palm' ]
+        num_items: 1
+  left_shadow_hand:
+    type: diagnostic_aggregator/AnalyzerGroup
+    path: Left Shadow Hand
+    analyzers:
+      tactiles:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Tactiles
+        timeout: 5.0
+        regex: 'lh Tactile .*[1-5].*'
+        num_items: 5
+      first_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: First Finger
+        timeout: 5.0
+        regex: 'lh SRDMotor .*FFJ[0-9].*'
+        num_items: 5
+      right_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Ring Finger
+        timeout: 5.0
+        regex: 'lh SRDMotor .*RFJ[0-9].*'
+        num_items: 5
+      middle_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Middle Finger
+        timeout: 5.0
+        regex: 'lh SRDMotor .*MFJ[0-9].*'
+        num_items: 2
+      little_finger:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Little Finger
+        timeout: 5.0
+        regex: 'lh SRDMotor .*LFJ[0-9].*'
+        num_items: 2
+      thumb:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Thumb
+        timeout: 5.0
+        regex: 'lh SRDMotor .*THJ[0-9].*'
+        num_items: 4
+      controllers:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Devices
+        timeout: 5.0
+        regex: [ 'lh SRDMotor : [0-9]+', 'lh EtherCAT Dual CAN Palm' ]
+        num_items: 1
+
