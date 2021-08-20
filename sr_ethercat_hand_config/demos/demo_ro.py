@@ -17,7 +17,7 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# Script to move the right hand into open position.
+# Script to move the left hand into open position.
 
 import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
@@ -33,14 +33,8 @@ open_hand = {'rh_FFJ1': 0.0, 'rh_FFJ2': 0.0, 'rh_FFJ3': 0.0, 'rh_FFJ4': 0.0,
              'rh_THJ1': 0.0, 'rh_THJ2': 0.0, 'rh_THJ3': 0.0, 'rh_THJ4': 0.0, 'rh_THJ5': 0.0,
              'rh_WRJ1': 0.0, 'rh_WRJ2': 0.0}
 
-open_thumb = {'rh_THJ1': 0.0, 'rh_THJ2': 0.0, 'rh_THJ3': 0.0, 'rh_THJ4': 1.2, 'rh_THJ5': 0.0}
-
-# Open the thumb
-rospy.loginfo("Moving thumb to open position")
-hand_commander.move_to_joint_value_target_unsafe(open_thumb, 1.0, False)
-rospy.sleep(1)
-
 # Move hand to open position
+joint_states = open_hand
 rospy.loginfo("Moving hand to open position")
-hand_commander.move_to_joint_value_target_unsafe(open_hand, 2.0, False)
+hand_commander.move_to_joint_value_target_unsafe(joint_states, 2.0, False)
 rospy.sleep(2)
