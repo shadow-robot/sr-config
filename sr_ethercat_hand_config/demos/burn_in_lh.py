@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
-#
+
 # Copyright 2019 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
-# Software Foundation, either version 2 of the License, or (at your option)
-# any later version.
+# Software Foundation version 2 of the License.
 #
 # This program is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
 # more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
+# with this program. If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import absolute_import
 import rospy
 import random
 import time
@@ -51,7 +50,7 @@ max_range = {"lh_THJ2": 20, "lh_THJ3": 12, "lh_THJ4": 70, "lh_THJ5": 0,
 # POSE DEFINITIONS #
 ####################
 
-# starting position for the hand 
+# starting position for the hand
 start_pos = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 0, "lh_THJ5": 0,
              "lh_FFJ1": 0, "lh_FFJ2": 0, "lh_FFJ3": 0, "lh_FFJ4": 0,
              "lh_MFJ1": 0, "lh_MFJ2": 0, "lh_MFJ3": 0, "lh_MFJ4": 0,
@@ -98,9 +97,9 @@ ext_lf = {"lh_LFJ1": 0, "lh_LFJ2": 0, "lh_LFJ3": 0, "lh_LFJ4": 0}
 # flex thumb step 1
 flex_th_1 = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 70, "lh_THJ5": 0}
 # flex thumb step 2
-flex_th_2 = {"lh_THJ1": 35, "lh_THJ2": 38, "lh_THJ3": 10, "lh_THJ4": 70, "lh_THJ5": 58}
+flex_th_2 = {"lh_THJ1": 35, "lh_THJ2": 38, "lh_THJ3": 12, "lh_THJ4": 70, "lh_THJ5": 52}
 # extend thumb step 1
-ext_th_1 = {"lh_THJ1": 90, "lh_THJ2": -40, "lh_THJ3": -10, "lh_THJ4": 35, "lh_THJ5": -60}
+ext_th_1 = {"lh_THJ1": 90, "lh_THJ2": -40, "lh_THJ3": -12, "lh_THJ4": 35, "lh_THJ5": -60}
 # extend thumb step 2
 ext_th_2 = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 0, "lh_THJ5": 0}
 # zero thumb
@@ -108,10 +107,10 @@ zero_th = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 0, "lh_THJ5": 0}
 # Pre O.K. with first finger
 pre_ff_ok = {"lh_THJ4": 70}
 # O.K. with first finger
-ff_ok = {"lh_THJ1": 17, "lh_THJ2": 20, "lh_THJ3": 0, "lh_THJ4": 56, "lh_THJ5": 18,
-         "lh_FFJ1": 0, "lh_FFJ2": 75, "lh_FFJ3": 52, "lh_FFJ4": -0.2,
-         "lh_MFJ1": 0, "lh_MFJ2": 42, "lh_MFJ3": 33, "lh_MFJ4": -3,
-         "lh_RFJ1": 0, "lh_RFJ2": 50, "lh_RFJ3": 18, "lh_RFJ4": 0.5,
+ff_ok = {"lh_THJ1": 36, "lh_THJ2": 11, "lh_THJ3": 0, "lh_THJ4": 60, "lh_THJ5": 18,
+         "lh_FFJ1": 0, "lh_FFJ2": 83, "lh_FFJ3": 37, "lh_FFJ4": 6,
+         "lh_MFJ1": 0, "lh_MFJ2": 42, "lh_MFJ3": 33, "lh_MFJ4": 9,
+         "lh_RFJ1": 0, "lh_RFJ2": 50, "lh_RFJ3": 18, "lh_RFJ4": -7,
          "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -6, "lh_LFJ5": 7}
 # O.K. transition from first finger to middle finger
 ff2mf_ok = {"lh_THJ1": 5, "lh_THJ2": 12, "lh_THJ3": 4, "lh_THJ4": 60, "lh_THJ5": 2,
@@ -120,7 +119,7 @@ ff2mf_ok = {"lh_THJ1": 5, "lh_THJ2": 12, "lh_THJ3": 4, "lh_THJ4": 60, "lh_THJ5":
             "lh_RFJ1": 0, "lh_RFJ2": 50, "lh_RFJ3": 18, "lh_RFJ4": 0.5,
             "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -6, "lh_LFJ5": 7}
 # O.K. with middle finger
-mf_ok = {"lh_THJ1": 19, "lh_THJ2": 17, "lh_THJ3": 6, "lh_THJ4": 66, "lh_THJ5": 31,
+mf_ok = {"lh_THJ1": 19, "lh_THJ2": 17, "lh_THJ3": 6, "lh_THJ4": 66, "lh_THJ5": 22,
          "lh_FFJ1": 0, "lh_FFJ2": 15, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
          "lh_MFJ1": 11, "lh_MFJ2": 71, "lh_MFJ3": 49, "lh_MFJ4": 10,
          "lh_RFJ1": 0, "lh_RFJ2": 50, "lh_RFJ3": 18, "lh_RFJ4": -10,
@@ -130,21 +129,21 @@ mf2rf_ok = {"lh_THJ1": 5, "lh_THJ2": -5, "lh_THJ3": 15, "lh_THJ4": 70, "lh_THJ5"
             "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
             "lh_MFJ1": 0, "lh_MFJ2": 45, "lh_MFJ3": 4, "lh_MFJ4": -1,
             "lh_RFJ1": 0, "lh_RFJ2": 50, "lh_RFJ3": 18, "lh_RFJ4": -19,
-            "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -12, "lh_LFJ5": 7}
+            "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -17, "lh_LFJ5": 7}
 # O.K. with ring finger
-rf_ok = {"lh_THJ1": 8, "lh_THJ2": 15, "lh_THJ3": 15, "lh_THJ4": 70, "lh_THJ5": 45,
+rf_ok = {"lh_THJ1": 8, "lh_THJ2": 15, "lh_THJ3": 15, "lh_THJ4": 70, "lh_THJ5": 42,
          "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
          "lh_MFJ1": 0, "lh_MFJ2": 45, "lh_MFJ3": 4, "lh_MFJ4": -1,
          "lh_RFJ1": 3, "lh_RFJ2": 90, "lh_RFJ3": 42, "lh_RFJ4": -19,
-         "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -12, "lh_LFJ5": 7}
+         "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -17, "lh_LFJ5": 7}
 # O.K. transition from ring finger to little finger
 rf2lf_ok = {"lh_THJ1": 5, "lh_THJ2": 4.5, "lh_THJ3": 8, "lh_THJ4": 60, "lh_THJ5": 21,
             "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
             "lh_MFJ1": 0, "lh_MFJ2": 45, "lh_MFJ3": 4, "lh_MFJ4": -1,
             "lh_RFJ1": 0, "lh_RFJ2": 30, "lh_RFJ3": 6, "lh_RFJ4": 0.5,
-            "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -10, "lh_LFJ5": 7}
+            "lh_LFJ1": 0, "lh_LFJ2": 30, "lh_LFJ3": 0, "lh_LFJ4": -15, "lh_LFJ5": 7}
 # O.K. with little finger
-lf_ok = {"lh_THJ1": 25, "lh_THJ2": 14, "lh_THJ3": 10, "lh_THJ4": 69, "lh_THJ5": 22,
+lf_ok = {"lh_THJ1": 25, "lh_THJ2": 14, "lh_THJ3": 10, "lh_THJ4": 74, "lh_THJ5": 13,
          "lh_FFJ1": 0, "lh_FFJ2": 14, "lh_FFJ3": 7, "lh_FFJ4": -0.4,
          "lh_MFJ1": 0, "lh_MFJ2": 15, "lh_MFJ3": 4, "lh_MFJ4": -1,
          "lh_RFJ1": 0, "lh_RFJ2": 15, "lh_RFJ3": 6, "lh_RFJ4": 0.5,
@@ -223,7 +222,7 @@ store_2_BioTac = {"lh_THJ1": 20, "lh_THJ2": 36, "lh_THJ3": 0, "lh_THJ4": 30, "lh
 store_3 = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 65, "lh_THJ5": 0}
 
 
-for x in range(0, 50):
+for x in range(0, 100):
     print("We're on iteration number %d" % (x))
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(store_3, 1.1, False, angle_degrees=True)
@@ -250,10 +249,10 @@ for x in range(0, 50):
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(flex_th_2, 0.7, False, angle_degrees=True)
     rospy.sleep(1)
-    hand_commander.move_to_joint_value_target_unsafe(ext_th_1, 1.5, False, angle_degrees=True)
-    rospy.sleep(1.5)
-    hand_commander.move_to_joint_value_target_unsafe(ext_th_2, 0.5, False, angle_degrees=True)
-    rospy.sleep(0.5)
+    hand_commander.move_to_joint_value_target_unsafe(ext_th_1, 2.0, False, angle_degrees=True)
+    rospy.sleep(2.0)
+    hand_commander.move_to_joint_value_target_unsafe(ext_th_2, 0.7, False, angle_degrees=True)
+    rospy.sleep(0.7)
     hand_commander.move_to_joint_value_target_unsafe(l_ext_lf, 0.5, False, angle_degrees=True)
     rospy.sleep(0.5)
     hand_commander.move_to_joint_value_target_unsafe(l_ext_rf, 0.5, False, angle_degrees=True)
@@ -370,7 +369,3 @@ for x in range(0, 50):
     rospy.sleep(0.4)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
-
-
-
-
