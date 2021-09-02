@@ -12,12 +12,10 @@ settings:
     branch: python3
     modules:
       - check_cache
-      - code_coverage
 
 trunks:
   - name: noetic-devel
     jobs:
-      - name: code_coverage
       - name: style_check
         settings:
           toolset:
