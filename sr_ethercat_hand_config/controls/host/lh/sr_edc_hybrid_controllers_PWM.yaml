@@ -1,0 +1,172 @@
+sh_lh_hybrid_controller:
+  gains:
+    lh_FFJ0:
+      d: 60
+      deadband: 0
+      i: 0.0
+      i_clamp: 0.0
+      p: 7200
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_FFJ3:
+      d: -290
+      i: 0.0
+      i_clamp: 0.0
+      p: 6200
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+      deadband: 0
+    lh_FFJ4:
+      d: -330
+      deadband: 0.02
+      i: 0.0
+      i_clamp: 0.0
+      p: -7200.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_LFJ0:
+      d: -70.0
+      i: 0.0
+      i_clamp: 0.0
+      p: -7200.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_LFJ3:
+      d: 290
+      deadband: 0.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 5800.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_LFJ4:
+      d: 330.0
+      deadband: 0
+      i: 0.0
+      i_clamp: 0.0
+      p: 7000.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_LFJ5:
+      d: 310.0
+      deadband: 0.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 6800.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_MFJ0:
+      d: 50.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 7100.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_MFJ3:
+      d: 330.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 5800.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_MFJ4:
+      d: 330.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 6800.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_RFJ0:
+      d: 40.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 6900.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_RFJ3:
+      d: 330.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 5900.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_RFJ4:
+      d: -340.0
+      i: 0.0
+      i_clamp: 0.0
+      p: -7000.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_THJ1:
+      d: -300.0
+      i: 0.0
+      i_clamp: 0.0
+      p: -5500.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_THJ2:
+      d: -3000.0
+      i: 0.0
+      i_clamp: 0.0
+      p: -6000.0
+      position_deadband: 0.002
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_THJ3:
+      d: 360.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 7100.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 400.0
+    lh_THJ4:
+      d: -320.0
+      i: 0.0
+      i_clamp: 0.0
+      p: -5600.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 500.0
+    lh_THJ5:
+      d: -350.0
+      i: 0.0
+      i_clamp: 0.0
+      p: -5700.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_WRJ1:
+      d: 300.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 7300.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 600.0
+    lh_WRJ2:
+      d: 140.0
+      i: 0.0
+      i_clamp: 0.0
+      p: 8800.0
+      position_deadband: 0.003
+      friction_deadband: 2000.0
+      max_force: 600.0
+      
+  type: sr_hybrid_controllers/SlhybridController
+  joints: [lh_FFJ0, lh_FFJ3, lh_FFJ4, lh_LFJ0, lh_LFJ3, lh_LFJ4, lh_LFJ5, lh_MFJ0, lh_MFJ3, lh_MFJ4, lh_RFJ0, lh_RFJ3, lh_RFJ4, lh_THJ1, lh_THJ2, lh_THJ3, lh_THJ4, lh_THJ5, lh_WRJ1, lh_WRJ2]
+
