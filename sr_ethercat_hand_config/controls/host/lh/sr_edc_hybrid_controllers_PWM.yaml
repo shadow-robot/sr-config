@@ -167,6 +167,6 @@ sh_lh_hybrid_controller:
       friction_deadband: 2000.0
       max_force: 600.0
       
-  type: sr_hybrid_controllers/SlhybridController
+  type: sr_hybrid_controllers/SrHybridController
   joints: [lh_FFJ0, lh_FFJ3, lh_FFJ4, lh_LFJ0, lh_LFJ3, lh_LFJ4, lh_LFJ5, lh_MFJ0, lh_MFJ3, lh_MFJ4, lh_RFJ0, lh_RFJ3, lh_RFJ4, lh_THJ1, lh_THJ2, lh_THJ3, lh_THJ4, lh_THJ5, lh_WRJ1, lh_WRJ2]
 
