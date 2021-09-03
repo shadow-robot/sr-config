@@ -142,7 +142,7 @@ sh_rh_hybrid_controller:
       position_deadband: 0.003
       friction_deadband: 2000.0
       max_force: 500.0
-    lh_THJ5:
+    rh_THJ5:
       d: 330.0
       i: 0.0
       i_clamp: 0.0
