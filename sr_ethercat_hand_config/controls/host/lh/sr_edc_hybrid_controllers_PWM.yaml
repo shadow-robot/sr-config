@@ -13,7 +13,7 @@ sh_lh_hybrid_controller:
       d: -290
       i: 0.0
       i_clamp: 0.0
-      p: 6200
+      p: -5800
       position_deadband: 0.002
       friction_deadband: 2000.0
       max_force: 600.0
