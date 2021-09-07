@@ -294,7 +294,7 @@ def secuence_ff():
     rospy.sleep(1.1)
     hand_commander.move_to_joint_value_target_unsafe(flex_lf, 1.0, False, angle_degrees=True)
     rospy.sleep(1.1)
-#   hand_commander.move_to_joint_value_target_unsafe(ext_lf, 1.0, False, angle_degrees=True)
+    hand_commander.move_to_joint_value_target_unsafe(ext_lf, 1.0, False, angle_degrees=True)
     rospy.sleep(1.1)
     hand_commander.move_to_joint_value_target_unsafe(flex_th_1, 0.7, False, angle_degrees=True)
     rospy.sleep(1)
