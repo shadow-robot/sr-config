@@ -1,21 +1,20 @@
-#!/usr/bin/env python
-#
+#!/usr/bin/env python3
+
 # Copyright 2019 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
-# Software Foundation, either version 2 of the License, or (at your option)
-# any later version.
+# Software Foundation version 2 of the License.
 #
 # This program is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
 # more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
+# with this program. If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import absolute_import
 import rospy
 import random
 import time
@@ -51,7 +50,7 @@ max_range = {"lh_THJ2": 20, "lh_THJ3": 12, "lh_THJ4": 70, "lh_THJ5": 0,
 # POSE DEFINITIONS #
 ####################
 
-# starting position for the hand 
+# starting position for the hand
 start_pos = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 0, "lh_THJ5": 0,
              "lh_FFJ1": 0, "lh_FFJ2": 0, "lh_FFJ3": 0, "lh_FFJ4": 0,
              "lh_MFJ1": 0, "lh_MFJ2": 0, "lh_MFJ3": 0, "lh_MFJ4": 0,
@@ -224,7 +223,7 @@ store_3 = {"lh_THJ1": 0, "lh_THJ2": 0, "lh_THJ3": 0, "lh_THJ4": 65, "lh_THJ5": 0
 
 
 for x in range(0, 100):
-    print "We're on iteration number %d" % (x)
+    print("We're on iteration number %d" % (x))
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(store_3, 1.1, False, angle_degrees=True)
     rospy.sleep(1.1)
