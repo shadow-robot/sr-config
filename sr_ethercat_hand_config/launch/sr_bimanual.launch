@@ -5,7 +5,7 @@
     <arg name="rh_serial" value="2314"/>
     <arg name="lh_serial" value="4506"/>
 
-    <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro" />
+    <arg name="robot_description" value="$(find sr_description)/robots/bimanual_shadowhand_motor_plus_right_biotac.urdf.xacro" />
 
     <arg name="rh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml"/>
     <arg name="lh_mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/lh_E_v4.yaml"/>
