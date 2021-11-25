@@ -9,8 +9,12 @@
     <arg name="hand_id" value="rh" />
 
     <arg name="robot_description" value="$(find sr_description)/robots/shadowhand_motor_plus.urdf.xacro" />
-    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v4.yaml"/>
+    <arg name="mapping_path" value="$(find sr_edc_launch)/mappings/default_mappings/rh_E_v5.yaml"/>
 
+<<<<<<< HEAD
+=======
+    <arg name="pwm_control" default="false"/>
+>>>>>>> a87b7c50ad96baa475a3b11e8dca5d90c722957a
 
     <arg name="use_moveit" value="true"/>
     <arg name="sim" value="false"/>
