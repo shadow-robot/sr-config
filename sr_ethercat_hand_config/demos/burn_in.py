@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright 2019 Shadow Robot Company Ltd.
+# Copyright 2019, 2022 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -15,10 +15,10 @@
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
 from __future__ import absolute_import
-from sr_robot_commander.sr_hand_commander import SrHandCommander
 import rospy
 from burn_in_states import warehouse_states
 from sr_robot_commander.sr_robot_state_exporter import SrRobotStateExporter
+from sr_robot_commander.sr_hand_commander import SrHandCommander
 
 rospy.init_node("burn_in_test")
 
