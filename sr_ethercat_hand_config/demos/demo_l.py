@@ -273,7 +273,7 @@ bc_12 = {"lh_MFJ1": 0, "lh_MFJ2": 20, "lh_MFJ3": 10, "lh_MFJ4": 0}
 # FUNCTION DEFINITIONS #
 ########################
 
-def secuence_ff():  # pylint: disable=R0915
+def sequence_ff():  # pylint: disable=R0915
     # Start secuence 1
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(store_3, 1.1, False, angle_degrees=True)
@@ -685,7 +685,7 @@ while not rospy.is_shutdown():
     if touched is not None:
         print("{} contact".format(touched))
         if touched == "FF":
-            secuence_ff()
+            sequence_ff()
         elif touched == "MF":
             secuence_mf()
         elif touched == "RF":
