@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright 2019 Shadow Robot Company Ltd.
+# Copyright 2019, 2022 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -16,8 +16,6 @@
 
 from __future__ import absolute_import
 import rospy
-import random
-import time
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
 rospy.init_node("right_hand_demo", anonymous=True)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright 2019 Shadow Robot Company Ltd.
+# Copyright 2019, 2022 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -15,10 +15,10 @@
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
 from __future__ import absolute_import
-import rospy
 import random
 import time
 from math import degrees
+import rospy
 from sr_robot_commander.sr_hand_commander import SrHandCommander
 
 rospy.init_node("right_hand_demo", anonymous=True)
@@ -273,7 +273,7 @@ bc_12 = {"rh_MFJ1": 0, "rh_MFJ2": 20, "rh_MFJ3": 10, "rh_MFJ4": 0}
 # FUNCTION DEFINITIONS #
 ########################
 
-def secuence_ff():
+def sequence_ff():  # pylint: disable=R0915
     # Start secuence 1
     rospy.sleep(1)
     hand_commander.move_to_joint_value_target_unsafe(store_3, 1.1, False, angle_degrees=True)
@@ -420,7 +420,6 @@ def secuence_ff():
     rospy.sleep(0.4)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
-    return
 
 
 def secuence_mf():
@@ -433,15 +432,15 @@ def secuence_mf():
         # Check if any of the tactile senors have been triggered
         # If so, send the Hand to its start position
         read_tactile_values()
-        touched = None
-        for finger in ["FF", "MF", "RF", "LF", "TH"]:
-            if tactile_values[finger] > force_zero[finger]:
-                touched = finger
-        if touched is not None:
+        touched_finger = None
+        for finger_value in ["FF", "MF", "RF", "LF", "TH"]:
+            if tactile_values[finger_value] > force_zero[finger_value]:
+                touched_finger = finger_value
+        if touched_finger is not None:
             hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
-            print('{} touched!'.format(finger))
+            print(f'{finger_value} touched!')
             rospy.sleep(2.0)
-            if touched == "TH":
+            if touched_finger == "TH":
                 break
 
         # If the tactile sensors have not been triggered and the Hand
@@ -459,7 +458,6 @@ def secuence_mf():
 
                 hand_commander.move_to_joint_value_target_unsafe(rand_pos, inter_time, False, angle_degrees=True)
                 wake_time = time.time() + inter_time * 0.9
-    return
 
 
 def secuence_rf():
@@ -495,8 +493,6 @@ def secuence_rf():
     rospy.sleep(4)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
-
-    return
 
 
 def secuence_lf():
@@ -593,15 +589,12 @@ def secuence_lf():
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 2.0, False, angle_degrees=True)
     rospy.sleep(2.0)
 
-    return
-
 
 def secuence_th():
     # Start the secuence 5
     rospy.sleep(0.5)
     hand_commander.move_to_joint_value_target_unsafe(start_pos, 1.5, False, angle_degrees=True)
     rospy.sleep(1.5)
-    return
 
 
 def zero_tactile_sensors():
@@ -613,7 +606,7 @@ def zero_tactile_sensors():
     # raw_input ('Press ENTER to continue')
     rospy.sleep(1.0)
 
-    for x in range(1, 1000):
+    for _ in range(999):
         # Read current state of tactile sensors to zero them
         read_tactile_values()
 
@@ -645,8 +638,6 @@ def zero_tactile_sensors():
     print("   LF: Grasp Demo")
     print("   TH: Open Hand")
 
-    return
-
 
 def read_tactile_values():
     # Read tactile type
@@ -671,8 +662,6 @@ def read_tactile_values():
     elif tactile_type is None:
         print("You don't have tactile sensors. Talk to your Shadow representative to purchase some")
 
-    return
-
 
 ########
 # MAIN #
@@ -696,7 +685,7 @@ while not rospy.is_shutdown():
     if touched is not None:
         print("{} contact".format(touched))
         if touched == "FF":
-            secuence_ff()
+            sequence_ff()
         elif touched == "MF":
             secuence_mf()
         elif touched == "RF":
