@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright 2019 Shadow Robot Company Ltd.
+# Copyright 2024 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -13,8 +13,6 @@
 #
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
-
-# Script to move the right hand into store position.
 
 from __future__ import absolute_import
 import rospy
