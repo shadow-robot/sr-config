@@ -44,25 +44,19 @@ analyzers:
         path: Middle Finger
         timeout: 5.0
         regex: '([^\s]+) SRDMotor .*MFJ[0-9].*'
-        num_items: 5
+        num_items: 2
       little_finger:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Little Finger
         timeout: 5.0
         regex: '([^\s]+) SRDMotor .*LFJ[0-9].*'
-        num_items: 6
+        num_items: 2
       thumb:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Thumb
         timeout: 5.0
         regex: '([^\s]+) SRDMotor .*THJ[0-9].*'
-        num_items: 5
-      wrist:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Wrist
-        timeout: 5.0
-        regex: '([^\s]+) SRDMotor .*WRJ[0-9].*'
-        num_items: 2
+        num_items: 4
   ethercat:
     type: diagnostic_aggregator/AnalyzerGroup
     path: EtherCat
