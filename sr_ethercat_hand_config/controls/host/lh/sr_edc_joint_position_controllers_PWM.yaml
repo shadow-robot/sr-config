@@ -37,12 +37,12 @@ sh_lh_ffj4_position_controller:
 sh_lh_lfj0_position_controller:
   joint: lh_LFJ0
   pid:
-    d: -70.0
+    d: 70.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
     max_force: 600.0
-    p: -7200.0
+    p: 7200.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_lh_lfj3_position_controller:
